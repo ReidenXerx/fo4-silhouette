@@ -126,12 +126,21 @@ Copy-Item (Join-Path $data 'MCM') $out -Recurse -Force
 Copy-Item (Join-Path $data 'Silhouette.esp') $out -Force
 Copy-Item (Join-Path $data 'Tools') $out -Recurse -Force
 Copy-Item $dll (Join-Path $out 'F4SE\Plugins\Silhouette.dll') -Force
+# The dll keeps no folder of this machine: sources trimmed by /d1trimfile, the pdb named by /PDBALTPATH (CMakeLists.txt).
+$dllText = [System.Text.Encoding]::GetEncoding(28591).GetString([System.IO.File]::ReadAllBytes($dll))
+foreach ($name in @(':\Users\', $env:USERNAME, $env:COMPUTERNAME) | Where-Object { $_ }) {
+    if ($dllText.Contains($name)) { throw "$dll still names this machine ($name) - rebuild with scripts\build-plugin.ps1; nothing was packed." }
+}
 $scripts = Join-Path $out 'Scripts\Silhouette'
 New-Item -ItemType Directory -Force -Path $scripts | Out-Null
 foreach ($f in Get-ChildItem $pex -Filter *.pex) {
     $name = if ($f.Name -ieq 'player.pex') { 'Player.pex' } else { $f.Name }
     Copy-Item $f.FullName (Join-Path $scripts $name) -Force
 }
+# Every .pex header names the source folder, the Windows user and the computer; the game never reads them. The
+# archive's copies get neutral ones (the dll's paths are trimmed in CMakeLists.txt).
+& $python (Join-Path $PSScriptRoot 'strip-pex.py') $scripts 'Silhouette'
+if ($LASTEXITCODE) { throw "scripts\strip-pex.py refused - see the line above; nothing was packed." }
 foreach ($d in $docs) {
     Copy-Item $d (Join-Path $out 'F4SE\Plugins\Silhouette') -Force
 }

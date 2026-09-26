@@ -5,9 +5,9 @@ keeps it: an ordinary one most often, an unflattering one less often, a conventi
 rarely, from Silhouette's own pool. The Commonwealth's named people -- companions and major NPCs -- each
 have a body of their own.
 
-**Status:** 0.2.0 beta: one plugin for every game version -- old-gen 1.10.163, next-gen 1.10.984 and
-Anniversary 1.11.x -- through Runtime Database (S-75), proved in game on old-gen, next-gen and Anniversary
-still to be reported by testers; and your own BodySlide presets in the NPC picker (S-76). The last
+**Status:** 0.2.1 beta: one plugin for every game version -- old-gen 1.10.163, next-gen 1.10.984 and
+Anniversary 1.11.x -- through Runtime Database (S-75), proved in game on old-gen and on Anniversary 1.11.240,
+next-gen still to be reported by testers; and your own BodySlide presets in the NPC picker (S-76). The last
 old-gen-only release is 0.1.1. Phase 1 (the generator; LooksMenu's own BodyGen does the
 work at run time) and Phase 2 -- `Silhouette.dll`, an F4SE plugin, with `Silhouette.esp` -- which adds the
 rules only a running game can see, ORefit, the NPC picker, the touch-up, faction pools and an API with

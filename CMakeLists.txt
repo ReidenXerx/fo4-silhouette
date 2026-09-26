@@ -21,6 +21,13 @@ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL" CACHE 
 # the classic OG-only plugin on alandtse's CommonLibF4 (S-18), which refuses any other runtime.
 option(SILHOUETTE_RUNTIME_DATABASE "Build on CommonLibF4RD for OG, NG and AE" ON)
 set(BUILD_TESTS OFF CACHE BOOL "" FORCE)
+# __FILE__ without this machine's folders (0.2.1 zip audit, 2026-09-26): the compiler writes every source's full
+# path into the dll, which named the Windows user in every release since 0.1.0. Trimmed before CommonLib so its
+# paths go too, and in the build rather than the packaging, so the dev dll and the release dll stay one build.
+if(MSVC)
+	file(TO_NATIVE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" SILHOUETTE_TRIM_PREFIX)
+	add_compile_options("/d1trimfile:${SILHOUETTE_TRIM_PREFIX}")
+endif()
 if(SILHOUETTE_RUNTIME_DATABASE)
 	add_subdirectory("extern/CommonLibF4RD/CommonLibF4" "CommonLibF4")
 else()
@@ -83,7 +90,7 @@ if(MSVC)
 	# A PDB for the Release DLL too: a crash log names our functions only with one. /DEBUG turns the
 	# linker's /OPT:REF and /OPT:ICF off by default, so they are asked for again.
 	target_compile_options("${PROJECT_NAME}" PRIVATE "/permissive-" "/Zc:preprocessor" "/utf-8" "/W4" "/wd4201" "$<$<CONFIG:Release>:/Zi>")
-	target_link_options("${PROJECT_NAME}" PRIVATE "$<$<CONFIG:Release>:/DEBUG;/OPT:REF;/OPT:ICF>")
+	target_link_options("${PROJECT_NAME}" PRIVATE "$<$<CONFIG:Release>:/DEBUG;/OPT:REF;/OPT:ICF;/PDBALTPATH:%_PDB%>")
 endif()
 
 # Everything with no game in it -- the catalog, the rules, the plans, the co-save bytes and the whole

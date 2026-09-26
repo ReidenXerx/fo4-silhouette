@@ -162,7 +162,7 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 
 - Fallout 4 **old-gen 1.10.163, next-gen 1.10.984 or Anniversary 1.11.x** with the F4SE for that version, and
   **Runtime Database** (Nexus 108394), which finds the game's functions on each (S-75). Proved in game on
-  old-gen; next-gen and Anniversary by testers' reports. A version whose classes are laid out differently
+  old-gen 1.10.163 and Anniversary 1.11.240; next-gen by testers' reports. A version whose classes are laid out differently
   from what the plugin reads turns the plugin off with one log line, never half on; BodyGen still gives
   every body. **LooksMenu** with BodyGen on, **MCM**, the Visual C++ 2015-2022 Redistributable 14.40 or newer, and your body and outfits built in
   **BodySlide** from a zeroed preset with Build Morphs ticked. `Silhouette.esp` is a light plugin (no
