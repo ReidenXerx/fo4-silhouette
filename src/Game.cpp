@@ -3,6 +3,10 @@
 #include "Compat.h"
 #include "Crosshair.h"
 #include "EventSources.h"
+#include "Presets.h"
+
+#include <cwctype>
+#include <fstream>
 
 namespace SH::Game
 {
@@ -613,6 +617,79 @@ namespace SH::Game
 		return g_director;
 	}
 
+	namespace
+	{
+		std::vector<std::byte> ReadBytes(const std::filesystem::path& a_path)
+		{
+			std::ifstream file{ a_path, std::ios::binary };
+			if (!file) {
+				return {};
+			}
+			std::vector<char> raw{ std::istreambuf_iterator<char>{ file }, std::istreambuf_iterator<char>{} };
+			std::vector<std::byte> out(raw.size());
+			std::memcpy(out.data(), raw.data(), raw.size());
+			return out;
+		}
+
+		// S-76: the player's own BodySlide presets join the pickers (never random), resolved through the slider
+		// set each body was built with, as the generator would have resolved them. Absolute mode only: in a
+		// compensated build every value is relative to what the base has baked in, and that is not guessed here.
+		void AddInstalledPresets(Catalog& a_catalog)
+		{
+			if (a_catalog.mode != "absolute") {
+				logger::info("presets: this build is {} - your own presets are read only for a zeroed body (S-76)", a_catalog.mode);
+				return;
+			}
+			if (!a_catalog.sliderSets[0] && !a_catalog.sliderSets[1]) {
+				logger::info("presets: this build does not say how the body's sliders read - your own presets are not read (S-76)");
+				return;
+			}
+			std::unordered_set<std::string> morphs[2];
+			for (const int s : { 0, 1 }) {
+				const auto path = std::filesystem::path{ "Data/Meshes/Actors/Character/CharacterAssets" } / (s ? "FemaleBody.tri" : "MaleBody.tri");
+				morphs[s] = Presets::TriMorphs(ReadBytes(path));
+				if (morphs[s].empty()) {
+					logger::info("presets: no loose {} with morphs - your own {} presets are not read (S-76)",
+						s ? "FemaleBody.tri" : "MaleBody.tri", s ? "female" : "male");
+				}
+			}
+			std::vector<std::filesystem::path> files;
+			std::error_code                    ec;
+			for (std::filesystem::recursive_directory_iterator it{ "Data/Tools/BodySlide/SliderPresets", ec }, end; !ec && it != end; it.increment(ec)) {
+				try {
+					auto ext = it->path().extension().wstring();
+					std::ranges::transform(ext, ext.begin(), [](wchar_t c) { return static_cast<wchar_t>(std::towlower(c)); });
+					if (it->is_regular_file() && ext == L".xml") {
+						files.push_back(it->path());
+					}
+				} catch (const std::exception&) {
+				}
+			}
+			std::ranges::sort(files);  // BodySlide keeps the first preset of a name, in this order
+			std::vector<Presets::SliderPreset> all;
+			for (const auto& f : files) {
+				const auto bytes = ReadBytes(f);
+				auto       found = Presets::ParseXml(std::string_view{ reinterpret_cast<const char*>(bytes.data()), bytes.size() });
+				std::ranges::move(found, std::back_inserter(all));
+			}
+			auto result = Presets::Resolve(a_catalog, all, morphs);
+			std::size_t female = 0;
+			for (auto& p : result.added) {
+				female += p.female ? 1 : 0;
+				a_catalog.presets.push_back(std::move(p));
+			}
+			logger::info("presets: {} of your own join the pickers ({} female, {} male), from {} file(s) (S-76)",
+				result.added.size(), female, result.added.size() - female, files.size());
+			constexpr std::size_t kShown = 20;
+			for (std::size_t i = 0; i < result.notes.size() && i < kShown; ++i) {
+				logger::info("presets: left out {}", result.notes[i]);
+			}
+			if (result.notes.size() > kShown) {
+				logger::info("presets: ... and {} more left out", result.notes.size() - kShown);
+			}
+		}
+	}
+
 	void Load()
 	{
 		std::string error;
@@ -628,6 +705,7 @@ namespace SH::Game
 			g_director.Refuse(std::format("catalog refused: {}", error));
 			return;
 		}
+		AddInstalledPresets(*catalog);
 
 		// The catalog and the BodyGen files come from one generator run, or neither can be trusted: a
 		// marker would name a preset of another build (S-19), or the runtime would apply rules the

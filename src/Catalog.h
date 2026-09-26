@@ -42,6 +42,21 @@ namespace SH
 		bool                                       zeroed{ false };
 		std::string                                fit;     // "full" or "partial"
 		std::string                                family;  // the preset's declared body family
+		bool                                       installed{ false };  // S-76: the player's own, read in game
+	};
+
+	// S-76: the BodySlide slider set a body was built with -- each morph slider's default and inversion --
+	// so a player's own preset becomes morph values exactly as the generator's base_body.resolve() makes them.
+	struct BodySliderSet
+	{
+		std::string name;
+		struct Slider
+		{
+			std::string name;
+			float       defaultValue{ 0.0F };
+			bool        invert{ false };
+		};
+		std::vector<Slider> sliders;
 	};
 
 	// One floor of a refit (S-40): while dressed she has at least this value, under Silhouette's own
@@ -117,6 +132,7 @@ namespace SH
 		std::vector<std::string>  states[2];         // runtime states (S-16)
 		std::vector<std::string>  neverInBody[2];    // never written into a body: states and the shaft (S-29)
 		std::vector<VarietyRange> variety[2];
+		std::optional<BodySliderSet> sliderSets[2];  // S-76, [0] male, [1] female; absent in an older catalog
 
 		// Tiers BodyGen already carries -- the plugin must know them to leave those NPCs alone.
 		std::vector<std::string> races;  // distributeRaces, editor ids

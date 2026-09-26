@@ -1275,3 +1275,30 @@ Database's `.trace` / `.mapping` diagnostics; the Main file stays the OG build u
   half on.
 - **Not claimed.** The beta's page says what was proved where: OG in the author's game, NG and AE by
   testers' logs.
+
+## S-76 — The player's own presets, read in game: the try-on, never random
+
+Owner decision, 2026-09-26, by poll, after players asked how to use their own BodySlide presets: "Yes, read
+them in game" -- no Python, no generator, no Papyrus compiler. Fallout 4's MCM builds no dropdown list at run
+time (the options are fixed in config.json, and the plugin does not rewrite a mod's files inside a mod
+manager's folders), so the second poll settled how they reach the pickers: "Try-on for NPCs and yourself"
+-- they join the NPC picker's Next / Previous, and the player gets the same try-on; the dropdowns keep
+Silhouette's own bodies and CBBE's and BodyTalk's stock ones (S-74).
+
+- **Read as the generator reads them** (`src/Presets.cpp`, pure, tested offline): every SliderPresets file in
+  BodySlide's order, the first preset of a name winning in any case; a slider counts by its big (or both)
+  value; the fit is the share of its sliders the body's `.tri` carries -- full at 95 %, partial at 50 % only
+  for the body's own family; outfit-tuned copies and refit sets are left out; the values are resolved
+  through the slider set the body was built with (the set's default where the preset is silent, inverted
+  where the set says so), kept where the body has the morph and never a runtime state or the shaft. The
+  marker is the generator's `plain_marker`. Mutants on the inversion, the defaults, the family rule and
+  small-size values each fail a test.
+- **The slider set travels in the catalog** (`sliderSets`, optional: a plugin that does not know it ignores
+  it, a catalog from before has none and the player's presets are then not read). The generator writes the
+  set it measured each body against.
+- **Absolute builds only.** In a compensated build every value is relative to what the base has baked in;
+  that is not guessed at run time.
+- **Never random, never a rule's.** They are picker presets: the random pool stays Silhouette's (S-65).
+  Their values come from the player's own files, so nothing is redistributed (S-74).
+- Names and markers the catalog already has stay the catalog's. A body given one of them and saved stays
+  named for as long as the preset stays installed; removed, the body stays as it is, unnamed.

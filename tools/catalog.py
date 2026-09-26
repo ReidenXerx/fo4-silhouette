@@ -93,8 +93,11 @@ def resolve_races(cfg, data, report):
 
 
 def build(*, stamp, build_id, mode, presets, player, states, never_in_body, variety, cfg, data,
-          refit_presets, body_morphs, baked, report, pool_factions=frozenset()):
+          refit_presets, body_morphs, baked, report, pool_factions=frozenset(), slider_sets=None):
     """The catalog as a dict, without its rulesHash (rules_hash() below, once the BodyGen lines exist).
+
+    slider_sets: {sex: base_body slider set} the body was built with -- the plugin resolves the player's
+              own installed presets through it at run time, as this generator does (S-76)
 
     presets:  [{name, sex, marker, values: [(morph, v)], random, menu, zeroed, fit, family}] in
               the order the pickers list them first (the NPC hotkeys walk this order)
@@ -259,6 +262,12 @@ def build(*, stamp, build_id, mode, presets, player, states, never_in_body, vari
         'player': {s: player[s] for s in ('female', 'male') if player.get(s)},
         'states': {s: list(states.get(s, [])) for s in ('female', 'male')},
         'neverInBody': {s: list(never_in_body.get(s, [])) for s in ('female', 'male')},
+        # S-76: each morph slider's default and inversion in the set the body was built with, so the plugin
+        # turns a player's own BodySlide preset into morph values exactly as base_body.resolve() does.
+        'sliderSets': {s: {'set': ss['name'],
+                           'sliders': {n: [round(sl['default'], 6), bool(sl['invert'])]
+                                       for n, sl in sorted(ss['sliders'].items()) if sl['morph']}}
+                       for s, ss in (slider_sets or {}).items() if ss},
         'variety': {s: [{'morph': m, 'low': lo, 'high': hi, 'group': grp} for m, lo, hi, grp in variety.get(s, [])]
                     for s in ('female', 'male')},
         'rules': {
@@ -311,7 +320,7 @@ def f32(v):
 # per-sex objects -- a field the generator added and the plugin never reads -- so check() refuses it.
 SEXES = ('female', 'male')
 TOP_KEYS = ('schema', 'build', 'stamp', 'mode', 'rulesHash', 'states', 'neverInBody', 'presets', 'player',
-            'variety', 'rules', 'orefit')
+            'variety', 'rules', 'orefit', 'sliderSets')
 PRESET_KEYS = ('name', 'sex', 'marker', 'values', 'random', 'menu', 'zeroed', 'fit', 'family')
 VARIETY_KEYS = ('morph', 'low', 'high', 'group')
 RULE_KEYS = ('races', 'npcFormID', 'blacklistedNpcsFormID', 'blacklistedPlugins', 'blacklistedRaces', 'npcName',
@@ -455,6 +464,14 @@ def check(doc):
         if key in seen:
             fail(f'{where} listed twice for {sex} (names are compared in any case)')
         seen.add(key)
+    # S-76, optional: the slider set each body was built with, for the player's own presets at run time.
+    for s, ss in only(need(doc.get('sliderSets', {}), dict, 'sliderSets'), SEXES, 'sliderSets').items():
+        only(need(ss, dict, f'sliderSets.{s}'), ('set', 'sliders'), f'sliderSets.{s}')
+        need(at(ss, 'set', f'sliderSets.{s}'), str, f'sliderSets.{s}.set')
+        for n, pair in need(at(ss, 'sliders', f'sliderSets.{s}'), dict, f'sliderSets.{s}.sliders').items():
+            if not (isinstance(pair, list) and len(pair) == 2 and type(pair[1]) is bool):
+                fail(f'sliderSets.{s}.sliders.{n} must be [default, invert]')
+            number(pair[0], f'sliderSets.{s}.sliders.{n}')
     player = only(at(doc, 'player', 'catalog'), SEXES, 'player')
     for s, name in player.items():
         if (s, ifold(need(name, str, f'player.{s}'))) not in seen:

@@ -405,6 +405,24 @@ namespace SH
 					}
 				}
 			}
+			// S-76, optional: a catalog from before has none, and the player's own presets are then not read.
+			if (const auto it = a_doc.find("sliderSets"); it != a_doc.end()) {
+				for (const auto& [sex, v] : Object(*it, "catalog.sliderSets").items()) {
+					if (sex != "female" && sex != "male") {
+						throw Bad(std::format("catalog.sliderSets: \"{}\" is not a sex", sex));
+					}
+					const auto    where = std::format("catalog.sliderSets.{}", sex);
+					BodySliderSet set;
+					set.name = Str(At(v, "set", where), where);
+					for (const auto& [name, pair] : Object(At(v, "sliders", where), where).items()) {
+						if (!pair.is_array() || pair.size() != 2) {
+							throw Bad(std::format("{}.{}: expected [default, invert]", where, name));
+						}
+						set.sliders.push_back({ name, Num(pair[0], where), Bool(pair[1], where) });
+					}
+					c.sliderSets[sex == "female" ? 1 : 0] = std::move(set);
+				}
+			}
 
 			std::unordered_set<std::string> markers;
 			for (const auto& p : List(At(a_doc, "presets", "catalog"), "catalog.presets")) {

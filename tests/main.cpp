@@ -17,6 +17,7 @@
 #include "Crosshair.h"
 #include "Director.h"
 #include "Plan.h"
+#include "Presets.h"
 #include "Registry.h"
 #include "Rules.h"
 
@@ -3529,6 +3530,128 @@ static void TestCrosshairTrail()
 	}
 }
 
+	// ------------------------------------------------------------------ S-76: the player's own presets
+
+	// A BodySlide .tri: one shape per entry, each morph moving one vertex.
+	std::vector<std::byte> Tri(const std::vector<std::pair<std::string, std::vector<std::string>>>& a_shapes)
+	{
+		std::string raw = "PIRT";
+		const auto  u16 = [&](std::uint16_t v) { raw.append(reinterpret_cast<const char*>(&v), 2); };
+		u16(static_cast<std::uint16_t>(a_shapes.size()));
+		for (const auto& [shape, morphs] : a_shapes) {
+			raw += static_cast<char>(shape.size());
+			raw += shape;
+			u16(static_cast<std::uint16_t>(morphs.size()));
+			for (const auto& m : morphs) {
+				raw += static_cast<char>(m.size());
+				raw += m;
+				const float mult = 0.01F;
+				raw.append(reinterpret_cast<const char*>(&mult), 4);
+				u16(1);
+				raw.append(8, '\0');  // vertex 0, no move
+			}
+		}
+		std::vector<std::byte> out(raw.size());
+		std::memcpy(out.data(), raw.data(), raw.size());
+		return out;
+	}
+
+	bool Near(float a_lhs, float a_rhs) { return std::abs(a_lhs - a_rhs) < 1e-5F; }
+
+	const SH::Preset* Added(const SH::Presets::Installed& a_result, std::string_view a_name)
+	{
+		const auto it = std::ranges::find(a_result.added, a_name, &SH::Preset::name);
+		return it == a_result.added.end() ? nullptr : &*it;
+	}
+
+	float ValueOf(const SH::Preset& a_preset, std::string_view a_morph)
+	{
+		const auto it = std::ranges::find(a_preset.values, a_morph, &std::pair<std::string, float>::first);
+		return it == a_preset.values.end() ? -99.0F : it->second;
+	}
+
+	void TestInstalledPresets()
+	{
+		namespace P = SH::Presets;
+		// ---- reading a SliderPresets file, as BodySlide's SliderPresets.cpp does
+		const auto ps = P::ParseXml(R"(<?xml version="1.0" encoding="utf-8"?>
+<SliderPresets>
+	<!-- <Preset name="Commented out"/> -->
+	<Preset name="Mine &amp; Yours" set="CBBE Body">
+		<Group name="CBBE"/>
+		<Group name="CBBE Outfits"/>
+		<SetSlider name="Breasts" size="big" value="40"/>
+		<SetSlider name="Breasts" size="small" value="10"/>
+		<SetSlider name="Waist" size="both" value="-20"/>
+		<SetSlider name="Butt" value="90"/>
+		<SetSlider name="Waist" size="big" value="30"/>
+	</Preset>
+	<Preset name='Empty'/>
+</SliderPresets>)");
+		Check(ps.size() == 2 && ps[0].name == "Mine & Yours" && ps[1].name == "Empty" && ps[1].big.empty(),
+			"presets: a file's presets are read, an entity decoded, a comment skipped, a self-closed preset kept");
+		Check(ps.size() == 2 && ps[0].families == std::vector<std::string>{ "CBBE" }, "presets: a group naming outfits is not a body family");
+		Check(ps.size() == 2 && ps[0].big.size() == 2 && ps[0].big[0].first == "Breasts" && Near(ps[0].big[0].second, 0.4F) &&
+				  ps[0].big[1].first == "Waist" && Near(ps[0].big[1].second, 0.3F),
+			"presets: big and both count, small and no size do not, the later value of a slider wins");
+
+		// ---- markers: the generator's plain_marker, character for character
+		Check(P::PlainMarker("CBBE Curvy") == "Silhouette_CBBE_Curvy" &&
+				  P::PlainMarker("The Rocket Bomb Body CBBE Extra") == "Silhouette_The_Rocket_Bomb_Body_CBBE_Extra" &&
+				  P::PlainMarker("Josie CBBE Body 2 (Nude)") == "Silhouette_Josie_CBBE_Body_2_Nude" &&
+				  P::PlainMarker("xy - Type 3DCG (Blessed)(2)(a)") == "Silhouette_xy_Type_3DCG_Blessed_2_a" &&
+				  P::PlainMarker("A=B/C,D|E@F") == "Silhouette_A_B_C_D_E_F" && P::PlainMarker("!!!").empty(),
+			"presets: a marker is named exactly as the generator names it");
+
+		// ---- the body's morphs, from its .tri
+		const auto tri = Tri({ { "CBBE", { "Breasts", "Waist" } }, { "AnatomyGenitals", { "VaginaPenetrate" } } });
+		const auto morphs = P::TriMorphs(tri);
+		Check(morphs == std::unordered_set<std::string>{ "Breasts", "Waist", "VaginaPenetrate" }, "presets: every shape's morphs are read from a .tri");
+		auto cut = tri;
+		cut.resize(cut.size() - 3);
+		Check(P::TriMorphs(cut).empty() && P::TriMorphs(std::vector<std::byte>(8)).empty(), "presets: a cut or foreign .tri reads as no body");
+
+		// ---- resolving: the generator's classify, band and resolve
+		auto doc = BaseCatalog();
+		doc["sliderSets"] = nlohmann::json::parse(R"({"female": {"set": "CBBE Body", "sliders": {
+			"Breasts": [0.0, false], "Waist": [0.5, false], "Butt": [0.0, true], "VaginaPenetrate": [0.3, false], "Arms": [0.0, false]}}})");
+		const auto cat = Cat(doc);
+		const std::unordered_set<std::string> bodies[2] = { { "BTChest" }, { "Breasts", "Waist", "Butt", "VaginaPenetrate" } };
+		const auto one = [](std::string a_name, std::vector<std::string> a_families, std::vector<std::pair<std::string, float>> a_big) {
+			return P::SliderPreset{ std::move(a_name), std::move(a_families), std::move(a_big) };
+		};
+		const std::vector<P::SliderPreset> files{
+			one("Mine", { "CBBE" }, { { "Breasts", 0.4F }, { "Butt", 0.2F } }),
+			one("mine", { "CBBE" }, { { "Breasts", 0.9F } }),
+			one("Curvy", { "CBBE" }, { { "Breasts", 0.1F } }),
+			one("Mine (Outfit)", { "CBBE" }, { { "Breasts", 0.3F } }),
+			one("Half", { "Fusion Girl" }, { { "Breasts", 0.5F }, { "Zzz", 0.5F } }),
+			one("HalfCBBE", { "CBBE" }, { { "Breasts", 0.5F }, { "Zzz", 0.5F } }),
+			one("Low", {}, { { "Breasts", 0.5F }, { "Zzz", 0.5F }, { "Yyy", 0.5F } }),
+			one("Man", {}, { { "BTChest", 0.3F } }),
+			one("Curvy!", { "CBBE" }, { { "Breasts", 0.6F } }),
+			one("Mine-Refit", { "CBBE" }, { { "Breasts", 0.6F } }),
+		};
+		const auto result = P::Resolve(*cat, files, bodies);
+		const auto* mine = Added(result, "Mine");
+		Check(mine && mine->female && mine->marker == "Silhouette_Mine" && mine->installed && mine->menu && !mine->random &&
+				  mine->fit == "full" && mine->family == "CBBE",
+			"presets: a full fit joins the pickers, never random, named and marked as the generator would");
+		Check(mine && Near(ValueOf(*mine, "Breasts"), 0.4F) && Near(ValueOf(*mine, "Waist"), 0.5F) && Near(ValueOf(*mine, "Butt"), 0.8F),
+			"presets: a slider the preset leaves out takes the set's default, an inverted one is turned");
+		Check(mine && ValueOf(*mine, "VaginaPenetrate") == -99.0F && ValueOf(*mine, "Arms") == -99.0F,
+			"presets: never a runtime state, and never a morph the body does not carry");
+		Check(!Added(result, "mine") && !Added(result, "Curvy") && !Added(result, "Mine (Outfit)") && !Added(result, "Mine-Refit"),
+			"presets: the first of a name wins, the catalog's own stays, outfit copies and refit sets are left out");
+		Check(!Added(result, "Half") && Added(result, "HalfCBBE") && Added(result, "HalfCBBE")->fit == "partial",
+			"presets: a partial fit counts only for the body's own family");
+		Check(!Added(result, "Low") && !Added(result, "Man") && !Added(result, "Curvy!"),
+			"presets: too little fit, no slider set for that body, or a marker another body uses: left out");
+		Check(result.added.size() == 2 && result.notes.size() == 4, std::format("presets: 2 added, 4 said why ({} / {})", result.added.size(), result.notes.size()));
+		std::unordered_set<std::string> none[2];
+		Check(P::Resolve(*cat, files, none).added.empty(), "presets: no body read, nothing added");
+	}
+
 int main(int argc, char** argv)
 {
 	if (argc == 3 && std::string_view{ argv[1] } == "--check") {
@@ -3548,6 +3671,7 @@ int main(int argc, char** argv)
 	TestWave5();
 	TestCrosshairTrail();
 	TestResetEveryone();
+	TestInstalledPresets();
 	std::cout << g_passed << " passed, " << g_failed << " failed\n";
 	return g_failed;
 }

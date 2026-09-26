@@ -46,6 +46,8 @@ set(SOURCES
 	"src/Papyrus.cpp"
 	"src/Plan.h"
 	"src/Plan.cpp"
+	"src/Presets.h"
+	"src/Presets.cpp"
 	"src/Registry.h"
 	"src/Registry.cpp"
 	"src/Rules.h"
@@ -92,6 +94,7 @@ add_executable(
 	"src/Catalog.cpp"
 	"src/Director.cpp"
 	"src/Plan.cpp"
+	"src/Presets.cpp"
 	"src/Registry.cpp"
 	"src/Rules.cpp"
 )

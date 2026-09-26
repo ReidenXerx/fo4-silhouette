@@ -2070,7 +2070,8 @@ def main():
             variety={g: [(mm, lo, hi, ranges[g][mm][2]) for mm, (lo, hi) in variety[g]] for g in BODIES},
             cfg=cfg, data=args.data,
             refit_presets=refit_sets(buckets.get('refit', []), base, baked, morphs_of),
-            body_morphs=morphs_of, baked=baked, report=cat_report, pool_factions=pool_factions)
+            body_morphs=morphs_of, baked=baked, report=cat_report, pool_factions=pool_factions,
+            slider_sets={g: base[g]['set'] for g in BODIES if base.get(g) and base[g].get('set')})
         rules_id = catalog.rules_hash(cat, m)
         cat['rulesHash'] = rules_id
         catalog.check(cat)

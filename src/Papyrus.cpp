@@ -201,9 +201,17 @@ namespace SH::Papyrus
 
 		// ---- the picker ----
 
-		Str          PickerStep(std::monostate, std::int32_t a_step) { return Str{ D().PickerStep(a_step) }; }
-		Str          PickerKeep(std::monostate) { return Str{ D().PickerKeep() }; }
-		Str          PickerCancel(std::monostate) { return Str{ D().PickerCancel() }; }
+		// Each answer is logged as well as returned: a tester driving the picker from the console (cgf) cannot
+		// read what a native returns, and a refusal must not look like a press that did nothing.
+		std::string Said(std::string_view a_what, std::string a_answer)
+		{
+			logger::info("picker: {} -> {}", a_what, a_answer.empty() ? "done"s : std::format("\"{}\"", a_answer));
+			return a_answer;
+		}
+
+		Str          PickerStep(std::monostate, std::int32_t a_step) { return Str{ Said(std::format("step {}", a_step), D().PickerStep(a_step)) }; }
+		Str          PickerKeep(std::monostate) { return Str{ Said("keep", D().PickerKeep()) }; }
+		Str          PickerCancel(std::monostate) { return Str{ Said("cancel", D().PickerCancel()) }; }
 		std::int32_t PickerTarget(std::monostate) { return static_cast<std::int32_t>(D().PickerTarget()); }
 		bool         PickerReady(std::monostate) { return D().PickerReady(); }
 
@@ -303,9 +311,10 @@ namespace SH::Papyrus
 			std::string why;
 			auto*       actor = Shapeable(a_actor, why);
 			if (!actor) {
-				return Str{ why };
+				return Str{ Said(std::format("start {:08X}", static_cast<std::uint32_t>(a_actor)), why) };
 			}
-			return Str{ D().PickerStart(Ref(a_actor), Game::IsFemale(actor), Game::BaseOf(actor), Game::NameOf(actor)) };
+			return Str{ Said(std::format("start {:08X}", static_cast<std::uint32_t>(a_actor)),
+				D().PickerStart(Ref(a_actor), Game::IsFemale(actor), Game::BaseOf(actor), Game::NameOf(actor))) };
 		}
 
 		// Each request answers with why it said no, "" when it was accepted: the answer belongs to the call
