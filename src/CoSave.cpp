@@ -75,7 +75,7 @@ namespace SH::CoSave
 			std::uint32_t type = 0;
 			std::uint32_t version = 0;
 			std::uint32_t length = 0;
-			while (a_intfc->GetNextRecordInfo(type, version, length)) {
+			while (Compat::NextRecordInfo(a_intfc, type, version, length)) {
 				if (type == kReset) {
 					std::vector<std::byte> bytes(length);
 					std::string            error;

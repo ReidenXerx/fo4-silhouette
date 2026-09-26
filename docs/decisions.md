@@ -1275,6 +1275,12 @@ Database's `.trace` / `.mapping` diagnostics; the Main file stays the OG build u
   half on.
 - **Not claimed.** The beta's page says what was proved where: OG in the author's game, NG and AE by
   testers' logs.
+- **Verified in game on OG**, 2026-09-26, by the owner with the RD build (DLL d4a965b8f4c54764, Runtime
+  Database installed): "runtime 1-10-163-0 (OG), addresses through Runtime Database", "layout: every member
+  Silhouette reads checks out on this runtime", all three event sources attached, a save's 39 co-save
+  records read back, 39 probes and refits, and on a save from before Silhouette the fresh start (S-70): 35
+  body orders, 9 refits, none failed. One new line, "failed to get next record info", was CommonLibF4RD's
+  wrapper warning at the co-save list's normal end; the list is now read through F4SE's own interface.
 
 ## S-76 — The player's own presets, read in game: the try-on, never random
 

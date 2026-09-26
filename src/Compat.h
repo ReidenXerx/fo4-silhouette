@@ -42,6 +42,19 @@ namespace SH::Compat
 #endif
 	}
 
+	// The next co-save record. CommonLibF4RD's wrapper logs a warning every time this returns false -- which is
+	// how F4SE says the list has ended, on every load (measured 2026-09-26: "failed to get next record info"
+	// after all 39 records read). Its wrapper is a cast onto F4SE's own interface, so the call goes there.
+	inline bool NextRecordInfo(const F4SE::SerializationInterface* a_intfc, std::uint32_t& a_type, std::uint32_t& a_version, std::uint32_t& a_length)
+	{
+#ifdef SH_RUNTIME_DATABASE
+		const auto& raw = reinterpret_cast<const F4SE::detail::F4SESerializationInterface&>(*a_intfc);
+		return raw.GetNextRecordInfo(&a_type, &a_version, &a_length);
+#else
+		return a_intfc->GetNextRecordInfo(a_type, a_version, a_length);
+#endif
+	}
+
 	inline void SetUniqueID(const F4SE::SerializationInterface* a_intfc, std::uint32_t a_id)
 	{
 		// CommonLibF4RD hands the interface out const and keeps SetUniqueID non-const.
