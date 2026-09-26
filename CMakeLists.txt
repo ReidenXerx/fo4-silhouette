@@ -16,14 +16,19 @@ project(
 
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL" CACHE STRING "")
 
-# Fallout 4 OG 1.10.163 only (S-18): every RelocationID resolves to the one runtime we test against,
-# and the plugin refuses any other at query time.
-set(ENABLE_FALLOUT_F4 ON  CACHE BOOL "" FORCE)
-set(ENABLE_FALLOUT_NG OFF CACHE BOOL "" FORCE)
-set(ENABLE_FALLOUT_VR OFF CACHE BOOL "" FORCE)
-set(BUILD_TESTS       OFF CACHE BOOL "" FORCE)
-
-add_subdirectory("extern/CommonLibF4/CommonLibF4" "CommonLibF4")
+# S-75: one build for OG 1.10.163, NG 1.10.984 and AE 1.11.x through Runtime Database (CommonLibF4RD):
+# addresses resolved at run time from f4rd-runtime.bin, class layouts guarded in Game.cpp. OFF builds
+# the classic OG-only plugin on alandtse's CommonLibF4 (S-18), which refuses any other runtime.
+option(SILHOUETTE_RUNTIME_DATABASE "Build on CommonLibF4RD for OG, NG and AE" ON)
+set(BUILD_TESTS OFF CACHE BOOL "" FORCE)
+if(SILHOUETTE_RUNTIME_DATABASE)
+	add_subdirectory("extern/CommonLibF4RD/CommonLibF4" "CommonLibF4")
+else()
+	set(ENABLE_FALLOUT_F4 ON  CACHE BOOL "" FORCE)
+	set(ENABLE_FALLOUT_NG OFF CACHE BOOL "" FORCE)
+	set(ENABLE_FALLOUT_VR OFF CACHE BOOL "" FORCE)
+	add_subdirectory("extern/CommonLibF4/CommonLibF4" "CommonLibF4")
+endif()
 
 set(SOURCES
 	"src/PCH.h"
@@ -62,6 +67,7 @@ target_compile_definitions(
 		"SH_VERSION_MINOR=${PROJECT_VERSION_MINOR}"
 		"SH_VERSION_PATCH=${PROJECT_VERSION_PATCH}"
 		"SH_VERSION_STRING=\"${PROJECT_VERSION}\""
+		"$<$<BOOL:${SILHOUETTE_RUNTIME_DATABASE}>:SH_RUNTIME_DATABASE=1>"
 )
 
 target_include_directories("${PROJECT_NAME}" PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src")

@@ -1,6 +1,8 @@
 #include "Game.h"
 
+#include "Compat.h"
 #include "Crosshair.h"
+#include "EventSources.h"
 
 namespace SH::Game
 {
@@ -100,8 +102,8 @@ namespace SH::Game
 		// Main thread: "Harold Roach (00115EA1)", for the log.
 		std::string Described(RE::TESObjectREFR* a_ref)
 		{
-			const char* name = a_ref ? a_ref->GetDisplayFullName() : nullptr;
-			return std::format("{} ({:08X})", name && *name ? name : "unnamed", a_ref ? a_ref->GetFormID() : 0u);
+			const auto name = Compat::DisplayName(a_ref);
+			return std::format("{} ({:08X})", !name.empty() ? name : "unnamed", a_ref ? a_ref->GetFormID() : 0u);
 		}
 
 		bool AnyIEquals(const std::vector<std::string>& a_list, std::string_view a_name)
@@ -207,7 +209,7 @@ namespace SH::Game
 		// the one that says which slots it takes.
 		std::uint32_t SlotsOf(const RE::TESObjectARMO* a_item)
 		{
-			return static_cast<const RE::BGSBipedObjectForm*>(a_item)->GetFilledSlots();
+			return Compat::FilledSlots(static_cast<const RE::BGSBipedObjectForm*>(a_item));
 		}
 
 		// The item's own keywords, read from the members: no virtual call on a table mapped by hand.
@@ -269,6 +271,134 @@ namespace SH::Game
 				out.push_back(a_actor->race->formSkin);
 			}
 			return out;
+		}
+
+		// S-75: this plugin reads a few members of the game's classes directly (the biped, the race, the NPC
+		// record's race, template and skin, an item's keywords and slots, the process lists). Runtime Database
+		// finds the game's functions on OG, NG and AE; it does not make a class's layout the same. So before
+		// any of it is trusted, each member is read once -- on the player and on the Vault 111 jumpsuit -- and
+		// checked against what it must be. A runtime where one differs turns the plugin off, never half on.
+		enum class Layout
+		{
+			kUnchecked,
+			kGood,
+			kBad
+		};
+		Layout g_layout = Layout::kUnchecked;
+
+		struct LayoutRun
+		{
+			std::vector<std::string> problems;
+			bool                     complete{ false };  // the player's 3D was there to read the biped
+		};
+
+		constexpr std::uint32_t kJumpsuit = 0x0001EED7;  // Fallout4.esm "Vault 111 Jumpsuit": body slot 33
+
+		void CheckLayout(void* a_run)
+		{
+			auto& run = *static_cast<LayoutRun*>(a_run);
+			auto* player = RE::PlayerCharacter::GetSingleton();
+			if (!player) {
+				return;
+			}
+			const auto is = [&](const void* a_form, RE::ENUM_FORM_ID a_type, std::string_view a_what, bool a_emptyOk) {
+				if (!a_form) {
+					if (!a_emptyOk) {
+						run.problems.push_back(std::format("{} is empty", a_what));
+					}
+					return false;
+				}
+				const auto type = Events::SafeFormType(a_form);
+				if (type != std::to_underlying(a_type)) {
+					run.problems.push_back(std::format("{} is not the form it should be (type {})", a_what, type));
+					return false;
+				}
+				return true;
+			};
+			auto* npc = player->GetNPC();
+			const bool npcOk = is(npc, RE::ENUM_FORM_ID::kNPC_, "the player's base record", false);
+			const bool raceOk = is(player->race, RE::ENUM_FORM_ID::kRACE, "Actor::race", false);
+			if (npcOk) {
+				is(npc->formRace, RE::ENUM_FORM_ID::kRACE, "TESNPC::formRace", false);
+				is(npc->faceNPC, RE::ENUM_FORM_ID::kNPC_, "TESNPC::faceNPC", true);
+				is(npc->formSkin, RE::ENUM_FORM_ID::kARMO, "TESNPC::formSkin", true);
+			}
+			if (raceOk) {
+				const auto edid = RaceName(player->race);
+				if (edid.empty() || edid.size() > 128 || !std::ranges::all_of(edid, [](char c) { return c > 32 && c < 127; })) {
+					run.problems.push_back(std::format("TESForm::formEditorID reads \"{}\" for the player's race", edid.substr(0, 40)));
+				}
+				is(player->race->formSkin, RE::ENUM_FORM_ID::kARMO, "TESRace::formSkin", true);
+			}
+			if (auto* form = RE::TESForm::GetFormByID(kJumpsuit); form && form->Is(RE::ENUM_FORM_ID::kARMO)) {
+				auto* item = static_cast<RE::TESObjectARMO*>(form);
+				if ((SlotsOf(item) & (1u << (33 - 30))) == 0) {
+					run.problems.push_back(std::format("BGSBipedObjectForm slots read {:08X} for the Vault 111 jumpsuit", SlotsOf(item)));
+				}
+				const auto* keywords = static_cast<const RE::BGSKeywordForm*>(item);
+				if (keywords->numKeywords > 256) {
+					run.problems.push_back(std::format("BGSKeywordForm::numKeywords reads {}", keywords->numKeywords));
+				} else {
+					for (std::uint32_t i = 0; i < keywords->numKeywords; ++i) {
+						if (!is(keywords->keywords[i], RE::ENUM_FORM_ID::kKYWD, "BGSKeywordForm::keywords", false)) {
+							break;
+						}
+					}
+				}
+			}
+			if (const auto lists = RE::ProcessLists::GetSingleton()) {
+				std::size_t checked = 0;
+				for (const auto& handle : lists->highActorHandles) {
+					if (checked++ == 8) {
+						break;
+					}
+					if (auto ptr = handle.get(); ptr && !is(ptr.get(), RE::ENUM_FORM_ID::kACHR, "ProcessLists::highActorHandles", false)) {
+						break;
+					}
+				}
+			}
+			if (!Has3D(player)) {
+				return;  // the biped is read once the player's body is built
+			}
+			const auto& biped = player->biped;
+			for (std::size_t i = 0; i < 32; ++i) {
+				if (auto* form = biped->object[i].parent.object; form && Events::SafeFormType(form) == 0) {
+					run.problems.push_back(std::format("BipedAnim::object[{}] holds no form", i));
+					break;
+				}
+			}
+			run.complete = true;
+		}
+
+		// Main thread, from the pump: once, when the player's body is built.
+		void GuardLayout()
+		{
+			if (g_layout != Layout::kUnchecked) {
+				return;
+			}
+			LayoutRun run;
+			if (!Events::Guarded(&CheckLayout, &run)) {
+				run.problems.push_back("a read faulted");
+				run.complete = true;
+			}
+			if (!run.complete && run.problems.empty()) {
+				return;  // no body yet: next pump
+			}
+			if (run.problems.empty()) {
+				g_layout = Layout::kGood;
+				logger::info("layout: every member Silhouette reads checks out on this runtime (S-75)");
+				return;
+			}
+			g_layout = Layout::kBad;
+			std::string all;
+			for (const auto& p : run.problems) {
+				all += (all.empty() ? "" : "; ") + p;
+			}
+			const auto why = std::format("this game's classes are laid out differently from what Silhouette.dll reads ({}) - "
+										 "the plugin is off, BodyGen still gives bodies. Please report it with Silhouette.log (S-75)",
+				all);
+			logger::error("layout: {}", why);
+			g_director.Refuse(why);
 		}
 
 		struct Worn
@@ -399,7 +529,7 @@ namespace SH::Game
 			Sighting s;
 			s.ref = a_actor->GetFormID();
 			s.base = npc->GetFormID();
-			s.facts.female = npc->GetSex() == RE::SEX::kFemale;
+			s.facts.female = Compat::Female(npc);
 			s.facts.seed = s.ref;
 			// The NPC record's name, as OBody reads it: a reference renamed at runtime (Rapport names the
 			// settlers it befriends) keeps the rule its record matched.
@@ -676,7 +806,7 @@ namespace SH::Game
 	bool IsFemale(RE::Actor* a_actor)
 	{
 		auto* npc = a_actor ? a_actor->GetNPC() : nullptr;
-		return npc && npc->GetSex() == RE::SEX::kFemale;
+		return Compat::Female(npc);
 	}
 
 	std::uint32_t BaseOf(RE::Actor* a_actor)
@@ -687,8 +817,7 @@ namespace SH::Game
 
 	std::string NameOf(RE::Actor* a_actor)
 	{
-		const char* name = a_actor ? a_actor->GetDisplayFullName() : nullptr;
-		return name ? std::string{ name } : std::string{};
+		return Compat::DisplayName(a_actor);
 	}
 
 	bool NeverShaped(RE::Actor* a_actor)
@@ -705,6 +834,10 @@ namespace SH::Game
 	void Pump()
 	{
 		g_pumpedMs.store(NowMs());
+		GuardLayout();
+		if (g_layout == Layout::kBad) {
+			return;  // refused: nothing is read from members this runtime lays out otherwise
+		}
 		std::deque<std::uint32_t> loaded;
 		std::deque<Inbox::Equip>  equips;
 		std::size_t               dropped = 0;

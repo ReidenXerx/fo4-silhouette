@@ -1,5 +1,6 @@
 #include "CoSave.h"
 
+#include "Compat.h"
 #include "Game.h"
 
 namespace SH::CoSave
@@ -133,7 +134,7 @@ namespace SH::CoSave
 		if (!a_intfc) {
 			return false;
 		}
-		a_intfc->SetUniqueID(kPluginID);
+		Compat::SetUniqueID(a_intfc, kPluginID);
 		a_intfc->SetRevertCallback(OnRevert);
 		a_intfc->SetSaveCallback(OnSave);
 		a_intfc->SetLoadCallback(OnLoad);

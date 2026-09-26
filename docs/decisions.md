@@ -1245,3 +1245,33 @@ nearly every player has.
 
 The repo's history keeps the earlier generated files; this stops them from shipping, not from having been
 committed.
+
+## S-75 — Every game version through Runtime Database, fail-closed where a layout differs
+
+Owner decision, 2026-09-26, after the first Nexus comment from a player on another runtime: "we will support
+all versions via https://www.nexusmods.com/fallout4/mods/108394" -- Runtime Database (Zzyxzz), with its
+library CommonLibF4RD: one plugin for OG 1.10.163, NG 1.10.984 and AE 1.11.x, addresses found at run time
+from `f4rd-runtime.bin` (which players install from that page). Asked how NG and AE get proved on a machine
+that only has OG: a public beta -- an Optional file on Nexus for NG and AE players to test, with Runtime
+Database's `.trace` / `.mapping` diagnostics; the Main file stays the OG build until they confirm.
+
+- **The library.** `SILHOUETTE_RUNTIME_DATABASE` (CMake, ON) builds on `extern/CommonLibF4RD`; OFF builds the
+  classic OG-only plugin on alandtse's CommonLibF4 (S-18). The API is the same but for four calls, kept in
+  `src/Compat.h`: the NPC's sex (a plain number there), a reference's name (no GetDisplayFullName: the RD build
+  names a reference by its base record, as OBody reads names for its rules), the biped slots (an enumeration
+  there), and the co-save interface's constness. `F4SEPlugin_Version` is exported for NG's and AE's F4SE
+  (addresses by signatures); OG's F4SE asks `F4SEPlugin_Query`, which no longer refuses other runtimes.
+- **Layouts are not addresses.** Runtime Database's own guide: "runtime-aware relocations do not make class
+  layouts automatically compatible". Silhouette hooks nothing and has no address of its own -- it calls the
+  library's functions, listens to events (found by their RTTI names, EventSources.cpp) -- but it reads a few
+  members directly: `Actor::biped` and `race`, `TESNPC::formRace`, `faceNPC` and `formSkin`, `TESRace::formSkin`,
+  the race's `formEditorID`, `BGSKeywordForm::keywords`, the biped slots, `ProcessLists::highActorHandles`.
+  None of them could be checked here on NG or AE. So `Game::GuardLayout` reads each once -- on the player
+  and on the Vault 111 jumpsuit, when the player's body is built -- and checks it against what it must be
+  (a race is a race form, an editor id is text, the jumpsuit fills body slot 33, every keyword is a
+  keyword, every high process handle is an actor, every biped slot holds a form or nothing), under a fault
+  guard. One that does not check out refuses the plugin for the session with one log line naming it: rules
+  by name and faction, ORefit, the picker and the API are off, and BodyGen still gives every body. Never
+  half on.
+- **Not claimed.** The beta's page says what was proved where: OG in the author's game, NG and AE by
+  testers' logs.

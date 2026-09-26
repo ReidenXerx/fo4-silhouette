@@ -4,10 +4,13 @@
   "description": "OBody NG's body distribution for Fallout 4: the F4SE plugin (Phase 2)",
   "supports": "windows & x64",
   "dependencies": [
+    "boost-stl-interfaces",
+    "fmt",
     "nlohmann-json",
     "rapidcsv",
     "rsm-mmio",
-    "spdlog"
+    "spdlog",
+    "zydis"
   ],
   "builtin-baseline": "386d7c478221b7ee0c97bfe6ea61dcf65121d564"
 }
