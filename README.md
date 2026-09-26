@@ -5,7 +5,10 @@ keeps it: an ordinary one most often, an unflattering one less often, a conventi
 rarely, from Silhouette's own pool. The Commonwealth's named people -- companions and major NPCs -- each
 have a body of their own.
 
-**Status:** 0.1.1. The first public release was 0.1.0. Phase 1 (the generator; LooksMenu's own BodyGen does the
+**Status:** 0.2.0 beta: one plugin for every game version -- old-gen 1.10.163, next-gen 1.10.984 and
+Anniversary 1.11.x -- through Runtime Database (S-75), proved in game on old-gen, next-gen and Anniversary
+still to be reported by testers; and your own BodySlide presets in the NPC picker (S-76). The last
+old-gen-only release is 0.1.1. Phase 1 (the generator; LooksMenu's own BodyGen does the
 work at run time) and Phase 2 -- `Silhouette.dll`, an F4SE plugin, with `Silhouette.esp` -- which adds the
 rules only a running game can see, ORefit, the NPC picker, the touch-up, faction pools and an API with
 OBody's names. Everything is tested offline (over 540 plugin tests and 140 tool tests) and has been played in the
@@ -134,7 +137,9 @@ takes the clothed shapes off).
 
 ## Requirements
 
-- Fallout 4 with F4SE and **LooksMenu**, BodyGen enabled in `Data/F4SE/Plugins/f4ee.ini`
+- Fallout 4 -- old-gen 1.10.163, next-gen 1.10.984 or Anniversary 1.11.x -- with the F4SE for that version,
+  and **Runtime Database** ([Nexus 108394](https://www.nexusmods.com/fallout4/mods/108394)).
+- **LooksMenu**, BodyGen enabled in `Data/F4SE/Plugins/f4ee.ini`
   (`[BodyMorph] bEnable=1`, `bEnableBodyGen=1` — the default).
 - **BodySlide**, with your body — CBBE for women, BodyTalk for men — and your outfits built from a
   **zeroed** preset ("CBBE Zeroed Sliders", "BT - Zero") with **Build Morphs** ticked.
@@ -144,13 +149,15 @@ takes the clothed shapes off).
 ## Install
 
 1. Build your body and your outfits in BodySlide from a zeroed preset, with Build Morphs ticked.
-2. Install the release archive with your mod manager and enable `Silhouette.esp` (a light plugin).
+2. Install Runtime Database (Nexus 108394), then the release archive, with your mod manager, and enable
+   `Silhouette.esp` (a light plugin).
 3. Load a save. A save that never had Silhouette gets *Reset everyone* by itself once, with a notification; a
    new game needs nothing.
 4. Optional: set the picker hotkeys in MCM > Silhouette > *The NPC in your sights*.
 
 The archive is generated ready to play: Silhouette's own bodies, and in the pickers also the presets CBBE and
-BodyTalk ship (S-74). You need the generator below only to put your other installed presets in the pickers,
+BodyTalk ship (S-74); your other installed presets join the NPC picker by themselves (S-76). You need the
+generator below only to put them in the MCM dropdowns,
 to change the rules in `Silhouette_presetDistributionConfig.json`, or for a body you cannot build zeroed.
 
 ## Use (the generator)

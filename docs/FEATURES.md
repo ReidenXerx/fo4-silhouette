@@ -19,8 +19,8 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
   in the pool, the faction pools and the named characters alike (S-65 amendment, seventh wave).
 - The pickers hold Silhouette's own bodies and the presets CBBE and BodyTalk themselves ship (CBBE Curvy,
   Slim, Athletic ..., the Imitation and SevenBase presets; BT - Average, Muscular ...): 192 for women, 175 for
-  men. Your other installed BodySlide presets join them when you run the generator yourself (S-74); none is
-  ever random. Zeroed presets (`CBBE Zeroed Sliders`, `BT - Zero`) are left out of random, told by their
+  men (S-74). Your other installed BodySlide presets join the NPC picker's Next / Previous by themselves
+  (S-76); in the MCM dropdowns only when you run the generator yourself. None is ever random. Zeroed presets (`CBBE Zeroed Sliders`, `BT - Zero`) are left out of random, told by their
   measured values (S-8).
 - Presets whose sliders your body's `.tri` does not have are left out (they would do nothing); partial fits
   count only for the body family they declare (S-4). `--no-partial` keeps only full fits.
@@ -73,6 +73,11 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
   its armours count as heavy) (S-61).
 
 ## Picking bodies in game
+
+- **Your own BodySlide presets** join the NPC picker's Next / Previous by themselves, read from BodySlide's
+  SliderPresets folder when the game starts, exactly as BodySlide builds them for your body -- no Python, no
+  generator (S-76). They are never random. `Silhouette.log` says how many joined and which were left out, and
+  why (made for another body, fits too little, an outfit copy).
 
 - **Your character** is never randomised: the pool's most average body (Plain F01 / Plain M02) unless you
   choose one in MCM; *Apply to my character*, *Back to the default*, *Which body do I have?* (S-7, S-10). This
@@ -155,8 +160,11 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 
 ## Requirements
 
-- Fallout 4 **1.10.163** with F4SE 0.6.23 (the plugin refuses other runtimes), **LooksMenu** with BodyGen
-  on, **MCM**, the Visual C++ 2015-2022 Redistributable 14.40 or newer, and your body and outfits built in
+- Fallout 4 **old-gen 1.10.163, next-gen 1.10.984 or Anniversary 1.11.x** with the F4SE for that version, and
+  **Runtime Database** (Nexus 108394), which finds the game's functions on each (S-75). Proved in game on
+  old-gen; next-gen and Anniversary by testers' reports. A version whose classes are laid out differently
+  from what the plugin reads turns the plugin off with one log line, never half on; BodyGen still gives
+  every body. **LooksMenu** with BodyGen on, **MCM**, the Visual C++ 2015-2022 Redistributable 14.40 or newer, and your body and outfits built in
   **BodySlide** from a zeroed preset with Build Morphs ticked. `Silhouette.esp` is a light plugin (no
   load-order slot).
 

@@ -19,7 +19,7 @@ namespace SH::Presets
 	{
 		std::string                                name;
 		std::vector<std::string>                   families;  // <Group>s that name a body family
-		std::vector<std::pair<std::string, float>> big;       // SetSlider big (or both) values, 0..1
+		std::vector<std::pair<std::string, double>> big;      // SetSlider big (or both) values, 0..1, as the generator reads them
 	};
 
 	// Every <Preset> of one BodySlide SliderPresets file.
@@ -44,4 +44,15 @@ namespace SH::Presets
 	// that sex is skipped). Names and markers the catalog already has stay the catalog's.
 	[[nodiscard]] Installed Resolve(const Catalog& a_catalog, const std::vector<SliderPreset>& a_files,
 		const std::unordered_set<std::string> (&a_morphs)[2]);
+
+	// Resolve() over a game's Data folder: the loose FemaleBody.tri / MaleBody.tri and every *.xml under
+	// Tools/BodySlide/SliderPresets, recursive, in sorted order. The plugin calls it with "Data"; the offline
+	// tests' --presets mode with any folder, so the game's code path is the one compared with the generator.
+	struct Read
+	{
+		Installed   installed;
+		std::size_t files{ 0 };
+		bool        body[2]{ false, false };  // [0] male, [1] female: a .tri with morphs was found
+	};
+	[[nodiscard]] Read ReadInstalled(const Catalog& a_catalog, const std::filesystem::path& a_data);
 }

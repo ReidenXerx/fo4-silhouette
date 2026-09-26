@@ -1,5 +1,7 @@
 #include "Presets.h"
 
+#include <cwctype>
+#include <fstream>
 #include <regex>
 
 namespace SH::Presets
@@ -113,8 +115,8 @@ namespace SH::Presets
 			return std::regex_search(a_name, re);
 		}
 
-		constexpr float kFullFit = 0.95F;
-		constexpr float kPartialFit = 0.50F;
+		constexpr double kFullFit = 0.95;
+		constexpr double kPartialFit = 0.50;
 	}
 
 	std::vector<SliderPreset> ParseXml(std::string_view a_text)
@@ -174,12 +176,12 @@ namespace SH::Presets
 				if (!slider || !text || (size != "big" && size != "both")) {
 					continue;
 				}
-				float value = 0.0F;
+				double      value = 0.0;
 				const auto* first = text->data();
 				if (std::from_chars(first, first + text->size(), value).ec != std::errc{} || !std::isfinite(value)) {
 					continue;
 				}
-				value /= 100.0F;
+				value /= 100.0;
 				if (const auto it = index.find(*slider); it != index.end()) {
 					current->big[it->second].second = value;  // the later value, as the generator's dict keeps it
 				} else {
@@ -308,7 +310,7 @@ namespace SH::Presets
 			}
 			const bool isFemale = female >= male;
 			const int  s = isFemale ? 1 : 0;
-			const auto fit = static_cast<float>(std::max(female, male)) / static_cast<float>(sp.big.size());
+			const auto fit = static_cast<double>(std::max(female, male)) / static_cast<double>(sp.big.size());  // in double, as Python
 			if (a_morphs[s].empty()) {
 				continue;  // that sex's body was not found: nothing to fit it to
 			}
@@ -319,7 +321,7 @@ namespace SH::Presets
 			if (fit >= kFullFit) {
 				band = "full";
 			} else if (fit < kPartialFit) {
-				out.notes.push_back(std::format("\"{}\": fits your {} body at {:.0f} %", sp.name, isFemale ? "female" : "male", fit * 100.0F));
+				out.notes.push_back(std::format("\"{}\": fits your {} body at {:.0f} %", sp.name, isFemale ? "female" : "male", fit * 100.0));
 				continue;
 			} else if (!sp.families.empty() && !family[s].empty() && std::ranges::find(sp.families, family[s]) == sp.families.end()) {
 				out.notes.push_back(std::format("\"{}\": made for {}, your body is {}", sp.name, sp.families.front(), family[s]));
@@ -343,13 +345,23 @@ namespace SH::Presets
 			p.female = isFemale;
 			p.marker = std::move(marker);
 			for (const auto& slider : set->sliders) {
-				const auto it = std::ranges::find(sp.big, slider.name, &std::pair<std::string, float>::first);
-				auto       v = it != sp.big.end() ? it->second : slider.defaultValue;
-				if (slider.invert) {
-					v = 1.0F - v;
+				// tools/silhouette_gen.py morph_values: only morphs the body carries, never one whose name a
+				// BodyGen separator would cut, never a runtime state or the shaft, and exactly the number the
+				// template file would carry (fmt: fixed point, 4 decimals), 0 left out.
+				if (!a_morphs[s].contains(slider.name) || slider.name.find_first_of("=/,|@") != std::string::npos ||
+					a_catalog.NeverInBody(isFemale, slider.name)) {
+					continue;
 				}
-				if (v != 0.0F && a_morphs[s].contains(slider.name) && !a_catalog.NeverInBody(isFemale, slider.name)) {
-					p.values.emplace_back(slider.name, v);
+				const auto it = std::ranges::find(sp.big, slider.name, &std::pair<std::string, double>::first);
+				auto       v = it != sp.big.end() ? it->second : static_cast<double>(slider.defaultValue);
+				if (slider.invert) {
+					v = 1.0 - v;
+				}
+				double rounded = 0.0;
+				const auto text = std::format("{:.4f}", v);
+				(void)std::from_chars(text.data(), text.data() + text.size(), rounded);
+				if (rounded != 0.0) {
+					p.values.emplace_back(slider.name, static_cast<float>(rounded));
 				}
 			}
 			p.random = false;
@@ -360,6 +372,53 @@ namespace SH::Presets
 			p.installed = true;
 			out.added.push_back(std::move(p));
 		}
+		return out;
+	}
+
+	namespace
+	{
+		std::vector<std::byte> ReadBytes(const std::filesystem::path& a_path)
+		{
+			std::ifstream file{ a_path, std::ios::binary };
+			if (!file) {
+				return {};
+			}
+			std::vector<char>      raw{ std::istreambuf_iterator<char>{ file }, std::istreambuf_iterator<char>{} };
+			std::vector<std::byte> out(raw.size());
+			std::memcpy(out.data(), raw.data(), raw.size());
+			return out;
+		}
+	}
+
+	Read ReadInstalled(const Catalog& a_catalog, const std::filesystem::path& a_data)
+	{
+		Read                            out;
+		std::unordered_set<std::string> morphs[2];
+		for (const int s : { 0, 1 }) {
+			morphs[s] = TriMorphs(ReadBytes(a_data / "Meshes/Actors/Character/CharacterAssets" / (s ? "FemaleBody.tri" : "MaleBody.tri")));
+			out.body[s] = !morphs[s].empty();
+		}
+		std::vector<std::filesystem::path> files;
+		std::error_code                    ec;
+		for (std::filesystem::recursive_directory_iterator it{ a_data / "Tools/BodySlide/SliderPresets", ec }, end; !ec && it != end; it.increment(ec)) {
+			try {
+				auto ext = it->path().extension().wstring();
+				std::ranges::transform(ext, ext.begin(), [](wchar_t c) { return static_cast<wchar_t>(std::towlower(c)); });
+				if (it->is_regular_file() && ext == L".xml") {
+					files.push_back(it->path());
+				}
+			} catch (const std::exception&) {
+			}
+		}
+		std::ranges::sort(files);  // BodySlide keeps the first preset of a name, in this order
+		out.files = files.size();
+		std::vector<SliderPreset> all;
+		for (const auto& f : files) {
+			const auto bytes = ReadBytes(f);
+			auto       found = ParseXml(std::string_view{ reinterpret_cast<const char*>(bytes.data()), bytes.size() });
+			std::ranges::move(found, std::back_inserter(all));
+		}
+		out.installed = Resolve(a_catalog, all, morphs);
 		return out;
 	}
 }

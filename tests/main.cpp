@@ -3591,8 +3591,8 @@ static void TestCrosshairTrail()
 		Check(ps.size() == 2 && ps[0].name == "Mine & Yours" && ps[1].name == "Empty" && ps[1].big.empty(),
 			"presets: a file's presets are read, an entity decoded, a comment skipped, a self-closed preset kept");
 		Check(ps.size() == 2 && ps[0].families == std::vector<std::string>{ "CBBE" }, "presets: a group naming outfits is not a body family");
-		Check(ps.size() == 2 && ps[0].big.size() == 2 && ps[0].big[0].first == "Breasts" && Near(ps[0].big[0].second, 0.4F) &&
-				  ps[0].big[1].first == "Waist" && Near(ps[0].big[1].second, 0.3F),
+		Check(ps.size() == 2 && ps[0].big.size() == 2 && ps[0].big[0].first == "Breasts" && Near(static_cast<float>(ps[0].big[0].second), 0.4F) &&
+				  ps[0].big[1].first == "Waist" && Near(static_cast<float>(ps[0].big[1].second), 0.3F),
 			"presets: big and both count, small and no size do not, the later value of a slider wins");
 
 		// ---- markers: the generator's plain_marker, character for character
@@ -3617,7 +3617,7 @@ static void TestCrosshairTrail()
 			"Breasts": [0.0, false], "Waist": [0.5, false], "Butt": [0.0, true], "VaginaPenetrate": [0.3, false], "Arms": [0.0, false]}}})");
 		const auto cat = Cat(doc);
 		const std::unordered_set<std::string> bodies[2] = { { "BTChest" }, { "Breasts", "Waist", "Butt", "VaginaPenetrate" } };
-		const auto one = [](std::string a_name, std::vector<std::string> a_families, std::vector<std::pair<std::string, float>> a_big) {
+		const auto one = [](std::string a_name, std::vector<std::string> a_families, std::vector<std::pair<std::string, double>> a_big) {
 			return P::SliderPreset{ std::move(a_name), std::move(a_families), std::move(a_big) };
 		};
 		const std::vector<P::SliderPreset> files{
@@ -3631,6 +3631,7 @@ static void TestCrosshairTrail()
 			one("Man", {}, { { "BTChest", 0.3F } }),
 			one("Curvy!", { "CBBE" }, { { "Breasts", 0.6F } }),
 			one("Mine-Refit", { "CBBE" }, { { "Breasts", 0.6F } }),
+			one("Fine Digits", { "CBBE" }, { { "Breasts", 0.123456 }, { "Butt", 1.00004 } }),
 		};
 		const auto result = P::Resolve(*cat, files, bodies);
 		const auto* mine = Added(result, "Mine");
@@ -3647,15 +3648,54 @@ static void TestCrosshairTrail()
 			"presets: a partial fit counts only for the body's own family");
 		Check(!Added(result, "Low") && !Added(result, "Man") && !Added(result, "Curvy!"),
 			"presets: too little fit, no slider set for that body, or a marker another body uses: left out");
-		Check(result.added.size() == 2 && result.notes.size() == 4, std::format("presets: 2 added, 4 said why ({} / {})", result.added.size(), result.notes.size()));
+		const auto* digits = Added(result, "Fine Digits");
+		Check(digits && ValueOf(*digits, "Breasts") == 0.1235F && ValueOf(*digits, "Butt") == -99.0F,
+			"presets: a value is the number the template would carry (4 decimals), and one that rounds to 0 is left out");
+		Check(result.added.size() == 3 && result.notes.size() == 4, std::format("presets: 3 added, 4 said why ({} / {})", result.added.size(), result.notes.size()));
 		std::unordered_set<std::string> none[2];
 		Check(P::Resolve(*cat, files, none).added.empty(), "presets: no body read, nothing added");
 	}
+
+// --presets <Data> <catalog.json>: what the plugin's own code (Presets::ReadInstalled) adds to the pickers from a
+// Data folder, as JSON -- compared with the generator's reading of the same presets (tools/tests/test_presets_parity.py).
+int DumpPresets(const std::filesystem::path& a_data, const std::filesystem::path& a_catalog)
+{
+	std::ifstream  file{ a_catalog };
+	nlohmann::json doc;
+	try {
+		file >> doc;
+	} catch (const std::exception& e) {
+		std::cerr << "catalog: " << e.what() << "\n";
+		return 2;
+	}
+	std::string error;
+	auto        catalog = SH::ParseCatalog(doc, error);
+	if (!catalog) {
+		std::cerr << "catalog refused: " << error << "\n";
+		return 2;
+	}
+	const auto     read = SH::Presets::ReadInstalled(*catalog, a_data);
+	nlohmann::json out{ { "files", read.files }, { "bodies", { read.body[0], read.body[1] } }, { "added", nlohmann::json::array() },
+		{ "notes", read.installed.notes } };
+	for (const auto& p : read.installed.added) {
+		nlohmann::json values = nlohmann::json::object();
+		for (const auto& [m, v] : p.values) {
+			values[m] = v;
+		}
+		out["added"].push_back({ { "name", p.name }, { "sex", p.female ? "female" : "male" }, { "fit", p.fit }, { "marker", p.marker },
+			{ "family", p.family }, { "values", values } });
+	}
+	std::cout << out.dump(1) << "\n";
+	return 0;
+}
 
 int main(int argc, char** argv)
 {
 	if (argc == 3 && std::string_view{ argv[1] } == "--check") {
 		return CheckData(argv[2]);
+	}
+	if (argc == 4 && std::string_view{ argv[1] } == "--presets") {
+		return DumpPresets(argv[2], argv[3]);
 	}
 	TestCatalog();
 	TestRules();
