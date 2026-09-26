@@ -1281,6 +1281,11 @@ Database's `.trace` / `.mapping` diagnostics; the Main file stays the OG build u
   records read back, 39 probes and refits, and on a save from before Silhouette the fresh start (S-70): 35
   body orders, 9 refits, none failed. One new line, "failed to get next record info", was CommonLibF4RD's
   wrapper warning at the co-save list's normal end; the list is now read through F4SE's own interface.
+- **First AE run** (1.11.240, 2026-09-26, fallout-collection with the owner): Silhouette.dll bound, the catalog
+  ready (371 presets, the player's own among them), events attached, co-save read -- but the bridge refused:
+  the Anniversary LooksMenu (1.7) registers its F4SE plugin as "Fallout 4 Engine Extender", old-gen's as "F4EE",
+  and the scripts asked for "F4EE" only. `API.LooksMenuLoaded()` accepts either and every script asks there.
+  MCM registers "F4MCM" on both. A name by which a plugin registers is part of the runtime too.
 
 ## S-76 — The player's own presets, read in game: the try-on, never random
 

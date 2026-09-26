@@ -116,9 +116,9 @@ Function Connect()
 	EndIf
 	; Checked once per load: calling into a missing plugin's script fills the log on
 	; every call. By the names the plugins register with F4SE (f4se.log), not their
-	; file names: MCM is "F4MCM", LooksMenu "F4EE".
+	; file names: MCM is "F4MCM"; LooksMenu "F4EE", or "Fallout 4 Engine Extender" on AE (API.LooksMenuLoaded).
 	_mcm = F4SE.GetPluginVersion("F4MCM") > 0 || F4SE.GetPluginVersion("MCM") > 0
-	_looksMenu = F4SE.GetPluginVersion("F4EE") > 0
+	_looksMenu = Silhouette:API.LooksMenuLoaded()
 	If !_looksMenu
 		Debug.Trace("Silhouette bridge: LooksMenu is not loaded - no body can be shaped", 0)
 		Debug.Notification("Silhouette: LooksMenu is not loaded, so no body can be shaped.")

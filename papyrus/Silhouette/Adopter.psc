@@ -69,7 +69,7 @@ Function LookUpAAF()
 		busyKeyword = Game.GetFormFromFile(AAFActorBusy, "AAF.esm") as Keyword
 		lockedKeyword = Game.GetFormFromFile(AAFActorLocked, "AAF.esm") as Keyword
 	EndIf
-	looksMenu = F4SE.GetPluginVersion("F4EE") > 0
+	looksMenu = Silhouette:API.LooksMenuLoaded()
 EndFunction
 
 Function OpenWindow()

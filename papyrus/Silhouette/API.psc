@@ -51,9 +51,11 @@ Bool Function Loaded() Global
 	Return Silhouette:DLL.ProtocolVersion() == Protocol()
 EndFunction
 
-; LooksMenu (its F4SE plugin registers as "F4EE"): the only door to the morph store.
+; LooksMenu: the only door to the morph store. Its F4SE plugin registers as "F4EE" on old-gen (LooksMenu
+; 1.6) and as "Fallout 4 Engine Extender" on the Anniversary build's (1.7, f4se.log 2026-09-26): either.
+; Every script of Silhouette asks here, so the names live in one place (S-75).
 Bool Function LooksMenuLoaded() Global
-	Return F4SE.GetPluginVersion("F4EE") > 0
+	Return F4SE.GetPluginVersion("F4EE") > 0 || F4SE.GetPluginVersion("Fallout 4 Engine Extender") > 0
 EndFunction
 
 ; MCM, by the name it registers with F4SE ("F4MCM", as f4se.log shows it) -- not its
@@ -244,7 +246,7 @@ EndFunction
 ; number -- EVEN under heavy clothes (armour, jackets: nipples flattened), ODD under
 ; light ones (S-40, S-50).
 Float Function RefitMarkerValue(Actor akActor) Global
-	If !akActor || F4SE.GetPluginVersion("F4EE") <= 0 || !Game.IsPluginInstalled("Silhouette.esp")
+	If !akActor || !LooksMenuLoaded() || !Game.IsPluginInstalled("Silhouette.esp")
 		Return 0.0
 	EndIf
 	Keyword refit = Game.GetFormFromFile(0x803, "Silhouette.esp") as Keyword
