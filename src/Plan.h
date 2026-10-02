@@ -30,6 +30,15 @@ namespace SH
 	[[nodiscard]] Morphs BodyFor(const Catalog& a_catalog, const Preset& a_preset, std::uint32_t a_seed, VarietySwitches a_switches,
 		const std::unordered_map<std::string, float>* a_keep = nullptr);
 
+	// S-79 (0.3.3), the window's Me tab: the presets offered for the player, "name<TAB>kind" joined by "|" as
+	// the NPC picker lists them (y the player's own BodySlide presets, S-76; p the random pool; o the rest) --
+	// the catalog's menu, so presets read in game are there, not only those the player script was built with.
+	[[nodiscard]] std::string MenuList(const Catalog& a_catalog, bool a_female);
+
+	// The player's body for a preset, as the player script writes one: the preset's values and its marker, no
+	// variety drawn (the player is never rolled).
+	[[nodiscard]] Morphs PlayerBody(const Catalog& a_catalog, const Preset& a_preset);
+
 	// The variety an existing body lacks (S-44): a drawn value for every enabled range whose morph is not
 	// in a_present -- the morphs her OWN layer holds, not other mods' keyed ones. Nothing else.
 	[[nodiscard]] Morphs TopUp(const Catalog& a_catalog, bool a_female, std::uint32_t a_seed, VarietySwitches a_switches,

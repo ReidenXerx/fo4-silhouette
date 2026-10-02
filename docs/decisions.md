@@ -1429,3 +1429,11 @@ not spin); a probe or a snapshot still reads them. The window, the Pick hotkey a
 refuse a dead target and say why. A body LooksMenu's BodyGen gives at cell load is not ours to stop. Shipped with
 Anatomy Engine 1.2.2's guard against non-finite physics: a "[physics] ... went non-finite" line in
 anatomy_ocbpc.log puts a remaining case on the physics; without one, on LooksMenu's own BodyGen at cell load.
+
+**S-79 amended (0.3.3, 2026-10-02): the Me tab lists your own presets.** A tester's own BodySlide presets went on
+NPCs but the Me tab showed none: it listed the player script's presets, fixed when the release was generated,
+while your own presets (S-76) are read by the plugin in game. With the plugin the Me tab now takes the plugin's
+list, exactly as the NPC tab does (protocol 8: PlayerPresets, PlayerPresetIndex, PlayerBody*), and writes the
+body the player script would -- the preset's values and its marker, no variety, the unkeyed layer cleared first.
+Without the plugin it is the player script's list as before. Undo is unchanged (the snapshot of the player's
+morphs). MCM's Bodies page still lists only the player script's presets.

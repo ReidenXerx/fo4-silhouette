@@ -49,7 +49,7 @@ Int Property SourcePicker = 3 AutoReadOnly
 Int Property LaneUrgent = 0 AutoReadOnly
 ; What RunOrder below does, and the natives the menu calls. Silhouette.dll says what it
 ; expects; they must agree. 4: ResetEveryone (S-68).
-Int Property Protocol = 7 AutoReadOnly
+Int Property Protocol = 8 AutoReadOnly
 ; "Reset everyone" forgets every body, picks included: a second press within this long
 ; confirms the first. A minute, not ten seconds: the clock runs while the player reads the
 ; first press's message box, and the owner's first try ran out reading it.
@@ -189,6 +189,7 @@ Int _winThem = 0            ; the NPC aimed at when the window opened, 0 for non
 Bool _winMe = False         ; the window is on the player
 Bool _winApplied = False    ; Apply was pressed: the close keeps what is on
 Bool _winTried = False      ; the player tries a preset on: the close puts the snapshot back
+Bool _winMeList             ; the Me tab lists the plugin's presets (yours too), not the player script's (0.3.3)
 String[] _winMorphs         ; the player's body before the first try: morph names ...
 Float[] _winValues          ; ... and values, the unkeyed layer only
 Bool _winAfterMenu = False  ; an MCM button asked for the window: it opens when the pause menu closes
@@ -407,6 +408,20 @@ Function WindowLoadMe(Int aiSession)
 		WindowItems("", "No " + WindowSex(female) + " body Silhouette supports is installed, so it leaves yours alone (Silhouette.log says why).", -1)
 		Return
 	EndIf
+	_winMeList = _plugin
+	If _winMeList
+		; The plugin's list, as the NPC tab shows it: your own BodySlide presets (S-76) are read in game, and the
+		; player script only knows the presets it was built with (a tester, 2026-10-02: none of theirs on "Me").
+		String list = Silhouette:DLL.PlayerPresets(female)
+		String mine = WindowMyPreset(player, female)
+		If !WindowLive(aiSession)
+			Return
+		EndIf
+		WindowItems(list, "You have " + WindowBodyName(mine) + ". Click a preset to try it on.", Silhouette:DLL.PlayerPresetIndex(mine, female))
+		Game.ForceThirdPerson()
+		WindowFrame(player, aiSession)
+		Return
+	EndIf
 	String[] n0
 	String[] n1
 	String[] m0
@@ -453,6 +468,37 @@ String Function WindowSex(Bool abFemale)
 EndFunction
 
 ; What Silhouette:Player.PresetOf says, as words.
+; The preset the player's body is, by its marker: the plugin's catalog names your own presets too.
+String Function WindowMyPreset(Actor akPlayer, Bool abFemale)
+	If _winMeList
+		String named = Silhouette:API.MarkerPreset(akPlayer)
+		If named != ""
+			Return named
+		EndIf
+	EndIf
+	If abFemale
+		Return Silhouette:Player.PresetOf(akPlayer, abFemale, Silhouette:Player.FemaleMarkers0(), Silhouette:Player.FemaleNames0(), Silhouette:Player.FemaleMarkers1(), Silhouette:Player.FemaleNames1())
+	EndIf
+	Return Silhouette:Player.PresetOf(akPlayer, abFemale, Silhouette:Player.MaleMarkers0(), Silhouette:Player.MaleNames0(), Silhouette:Player.MaleMarkers1(), Silhouette:Player.MaleNames1())
+EndFunction
+
+; A preset on the player from the plugin's list, as the player script gives one: the unkeyed layer cleared,
+; the preset's values and its marker, the 3D reshaped. "" for a preset this build does not have.
+String Function WindowGiveMe(Actor akPlayer, Bool abFemale, String asPreset)
+	Int n = Silhouette:DLL.PlayerBodyCount(asPreset, abFemale)
+	If n <= 0
+		Return ""
+	EndIf
+	BodyGen.RemoveMorphsByKeyword(akPlayer, abFemale, None)
+	Int i = 0
+	While i < n
+		BodyGen.SetMorph(akPlayer, abFemale, Silhouette:DLL.PlayerBodyMorph(asPreset, abFemale, i), None, Silhouette:DLL.PlayerBodyValue(asPreset, abFemale, i))
+		i += 1
+	EndWhile
+	BodyGen.UpdateMorphs(akPlayer)
+	Return asPreset
+EndFunction
+
 String Function WindowBodyName(String asPresetOf)
 	If asPresetOf == "*"
 		Return "sliders Silhouette did not set"
@@ -493,7 +539,12 @@ Function WindowTry(String asPreset, Int aiIndex, Int aiSession)
 		If !WindowLive(aiSession)
 			Return
 		EndIf
-		String name = Silhouette:Player.Give(player, female, aiIndex)
+		String name
+		If _winMeList
+			name = WindowGiveMe(player, female, asPreset)
+		Else
+			name = Silhouette:Player.Give(player, female, aiIndex)
+		EndIf
 		WindowStatus("Trying " + name + ". Apply keeps it; Cancel puts yours back.")
 	ElseIf _winThem != 0 && Silhouette:DLL.PickerTarget() == _winThem
 		WindowStatus(Silhouette:DLL.PickerShow(asPreset))
@@ -513,13 +564,7 @@ Function OnWindowApply()
 		_winValues = None
 		Actor player = Game.GetPlayer()
 		Bool female = Silhouette:Player.IsFemale(player)
-		String had
-		If female
-			had = Silhouette:Player.PresetOf(player, female, Silhouette:Player.FemaleMarkers0(), Silhouette:Player.FemaleNames0(), Silhouette:Player.FemaleMarkers1(), Silhouette:Player.FemaleNames1())
-		Else
-			had = Silhouette:Player.PresetOf(player, female, Silhouette:Player.MaleMarkers0(), Silhouette:Player.MaleNames0(), Silhouette:Player.MaleMarkers1(), Silhouette:Player.MaleNames1())
-		EndIf
-		Debug.Notification("Silhouette: your body is now " + WindowBodyName(had) + ".")
+		Debug.Notification("Silhouette: your body is now " + WindowBodyName(WindowMyPreset(player, female)) + ".")
 	ElseIf _winThem != 0 && Silhouette:DLL.PickerTarget() == _winThem
 		Debug.Notification("Silhouette: " + Silhouette:DLL.PickerKeep())
 	EndIf

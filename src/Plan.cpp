@@ -91,6 +91,25 @@ namespace SH
 		return out;
 	}
 
+	std::string MenuList(const Catalog& a_catalog, bool a_female)
+	{
+		std::string out;
+		for (const auto* p : a_catalog.MenuPresets(a_female)) {
+			if (!out.empty()) {
+				out += '|';
+			}
+			out += p->name;
+			out += '\t';
+			out += p->installed ? 'y' : p->random ? 'p' : 'o';
+		}
+		return out;
+	}
+
+	Morphs PlayerBody(const Catalog& a_catalog, const Preset& a_preset)
+	{
+		return BodyFor(a_catalog, a_preset, 0, { .nipples = false, .genitals = false });
+	}
+
 	Morphs TopUp(const Catalog& a_catalog, bool a_female, std::uint32_t a_seed, VarietySwitches a_switches,
 		const std::vector<std::string>& a_present)
 	{

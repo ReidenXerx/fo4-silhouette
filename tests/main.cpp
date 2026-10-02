@@ -352,6 +352,21 @@ namespace
 		Check(Value(k, "NippleSize") == 0.33F, "a rolled value in range is kept");
 		Check(Value(k, "VaginaSize") == SH::Draw(0xFF000801, "VaginaSize", -0.3F, 0.3F), "a value out of range is drawn again");
 
+		// S-79 (0.3.3), the window's Me tab: the catalog's menu with kinds, the player's own presets as y; the
+		// player's body is the preset's own values and its marker, no variety drawn.
+		auto mine = *c;
+		for (auto& p : mine.presets) {
+			if (p.name == "Athletic") {
+				p.installed = true;
+			}
+		}
+		const auto list = SH::MenuList(mine, true);
+		Check(list.find("Curvy\tp") != std::string::npos && list.find("Athletic\ty") != std::string::npos,
+			std::format("the Me tab lists the catalog's presets, the player's own as y ({})", list));
+		const auto pb = SH::PlayerBody(*c, *slim);
+		Check(Value(pb, "NippleSize") == 0.9F && !Value(pb, "VaginaSize") && pb.back().first == "Silhouette_Slim" && pb.back().second == 1234.0F,
+			"the player's body: the preset's own values and its marker, nothing drawn");
+
 		// top-up: only what is missing from her own layer
 		const auto t = SH::TopUp(*c, true, 5, {}, { "Breasts", "nipplesize" });
 		Check(t.size() == 1 && t[0].first == "VaginaSize", "top-up adds exactly the missing ranges (names compared in any case)");

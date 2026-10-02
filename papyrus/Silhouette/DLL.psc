@@ -92,6 +92,12 @@ Int Function PickerIndex() Global Native                    ; the preset tried o
 String Function PickerCurrent() Global Native               ; what they had at Pick, "" not read yet
 Bool Function PickerFemale() Global Native                  ; the sex the picking lists presets for
 Bool Function BodySupported(Bool abFemale) Global Native    ; S-78: a body Silhouette supports is installed for the sex
+; S-79 (0.3.3), the window's Me tab: the catalog's presets for the player, your own among them, and each one's body.
+String Function PlayerPresets(Bool abFemale) Global Native                  ; "name<TAB>kind|..." as PickerPresets
+Int Function PlayerPresetIndex(String asPreset, Bool abFemale) Global Native ; its place in that list, -1 none
+Int Function PlayerBodyCount(String asPreset, Bool abFemale) Global Native   ; morphs to write, marker last; 0 = no such preset
+String Function PlayerBodyMorph(String asPreset, Bool abFemale, Int aiIndex) Global Native
+Float Function PlayerBodyValue(String asPreset, Bool abFemale, Int aiIndex) Global Native
 String Function PickerKeep() Global Native
 String Function PickerCancel() Global Native
 Int Function PickerTarget() Global Native

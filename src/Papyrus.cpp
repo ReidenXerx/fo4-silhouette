@@ -22,7 +22,9 @@ namespace SH::Papyrus
 		// 7: PickerShow, PickerPresets, PickerIndex, PickerCurrent, PickerFemale, BodySupported, CameraFrame,
 		// CameraRestore, CameraStep -- the picker
 		// window (S-79).
-		constexpr std::int32_t kProtocol = 7;
+		// 8: PlayerPresets, PlayerPresetIndex, PlayerBodyCount, PlayerBodyMorph, PlayerBodyValue -- the window's Me
+		// tab lists the catalog's presets, the player's own BodySlide presets among them (0.3.3).
+		constexpr std::int32_t kProtocol = 8;
 
 		using Str = RE::BSFixedString;
 
@@ -228,6 +230,43 @@ namespace SH::Papyrus
 		{
 			const auto c = D().CatalogPtr();
 			return c && c->bodySupported[a_female ? 1 : 0];
+		}
+		// S-79 (0.3.3), the window's Me tab: the catalog's presets for the player and each one's body, data only --
+		// the bridge writes it. Asked by name every time, so nothing is held between calls.
+		Str PlayerPresets(std::monostate, bool a_female)
+		{
+			const auto c = D().CatalogPtr();
+			return c ? Str{ MenuList(*c, a_female) } : Str{};
+		}
+		std::int32_t PlayerPresetIndex(std::monostate, Str a_preset, bool a_female)
+		{
+			const auto c = D().CatalogPtr();
+			if (!c) {
+				return -1;
+			}
+			const auto list = c->MenuPresets(a_female);
+			const auto it = std::ranges::find_if(list, [&](const Preset* a_p) { return IEquals(a_p->name, a_preset.c_str()); });
+			return it == list.end() ? -1 : static_cast<std::int32_t>(it - list.begin());
+		}
+		Morphs PlayerMorphs(Str a_preset, bool a_female)
+		{
+			const auto  c = D().CatalogPtr();
+			const auto* p = c ? c->Find(a_preset.c_str(), a_female) : nullptr;
+			return p ? PlayerBody(*c, *p) : Morphs{};
+		}
+		std::int32_t PlayerBodyCount(std::monostate, Str a_preset, bool a_female)
+		{
+			return static_cast<std::int32_t>(PlayerMorphs(a_preset, a_female).size());
+		}
+		Str PlayerBodyMorph(std::monostate, Str a_preset, bool a_female, std::int32_t a_index)
+		{
+			const auto m = PlayerMorphs(a_preset, a_female);
+			return a_index >= 0 && a_index < static_cast<std::int32_t>(m.size()) ? Str{ m[static_cast<std::size_t>(a_index)].first } : Str{};
+		}
+		float PlayerBodyValue(std::monostate, Str a_preset, bool a_female, std::int32_t a_index)
+		{
+			const auto m = PlayerMorphs(a_preset, a_female);
+			return a_index >= 0 && a_index < static_cast<std::int32_t>(m.size()) ? m[static_cast<std::size_t>(a_index)].second : 0.0F;
 		}
 		Str          PickerKeep(std::monostate) { return Str{ Said("keep", D().PickerKeep()) }; }
 		Str          PickerCancel(std::monostate) { return Str{ Said("cancel", D().PickerCancel()) }; }
@@ -519,6 +558,11 @@ namespace SH::Papyrus
 		Bind(a_vm, "PickerCurrent"sv, PickerCurrent, fast);
 		Bind(a_vm, "PickerFemale"sv, PickerFemale, fast);
 		Bind(a_vm, "BodySupported"sv, BodySupported, fast);
+		Bind(a_vm, "PlayerPresets"sv, PlayerPresets, fast);
+		Bind(a_vm, "PlayerPresetIndex"sv, PlayerPresetIndex, fast);
+		Bind(a_vm, "PlayerBodyCount"sv, PlayerBodyCount, fast);
+		Bind(a_vm, "PlayerBodyMorph"sv, PlayerBodyMorph, fast);
+		Bind(a_vm, "PlayerBodyValue"sv, PlayerBodyValue, fast);
 		Bind(a_vm, "PickerKeep"sv, PickerKeep, fast);
 		Bind(a_vm, "PickerCancel"sv, PickerCancel, fast);
 		Bind(a_vm, "PickerTarget"sv, PickerTarget, fast);
