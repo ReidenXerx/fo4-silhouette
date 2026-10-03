@@ -5,7 +5,7 @@ keeps it: an ordinary one most often, an unflattering one less often, a conventi
 rarely, from Silhouette's own pool. The Commonwealth's named people -- companions and major NPCs -- each
 have a body of their own.
 
-**Status:** 0.3.2: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
+**Status:** 0.3.3: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
 live on them while the camera frames them. One plugin for old-gen 1.10.163 and Anniversary 1.11.x through
 Runtime Database (S-75); your own BodySlide presets in the picker (S-76); the Diamond City pack (S-77); one
 body mod is enough (S-78).
