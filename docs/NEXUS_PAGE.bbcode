@@ -1,10 +1,12 @@
+[center][url=https://ko-fi.com/duduphudu][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-anatomy@6e50d8308b73ca15df0469604f39b03332242391/docs/img/support-kofi.png[/img][/url] [url=https://www.paypal.com/donate/?business=motet.volutes.5a@icloud.com&no_recurring=0&currency_code=USD][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-anatomy@6e50d8308b73ca15df0469604f39b03332242391/docs/img/support-paypal.png[/img][/url]
+[size=1]PayPal: motet.volutes.5a@icloud.com[/size][/center]
 [size=1]Comments here are also answered by Dudu's Butt, my own AI model: it handles your questions and brings bug reports straight to me.[/size]
 [center][url=https://discord.gg/H9yqPhjuY5][img]https://img.shields.io/discord/1273646070215348375?style=for-the-badge&labelColor=2b2b2b&logo=discord&logoColor=white&color=5865F2&label=Dudu%27s%20Den[/img][/url]
 [b][url=https://discord.gg/H9yqPhjuY5]Join Dudu's Den on Discord[/url][/b]: news, help and a chat with the people who play these mods.[/center]
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/pool.jpg[/img][/center]
 
-[center][size=4][b]OBody NG's body distribution, for Fallout 4. Every NPC gets a body of their own the first time you meet them, and keeps it: an ordinary one most often, an unflattering one less often, a conventionally beautiful one rarely. The Commonwealth's named people each have their own.[/b][/size][/center]
+[center][size=4][b]In vanilla Fallout 4, every woman in the Commonwealth has the same body, and every man has another. Silhouette gives each person a body of their own the first time you meet them, and they keep it. Most are ordinary, some are unflattering, a few are conventionally beautiful. You can also try any body on anyone yourself, in a picker window.[/b][/size][/center]
 
 [center]
 [url=https://www.virustotal.com/gui/file/a101bd3b2270a4d90a3a4bcc8a55d1a31c0273bc8bc0bd855991cb10c9296663][img]https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FReidenXerx%2Ffo4-silhouette%2Fmaster%2Fdocs%2Fvt-badge.json&style=for-the-badge&labelColor=2b2b2b&logo=virustotal&logoColor=white[/img][/url] [url=https://github.com/ReidenXerx/fo4-silhouette/blob/master/LICENSE][img]https://img.shields.io/github/license/ReidenXerx/fo4-silhouette?color=blue&style=for-the-badge&labelColor=2b2b2b[/img][/url] [url=https://github.com/ReidenXerx/fo4-silhouette][img]https://img.shields.io/badge/source-GitHub-181717?style=for-the-badge&labelColor=2b2b2b&logo=github&logoColor=white[/img][/url] [url=https://github.com/ReidenXerx/fo4-silhouette/commits][img]https://img.shields.io/github/last-commit/ReidenXerx/fo4-silhouette?label=last%20commit&style=for-the-badge&labelColor=2b2b2b[/img][/url]
@@ -18,120 +20,124 @@
 
 [center][size=4][b]New here? [url=https://www.nexusmods.com/fallout4/articles/6679]The setup guide[/url]: from the body to the scenes, in one order, with what to take and what to skip.[/b][/size][/center]
 
+[size=5][b][color=#e8b99c]In short[/color][/b][/size]
+
+[b]What you get[/b]
+[list]
+[*]Every NPC has their own body, chosen the first time you meet them. They keep it for the rest of the save.[/*]
+[*]About 60 named people, like Piper, Cait, Curie and Preston, have a body that fits who they are.[/*]
+[*]A picker window: aim at anyone and try every body on them, live, then keep it or cancel.[/*]
+[*]Clothes that fit: breasts are held together under armour, and the change goes away when they undress.[/*]
+[*]Your own rules decide who gets what, and they always win over Silhouette's.[/*]
+[/list][b]What you need[/b]: F4SE, [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url], [url=https://www.nexusmods.com/fallout4/mods/12631]LooksMenu[/url] and [url=https://www.nexusmods.com/fallout4/mods/21497]MCM[/url], plus a body built in BodySlide (CBBE for women, BodyTalk for men; one of them is enough).
+[b]How it goes[/b]: build your body and outfits in BodySlide from a zeroed preset, install Silhouette, load a save. Step by step: [b]Install[/b], below.
+
 [size=5][b][color=#e8b99c]What it is[/color][/b][/size]
 
-Without a distributor, every woman in the Commonwealth shares one body and every man another. Silhouette gives each of them a body the first time you meet them, keeps it for the rest of the save, and never re-rolls someone you have already met. It follows OBody NG's design, config keys, priority and API names, and it works through LooksMenu's own BodyGen, so the bodies are LooksMenu's and stay in your save.
+Without a body mod for variety, every woman in the Commonwealth shares one body and every man another. Silhouette gives each of them their own body the first time you meet them. It keeps that body for the rest of the save and never re-rolls someone you have already met.
 
-[b]New in 0.3.0: the picker window.[/b] Aim at anyone, or at no one for yourself, and press its hotkey (or the MCM button). A window beside them shows every preset that fits their body as a grid of pictures (384 with a picture: 196 women, 188 men), with six filters: All, People, Plain, Rough, Fine and Yours. A click puts the body on them live while the camera frames them and they stand still; Apply keeps it, Cancel puts back exactly what they had. Mouse. Since 0.3.2 the dead are left alone: Silhouette changes no corpse's body. Corpses showing only head and hands are LooksMenu's BodyGen bug: [url=https://www.nexusmods.com/fallout4/mods/93614]Invisible Dead Body Fix[/url] (93614) fixes it.
+It copies the design of OBody NG, a body distributor from Skyrim: the same config keys, priority and API names. It works through LooksMenu's own BodyGen, so the bodies are LooksMenu's and stay in your save.
+
+[b]The picker window.[/b] Aim at anyone, or at no one for yourself, and press its hotkey (or the MCM button). A window beside them shows every preset that fits their body as a grid of pictures (384 with a picture: 196 women, 188 men). Six filters help you look: All, People, Plain, Rough, Fine and Yours. Click a picture and the body goes on them live, while the camera frames them and they stand still. Apply keeps it. Cancel puts back exactly what they had. You use the mouse.
+
+The dead are left alone: Silhouette changes no corpse's body. Corpses showing only head and hands are a LooksMenu BodyGen bug. [url=https://www.nexusmods.com/fallout4/mods/93614]Invisible Dead Body Fix[/url] (93614) fixes it.
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@9fc46cf946f693679d073013f8232cf56921519f/docs/img/window.jpg[/img][/center]
 
-[b]It measures your install instead of assuming it.[/b]
+[b]It checks your install instead of guessing.[/b]
 [list]
-[*]A preset whose sliders your body's [font=Courier New].tri[/font] does not have would do nothing, so it is left out.
-[*]If your base body was not built zeroed, Silhouette names the exact preset it was built from and the zeroed one to rebuild with, instead of stacking every NPC on top of it.
-[*]Every body it writes is rebuilt the way LooksMenu builds it and checked to land on its preset.
-[/list]
+[*]If a preset needs sliders your body does not have, it would do nothing, so Silhouette leaves it out.[/*]
+[*]If your base body was not built from a zeroed preset, Silhouette tells you which preset it was built from and which zeroed one to rebuild with. It does not stack every NPC's body on top of it.[/*]
+[*]Every body it writes is checked to match its preset.[/*]
+[/list][b]How it works:[/b] [url=https://www.nexusmods.com/fallout4/articles/6683]Silhouette - under the hood →[/url]
 
 [size=5][b][color=#e8b99c]Who gets which body[/color][/b][/size]
 
 [list]
-[*][b]Everyone: Silhouette's own pool.[/b] 41 bodies per sex, 82 in all, generated and measured rather than hand-picked, so no two look alike. 18 Plain, 17 Rough (very fat, very flat, frail, disproportioned) and 6 Fine, drawn at 70 / 22 / 8 %. The NPC picker also offers the stock CBBE and BodyTalk presets and your own BodySlide presets, read from BodySlide's SliderPresets folder when the game starts, exactly as BodySlide builds them; none of them is ever random.
+[*][b]Everyone: Silhouette's own bodies.[/b] There are 41 per sex, 82 in all. They are made and measured, not hand-picked, so no two look alike. Most are Plain, fewer are Rough (very fat, very flat, frail, or oddly proportioned), and a few are Fine. The NPC picker also offers the stock CBBE and BodyTalk presets and your own BodySlide presets. Those are for trying on only, never given out at random.[/*]
 [*][b]The named people.[/b] 60 companions and named NPCs, 30 women and 30 men, have a body that fits who they are: Piper, Cait, Curie, Magnolia, Preston, Danse, MacCready, Deacon, Maxson and more.[/*]
-[*][b]The Diamond City pack (0.2.2)[/b] is sardonic on purpose: Mayor McDonough is enormous, Sheffield wears his liver, Becky Fallon's stock has all sunk to the basement. Someone you've already met keeps their body; use Reset on them in MCM to see the new one.
-[*][b]One body mod is enough (0.2.3).[/b] Women are made for CBBE and men for BodyTalk. With only one of them installed, Silhouette leaves the other sex alone: no rolls, rules, resets or picks for them. Silhouette.log says why, and a message box tells you once a launch. Reset everyone now logs each person and the body they got.
-[*][b]Factions[/b] (built, not yet seen in game). Eleven factions draw from ten bodies per sex in their own look: drilled Brotherhood soldiers, underfed raiders, lean Gunners, soft Institute scientists, gaunt Children of Atom. 220 bodies, measured like the pool.
-[*][b]Your rules.[/b] OBody NG's own JSON keys and priority: per NPC by form id or name, blacklists, faction, plugin, race. A rule of yours always wins over Silhouette's.
-[*][b]Your character[/b] is never randomised. Pick a body in MCM, or keep the pool's most average one.
-[/list]
-
-[center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@baa16767a79eb32a585b1d3bf6ba25f3d11a5ead/docs/img/gallery.jpg[/img][/center]
+[*][b]Diamond City.[/b] This pack is sardonic on purpose: Mayor McDonough is enormous, Sheffield wears his liver, Becky Fallon's stock has all sunk to the basement. Someone you have already met keeps their body. Use Reset on them in MCM to see the new one.[/*]
+[*][b]One body mod is enough.[/b] Women are made for CBBE and men for BodyTalk. With only one of them installed, Silhouette leaves the other sex alone. Silhouette.log says why, and a message box tells you once a launch. [i]Reset everyone[/i] logs each person and the body they got.[/*]
+[*][b]Factions.[/b] Eleven factions draw from ten bodies per sex in their own look: drilled Brotherhood soldiers, underfed raiders, lean Gunners, soft Institute scientists, gaunt Children of Atom.[/*]
+[*][b]Your rules.[/b] OBody NG's own JSON keys and priority: per NPC by form id or name, blacklists, faction, plugin, race. A rule of yours always wins over Silhouette's.[/*]
+[*][b]Your character[/b] is never random. Pick a body in MCM, or keep the most average one.[/*]
+[/list][center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@baa16767a79eb32a585b1d3bf6ba25f3d11a5ead/docs/img/gallery.jpg[/img][/center]
 [center][i]The Diamond City pack's rogues' gallery: seventeen people you actually meet, and a mayor made enormous. Each is the mod's own body built with that character's values, drawn at one scale over the standard body.[/i][/center]
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/factions.jpg[/img][/center]
-[center][i]Each faction's bodies, by overall size and belly, women and men. Size is the sum of seven girths.[/i][/center]
+[center][i]Each faction's bodies, by overall size and belly, women and men.[/i][/center]
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/divider.png[/img][/center]
 
 [size=5][b][color=#e8b99c]In game[/color][/b][/size]
 
 [list]
-[*][b]Try every body on anyone.[/b] Five hotkeys, unbound until you set them: [i]Pick[/i] the NPC you aim at, [i]Next[/i] and [i]Previous[/i] to try each preset on them live, [i]Keep[/i], or [i]Cancel[/i] back to exactly what they had. The lists have no length limit, past Papyrus's 128-entry cap.
-[*][b]The MCM page for the NPC in your sights:[/b] give them a preset from a list, reset them, or ask which body they have.
-[*][b]For the people around you:[/b] count the bodies, refresh them with this build's values, or give them new ones. [i]Reset everyone[/i] starts the whole save over.
-[*][b]Old saves too.[/b] A save that never had Silhouette gets bodies for everyone on its first load, once, with a notification (seen in game: 39 people on an old save). A switch in MCM turns it off (built, not yet seen in game).
-[/list]
-
-[center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/picker.jpg[/img][/center]
+[*][b]Try every body on anyone.[/b] There are five hotkeys, unbound until you set them. [i]Pick[/i] the NPC you aim at. [i]Next[/i] and [i]Previous[/i] try each preset on them live. [i]Keep[/i] it, or [i]Cancel[/i] back to exactly what they had. The lists have no length limit.[/*]
+[*][b]The MCM page for the NPC in your sights:[/b] give them a preset from a list, reset them, or ask which body they have.[/*]
+[*][b]For the people around you:[/b] count the bodies, refresh them, or give them new ones. [i]Reset everyone[/i] starts the whole save over.[/*]
+[*][b]Old saves too.[/b] A save that never had Silhouette gets bodies for everyone on its first load, once, with a notification (39 people on one old save). A switch in MCM turns this off.[/*]
+[/list][center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/picker.jpg[/img][/center]
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/ownpresets.jpg[/img][/center]
-[center][i]Install a BodySlide preset and it joins the NPC picker at the next start, with no Python and no build step. A test holds the plugin to the generator's own reading: 6 of 6 presets and 142 values identical. For trying on, never the random pool.[/i][/center]
+[center][i]Install a BodySlide preset and it joins the NPC picker at the next start, with no Python and no build step. For trying on, never the random bodies.[/i][/center]
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/oldsaves.jpg[/img][/center]
 
 [size=5][b][color=#e8b99c]Clothing: ORefit[/color][/b][/size]
 
-While someone is dressed, their breasts are held together and lifted, and under heavy clothes their nipples are flattened (built, not yet seen in game); a light bodysuit showing her own was seen. Heavy is told by the item's [b]name[/b] (armor, jacket, coat, parka and more, whole words only), not by its slot, and you can name items heavy or light yourself. ORefit only ever raises a slider, under a keyword of its own: the moment they undress they are exactly their own body.
+While someone is dressed, their breasts are held together and lifted. Under heavy clothes their nipples are flattened. Heavy is told by the item's [b]name[/b] (armor, jacket, coat, parka and more, whole words only), not by its slot. You can name items heavy or light yourself. ORefit only ever raises a slider, under a keyword of its own. The moment they undress, they are exactly their own body.
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/cloth.jpg[/img][/center]
-[center][i]Measured over the author's 816-plugin load order: 137 garments flattened under the old slot rule, 35 under the name rule, and no bra, top or shirt among them any more. The bodysuit was seen in game; the coat is flattened by the rule.[/i][/center]
+[center][i]Measured over the author's 816-plugin load order: 137 garments flattened under the old slot rule, 35 under the name rule, and no bra, top or shirt among them any more.[/i][/center]
 
-The flattening shows only on outfits whose meshes carry the refit sliders (mod outfits built with them; no vanilla or DLC heavy outfit does).
+The flattening shows only on outfits whose meshes carry the refit sliders: mod outfits built with them. No vanilla or DLC heavy outfit does.
 
 [size=5][b][color=#e8b99c]Variety, and other mods[/color][/b][/size]
 
 [list]
-[*]Every person has their own nipples (size, areola, tip, length) and, on the anatomy bodies, their own genital shape. Never a runtime state: scenes own those.
-[*][b]AAF-aware:[/b] anyone in a scene waits, and their change lands when the scene ends.
-[*]Other mods' morphs under their own keyword are never touched. People another mod marked before Silhouette arrived get a body within a 24-hour window, keeping that mod's morphs.
-[*]Works with [url=https://www.nexusmods.com/fallout4/mods/109435]Anatomy[/url]: its arousal keeps nipples flat under armour Silhouette marks heavy.
-[/list]
-
-[center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/variety.jpg[/img][/center]
+[*]Every person has their own nipples (size, areola, tip, length). On the anatomy bodies, each also has their own genital shape. Scenes own those while they play.[/*]
+[*][b]AAF-aware:[/b] anyone in a scene waits, and their change lands when the scene ends.[/*]
+[*]Other mods' body changes under their own keyword are never touched. People another mod marked before Silhouette arrived get a body within a 24-hour window, keeping that mod's changes.[/*]
+[*]Works with [url=https://www.nexusmods.com/fallout4/mods/109435]Anatomy[/url]: its arousal keeps nipples flat under armour Silhouette marks heavy.[/*]
+[/list][center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/variety.jpg[/img][/center]
 [center][i]Every body rolls its own nipples, and on the Anatomy body its own genital shape; every man his own ball size (on BodyTalk). The dots are real people from the author's save, each inside the range the mesh was measured for.[/i][/center]
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/divider.png[/img][/center]
 
 [center][img]https://cdn.jsdelivr.net/gh/ReidenXerx/fo4-silhouette@df2a29e81dfc5bbb999711802ba961dbd70a4e9c/docs/img/runtimes.jpg[/img][/center]
-[center][i]One DLL for old-gen and Anniversary through Runtime Database. Before touching anyone it checks the 11 class members it reads on the running game, and switches itself off rather than run half on. Proved in game on both; on Anniversary 1.11.240 it read 39 bodies with 0 failures.[/i][/center]
+[center][i]One DLL for old-gen and Anniversary through Runtime Database. Before touching anyone it checks what it needs on the running game, and switches itself off rather than run half on. It works on both; on Anniversary 1.11.240 it read 39 bodies with 0 failures.[/i][/center]
 
 [size=5][b][color=#e8b99c]Install[/color][/b][/size]
 
 [list=1]
-[*]In BodySlide, build your body (CBBE for women, BodyTalk for men; one of them is enough) and your outfits from a zeroed preset ("CBBE Zeroed Sliders", "BT - Zero") with [b]Build Morphs[/b] ticked. You do not need to build Silhouette's own presets: the bodies are applied in game.
-[*]Install [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url], then Silhouette, with your mod manager, and enable [font=Courier New]Silhouette.esp[/font]. Old-gen without Runtime Database: take 0.1.1 from Old files instead.
-[*]Load a save. A save that never had Silhouette gets bodies for everyone by itself, once, with a notification; a new game needs nothing.
-[*]Optional: set the picker hotkeys in MCM > Silhouette > The NPC in your sights.
-[/list]
-No Python and no generator for any of this. [b]For power users:[/b] the generator ([font=Courier New]tools/silhouette_gen.py[/font] on [url=https://github.com/ReidenXerx/fo4-silhouette]GitHub[/url], Python 3) adds your own presets to your character's list, compiles your own distribution rules, and handles a body that was not built zeroed.
+[*]In BodySlide, build your body (CBBE for women, BodyTalk for men; one of them is enough) and your outfits from a zeroed preset ("CBBE Zeroed Sliders", "BT - Zero") with [b]Build Morphs[/b] ticked. You do not need to build Silhouette's own presets: the bodies are applied in game.[/*]
+[*]Install [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url], then Silhouette, with your mod manager, and enable [font=Courier New]Silhouette.esp[/font]. Old-gen without Runtime Database: take 0.1.1 from Old files instead.[/*]
+[*]Load a save. A save that never had Silhouette gets bodies for everyone by itself, once, with a notification. A new game needs nothing.[/*]
+[*]Optional: set the picker hotkeys in MCM > Silhouette > The NPC in your sights.[/*]
+[/list]No Python and no generator for any of this. [b]For power users:[/b] the generator ([font=Courier New]tools/silhouette_gen.py[/font] on [url=https://github.com/ReidenXerx/fo4-silhouette]GitHub[/url], Python 3) adds your own presets to your character's list, compiles your own distribution rules, and handles a body that was not built zeroed.
 
 [quote]
-[b]Install with Vortex or MO2; manual installs are not supported.[/b] The installer will not run without LooksMenu enabled.
+[b]Install with Vortex or MO2; installing by hand is not supported.[/b] The installer will not run without LooksMenu enabled.
 
-[b]Needs:[/b] Fallout 4 old-gen 1.10.163 (F4SE 0.6.23) or Anniversary 1.11.x (its F4SE), [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url], LooksMenu with BodyGen on, MCM, and the Visual C++ 2015-2022 Redistributable 14.40 or newer. CBBE (women) and BodyTalk (men) are each optional, and one is enough: the sex without its body is left alone, with a line in Silhouette.log and a message box. Your body and outfits built in BodySlide from a zeroed preset ("CBBE Zeroed Sliders", "BT - Zero") with Build Morphs ticked. [font=Courier New]Silhouette.esp[/font] is a light plugin: no load-order slot.
-[/quote]
-
-[size=5][b][color=#e8b99c]Incompatibilities[/color][/b][/size]
+[b]Needs:[/b] Fallout 4 old-gen 1.10.163 (F4SE 0.6.23) or Anniversary 1.11.x (its F4SE), [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url], LooksMenu with BodyGen on, MCM, and the Visual C++ 2015-2022 Redistributable 14.40 or newer. CBBE (women) and BodyTalk (men) are each optional, and one is enough: the sex without its body is left alone, with a line in Silhouette.log and a message box. Your body and outfits are built in BodySlide from a zeroed preset ("CBBE Zeroed Sliders", "BT - Zero") with Build Morphs ticked. [font=Courier New]Silhouette.esp[/font] is a light plugin: no load-order slot.[/quote][size=5][b][color=#e8b99c]Incompatibilities[/color][/b][/size]
 
 Known conflicts, from real reports and the code. Found another one? Tell us in the Bugs tab.
 [list]
-[*][b]Other BodyGen randomizers (any mod shipping its own morphs.ini/templates.ini for HumanRace)[/b]: LooksMenu merges every BodyGen file, so their bodies get mixed into Silhouette's distribution. Keep one body distributor.[/*]
+[*][b]Other BodyGen randomizers (any mod shipping its own morphs.ini/templates.ini for HumanRace)[/b]: LooksMenu merges every BodyGen file, so their bodies get mixed into Silhouette's. Keep one body distributor.[/*]
 [*][b]Bodies or outfits built in BodySlide with a preset baked in (not "Zeroed sliders")[/b]: every Silhouette body is added on top of the baked shape, so everyone comes out doubled. Rebuild the body and outfits zeroed, with "Build Morphs" ticked.[/*]
 [*][b]Outfits built without "Build Morphs"[/b]: the clothes don't follow the body, and the clothed shape (ORefit) can't apply. Rebuild them with Build Morphs.[/*]
 [*][b]LooksMenu with BodyGen turned off (f4ee.ini bEnableBodyGen=0)[/b]: no random bodies at all. Set it to 1 (the default).[/*]
 [*][b]Next-gen 1.10.984[/b]: not supported. On old-gen without Runtime Database, use 0.1.1 from Old files.[/*]
-[/list]
-
-[size=5][b][color=#e8b99c]FAQ[/color][/b][/size]
+[/list][size=5][b][color=#e8b99c]FAQ[/color][/b][/size]
 
 
 [b]Which game versions?[/b]
-[spoiler]Old-gen 1.10.163 and Anniversary 1.11.x, both verified in game, through [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url]. Next-gen isn't supported. Old-gen without Runtime Database: take 0.1.1 from Old files. If a game's layout is not what Silhouette expects, the plugin switches itself off with one log line and BodyGen still gives every body.[/spoiler]
+[spoiler]Old-gen 1.10.163 and Anniversary 1.11.x, both through [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url]. Next-gen isn't supported. Old-gen without Runtime Database: take 0.1.1 from Old files. If a game's layout is not what Silhouette expects, the plugin switches itself off with one log line and BodyGen still gives every body.[/spoiler]
 
 [b]Safe to add or remove mid-playthrough?[/b]
-[spoiler]Adding: yes. The first load of a save runs Reset everyone once, with a notification; turn "Fresh start for saves new to Silhouette" off in MCM > Silhouette > Settings to keep the bodies you have. Removing: disable Silhouette.esp and remove the files. The bodies stay (they are LooksMenu's data in your save), and the clothed shapes go with the esp. Adding it back to that save later counts as a new save again, so the fresh start runs once more.[/spoiler]
+[spoiler]Adding: yes. The first load of a save runs Reset everyone once, with a notification. Turn "Fresh start for saves new to Silhouette" off in MCM > Silhouette > Settings to keep the bodies you have. Removing: disable Silhouette.esp and remove the files. The bodies stay (they are LooksMenu's data in your save), and the clothed shapes go with the esp. Adding it back to that save later counts as a new save again, so the fresh start runs once more.[/spoiler]
 
 [b]What are its limits?[/b]
-[spoiler]ORefit only raises a slider; it cannot lower one, because LooksMenu keeps the highest value per keyword. Heavy clothes are told by English names; a localized game needs its words added to [font=Courier New]heavyWords[/font]. Faction rules read an NPC record's own factions, as OBody does, not its templates'. There is no custom menu, to stay clear of a known plugin-menu crash on 1.10.163: the picker is MCM and hotkeys.[/spoiler]
+[spoiler]ORefit only raises a slider; it cannot lower one, because LooksMenu keeps the highest value per keyword. Heavy clothes are told by English names; a localized game needs its words added to [font=Courier New]heavyWords[/font]. Faction rules read an NPC's own factions, as OBody does, not its templates'. There is no custom menu, to stay clear of a known plugin-menu crash on 1.10.163: the picker is MCM and hotkeys.[/spoiler]
 
 [b]Where are all the settings, and the API?[/b]
 [spoiler]In the sticky posts: every feature, every MCM page and config key, and the API for mod authors with OBody NG's names.[/spoiler]
@@ -141,14 +147,8 @@ Known conflicts, from real reports and the code. Found another one? Tell us in t
 [size=5][b][color=#e8b99c]Credits[/color][/b][/size]
 
 [list]
-[*][b]OBody NG[/b] (Aietos and contributors), for the design this follows.
-[*][b][url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url][/b] (Zzyxzz), which lets one plugin run on every supported game version.
-[*][b]LooksMenu[/b] (expired6978) and [b]BodySlide[/b] (ousnius, Caliente), for the tools it feeds.
-[*]The stock presets in the pickers are CBBE's (Caliente, ousnius) and BodyTalk's (its authors). Silhouette reads their source to get their behaviour right, and ships none of it.
-[/list]
-
-Bugs go to the [b]Bugs[/b] tab, with [font=Courier New]Silhouette.log[/font] (Documents\My Games\Fallout4\F4SE), what MCM's [i]How is Silhouette doing?[/i] says, and Runtime Database's .trace and .mapping files if you have them.
-
-[center]If you'd like to support my work:
-[url=https://ko-fi.com/duduphudu][img]https://img.shields.io/badge/Ko--fi-support%20me-FF5E5B?style=for-the-badge&labelColor=2b2b2b&logo=kofi&logoColor=white[/img][/url] [url=https://www.paypal.com/donate/?business=motet.volutes.5a@icloud.com&no_recurring=0&currency_code=USD][img]https://img.shields.io/badge/PayPal-donate-0070BA?style=for-the-badge&labelColor=2b2b2b&logo=paypal&logoColor=white[/img][/url]
-[size=1]PayPal: motet.volutes.5a@icloud.com[/size][/center]
+[*][b]OBody NG[/b] (Aietos and contributors), for the design this follows.[/*]
+[*][b][url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url][/b] (Zzyxzz), which lets one plugin run on every supported game version.[/*]
+[*][b]LooksMenu[/b] (expired6978) and [b]BodySlide[/b] (ousnius, Caliente), for the tools it feeds.[/*]
+[*]The stock presets in the pickers are CBBE's (Caliente, ousnius) and BodyTalk's (its authors). Silhouette reads their source to get their behaviour right, and ships none of it.[/*]
+[/list]Bugs go to the [b]Bugs[/b] tab, with [font=Courier New]Silhouette.log[/font] (Documents\My Games\Fallout4\F4SE), what MCM's [i]How is Silhouette doing?[/i] says, and Runtime Database's .trace and .mapping files if you have them.
