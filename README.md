@@ -156,6 +156,9 @@ takes the clothed shapes off).
   **zeroed** preset ("CBBE Zeroed Sliders", "BT - Zero") with **Build Morphs** ticked. One of the two is
   enough: a sex without its body is left alone, and Silhouette.log and a message box say so (S-78).
 - **MCM** (Mod Configuration Menu) for the settings and the pickers.
+- **Invisible Dead Body Fix** ([Nexus 93614](https://www.nexusmods.com/fallout4/mods/93614), the build for
+  your game version). With BodyGen on, corpses the game places show only their head and hands without it --
+  LooksMenu's old bug, not Silhouette's. Silhouette.log and a message box say when it is missing (S-82).
 - **Vortex or Mod Organizer 2.** The archive has an installer that refuses to install without LooksMenu;
   manual installs are not supported.
 - Python 3 only to run the generator yourself (standard library only) -- never to play.

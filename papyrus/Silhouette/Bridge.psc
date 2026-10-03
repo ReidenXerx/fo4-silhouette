@@ -151,7 +151,8 @@ Function Connect()
 		StartSweeping()
 		Return
 	EndIf
-	; A sex with no body Silhouette supports is left alone: said once a launch, in a box.
+	; A sex with no body Silhouette supports is left alone, and Invisible Dead Body Fix missing (S-82): said once a
+	; launch, in a box.
 	String bodies = Silhouette:DLL.BodyWarning()
 	If bodies != ""
 		Debug.MessageBox("Silhouette: " + bodies)

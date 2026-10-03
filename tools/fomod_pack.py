@@ -64,6 +64,8 @@ SETUP = ('Your setup',
          'F4SE: check this yourself -- runs every DLL mod (f4se.silverlock.org).\n'
          'Runtime Database: check this yourself -- finds the game\'s functions on old-gen and Anniversary (Nexus 108394).\n'
          'MCM: check this yourself -- the settings, the hotkeys and the picker buttons.\n'
+         'Invisible Dead Body Fix: check this yourself -- without it, BodyGen leaves corpses the game places with only '
+         'head and hands (Nexus 93614, the build for your game version).\n'
          'BodySlide: check this yourself -- your body (CBBE for women, BodyTalk for men; one is enough) and your '
          'outfits built from a zeroed preset with Build Morphs ticked.\n'
          'Silhouette checks the rest in game and says what is missing.')

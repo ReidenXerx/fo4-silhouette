@@ -1437,3 +1437,15 @@ list, exactly as the NPC tab does (protocol 8: PlayerPresets, PlayerPresetIndex,
 body the player script would -- the preset's values and its marker, no variety, the unkeyed layer cleared first.
 Without the plugin it is the player script's list as before. Undo is unchanged (the snapshot of the player's
 morphs). MCM's Bodies page still lists only the player script's presets.
+
+## S-82 — Invisible Dead Body Fix is required (owner, 2026-10-03)
+
+The invisible corpses (S-81) were found by a player: an old LooksMenu bug. With BodyGen on, an NPC the game places
+dead gets morphs, and the game skips that corpse's 3D update unless a flag is set (taking an armour off them sets
+it -- why the body appears then). Lee3310's Invisible Dead Body Fix (Nexus 93614, an F4SE plugin, old-gen/next-gen
+and Anniversary builds) sets the flag as their cell loads; the player confirmed it works with Silhouette. Silhouette
+gives everyone a BodyGen body, so the fix is a requirement: on the Nexus page, in the installer's setup checklist
+(a FOMOD cannot see a DLL), and checked at launch -- its file among F4SE's plugins, any name holding
+"deadbodyfix"; missing, a warning in Silhouette.log and once a launch in the S-78 box. Not reimplemented: its
+source is not published, it works, and two copies of the same flag trick could fight. S-81 stays: Silhouette
+writes nothing to the dead either way.

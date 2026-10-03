@@ -654,6 +654,30 @@ namespace SH::Game
 			}
 		}
 
+		// S-82 (owner, 2026-10-03): with BodyGen on, corpses the game places dead show only their head and hands --
+		// LooksMenu's old bug: the game skips the 3D update of an editor-dead NPC without a flag it waits for.
+		// Lee3310's Invisible Dead Body Fix (Nexus 93614, an F4SE plugin for old-gen and Anniversary) sets it.
+		// Silhouette gives everyone a BodyGen body, so a launch without that fix says so: in the log, and once on
+		// the player's screen with the S-78 box. Found by its file among F4SE's plugins (any name holding
+		// "deadbodyfix": the archives name it InvisibleDeadBodyFix.dll).
+		void CheckDeadBodyFix()
+		{
+			std::error_code ec;
+			for (const auto& e : std::filesystem::directory_iterator("Data/F4SE/Plugins", ec)) {
+				auto name = e.path().filename().string();
+				std::ranges::transform(name, name.begin(), [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+				if (name.ends_with(".dll") && name.find("deadbodyfix") != std::string::npos) {
+					logger::info("corpses: {} is installed - corpses the game places keep their bodies under BodyGen", e.path().filename().string());
+					return;
+				}
+			}
+			logger::warn("corpses: Invisible Dead Body Fix (Nexus 93614) is not installed - with BodyGen, corpses the game places show only their head and hands");
+			std::scoped_lock l{ g_bodyWarningLock };
+			g_bodyWarning += std::string{ g_bodyWarning.empty() ? "" : "\n\n" } +
+			                 "Invisible Dead Body Fix (Nexus mod 93614) is not installed. Without it, LooksMenu's BodyGen leaves corpses the game "
+			                 "places with only their head and hands visible. Install it for your game version.";
+		}
+
 		// S-76: the player's own BodySlide presets join the pickers (never random), resolved through the slider
 		// set each body was built with, as the generator would have resolved them (Presets::ReadInstalled).
 		// Absolute mode only: in a compensated build every value is relative to what the base has baked in,
@@ -716,6 +740,7 @@ namespace SH::Game
 		}
 		AddInstalledPresets(*catalog);
 		CheckBodies(*catalog);
+		CheckDeadBodyFix();
 
 		// The catalog and the BodyGen files come from one generator run, or neither can be trusted: a
 		// marker would name a preset of another build (S-19), or the runtime would apply rules the
