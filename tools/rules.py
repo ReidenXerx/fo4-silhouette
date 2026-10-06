@@ -70,7 +70,8 @@ DEFAULT = {
     # distributes to every NPC race; in Fallout 4 only races that wear the human body
     # should, and the base game has one. Never empty (owner, 2026-09-24): the shipped
     # config lists HumanRace, and a list emptied by hand is refused, not read as the default.
-    'distributeRaces': ['HumanRace'],
+    # ServitronRace (S-85): a mod's race, in OPTIONAL_RACES below.
+    'distributeRaces': ['HumanRace', 'ServitronRace'],
     # What counts as heavy clothes, which flatten the nipples under ORefit (S-48): an item
     # whose NAME holds one of these words or phrases, as a whole word, in any case --
     # plainly armour, a plate over the chest, or a jacket or coat. Anything the name does
@@ -97,8 +98,17 @@ def is_player_form(plugin, fid):
     return str(plugin).lower() == 'fallout4.esm' and fid in PLAYER_FORMS
 
 
+# S-85 (owner, 2026-10-06, a player's request): races another mod adds, whose NPCs wear a body Silhouette can
+# shape, listed by default. Servitron (Nexus 32801, Servitron.esm|000F99 ServitronRace): an Automatron robot
+# built from parts BodySlide builds on CBBE's sliders (47 sets, Breasts, Butt, Hips, Waist...), so BodyGen's
+# morphs move them. Such a race may be missing from the load order: its lines then match nobody, which is
+# right for a player without the mod, so the generator and the verifier say so instead of refusing. Editor id,
+# folded -> the plugin that defines it.
+OPTIONAL_RACES = {'servitronrace': 'Servitron.esm'}
+
+
 EMPTY_RACES = ('distributeRaces is empty: Silhouette would shape nobody -- no random bodies, no rules by name or '
-               'faction, no refits. The default is ["HumanRace"]: put it back, or list the races (by editor id) '
+               'faction, no refits. The default is ["HumanRace", "ServitronRace"]: put it back, or list the races (by editor id) '
                'that wear the human body')
 
 

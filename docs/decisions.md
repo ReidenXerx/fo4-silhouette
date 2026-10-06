@@ -1449,3 +1449,14 @@ gives everyone a BodyGen body, so the fix is a requirement: on the Nexus page, i
 "deadbodyfix"; missing, a warning in Silhouette.log and once a launch in the S-78 box. Not reimplemented: its
 source is not published, it works, and two copies of the same flag trick could fight. S-81 stays: Silhouette
 writes nothing to the dead either way.
+
+## S-85 — Servitron gets bodies (owner, 2026-10-06)
+
+A player asked for Servitron (Nexus 32801, 5133p39): an Automatron robot whose parts BodySlide builds on CBBE's
+sliders (47 sets, 84 sliders: Breasts, Butt, Hips, Waist...), so BodyGen's morphs move them (read from the files
+by Anatomy-specialist). `ServitronRace` (Servitron.esm|000F99) joins the default `distributeRaces`, and
+`rules.OPTIONAL_RACES` names it with its plugin: a player without Servitron has no such race, its two lines
+match nobody, and the generator and the verifier say so instead of refusing. Both sexes' lines are written:
+which sex the game gives a Servitron is not known from the plugin (its only NPC is a male-flagged dummy; the
+robots come from Automatron's templates), and a man's BodyTalk sliders move nothing on CBBE parts. Its physics
+is Anatomy's (a 3BBB version on Nexus 109602). The build is unchanged: only the lines and the rules hash.

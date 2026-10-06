@@ -9086,7 +9086,8 @@
  },
  "rules": {
   "races": [
-   "HumanRace"
+   "HumanRace",
+   "ServitronRace"
   ],
   "npcFormID": {
    "female": [
@@ -10292,5 +10293,5 @@
    "names": []
   }
  },
- "rulesHash": "16c5317a1983"
+ "rulesHash": "b5d88cb95b19"
 }

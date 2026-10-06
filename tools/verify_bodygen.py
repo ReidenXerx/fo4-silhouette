@@ -739,7 +739,7 @@ def check_lines(args, rules, templates, cat, problems):
     # refuses it in the generator).
     report = []
     found = plugin_forms.resolve(args.data, catalog.plugins_txt(), 'RACE', races, report)
-    for race in sorted(races - {x.lower() for x in found}):
+    for race in sorted(races - {x.lower() for x in found} - set(rules_mod.OPTIONAL_RACES)):  # S-85: a mod's race may be absent
         problems.append(f'Silhouette_morphs.ini names race {race!r}, which no plugin in the load order defines: those '
                         f'lines match nobody')
 

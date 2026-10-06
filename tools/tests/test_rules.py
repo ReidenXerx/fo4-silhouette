@@ -25,12 +25,12 @@ class Validate(unittest.TestCase):
         self.assertIsNotNone(msg)
         self.assertIn('Silhouette would shape nobody', msg)
         self.assertIn('no random bodies, no rules by name or faction, no refits', msg)
-        self.assertIn('["HumanRace"]', msg)
+        self.assertIn('["HumanRace", "ServitronRace"]', msg)
         with self.assertRaises(SystemExit):
             rules.distribute_races({'distributeRaces': []})
 
     def test_a_missing_race_list_is_the_default(self):
-        self.assertEqual(rules.distribute_races({}), ['HumanRace'])
+        self.assertEqual(rules.distribute_races({}), ['HumanRace', 'ServitronRace'])
 
     def test_a_race_list_of_the_wrong_shape_says_so_before_anything_else(self):
         # "" is a string where a list belongs: that says more than "an empty name" (wave 4 L8).
@@ -74,7 +74,7 @@ class Validate(unittest.TestCase):
                 rules.load(f, [], [])
             self.assertIn('Silhouette would shape nobody', str(caught.exception))
             f.write_text(json.dumps({'npc': {}}), encoding='utf-8')
-            self.assertEqual(rules.load(f, [], [])['distributeRaces'], ['HumanRace'])
+            self.assertEqual(rules.load(f, [], [])['distributeRaces'], ['HumanRace', 'ServitronRace'])
 
 
 class FormKey(unittest.TestCase):

@@ -71,6 +71,10 @@ def resolve_races(cfg, data, report):
     txt = plugins_txt()
     found = plugin_forms.resolve(data, txt, 'RACE', wanted, missing)
     unknown = sorted(w for w in wanted if w not in found)
+    # S-85: a race another mod adds is listed by default; without that mod its lines wait for it.
+    for w in [w for w in unknown if w.lower() in rules.OPTIONAL_RACES]:
+        report.append(f'{w}: {rules.OPTIONAL_RACES[w.lower()]} is not in this load order, so its lines match nobody here (S-85)')
+        unknown.remove(w)
     if unknown:
         # A race a disabled plugin defines is not a typo: say which plugin, not "check the spelling" --
         # and which load order it was looked for in. Without a plugins.txt (Mod Organizer, Proton, no
