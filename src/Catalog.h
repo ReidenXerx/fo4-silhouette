@@ -99,6 +99,7 @@ namespace SH
 		std::string              race;  // editor id
 		bool                     female{ true };
 		std::vector<std::string> presets;
+		std::vector<std::string> without;  // S-87: morphs never written on this race (Servitron: no breast sliders)
 	};
 
 	// refitOutfitPresetsFemale / refitOutfitPresetsMale: an outfit, by its in-game name, that brings
@@ -163,6 +164,7 @@ namespace SH
 
 		// S-86: the body sex of a race with a pool of its own, whatever an actor's sex flag says; none otherwise.
 		[[nodiscard]] std::optional<bool> BodyFemaleOf(std::string_view a_race) const;
+		[[nodiscard]] const RacePool*     RacePoolOf(std::string_view a_race) const;
 
 		// ORefit (S-20 slots and order, S-40 floors, S-42 heavy clothes), OBody's keys for the lists.
 		std::vector<int>         clothedSlots;  // biped slot numbers, 30..61

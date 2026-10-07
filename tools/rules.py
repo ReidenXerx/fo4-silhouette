@@ -106,7 +106,11 @@ def is_player_form(plugin, fid):
 # folded -> the plugin that defines it.
 # S-86: 'body' is the sex of the body the race wears whatever the game's flag says; the plugin draws such a race's
 # bodies itself from that sex's random pool (BodyGen's lines cannot reach NPCs made from templates).
-OPTIONAL_RACES = {'servitronrace': {'plugin': 'Servitron.esm', 'body': 'female'}}
+# S-87 (owner, 2026-10-08): 'without' -- morphs never written on the race. Servitron's breasts are separate armour pieces
+# inside a torn suit; breast sliders flatten them behind the suit's edges in about half the templates (Anatomy's
+# measurement, fo4-anatomy studies/servitron_bodygen_clip.py), so its bodies keep the hips, waist, butt, legs, arms.
+SERVITRON_WITHOUT = ['Breasts', 'BreastsCleavage', 'BreastsGone', 'BreastsNewSH', 'BreastsSmall', 'BreastsSmall2', 'BreastsTogether', 'BreastTopSlope', 'BreastWidth', 'BreastCenter', 'BreastCenterBig', 'BreastFantasy', 'BreastFlatness2', 'BreastGravity2', 'BreastHeight', 'BreastPerkiness', 'DoubleMelon', 'PushUp', '7B Upper', '7B Lower', 'NipBGone', 'NippleAreola', 'NippleDistance', 'NippleDown', 'NippleLength', 'NipplePerk2', 'NipplePerkiness', 'NippleSize', 'NippleTip', 'NippleUp', 'NippleShape', 'NippleTwistUp', 'ChestDepth', 'ChestWidth', 'SternumDepth', 'SternumHeight', 'MuscularChest']
+OPTIONAL_RACES = {'servitronrace': {'plugin': 'Servitron.esm', 'body': 'female', 'without': SERVITRON_WITHOUT}}
 
 
 EMPTY_RACES = ('distributeRaces is empty: Silhouette would shape nobody -- no random bodies, no rules by name or '

@@ -320,6 +320,7 @@ namespace
 		Check(SH::Decide(robots, a).why.starts_with("faction"), "a faction rule outranks the race's pool");
 	}
 
+
 	// ------------------------------------------------------------------ plans
 
 	std::optional<float> Value(const SH::Morphs& a_m, std::string_view a_k)
@@ -798,6 +799,47 @@ namespace
 		d.RevertRecords();
 		d.SetCatalog(Cat(a_doc));
 		g.Load();
+	}
+
+	// S-86/S-87: a Servitron -- a race with its own pool and a list of morphs it never takes.
+	void TestRacePool()
+	{
+		auto doc = BaseCatalog();
+		doc["rules"]["races"].push_back("ServitronRace");
+		doc["rules"]["racePool"] = nlohmann::json::array(
+			{ { { "race", "ServitronRace" }, { "sex", "female" }, { "presets", { "Curvy" } }, { "without", { "Breasts", "NippleSize" } } } });
+		const auto cat = Cat(doc);
+		if (!cat) {
+			Check(false, "a catalog with a race pool reads");
+			return;
+		}
+		Check(cat->RacePoolOf("SERVITRONRACE") && cat->RacePoolOf("ServitronRace")->without.size() == 2, "the race pool's list reads");
+		SH::Director d;
+		FakeGame     g;
+		d.SetCatalog(cat);
+		auto ada = See(0x900, "Ada");
+		ada.facts.race = "ServitronRace";
+		d.Seen(ada);
+		(void)Drain(d, g);
+		const auto& body = g.actors[0x900].unkeyed;
+		Check(body.contains("Silhouette_Curvy") && body.contains("Butt") && !body.contains("Breasts") && !body.contains("NippleSize"),
+			"a Servitron gets her pool's body, without the morphs her race never takes");
+		const auto rec = d.RecordOf(0x900);
+		Check(rec && rec->source == SH::Source::kFactionRule && rec->preset == "Curvy", "the race's pool is recorded as a rule's body");
+
+		// A Servitron 0.3.5 gave a body with breast sliders: the touch-up takes them off, and keeps the rest.
+		SH::Director d2;
+		FakeGame     g2;
+		d2.SetCatalog(Cat(BaseCatalog()));
+		auto old = See(0x901, "Bea");
+		old.facts.race = "ServitronRace";
+		g2.Roll(0x901, *cat, "Silhouette_Curvy", 1234.0F);
+		d2.SetCatalog(cat);
+		d2.Seen(old);
+		(void)Drain(d2, g2);
+		const auto& kept = g2.actors[0x901].unkeyed;
+		Check(kept.contains("Silhouette_Curvy") && kept.contains("Butt") && (!kept.contains("Breasts") || kept.at("Breasts") == 0.0F),
+			"the breast sliders 0.3.5 wrote on a Servitron come off; the body stays");
 	}
 
 	// ------------------------------------------------------------------ the director: bodies
@@ -3791,6 +3833,7 @@ int main(int argc, char** argv)
 	TestCatalog();
 	TestRules();
 	TestPlan();
+	TestRacePool();
 	TestRegistry();
 	TestBodies();
 	TestDecisions();

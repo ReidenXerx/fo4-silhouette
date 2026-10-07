@@ -846,12 +846,14 @@ namespace SH
 		if (PresetNamedBy(a_session.marker, a_session.stamp).empty()) {
 			return;  // only a body Silhouette can name is healed or topped up
 		}
-		const auto key = TouchKey(*_catalog, a_session.marker, a_session.stamp, a_session.female, _settings.variety);
+		const auto* without = Without(a_ref);
+		const auto  key = TouchKey(*_catalog, a_session.marker, a_session.stamp, a_session.female, _settings.variety, without);
 		if (const auto* rec = _registry.Find(a_ref); rec && rec->touched == key) {
 			return;
 		}
 		const auto heal = _catalog->HealFor(a_session.marker, a_session.stamp);
-		const bool healing = std::ranges::any_of(heal, [&](const std::string& m) { return ContainsI(a_session.own, m); });
+		const bool healing = std::ranges::any_of(heal, [&](const std::string& m) { return ContainsI(a_session.own, m); }) ||
+		                     (without && std::ranges::any_of(*without, [&](const std::string& m) { return ContainsI(a_session.own, m); }));
 		if (healing || !TopUp(*_catalog, a_session.female, a_ref, _settings.variety, a_session.own).empty()) {
 			WorkFor(a_ref, Lane::kNormal).touch = true;
 			return;
@@ -1420,6 +1422,9 @@ namespace SH
 					for (const auto& r : c.variety[o->female ? 1 : 0]) {
 						weighed.push_back(r.morph);
 					}
+					if (const auto* without = Without(o->ref)) {
+						weighed.insert(weighed.end(), without->begin(), without->end());  // S-87: what the touch-up takes off
+					}
 					for (const auto& n : o->names) {
 						if (ContainsI(weighed, n) && !ContainsI(o->reads, n)) {
 							o->reads.push_back(n);
@@ -1482,6 +1487,16 @@ namespace SH
 		}
 	}
 
+	const std::vector<std::string>* Director::Without(std::uint32_t a_ref) const
+	{
+		const auto s = _sessions.find(a_ref);
+		if (s == _sessions.end() || !_catalog) {
+			return nullptr;
+		}
+		const auto* pool = _catalog->RacePoolOf(s->second.facts.race);
+		return pool && !pool->without.empty() ? &pool->without : nullptr;
+	}
+
 	bool Director::Prepare(std::uint32_t a_order)
 	{
 		std::scoped_lock l{ _lock };
@@ -1489,6 +1504,18 @@ namespace SH
 		if (!o || !_catalog) {
 			return false;
 		}
+		const bool ok = PrepareWrites(o);
+		if (const auto* without = ok ? Without(o->ref) : nullptr) {
+			// S-87 (owner, 2026-10-08): a race's list is never written -- a body, a preview, a refit's floors, the
+			// variety. Writing 0 (taking a value off) stays.
+			std::erase_if(o->writes, [&](const Write& w) { return w.value != 0.0F && ContainsI(*without, w.morph); });
+		}
+		return ok;
+	}
+
+	// The writes of one order. Called under the lock.
+	bool Director::PrepareWrites(Order* o)
+	{
 		const auto& c = *_catalog;
 		o->prepared = true;
 		o->clearUnkeyed = false;
@@ -1587,10 +1614,17 @@ namespace SH
 		case OrderKind::kTouch:
 			{
 				const auto& s = _sessions[o->ref];
-				o->touchKey = TouchKey(c, s.marker, s.stamp, s.female, _settings.variety);
+				o->touchKey = TouchKey(c, s.marker, s.stamp, s.female, _settings.variety, Without(o->ref));
 				for (const auto& m : c.HealFor(s.marker, s.stamp)) {
 					if (ContainsI(s.own, m)) {
 						o->writes.push_back(Write{ m, 0.0F, Layer::kUnkeyed });  // SetMorph(0) erases her own value only
+					}
+				}
+				if (const auto* without = Without(o->ref)) {
+					for (const auto& m : s.own) {
+						if (ContainsI(*without, m)) {
+							o->writes.push_back(Write{ m, 0.0F, Layer::kUnkeyed });  // S-87: what 0.3.5 wrote there
+						}
 					}
 				}
 				unkeyed(TopUp(c, s.female, o->ref, _settings.variety, s.own));
@@ -1915,7 +1949,7 @@ namespace SH
 					if (rec.base == 0) {
 						rec.base = s.base;
 					}
-					rec.touched = TouchKey(c, p->marker, c.stamp, a_order.female, _settings.variety);
+					rec.touched = TouchKey(c, p->marker, c.stamp, a_order.female, _settings.variety, Without(ref));
 					if (Chosen(s.choice) && rec.source == Source::kNone && rec.preset.empty()) {
 						// A choice the co-save had lost came back with the body (Prepare): recorded again.
 						Intend(ref, s, s.choice, p->name);
@@ -1997,7 +2031,7 @@ namespace SH
 					if (rec.base == 0) {
 						rec.base = s.base;
 					}
-					rec.touched = TouchKey(c, s.marker, s.stamp, a_order.female, _settings.variety);
+					rec.touched = TouchKey(c, s.marker, s.stamp, a_order.female, _settings.variety, Without(ref));
 				}
 				break;
 			}

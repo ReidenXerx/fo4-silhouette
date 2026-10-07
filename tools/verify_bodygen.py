@@ -673,7 +673,7 @@ def check_lines(args, rules, templates, cat, problems):
             continue
         gender = kind[1] if kind[0] == 'all' else kind[2] if kind[0] == 'plugin' else kind[3]
         if kind[0] == 'all' and kind[2] and kind[2].lower() in body_of:
-            gender = body_of[kind[2].lower()]
+            problems.append(f'Silhouette_morphs.ini:{n}: {kind[2]} draws its bodies in the plugin (S-87) and has no line')
         for t in names:
             s = sex_of.get(t.casefold())
             if gender and s and s != gender:
@@ -719,7 +719,7 @@ def check_lines(args, rules, templates, cat, problems):
                             f'{"lines add " + str(extra) if extra else ""}{"; " if extra and lost else ""}'
                             f'{"lines lack " + str(lost) if lost else ""}')
         if got and pool_races.get(g, set()) != {r.lower() for r in cat['rules'].get('races', [])
-                                                if body_of.get(r.lower(), g) == g}:
+                                                if r.lower() not in body_of}:
             problems.append(f'the {g} random pool is given to races {sorted(pool_races.get(g, set()))}, the catalog '
                             f'distributes to {cat["rules"].get("races")} (distributeRaces)')
     check_weights(cat, pool_lines, problems)

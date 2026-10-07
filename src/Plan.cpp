@@ -182,7 +182,7 @@ namespace SH
 	}
 
 	std::uint32_t TouchKey(const Catalog& a_catalog, std::string_view a_marker, std::uint32_t a_stamp, bool a_female,
-		VarietySwitches a_switches)
+		VarietySwitches a_switches, const std::vector<std::string>* a_without)
 	{
 		std::uint32_t h = Mix(2166136261u, a_marker);
 		h = MixWord(h, a_stamp);
@@ -201,6 +201,13 @@ namespace SH
 		std::ranges::sort(ranges);
 		for (const auto& m : ranges) {
 			h = Mix(h, m);
+		}
+		if (a_without && !a_without->empty()) {
+			// S-87: a race's list is something the touch-up takes off -- a body touched before it is touched again.
+			h = Mix(h, "without");
+			for (const auto& m : *a_without) {
+				h = Mix(h, m);
+			}
 		}
 		return h ? h : 1u;
 	}

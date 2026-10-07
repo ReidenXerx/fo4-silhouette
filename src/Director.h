@@ -224,6 +224,8 @@ namespace SH
 		[[nodiscard]] bool         ReadsDone(std::uint32_t a_order) const;  // the reads can stop here
 		void                       NoteLayer(std::uint32_t a_order, std::string_view a_morph, float a_value);
 		bool                       Prepare(std::uint32_t a_order);
+		// S-87: the morphs never written on this actor's race (Servitron: no breast sliders), nullptr for none.
+		[[nodiscard]] const std::vector<std::string>* Without(std::uint32_t a_ref) const;
 		[[nodiscard]] bool         ClearsUnkeyed(std::uint32_t a_order) const;
 		[[nodiscard]] bool         ClearsRefit(std::uint32_t a_order) const;
 		[[nodiscard]] bool         Updates(std::uint32_t a_order) const;
@@ -386,6 +388,7 @@ namespace SH
 		void                      PendingRestore(std::uint32_t a_ref, Session& a_session);
 		void                      Retire(std::uint32_t a_ref);
 		[[nodiscard]] Order*      Find(std::uint32_t a_order);
+		bool                      PrepareWrites(Order* a_order);
 		void                      Log(std::string a_line);
 		void                      Push(EventKind a_kind, std::uint32_t a_ref, std::string a_preset = {}, bool a_flag = false, std::uint32_t a_announce = 0);
 		Work&                     WorkFor(std::uint32_t a_ref, Lane a_lane);

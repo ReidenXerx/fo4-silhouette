@@ -48,7 +48,7 @@ namespace SH
 	// ranges the top-up draws. Once a body is touched with a key, only a build that wants something new
 	// of it (another heal, another range) touches it again (S-44).
 	[[nodiscard]] std::uint32_t TouchKey(const Catalog& a_catalog, std::string_view a_marker, std::uint32_t a_stamp, bool a_female,
-		VarietySwitches a_switches);
+		VarietySwitches a_switches, const std::vector<std::string>* a_without = nullptr);
 
 	// The floors of a set that apply (heavy-only floors under heavy clothes, S-42), without the marker.
 	// A morph named twice keeps its highest floor.

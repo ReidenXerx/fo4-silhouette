@@ -219,14 +219,20 @@ namespace SH
 		return nullptr;
 	}
 
-	std::optional<bool> Catalog::BodyFemaleOf(std::string_view a_race) const
+	const RacePool* Catalog::RacePoolOf(std::string_view a_race) const
 	{
 		for (const auto& p : racePools) {
 			if (IEquals(p.race, a_race)) {
-				return p.female;
+				return &p;
 			}
 		}
-		return std::nullopt;
+		return nullptr;
+	}
+
+	std::optional<bool> Catalog::BodyFemaleOf(std::string_view a_race) const
+	{
+		const auto* p = RacePoolOf(a_race);
+		return p ? std::optional<bool>{ p->female } : std::nullopt;
 	}
 
 	std::vector<const Preset*> Catalog::MenuPresets(bool a_female) const
@@ -533,6 +539,9 @@ namespace SH
 					pool.race = Str(At(r, "race", "rules.racePool"), "rules.racePool");
 					pool.female = Sex(At(r, "sex", "rules.racePool"), "rules.racePool");
 					pool.presets = Strings(At(r, "presets", "rules.racePool"), "rules.racePool");
+					if (const auto w = r.find("without"); w != r.end()) {
+						pool.without = Strings(*w, "rules.racePool.without");  // S-87, optional
+					}
 					if (pool.presets.empty()) {
 						throw Bad(std::format("rules.racePool {}: no presets", pool.race));
 					}

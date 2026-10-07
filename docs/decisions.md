@@ -1472,3 +1472,14 @@ sex as the body's (`Game::IsFemale`, the sighting's facts), so presets, the pick
 Decide draws the race's body after the factions, through the faction path. LooksMenu files morphs under the
 actor's own flag, so the bridge writes every morph under the real sex, not the plugin's. BodyGen's lines give
 the race its body sex's pool in both tables, for a Servitron some mod places without a template.
+
+## S-87 — Servitrons take no breast sliders (owner's poll, 2026-10-08)
+
+A Servitron's breasts are separate armour pieces (a "Boobs" shape inside a torn suit, metal caps). Anatomy
+measured every template on them offline (fo4-anatomy studies/servitron_bodygen_clip.py): in about half, the
+breast sliders flatten the breasts until the suit's torn edges sit in front of them -- shards across the chest in
+game. The owner chose to keep shaping Servitrons without those sliders. `rules.OPTIONAL_RACES` gives a race a
+`without` list (37 breast, nipple and chest morphs for Servitron), carried in `rules.racePool`. The plugin never
+writes them on that race -- a body, a preview, a refit's floors, the variety -- and its touch-up reads and takes
+off the values 0.3.5 wrote. Such a race has no BodyGen line any more: BodyGen cannot reach its NPCs made from
+templates, and a line cannot leave morphs out.

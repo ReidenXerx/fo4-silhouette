@@ -10208,6 +10208,45 @@
    {
     "race": "ServitronRace",
     "sex": "female",
+    "without": [
+     "Breasts",
+     "BreastsCleavage",
+     "BreastsGone",
+     "BreastsNewSH",
+     "BreastsSmall",
+     "BreastsSmall2",
+     "BreastsTogether",
+     "BreastTopSlope",
+     "BreastWidth",
+     "BreastCenter",
+     "BreastCenterBig",
+     "BreastFantasy",
+     "BreastFlatness2",
+     "BreastGravity2",
+     "BreastHeight",
+     "BreastPerkiness",
+     "DoubleMelon",
+     "PushUp",
+     "7B Upper",
+     "7B Lower",
+     "NipBGone",
+     "NippleAreola",
+     "NippleDistance",
+     "NippleDown",
+     "NippleLength",
+     "NipplePerk2",
+     "NipplePerkiness",
+     "NippleSize",
+     "NippleTip",
+     "NippleUp",
+     "NippleShape",
+     "NippleTwistUp",
+     "ChestDepth",
+     "ChestWidth",
+     "SternumDepth",
+     "SternumHeight",
+     "MuscularChest"
+    ],
     "presets": [
      "Fine F01",
      "Fine F02",
@@ -10378,5 +10417,5 @@
    "names": []
   }
  },
- "rulesHash": "6011efa978cd"
+ "rulesHash": "db84c2981760"
 }

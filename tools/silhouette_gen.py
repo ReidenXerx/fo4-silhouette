@@ -2058,11 +2058,12 @@ def main():
              '#']
         for g, label in (('female', 'Female'), ('male', 'Male')):
             for race in distribute:
-                # S-86: a race whose body is one sex's gets that sex's pool in BOTH tables -- LooksMenu picks the
-                # table by the sex flag, and a Servitron is flagged male.
-                body = rules.OPTIONAL_RACES.get(race.lower(), {}).get('body', g)
-                if pools[body]:
-                    m.append(f'All|{label}|{race}=' + '|'.join(random_line_names(pools[body], pool)))
+                # S-87: a race with a pool of its own has no BodyGen line -- BodyGen cannot reach its NPCs made from
+                # templates, and its line could not leave out the morphs the race never takes. The plugin draws them.
+                if race.lower() in rules.OPTIONAL_RACES:
+                    continue
+                if pools[g]:
+                    m.append(f'All|{label}|{race}=' + '|'.join(random_line_names(pools[g], pool)))
         if rule_lines:
             m += ['#', '# Rules from Silhouette_presetDistributionConfig.json and includes,',
                   '# lowest priority first: race, plugin, blacklists, FormID, FormID blacklists.']
@@ -2096,6 +2097,7 @@ def main():
             refit_presets=refit_sets(buckets.get('refit', []), base, baked, morphs_of),
             body_morphs=morphs_of, baked=baked, report=cat_report, pool_factions=pool_factions,
             race_pools=[{'race': race, 'sex': rules.OPTIONAL_RACES[race.lower()]['body'],
+                         'without': list(rules.OPTIONAL_RACES[race.lower()].get('without', [])),
                          'presets': [p['name'] for _n, _v, p in pools[rules.OPTIONAL_RACES[race.lower()]['body']]
                                      for _ in range(pool[p['name'].casefold()]['weight'] if pool else 1)]}
                         for race in distribute if race.lower() in rules.OPTIONAL_RACES],
