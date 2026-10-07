@@ -2098,6 +2098,7 @@ def main():
             body_morphs=morphs_of, baked=baked, report=cat_report, pool_factions=pool_factions,
             race_pools=[{'race': race, 'sex': rules.OPTIONAL_RACES[race.lower()]['body'],
                          'without': list(rules.OPTIONAL_RACES[race.lower()].get('without', [])),
+                         'withoutUnless': rules.OPTIONAL_RACES[race.lower()].get('withoutUnless', ''),
                          'presets': [p['name'] for _n, _v, p in pools[rules.OPTIONAL_RACES[race.lower()]['body']]
                                      for _ in range(pool[p['name'].casefold()]['weight'] if pool else 1)]}
                         for race in distribute if race.lower() in rules.OPTIONAL_RACES],

@@ -100,6 +100,7 @@ namespace SH
 		bool                     female{ true };
 		std::vector<std::string> presets;
 		std::vector<std::string> without;  // S-87: morphs never written on this race (Servitron: no breast sliders)
+		std::string              withoutUnless;  // S-88: a file under Data whose presence lifts the list (a fixed mesh package)
 	};
 
 	// refitOutfitPresetsFemale / refitOutfitPresetsMale: an outfit, by its in-game name, that brings

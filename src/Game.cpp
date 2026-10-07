@@ -742,6 +742,20 @@ namespace SH::Game
 		AddInstalledPresets(*catalog);
 		CheckBodies(*catalog);
 		CheckDeadBodyFix();
+		// S-88: a race's list of morphs it never takes is lifted when the package that fixes its meshes is there
+		// (Anatomy's Servitron torsos keep the suit behind the breasts at every template).
+		for (auto& pool : catalog->racePools) {
+			if (pool.without.empty() || pool.withoutUnless.empty()) {
+				continue;
+			}
+			std::error_code ec;
+			if (std::filesystem::exists(std::filesystem::path{ "Data" } / pool.withoutUnless, ec)) {
+				logger::info("races: {} found - {} takes every slider ({} no longer left out)", pool.withoutUnless, pool.race, pool.without.size());
+				pool.without.clear();
+			} else {
+				logger::info("races: {} leaves out {} slider(s) on {} - {} is not installed", pool.race, pool.without.size(), pool.race, pool.withoutUnless);
+			}
+		}
 
 		// The catalog and the BodyGen files come from one generator run, or neither can be trusted: a
 		// marker would name a preset of another build (S-19), or the runtime would apply rules the

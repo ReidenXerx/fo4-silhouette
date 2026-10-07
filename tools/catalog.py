@@ -528,8 +528,9 @@ def check(doc):
             if (sex, ifold(n)) not in seen:
                 fail(f'{where} names {n!r}, not a {sex} preset of this build')
     for rule in need(r.get('racePool', []), list, 'rules.racePool'):  # S-86, optional
-        only(rule, ('race', 'sex', 'presets', 'without'), 'rules.racePool')
+        only(rule, ('race', 'sex', 'presets', 'without', 'withoutUnless'), 'rules.racePool')
         strings(rule.get('without', []), 'rules.racePool.without')  # S-87, optional
+        need(rule.get('withoutUnless', ''), str, 'rules.racePool.withoutUnless')  # S-88, optional
         where = f'rules.racePool {need(at(rule, "race", "rules.racePool"), str, "rules.racePool.race")!r}'
         sex = sex_of(at(rule, 'sex', where), where)
         names = strings(at(rule, 'presets', where), where)

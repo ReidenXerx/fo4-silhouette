@@ -1483,3 +1483,11 @@ game. The owner chose to keep shaping Servitrons without those sliders. `rules.O
 writes them on that race -- a body, a preview, a refit's floors, the variety -- and its touch-up reads and takes
 off the values 0.3.5 wrote. Such a race has no BodyGen line any more: BodyGen cannot reach its NPCs made from
 templates, and a line cannot leave morphs out.
+
+## S-88 — Servitron's list is lifted by Anatomy's fixed torsos (2026-10-08)
+
+The owner had Anatomy push the suit behind the breasts in its Servitron torsos; measured offline, the chest stays
+clean under every template. Plain Servitron still clips (182 of 365 templates on 32801's own torso), so S-87's
+list stays the default, and `rules.racePool.withoutUnless` names a file only Anatomy's package ships
+(`F4SE/Plugins/Anatomy/Servitron.ini`): at launch, when it is under Data, the plugin lifts the list and says so
+in Silhouette.log.

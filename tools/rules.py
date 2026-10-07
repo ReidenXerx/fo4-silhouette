@@ -110,7 +110,11 @@ def is_player_form(plugin, fid):
 # inside a torn suit; breast sliders flatten them behind the suit's edges in about half the templates (Anatomy's
 # measurement, fo4-anatomy studies/servitron_bodygen_clip.py), so its bodies keep the hips, waist, butt, legs, arms.
 SERVITRON_WITHOUT = ['Breasts', 'BreastsCleavage', 'BreastsGone', 'BreastsNewSH', 'BreastsSmall', 'BreastsSmall2', 'BreastsTogether', 'BreastTopSlope', 'BreastWidth', 'BreastCenter', 'BreastCenterBig', 'BreastFantasy', 'BreastFlatness2', 'BreastGravity2', 'BreastHeight', 'BreastPerkiness', 'DoubleMelon', 'PushUp', '7B Upper', '7B Lower', 'NipBGone', 'NippleAreola', 'NippleDistance', 'NippleDown', 'NippleLength', 'NipplePerk2', 'NipplePerkiness', 'NippleSize', 'NippleTip', 'NippleUp', 'NippleShape', 'NippleTwistUp', 'ChestDepth', 'ChestWidth', 'SternumDepth', 'SternumHeight', 'MuscularChest']
-OPTIONAL_RACES = {'servitronrace': {'plugin': 'Servitron.esm', 'body': 'female', 'without': SERVITRON_WITHOUT}}
+# S-88 (Anatomy, 2026-10-08): plain Servitron clips too (182 of 365 templates), but Anatomy's Servitron package keeps
+# the suit behind the breasts at every template: 'withoutUnless' names a file only that package ships, under Data,
+# and the plugin lifts the list when it is there.
+OPTIONAL_RACES = {'servitronrace': {'plugin': 'Servitron.esm', 'body': 'female', 'without': SERVITRON_WITHOUT,
+                                    'withoutUnless': 'F4SE/Plugins/Anatomy/Servitron.ini'}}
 
 
 EMPTY_RACES = ('distributeRaces is empty: Silhouette would shape nobody -- no random bodies, no rules by name or '

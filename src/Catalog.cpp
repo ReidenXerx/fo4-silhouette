@@ -542,6 +542,9 @@ namespace SH
 					if (const auto w = r.find("without"); w != r.end()) {
 						pool.without = Strings(*w, "rules.racePool.without");  // S-87, optional
 					}
+					if (const auto u = r.find("withoutUnless"); u != r.end()) {
+						pool.withoutUnless = Str(*u, "rules.racePool.withoutUnless");  // S-88, optional
+					}
 					if (pool.presets.empty()) {
 						throw Bad(std::format("rules.racePool {}: no presets", pool.race));
 					}

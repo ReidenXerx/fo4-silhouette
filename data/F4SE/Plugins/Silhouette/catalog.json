@@ -10247,6 +10247,7 @@
      "SternumHeight",
      "MuscularChest"
     ],
+    "withoutUnless": "F4SE/Plugins/Anatomy/Servitron.ini",
     "presets": [
      "Fine F01",
      "Fine F02",
@@ -10417,5 +10418,5 @@
    "names": []
   }
  },
- "rulesHash": "db84c2981760"
+ "rulesHash": "e6ad2ec90155"
 }
