@@ -73,7 +73,7 @@ def resolve_races(cfg, data, report):
     unknown = sorted(w for w in wanted if w not in found)
     # S-85: a race another mod adds is listed by default; without that mod its lines wait for it.
     for w in [w for w in unknown if w.lower() in rules.OPTIONAL_RACES]:
-        report.append(f'{w}: {rules.OPTIONAL_RACES[w.lower()]} is not in this load order, so its lines match nobody here (S-85)')
+        report.append(f'{w}: {rules.OPTIONAL_RACES[w.lower()]['plugin']} is not in this load order, so its lines match nobody here (S-85)')
         unknown.remove(w)
     if unknown:
         # A race a disabled plugin defines is not a typo: say which plugin, not "check the spelling" --
@@ -97,7 +97,7 @@ def resolve_races(cfg, data, report):
 
 
 def build(*, stamp, build_id, mode, presets, player, states, never_in_body, variety, cfg, data,
-          refit_presets, body_morphs, baked, report, pool_factions=frozenset(), slider_sets=None):
+          refit_presets, body_morphs, baked, report, pool_factions=frozenset(), slider_sets=None, race_pools=None):
     """The catalog as a dict, without its rulesHash (rules_hash() below, once the BodyGen lines exist).
 
     slider_sets: {sex: base_body slider set} the body was built with -- the plugin resolves the player's
@@ -284,6 +284,8 @@ def build(*, stamp, build_id, mode, presets, player, states, never_in_body, vari
             'npcName': npc_name,
             'blacklistedNpcNames': list(cfg.get('blacklistedNpcs', [])),
             'faction': faction,
+            # S-86: races the plugin draws itself, with the body's sex
+            'racePool': list(race_pools or []),
         },
         'orefit': {
             'slots': CLOTHED_SLOTS,
@@ -327,7 +329,7 @@ TOP_KEYS = ('schema', 'build', 'stamp', 'mode', 'rulesHash', 'states', 'neverInB
             'variety', 'rules', 'orefit', 'sliderSets')
 PRESET_KEYS = ('name', 'sex', 'marker', 'values', 'random', 'menu', 'zeroed', 'fit', 'family')
 VARIETY_KEYS = ('morph', 'low', 'high', 'group')
-RULE_KEYS = ('races', 'npcFormID', 'blacklistedNpcsFormID', 'blacklistedPlugins', 'blacklistedRaces', 'npcName',
+RULE_KEYS = ('racePool', 'races', 'npcFormID', 'blacklistedNpcsFormID', 'blacklistedPlugins', 'blacklistedRaces', 'npcName',
              'blacklistedNpcNames', 'faction')
 OREFIT_KEYS = ('slots', 'blacklist', 'blacklistNames', 'blacklistPlugins', 'force', 'forceNames', 'outfits', 'sets',
                'heavy', 'light')
@@ -523,6 +525,16 @@ def check(doc):
         where = f'rules.faction {need(at(rule, "editorID", "rules.faction"), str, "rules.faction.editorID")!r}'
         sex = sex_of(at(rule, 'sex', where), where)
         for n in strings(at(rule, 'presets', where), where):
+            if (sex, ifold(n)) not in seen:
+                fail(f'{where} names {n!r}, not a {sex} preset of this build')
+    for rule in need(r.get('racePool', []), list, 'rules.racePool'):  # S-86, optional
+        only(rule, ('race', 'sex', 'presets'), 'rules.racePool')
+        where = f'rules.racePool {need(at(rule, "race", "rules.racePool"), str, "rules.racePool.race")!r}'
+        sex = sex_of(at(rule, 'sex', where), where)
+        names = strings(at(rule, 'presets', where), where)
+        if not names:
+            fail(f'{where}: no presets')
+        for n in names:
             if (sex, ifold(n)) not in seen:
                 fail(f'{where} names {n!r}, not a {sex} preset of this build')
     o = only(at(doc, 'orefit', 'catalog'), OREFIT_KEYS, 'orefit')

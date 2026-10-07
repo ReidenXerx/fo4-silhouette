@@ -301,6 +301,23 @@ namespace
 			drawn.insert(SH::Decide(*c, a).preset);
 		}
 		Check(drawn.size() == 2, "a rule with several presets spreads them across people");
+
+		// S-86: a race with a pool of its own -- its body's sex, its own draw, after the factions
+		auto robots = *c;
+		robots.races.push_back("ServitronRace");
+		robots.racePools.push_back({ "ServitronRace", true, { "Curvy", "Slim", "Slim" } });
+		Check(robots.BodyFemaleOf("servitronrace") == true && !robots.BodyFemaleOf("HumanRace"), "a race pool names its body's sex, in any case");
+		a = Npc();
+		a.race = "ServitronRace";
+		v = SH::Decide(robots, a);
+		Check(v.tier == SH::Tier::kFaction && (v.preset == "Curvy" || v.preset == "Slim") && v.options.size() == 3,
+			std::format("a race BodyGen cannot reach draws from its own pool ({})", v.why));
+		a.female = false;
+		Check(SH::Decide(robots, a).tier == SH::Tier::kNone, "the pool is its body's sex only");
+		a = Npc();
+		a.race = "ServitronRace";
+		a.factions = { { "Fallout4.esm", 3001 } };
+		Check(SH::Decide(robots, a).why.starts_with("faction"), "a faction rule outranks the race's pool");
 	}
 
 	// ------------------------------------------------------------------ plans

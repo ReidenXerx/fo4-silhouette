@@ -663,6 +663,8 @@ def check_lines(args, rules, templates, cat, problems):
     rule_start = min([n for n, raw in engine_lines(args.dir / 'Silhouette_morphs.ini', [])
                       if raw.strip().startswith('# Rules from')] + ([first_rule] if first_rule else []), default=None)
     races, lines_tiers, pool_races, pool, pool_lines = set(), set(), {}, {}, []
+    # S-86: a race with a pool of its own wears one sex's body in both tables.
+    body_of = {e['race'].lower(): e['sex'] for e in (cat or {}).get('rules', {}).get('racePool', [])}
     for form, groups, n in rules:
         kind = line_kind(form)
         names = [t for grp in groups for t in grp]
@@ -670,6 +672,8 @@ def check_lines(args, rules, templates, cat, problems):
             problems.append(f'Silhouette_morphs.ini:{n}: {"|".join(form)!r} names no form id LooksMenu can read')
             continue
         gender = kind[1] if kind[0] == 'all' else kind[2] if kind[0] == 'plugin' else kind[3]
+        if kind[0] == 'all' and kind[2] and kind[2].lower() in body_of:
+            gender = body_of[kind[2].lower()]
         for t in names:
             s = sex_of.get(t.casefold())
             if gender and s and s != gender:
@@ -714,7 +718,8 @@ def check_lines(args, rules, templates, cat, problems):
             problems.append(f'the {g} random pool is not the catalog\'s random presets: '
                             f'{"lines add " + str(extra) if extra else ""}{"; " if extra and lost else ""}'
                             f'{"lines lack " + str(lost) if lost else ""}')
-        if got and pool_races.get(g, set()) != {r.lower() for r in cat['rules'].get('races', [])}:
+        if got and pool_races.get(g, set()) != {r.lower() for r in cat['rules'].get('races', [])
+                                                if body_of.get(r.lower(), g) == g}:
             problems.append(f'the {g} random pool is given to races {sorted(pool_races.get(g, set()))}, the catalog '
                             f'distributes to {cat["rules"].get("races")} (distributeRaces)')
     check_weights(cat, pool_lines, problems)

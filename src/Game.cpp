@@ -533,7 +533,9 @@ namespace SH::Game
 			Sighting s;
 			s.ref = a_actor->GetFormID();
 			s.base = npc->GetFormID();
-			s.facts.female = Compat::Female(npc);
+			// S-86: the body's sex -- a race with a pool of its own says it, whatever the flag (Servitrons are flagged male).
+			s.facts.race = RaceOf(a_actor);
+			s.facts.female = a_catalog.BodyFemaleOf(s.facts.race).value_or(Compat::Female(npc));
 			s.facts.seed = s.ref;
 			// The NPC record's name, as OBody reads it: a reference renamed at runtime (Rapport names the
 			// settlers it befriends) keeps the rule its record matched.
@@ -557,7 +559,6 @@ namespace SH::Game
 					s.facts.factions.push_back(ref);
 				}
 			}
-			s.facts.race = RaceOf(a_actor);
 			const auto worn = ReadWorn(a_actor, a_catalog, s.facts.female, a_changing, a_equipping);
 			s.clothed = worn.clothed;
 			s.heavy = worn.heavy;
@@ -919,6 +920,13 @@ namespace SH::Game
 	bool IsFemale(RE::Actor* a_actor)
 	{
 		auto* npc = a_actor ? a_actor->GetNPC() : nullptr;
+		if (npc) {
+			if (const auto c = g_director.CatalogPtr()) {
+				if (const auto body = c->BodyFemaleOf(RaceOf(a_actor))) {
+					return *body;  // S-86: the body's sex, not the flag
+				}
+			}
+		}
 		return Compat::Female(npc);
 	}
 

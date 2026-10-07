@@ -91,6 +91,16 @@ namespace SH
 		bool                     pool{ false };  // one of Silhouette's own faction pools (S-72): MCM can switch it off (S-73)
 	};
 
+	// S-86: a race another mod adds whose NPCs wear the body of one sex whatever the game's sex flag says
+	// (Servitron: robots are flagged male and wear CBBE parts), and whose bodies the plugin draws itself --
+	// BodyGen's race lines never reach NPCs made from templates. presets repeat as the random line does.
+	struct RacePool
+	{
+		std::string              race;  // editor id
+		bool                     female{ true };
+		std::vector<std::string> presets;
+	};
+
 	// refitOutfitPresetsFemale / refitOutfitPresetsMale: an outfit, by its in-game name, that brings
 	// its own refit set. Names, as OBody's users write them.
 	struct OutfitRefit
@@ -149,6 +159,10 @@ namespace SH
 		std::vector<NameRule>    nameRules;
 		std::vector<std::string> blacklistedNpcNames;
 		std::vector<FactionRule> factionRules;
+		std::vector<RacePool>    racePools;  // S-86
+
+		// S-86: the body sex of a race with a pool of its own, whatever an actor's sex flag says; none otherwise.
+		[[nodiscard]] std::optional<bool> BodyFemaleOf(std::string_view a_race) const;
 
 		// ORefit (S-20 slots and order, S-40 floors, S-42 heavy clothes), OBody's keys for the lists.
 		std::vector<int>         clothedSlots;  // biped slot numbers, 30..61

@@ -36,7 +36,7 @@ namespace SH::Game
 
 	// Main thread: an actor by form id, or null.
 	[[nodiscard]] RE::Actor*    ActorFor(std::uint32_t a_ref);
-	[[nodiscard]] bool          IsFemale(RE::Actor* a_actor);
+	[[nodiscard]] bool          IsFemale(RE::Actor* a_actor);  // the BODY's sex (S-86); LooksMenu keeps morphs under the flag's
 	[[nodiscard]] std::uint32_t BaseOf(RE::Actor* a_actor);
 	[[nodiscard]] std::string   NameOf(RE::Actor* a_actor);  // the name the player sees
 	// The player, or a character-creation dummy LooksMenu clones onto the player (S-13).

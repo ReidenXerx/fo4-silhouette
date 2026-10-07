@@ -227,6 +227,13 @@ Function ShowCurrent() Global
     Else
         preset = PresetOf(player, False, MaleMarkers0(), MaleNames0(), MaleMarkers1(), MaleNames1())
     EndIf
+    If preset == "*"
+        ; One of your own presets, put on through the window's Me tab: the plugin's catalog names it (S-76).
+        String named = Silhouette:API.MarkerPreset(player)
+        If named != ""
+            preset = named
+        EndIf
+    EndIf
     If preset == ""
         Debug.MessageBox("Your character has no body sliders: the bare body you built in BodySlide.")
     ElseIf preset == "*"

@@ -1460,3 +1460,15 @@ match nobody, and the generator and the verifier say so instead of refusing. Bot
 which sex the game gives a Servitron is not known from the plugin (its only NPC is a male-flagged dummy; the
 robots come from Automatron's templates), and a man's BodyTalk sliders move nothing on CBBE parts. Its physics
 is Anatomy's (a 3BBB version on Nexus 109602). The build is unchanged: only the lines and the rules hash.
+
+## S-86 — A race's body sex, and the races the plugin draws itself (owner, 2026-10-07)
+
+S-85 did nothing in game: the engine flags every robot male, Servitrons included, while their parts are built on
+CBBE's sliders, and Servitrons are made from Automatron's templates, which BodyGen's race lines never reach (an
+All line lists only NPCs without a template). The picker offered a Servitron men's presets and she got no body.
+Now `rules.OPTIONAL_RACES` gives such a race the sex of the body it wears, and the catalog's `rules.racePool`
+carries it with that sex's random pool, each body as often as its tier weighs. The plugin reads the actor's
+sex as the body's (`Game::IsFemale`, the sighting's facts), so presets, the picker and the pools are the women's;
+Decide draws the race's body after the factions, through the faction path. LooksMenu files morphs under the
+actor's own flag, so the bridge writes every morph under the real sex, not the plugin's. BodyGen's lines give
+the race its body sex's pool in both tables, for a Servitron some mod places without a template.

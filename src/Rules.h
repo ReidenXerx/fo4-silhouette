@@ -24,7 +24,7 @@ namespace SH
 		kNone,           // BodyGen's roll stands (or the NPC is not ours at all)
 		kNameBlacklist,  // bare, and marked so BodyGen never rolls them again
 		kName,           // the per-NPC preset by name
-		kFaction,        // the faction's preset
+		kFaction,        // the faction's preset, or a race's own pool (S-86)
 	};
 
 	struct Verdict

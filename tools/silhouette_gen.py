@@ -1235,6 +1235,13 @@ def write_papyrus(path, picker, default_index, stamp, build):
         '    Else',
         f'        preset = PresetOf(player, False, {lists["Male"]})',
         '    EndIf',
+        '    If preset == "*"',
+        '        ; One of your own presets, put on through the window\'s Me tab: the plugin\'s catalog names it (S-76).',
+        '        String named = Silhouette:API.MarkerPreset(player)',
+        '        If named != ""',
+        '            preset = named',
+        '        EndIf',
+        '    EndIf',
         '    If preset == ""',
         '        Debug.MessageBox("Your character has no body sliders: the bare body you built in BodySlide.")',
         '    ElseIf preset == "*"',
@@ -2050,9 +2057,12 @@ def main():
              '# Always name a race: "All|Female" alone matches only NPCs that have none.',
              '#']
         for g, label in (('female', 'Female'), ('male', 'Male')):
-            if pools[g]:
-                for race in distribute:
-                    m.append(f'All|{label}|{race}=' + '|'.join(random_line_names(pools[g], pool)))
+            for race in distribute:
+                # S-86: a race whose body is one sex's gets that sex's pool in BOTH tables -- LooksMenu picks the
+                # table by the sex flag, and a Servitron is flagged male.
+                body = rules.OPTIONAL_RACES.get(race.lower(), {}).get('body', g)
+                if pools[body]:
+                    m.append(f'All|{label}|{race}=' + '|'.join(random_line_names(pools[body], pool)))
         if rule_lines:
             m += ['#', '# Rules from Silhouette_presetDistributionConfig.json and includes,',
                   '# lowest priority first: race, plugin, blacklists, FormID, FormID blacklists.']
@@ -2085,6 +2095,10 @@ def main():
             cfg=cfg, data=args.data,
             refit_presets=refit_sets(buckets.get('refit', []), base, baked, morphs_of),
             body_morphs=morphs_of, baked=baked, report=cat_report, pool_factions=pool_factions,
+            race_pools=[{'race': race, 'sex': rules.OPTIONAL_RACES[race.lower()]['body'],
+                         'presets': [p['name'] for _n, _v, p in pools[rules.OPTIONAL_RACES[race.lower()]['body']]
+                                     for _ in range(pool[p['name'].casefold()]['weight'] if pool else 1)]}
+                        for race in distribute if race.lower() in rules.OPTIONAL_RACES],
             slider_sets={g: base[g]['set'] for g in BODIES if base.get(g) and base[g].get('set')})
         rules_id = catalog.rules_hash(cat, m)
         cat['rulesHash'] = rules_id

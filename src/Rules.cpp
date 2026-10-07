@@ -102,6 +102,14 @@ namespace SH
 			}
 		}
 
+		// 4b. S-86: a race BodyGen cannot reach draws from its own pool, as a faction's rule does.
+		for (const auto& pool : a_catalog.racePools) {
+			if (pool.female == a_actor.female && IEquals(pool.race, a_actor.race)) {
+				auto preset = Pick(pool.presets, a_actor.seed, a_actor.salt);
+				return { Tier::kFaction, preset, pool.presets, std::format("race {} draws from its own pool (S-86) -> {}", pool.race, preset) };
+			}
+		}
+
 		// 5. plugin, race, random: BodyGen's.
 		return { Tier::kNone, {}, {}, "no runtime rule applies (BodyGen's roll stands)", false, true };
 	}

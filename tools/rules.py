@@ -104,7 +104,9 @@ def is_player_form(plugin, fid):
 # morphs move them. Such a race may be missing from the load order: its lines then match nobody, which is
 # right for a player without the mod, so the generator and the verifier say so instead of refusing. Editor id,
 # folded -> the plugin that defines it.
-OPTIONAL_RACES = {'servitronrace': 'Servitron.esm'}
+# S-86: 'body' is the sex of the body the race wears whatever the game's flag says; the plugin draws such a race's
+# bodies itself from that sex's random pool (BodyGen's lines cannot reach NPCs made from templates).
+OPTIONAL_RACES = {'servitronrace': {'plugin': 'Servitron.esm', 'body': 'female'}}
 
 
 EMPTY_RACES = ('distributeRaces is empty: Silhouette would shape nobody -- no random bodies, no rules by name or '

@@ -219,6 +219,16 @@ namespace SH
 		return nullptr;
 	}
 
+	std::optional<bool> Catalog::BodyFemaleOf(std::string_view a_race) const
+	{
+		for (const auto& p : racePools) {
+			if (IEquals(p.race, a_race)) {
+				return p.female;
+			}
+		}
+		return std::nullopt;
+	}
+
 	std::vector<const Preset*> Catalog::MenuPresets(bool a_female) const
 	{
 		std::vector<const Preset*> out;
@@ -515,6 +525,19 @@ namespace SH
 					rule.pool = p->get<bool>();
 				}
 				c.factionRules.push_back(std::move(rule));
+			}
+			// S-86. Optional, so a catalog from before it reads as it did.
+			if (const auto rp = rules.find("racePool"); rp != rules.end()) {
+				for (const auto& r : List(*rp, "rules.racePool")) {
+					RacePool pool;
+					pool.race = Str(At(r, "race", "rules.racePool"), "rules.racePool");
+					pool.female = Sex(At(r, "sex", "rules.racePool"), "rules.racePool");
+					pool.presets = Strings(At(r, "presets", "rules.racePool"), "rules.racePool");
+					if (pool.presets.empty()) {
+						throw Bad(std::format("rules.racePool {}: no presets", pool.race));
+					}
+					c.racePools.push_back(std::move(pool));
+				}
 			}
 
 			const auto& orefit = At(a_doc, "orefit", "catalog");

@@ -49,7 +49,7 @@ Int Property SourcePicker = 3 AutoReadOnly
 Int Property LaneUrgent = 0 AutoReadOnly
 ; What RunOrder below does, and the natives the menu calls. Silhouette.dll says what it
 ; expects; they must agree. 4: ResetEveryone (S-68).
-Int Property Protocol = 8 AutoReadOnly
+Int Property Protocol = 9 AutoReadOnly
 ; "Reset everyone" forgets every body, picks included: a second press within this long
 ; confirms the first. A minute, not ten seconds: the clock runs while the player reads the
 ; first press's message box, and the owner's first try ran out reading it.
@@ -925,7 +925,9 @@ Function RunOrder(Int aiOrder)
 		Silhouette:DLL.OrderGone(aiOrder)
 		Return
 	EndIf
-	Bool female = Silhouette:DLL.OrderFemale(aiOrder)
+	; LooksMenu files morphs under the actor's own sex flag; the plugin's choice of presets follows the body's sex,
+	; which a race can make the other one (S-86: Servitrons are flagged male and wear women's parts).
+	Bool female = a.GetLeveledActorBase().GetSex() == 1
 
 	; The dead are left as BodyGen gave them when they loaded (2026-10-02: reports of invisible bodies on pre-placed
 	; corpses, only head and hands showing). A body, a refit or a touch-up would re-apply a ragdolled corpse's
@@ -1316,8 +1318,7 @@ Function MenuApply()
 	If LeftDead(target)
 		Return
 	EndIf
-	Bool female = a.GetLeveledActorBase().GetSex() == 1
-	String preset = Silhouette:Player.NpcChoice(female)
+	String preset = Silhouette:Player.NpcChoice(Silhouette:DLL.BodyFemale(target))  ; the body's sex (S-86)
 	If preset == ""
 		Debug.MessageBox("Silhouette: that choice is not in this build of the menu. Nothing was changed.")
 		Return

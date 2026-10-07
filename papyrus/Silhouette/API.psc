@@ -26,7 +26,7 @@ Scriptname Silhouette:API Hidden
 ; The order protocol these scripts were built for (Silhouette:Bridge.Protocol, the DLL's
 ; kProtocol): all three move together -- tools/tests/test_protocol.py holds them to it.
 Int Function Protocol() Global
-	Return 8
+	Return 9
 EndFunction
 
 ; Other mods' requests wait behind the player's own actions and go before bulk work (S-55).

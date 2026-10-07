@@ -24,7 +24,8 @@ namespace SH::Papyrus
 		// window (S-79).
 		// 8: PlayerPresets, PlayerPresetIndex, PlayerBodyCount, PlayerBodyMorph, PlayerBodyValue -- the window's Me
 		// tab lists the catalog's presets, the player's own BodySlide presets among them (0.3.3).
-		constexpr std::int32_t kProtocol = 8;
+		// 9: BodyFemale (S-86), and the bridge writes LooksMenu under the actor's own sex, OrderFemale being the body's.
+		constexpr std::int32_t kProtocol = 9;
 
 		using Str = RE::BSFixedString;
 
@@ -481,6 +482,9 @@ namespace SH::Papyrus
 
 		Str NameOf(std::monostate, std::int32_t a_actor) { return Str{ Game::NameOf(Game::ActorFor(Ref(a_actor))) }; }
 
+		// S-86: the sex of the body they wear, which picks presets -- not the flag LooksMenu files morphs under.
+		bool BodyFemale(std::monostate, std::int32_t a_actor) { return Game::IsFemale(Game::ActorFor(Ref(a_actor))); }
+
 		// Binds a_fn. a_fast: callable from tasklets, so a call costs no frame -- set on our own
 		// function object before binding rather than through the VM's SetCallableFromTasklets, a
 		// virtual this plugin has never been seen to call on this runtime. Only functions that touch
@@ -595,6 +599,7 @@ namespace SH::Papyrus
 		Bind(a_vm, "ResetEveryone"sv, ResetEveryone, fast);
 		Bind(a_vm, "FreshStart"sv, FreshStart, fast);
 		Bind(a_vm, "NameOf"sv, NameOf, main);
+		Bind(a_vm, "BodyFemale"sv, BodyFemale, main);
 
 		logger::info("papyrus: {} bound (protocol {})", kScript, kProtocol);
 		return true;
