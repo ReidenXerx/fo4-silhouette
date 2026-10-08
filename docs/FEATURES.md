@@ -32,7 +32,8 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 - Which races get bodies is a config key (`distributeRaces`, HumanRace and Servitron's ServitronRace by
   default, S-85). Servitrons are flagged male by the game and wear women's parts: Silhouette treats them as
   women and draws their bodies itself, since BodyGen never reaches robots made from templates (S-86) -- without
-  breast, nipple or chest sliders, which push their armoured breasts behind the suit (S-87); an empty list is refused
+  breast, nipple or chest sliders, which push their armoured breasts behind the suit (S-87) -- unless Anatomy
+  Servitron is installed, whose breasts follow every slider with the suit behind them (S-88); an empty list is refused
   rather than read as "everyone" (S-11, S-61).
 
 ## The named people
