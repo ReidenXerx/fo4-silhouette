@@ -1491,3 +1491,12 @@ clean under every template. Plain Servitron still clips (182 of 365 templates on
 list stays the default, and `rules.racePool.withoutUnless` names a file only Anatomy's package ships
 (`F4SE/Plugins/Anatomy/Servitron.ini`): at launch, when it is under Data, the plugin lifts the list and says so
 in Silhouette.log.
+
+## S-89 — Servitron is dropped (owner, 2026-10-10)
+
+The owner's in-game test: opening LooksMenu on a Servitron crashes the game (access violation in LooksMenu's
+menu with ServitronRace in hand), and the bodies Silhouette gave Servitrons (S-85..S-88: written, 0 failed, a
+player's log) changed nothing on screen -- the robot's parts are object-mod models LooksMenu does not morph.
+ServitronRace leaves the default `distributeRaces`, so Silhouette writes nothing on Servitrons; the page says
+they are not shaped, as Anatomy Servitron's does. The code for a race with its own pool, body sex and list
+(S-86..S-88) stays, unused by default. Bodies already written on Servitrons stay as they are and show nothing.

@@ -23,8 +23,7 @@
   "refitOutfitPresetsFemale": {},
   "refitOutfitPresetsMale": {},
   "distributeRaces": [
-    "HumanRace",
-    "ServitronRace"
+    "HumanRace"
   ],
   "heavyWords": [
     "armor",

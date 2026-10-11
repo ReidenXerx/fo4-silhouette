@@ -70,8 +70,9 @@ DEFAULT = {
     # distributes to every NPC race; in Fallout 4 only races that wear the human body
     # should, and the base game has one. Never empty (owner, 2026-09-24): the shipped
     # config lists HumanRace, and a list emptied by hand is refused, not read as the default.
-    # ServitronRace (S-85): a mod's race, in OPTIONAL_RACES below.
-    'distributeRaces': ['HumanRace', 'ServitronRace'],
+    # S-89 (owner, 2026-10-10): ServitronRace is NOT a default any more -- LooksMenu crashes on that race and its
+    # sliders reshaped nothing in game. OPTIONAL_RACES below still says how to treat it if a user lists it.
+    'distributeRaces': ['HumanRace'],
     # What counts as heavy clothes, which flatten the nipples under ORefit (S-48): an item
     # whose NAME holds one of these words or phrases, as a whole word, in any case --
     # plainly armour, a plate over the chest, or a jacket or coat. Anything the name does
@@ -118,7 +119,7 @@ OPTIONAL_RACES = {'servitronrace': {'plugin': 'Servitron.esm', 'body': 'female',
 
 
 EMPTY_RACES = ('distributeRaces is empty: Silhouette would shape nobody -- no random bodies, no rules by name or '
-               'faction, no refits. The default is ["HumanRace", "ServitronRace"]: put it back, or list the races (by editor id) '
+               'faction, no refits. The default is ["HumanRace"]: put it back, or list the races (by editor id) '
                'that wear the human body')
 
 

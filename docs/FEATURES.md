@@ -29,11 +29,8 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
   when you cannot rebuild (S-5).
 - A marker morph per template makes every roll permanent and records which body an NPC got; each build's
   manifest names every body it can give, and old manifests are kept (S-6, S-12).
-- Which races get bodies is a config key (`distributeRaces`, HumanRace and Servitron's ServitronRace by
-  default, S-85). Servitrons are flagged male by the game and wear women's parts: Silhouette treats them as
-  women and draws their bodies itself, since BodyGen never reaches robots made from templates (S-86) -- without
-  breast, nipple or chest sliders, which push their armoured breasts behind the suit (S-87) -- unless Anatomy
-  Servitron is installed, whose breasts follow every slider with the suit behind them (S-88); an empty list is refused
+- Which races get bodies is a config key (`distributeRaces`, HumanRace by default). Servitron robots are
+  not shaped: LooksMenu does not support their race (S-89); an empty list is refused
   rather than read as "everyone" (S-11, S-61).
 
 ## The named people
