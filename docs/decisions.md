@@ -1500,3 +1500,14 @@ player's log) changed nothing on screen -- the robot's parts are object-mod mode
 ServitronRace leaves the default `distributeRaces`, so Silhouette writes nothing on Servitrons; the page says
 they are not shaped, as Anatomy Servitron's does. The code for a race with its own pool, body sex and list
 (S-86..S-88) stays, unused by default. Bodies already written on Servitrons stay as they are and show nothing.
+
+## S-90 — Ivy keeps her own body by default (alasdairn for the owner, 2026-10-12)
+
+Ivy's players dislike body modifiers on her (her author, via the Watcher), so the shipped config blacklists her
+by form id: `blacklistedNpcsFormID` {"CompanionIvy.esm": ["000803"]}, in the file and in rules.DEFAULT. Asked
+through the Watcher, alasdairn (approving while the owner is away): "ship Ivy with the default preset and allow
+players to choose a different preset if they wish ... yes to that". BodyGen's blacklist line comes after her
+S-66 character line, so it wins, and the plugin's step 1 says the same. A player's choice outranks every rule
+(Director::DecideBody keeps a chosen body first), so a pick in the window or MCM still gives her a body, the
+"Ivy" preset among them. Her S-66 body stays in the build: removing the blacklist entry gives it back. Someone
+who met her already keeps the body she has (a body is given once, S-68) until a Reset on her.
