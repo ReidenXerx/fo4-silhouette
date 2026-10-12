@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "label": "VirusTotal",
-  "message": "0.3.9 · 0/75 clean",
+  "message": "0.4.0 · 0/75 clean",
   "color": "brightgreen",
   "isError": false,
-  "_sha256": "dee431a24bf7fc773dc7f39a999010f26ccae3b1a231372c14832e400076a4c8"
+  "_sha256": "7456a70ddc24892c415440f21e28b0ca93ad351676946d39b4d663f422f6245c"
 }
