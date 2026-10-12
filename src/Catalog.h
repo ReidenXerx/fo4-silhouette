@@ -163,9 +163,19 @@ namespace SH
 		std::vector<FactionRule> factionRules;
 		std::vector<RacePool>    racePools;  // S-86
 
+		// S-91: [0] male, [1] female -- each sex's random line as preset names, each body as many times as its tier
+		// weighs (S-65); empty in an older catalog. Races the config adds after the generator ran draw from it.
+		std::vector<std::string> randomPool[2];
+		// S-91: races the config's distributeRaces adds that this build's BodyGen lines do not name (set at load).
+		std::vector<std::string> runtimeRaces;
+
 		// S-86: the body sex of a race with a pool of its own, whatever an actor's sex flag says; none otherwise.
 		[[nodiscard]] std::optional<bool> BodyFemaleOf(std::string_view a_race) const;
 		[[nodiscard]] const RacePool*     RacePoolOf(std::string_view a_race) const;
+
+		// S-91: takes the config's races this build lacks as runtime races (only additions: a race the build has
+		// stays whatever the file says). Returns the ones taken; none without a random pool to draw from.
+		std::vector<std::string> AddRuntimeRaces(const std::vector<std::string>& a_races);
 
 		// ORefit (S-20 slots and order, S-40 floors, S-42 heavy clothes), OBody's keys for the lists.
 		std::vector<int>         clothedSlots;  // biped slot numbers, 30..61

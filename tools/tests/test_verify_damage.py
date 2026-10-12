@@ -332,6 +332,13 @@ def g9_a_blacklist_line_dropped(d):
     restamp(d)
 
 
+@case(lambda: 'rules.randomPool.female is not the female random line at its weights (S-91)')
+def g9b_the_random_pool_copy_drops_a_body(d):
+    # A race the config adds in game draws from this copy: one body short is a pool that is not BodyGen's.
+    edit_json(data(d, support.CAT), lambda doc: doc['rules']['randomPool']['female'].pop())
+    restamp(d)
+
+
 @case(lambda: 'the female player template rolls')
 def g10_a_player_line_with_a_padded_id_last(d):
     # LooksMenu reads the id with strtoul: 000007 is the player too.

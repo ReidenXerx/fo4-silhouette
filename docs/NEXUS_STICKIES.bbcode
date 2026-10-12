@@ -1,5 +1,5 @@
 === STICKY: Every feature ===
-[b]Silhouette 0.3.9: every feature[/b]
+[b]Silhouette 0.4.0: every feature[/b]
 The full list, each item as the code does it. Decision numbers (S-#) point into [url=https://github.com/ReidenXerx/fo4-silhouette/blob/master/docs/decisions.md]decisions.md[/url].
 
 [b]Game versions[/b]
@@ -14,7 +14,7 @@ The full list, each item as the code does it. Decision numbers (S-#) point into 
 [*]Every NPC gets a body the first time you meet them, and keeps it for the rest of the save.
 [*]Random bodies come from Silhouette's own pool: 41 per sex, 18 Plain, 17 Rough, 6 Fine. Odds 70 / 22 / 8 % (S-65).
 [*]A bust floor keeps every woman's bust small but real: no concave chest for the breast physics to fold.
-[*]Which races get bodies is a config key (HumanRace by default).
+[*]Which races get bodies is a config key (HumanRace by default). Add a modded race that wears the CBBE or BodyTalk body to [font=Courier New]distributeRaces[/font] and its people get bodies from the random pool at the next game start: no Python, no generator (S-91).
 [*]One body mod is enough: a sex with no body Silhouette supports (CBBE for women, BodyTalk for men, built in BodySlide) is left alone, with a log line and one message box a launch (S-78).
 [/list]
 [b]The named people[/b]
@@ -103,7 +103,7 @@ The same keys and priority as OBody NG: per-NPC blacklist, then per-NPC preset, 
 [/list]
 [b]Keys that work without the plugin[/b] (compiled into LooksMenu's BodyGen files): race, plugin, per-NPC form id and every form-id, plugin and race blacklist. By name, by faction and the name blacklist need Silhouette.dll.
 
-[b]Changing the file[/b]: the game never reads it directly. Run [font=Courier New]tools/silhouette_gen.py --write[/font] (Python 3) after editing it; the source is on [url=https://github.com/ReidenXerx/fo4-silhouette]GitHub[/url]. Your own BodySlide presets need no step: the plugin reads them in game (S-76).
+[b]Changing the file[/b]: [font=Courier New]distributeRaces[/font] is read in game, so adding a race needs only the edit and a game restart (S-91). For every other key the game never reads the file directly: run [font=Courier New]tools/silhouette_gen.py --write[/font] (Python 3) after editing it; the source is on [url=https://github.com/ReidenXerx/fo4-silhouette]GitHub[/url]. Your own BodySlide presets need no step: the plugin reads them in game (S-76).
 
 === STICKY: For mod authors: the API and events ===
 [b]Silhouette:API[/b]: global functions with OBody NG's names. Every one is safe to call whatever is installed: without Silhouette.dll they do nothing and say so through their return value. Full comments in [url=https://github.com/ReidenXerx/fo4-silhouette/blob/master/papyrus/Silhouette/API.psc]API.psc[/url].

@@ -2102,6 +2102,8 @@ def main():
                          'presets': [p['name'] for _n, _v, p in pools[rules.OPTIONAL_RACES[race.lower()]['body']]
                                      for _ in range(pool[p['name'].casefold()]['weight'] if pool else 1)]}
                         for race in distribute if race.lower() in rules.OPTIONAL_RACES],
+            random_pool={g: [p['name'] for _n, _v, p in pools[g] for _ in range(pool[p['name'].casefold()]['weight'] if pool else 1)]
+                         for g in BODIES},
             slider_sets={g: base[g]['set'] for g in BODIES if base.get(g) and base[g].get('set')})
         rules_id = catalog.rules_hash(cat, m)
         cat['rulesHash'] = rules_id

@@ -97,7 +97,8 @@ def resolve_races(cfg, data, report):
 
 
 def build(*, stamp, build_id, mode, presets, player, states, never_in_body, variety, cfg, data,
-          refit_presets, body_morphs, baked, report, pool_factions=frozenset(), slider_sets=None, race_pools=None):
+          refit_presets, body_morphs, baked, report, pool_factions=frozenset(), slider_sets=None, race_pools=None,
+          random_pool=None):
     """The catalog as a dict, without its rulesHash (rules_hash() below, once the BodyGen lines exist).
 
     slider_sets: {sex: base_body slider set} the body was built with -- the plugin resolves the player's
@@ -286,6 +287,8 @@ def build(*, stamp, build_id, mode, presets, player, states, never_in_body, vari
             'faction': faction,
             # S-86: races the plugin draws itself, with the body's sex
             'racePool': list(race_pools or []),
+            # S-91: each sex's random line as preset names, weighted: races the config adds in game draw from it
+            'randomPool': {s: list((random_pool or {}).get(s, [])) for s in ('female', 'male')},
         },
         'orefit': {
             'slots': CLOTHED_SLOTS,
@@ -329,7 +332,7 @@ TOP_KEYS = ('schema', 'build', 'stamp', 'mode', 'rulesHash', 'states', 'neverInB
             'variety', 'rules', 'orefit', 'sliderSets')
 PRESET_KEYS = ('name', 'sex', 'marker', 'values', 'random', 'menu', 'zeroed', 'fit', 'family')
 VARIETY_KEYS = ('morph', 'low', 'high', 'group')
-RULE_KEYS = ('racePool', 'races', 'npcFormID', 'blacklistedNpcsFormID', 'blacklistedPlugins', 'blacklistedRaces', 'npcName',
+RULE_KEYS = ('racePool', 'randomPool', 'races', 'npcFormID', 'blacklistedNpcsFormID', 'blacklistedPlugins', 'blacklistedRaces', 'npcName',
              'blacklistedNpcNames', 'faction')
 OREFIT_KEYS = ('slots', 'blacklist', 'blacklistNames', 'blacklistPlugins', 'force', 'forceNames', 'outfits', 'sets',
                'heavy', 'light')
@@ -539,6 +542,10 @@ def check(doc):
         for n in names:
             if (sex, ifold(n)) not in seen:
                 fail(f'{where} names {n!r}, not a {sex} preset of this build')
+    for s, names in per_sex(r.get('randomPool', {s: [] for s in SEXES}), 'rules.randomPool').items():  # S-91, optional
+        for n in strings(names, f'rules.randomPool.{s}'):
+            if (s, ifold(n)) not in seen:
+                fail(f'rules.randomPool.{s} names {n!r}, not a {s} preset of this build')
     o = only(at(doc, 'orefit', 'catalog'), OREFIT_KEYS, 'orefit')
     for slot in need(at(o, 'slots', 'orefit'), list, 'orefit.slots'):
         if type(slot) is not int or not 30 <= slot <= 61:

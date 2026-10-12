@@ -235,6 +235,24 @@ namespace SH
 		return p ? std::optional<bool>{ p->female } : std::nullopt;
 	}
 
+	std::vector<std::string> Catalog::AddRuntimeRaces(const std::vector<std::string>& a_races)
+	{
+		std::vector<std::string> added;
+		if (randomPool[0].empty() && randomPool[1].empty()) {
+			return added;
+		}
+		for (const auto& race : a_races) {
+			const auto known = [&](const std::string& a_r) { return IEquals(a_r, race); };
+			if (race.empty() || std::ranges::any_of(races, known) || std::ranges::any_of(racePools, [&](const RacePool& a_p) { return IEquals(a_p.race, race); })) {
+				continue;
+			}
+			races.push_back(race);
+			runtimeRaces.push_back(race);
+			added.push_back(race);
+		}
+		return added;
+	}
+
 	std::vector<const Preset*> Catalog::MenuPresets(bool a_female) const
 	{
 		std::vector<const Preset*> out;
@@ -549,6 +567,19 @@ namespace SH
 						throw Bad(std::format("rules.racePool {}: no presets", pool.race));
 					}
 					c.racePools.push_back(std::move(pool));
+				}
+			}
+			// S-91. Optional, so a catalog from before it reads as it did (and adds no race at run time).
+			if (const auto rp = rules.find("randomPool"); rp != rules.end()) {
+				PerSex(*rp, "rules.randomPool", [&](bool a_female, const json& a_v) {
+					c.randomPool[a_female ? 1 : 0] = Strings(a_v, "rules.randomPool");
+				});
+				for (const int s : { 0, 1 }) {
+					for (const auto& name : c.randomPool[s]) {
+						if (!c.Find(name, s == 1)) {
+							throw Bad(std::format("rules.randomPool: \"{}\" is not a {} preset of this build", name, s == 1 ? "female" : "male"));
+						}
+					}
 				}
 			}
 

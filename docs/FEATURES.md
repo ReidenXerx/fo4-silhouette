@@ -32,6 +32,10 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 - Which races get bodies is a config key (`distributeRaces`, HumanRace by default). Servitron robots are
   not shaped: LooksMenu does not support their race (S-89); an empty list is refused
   rather than read as "everyone" (S-11, S-61).
+- **A race added to `distributeRaces` needs no generator** (S-91): the plugin reads the list at game start,
+  and a race the build's BodyGen lines do not name draws from the random pool, at the same weights, by each
+  person's own sex -- NPCs made from templates included, which a BodyGen race line would miss. For a race
+  whose people wear the CBBE or BodyTalk body; robots and creatures cannot be shaped.
 
 ## The named people
 

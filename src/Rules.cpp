@@ -110,6 +110,14 @@ namespace SH
 			}
 		}
 
+		// 4c. S-91: a race the config added after the generator ran has no BodyGen line: it draws from the random
+		// pool the line would have given it, the same bodies at the same weights.
+		if (ListedName(a_catalog.runtimeRaces, a_actor.race) && !a_catalog.randomPool[sex].empty()) {
+			auto preset = Pick(a_catalog.randomPool[sex], a_actor.seed, a_actor.salt);
+			return { Tier::kFaction, preset, a_catalog.randomPool[sex],
+				std::format("race {} is in the config, not in this build: the random pool (S-91) -> {}", a_actor.race, preset) };
+		}
+
 		// 5. plugin, race, random: BodyGen's.
 		return { Tier::kNone, {}, {}, "no runtime rule applies (BodyGen's roll stands)", false, true };
 	}

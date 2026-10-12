@@ -1511,3 +1511,20 @@ S-66 character line, so it wins, and the plugin's step 1 says the same. A player
 (Director::DecideBody keeps a chosen body first), so a pick in the window or MCM still gives her a body, the
 "Ivy" preset among them. Her S-66 body stays in the build: removing the blacklist entry gives it back. Someone
 who met her already keeps the body she has (a body is given once, S-68) until a Reset on her.
+
+## S-91 — A race added to the config needs no generator (alasdairn for the owner, 2026-10-12)
+
+A player asked for a modded race. The answer was "add it to distributeRaces and run the generator", and under
+MO2 the generator could not run: Python outside MO2 sees no virtual Data, so no FemaleBody.tri, and the stock
+CBBE and BodyTalk presets sit in two mod folders where `--data` reaches one. A shorter picker list would break
+MCM picks, so no workaround was offered. alasdairn, asked through the Watcher: "Build it".
+
+The plugin reads `distributeRaces` from Silhouette_presetDistributionConfig.json at game start
+(Game.cpp AddConfigRaces). A race the catalog already has is left as it is; a race it lacks becomes a runtime
+race (Catalog::AddRuntimeRaces) and joins `races`, so its people are distributed. Rules.cpp Decide step 4c gives
+them a body from the random pool, by their own sex, under every blacklist and after the faction rules, as
+Tier::kFaction (S-86's path: the plugin writes the body, so NPCs made from templates are reached too, which a
+BodyGen race line misses). The generator writes the pool into the catalog as `rules.randomPool`, each sex's
+random line as preset names at their tier weights (S-65); verify_bodygen checks it is exactly the line, and a
+damage case proves it fails when it is not. Only additions: removing HumanRace from the file still needs a
+generator run, as does every other key. A catalog from before S-91 has no pool and adds no race (logged).

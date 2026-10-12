@@ -724,6 +724,35 @@ namespace SH::Game
 		return std::exchange(g_bodyWarning, {});
 	}
 
+	// S-91: the config's distributeRaces, read in game, so a race needs no generator run: a race this build's
+	// BodyGen lines do not name draws from the random pool. Only additions; every other key still needs one.
+	void AddConfigRaces(Catalog& a_catalog)
+	{
+		std::string error;
+		const auto  doc = ReadJson(std::filesystem::path{ kFolder } / "Silhouette_presetDistributionConfig.json", error);
+		if (!doc) {
+			logger::info("races: {} - only this build's races are shaped", error);
+			return;
+		}
+		const auto it = doc->find("distributeRaces");
+		if (it == doc->end() || !it->is_array()) {
+			return;
+		}
+		std::vector<std::string> races;
+		for (const auto& r : *it) {
+			if (r.is_string()) {
+				races.push_back(r.get<std::string>());
+			}
+		}
+		const auto added = a_catalog.AddRuntimeRaces(races);
+		for (const auto& r : added) {
+			logger::info("races: {} is in the config but not in this build - its people draw from the random pool (S-91)", r);
+		}
+		if (a_catalog.randomPool[0].empty() && a_catalog.randomPool[1].empty()) {
+			logger::info("races: this catalog has no random pool (an older generator run) - a race added to the config needs a run");
+		}
+	}
+
 	void Load()
 	{
 		std::string error;
@@ -740,6 +769,7 @@ namespace SH::Game
 			return;
 		}
 		AddInstalledPresets(*catalog);
+		AddConfigRaces(*catalog);
 		CheckBodies(*catalog);
 		CheckDeadBodyFix();
 		// S-88: a race's list of morphs it never takes is lifted when the package that fixes its meshes is there

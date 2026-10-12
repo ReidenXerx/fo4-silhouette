@@ -5,7 +5,7 @@ keeps it: an ordinary one most often, an unflattering one less often, a conventi
 rarely, from Silhouette's own pool. The Commonwealth's named people -- companions and major NPCs -- each
 have a body of their own.
 
-**Status:** 0.3.9: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
+**Status:** 0.4.0: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
 live on them while the camera frames them. One plugin for old-gen 1.10.163 and Anniversary 1.11.x through
 Runtime Database (S-75); your own BodySlide presets in the picker (S-76); the Diamond City pack (S-77); one
 body mod is enough (S-78).
@@ -176,7 +176,8 @@ takes the clothed shapes off).
 The archive is generated ready to play: Silhouette's own bodies, and in the pickers also the presets CBBE and
 BodyTalk ship (S-74); your other installed presets join the NPC picker by themselves (S-76). You need the
 generator below only to put them in the MCM dropdowns,
-to change the rules in `Silhouette_presetDistributionConfig.json`, or for a body you cannot build zeroed.
+to change the rules in `Silhouette_presetDistributionConfig.json`, or for a body you cannot build zeroed. A race
+added to its `distributeRaces` needs no generator: the plugin reads that list in game (S-91).
 
 ## Use (the generator)
 

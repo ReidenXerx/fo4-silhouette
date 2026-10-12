@@ -644,6 +644,19 @@ def check_weights(cat, pool_lines, problems):
         if wrong:
             problems.append(f'Silhouette_morphs.ini:{n}: the random line lists {len(wrong)} template(s) other than '
                             f'their tier\'s weight (S-65): {", ".join(wrong[:4])}')
+    # S-91: the catalog's copy of each sex's random line -- a race the config adds in game draws from it.
+    marker_of = {(p['sex'], p['name'].casefold()): p['marker'].casefold() for p in cat.get('presets', [])}
+    if 'rules' not in cat:
+        return  # a catalog without rules fails catalog.check on its own; nothing to compare here
+    copy = cat['rules'].get('randomPool')
+    if not isinstance(copy, dict):
+        problems.append('catalog.json has no rules.randomPool: a race the config adds in game would get no body (S-91)')
+        return
+    for s in ('female', 'male'):
+        got = collections.Counter(marker_of.get((s, str(n).casefold()), f'?{n}') for n in copy.get(s, []))
+        want = collections.Counter({m: w for (g, m), w in weight.items() if g == s})
+        if got != want:
+            problems.append(f'catalog.json rules.randomPool.{s} is not the {s} random line at its weights (S-91)')
 
 
 def check_lines(args, rules, templates, cat, problems):

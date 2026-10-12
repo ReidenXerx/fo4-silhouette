@@ -318,6 +318,27 @@ namespace
 		a.race = "ServitronRace";
 		a.factions = { { "Fallout4.esm", 3001 } };
 		Check(SH::Decide(robots, a).why.starts_with("faction"), "a faction rule outranks the race's pool");
+
+		// S-91: a race the config adds in game -- the random pool, by the actor's own sex, under the blacklists
+		auto extra = *c;
+		Check(extra.AddRuntimeRaces({ "MyRace" }).empty() && extra.races.size() == 1, "a catalog with no random pool takes no race in game");
+		extra.randomPool[1] = { "Curvy", "Slim", "Slim" };
+		extra.randomPool[0] = { "BT - Average" };
+		Check(extra.AddRuntimeRaces({ "humanrace", "MyRace", "", "MYRACE" }) == std::vector<std::string>{ "MyRace" } && extra.races.size() == 2,
+			"only a race the build lacks is taken, once, in any case");
+		a = Npc();
+		a.race = "myrace";
+		v = SH::Decide(extra, a);
+		Check(v.tier == SH::Tier::kFaction && v.options.size() == 3 && (v.preset == "Curvy" || v.preset == "Slim"),
+			std::format("a race the config adds draws from the random pool ({})", v.why));
+		a.female = false;
+		v = SH::Decide(extra, a);
+		Check(v.tier == SH::Tier::kFaction && v.preset == "BT - Average", "a race the config adds draws by the actor's own sex");
+		a = Npc();
+		a.race = "MyRace";
+		a.bases = { { "Fallout4.esm", 2000 } };
+		Check(SH::Decide(extra, a).blacklisted, "a form id blacklist outranks the random pool of an added race");
+		Check(SH::Decide(extra, Npc()).tier == SH::Tier::kNone, "HumanRace keeps BodyGen's roll");
 	}
 
 
@@ -814,6 +835,31 @@ namespace
 			return;
 		}
 		Check(cat->RacePoolOf("SERVITRONRACE") && cat->RacePoolOf("ServitronRace")->without.size() == 2, "the race pool's list reads");
+
+		// S-91: the random pool reads, refuses a name that is no preset, and gives an added race a body
+		auto poolDoc = BaseCatalog();
+		poolDoc["rules"]["randomPool"] = { { "female", { "Curvy", "Curvy", "Slim" } }, { "male", { "BT - Average" } } };
+		auto added = Cat(poolDoc);
+		Check(added && added->randomPool[1].size() == 3 && added->randomPool[0].size() == 1, "the random pool reads (S-91)");
+		auto badDoc = poolDoc;
+		badDoc["rules"]["randomPool"]["male"] = { "Nobody" };
+		std::string bad;
+		Check(!SH::ParseCatalog(badDoc, bad) && bad.contains("randomPool"), "a random pool naming no preset of its sex is refused");
+		if (added) {
+			auto withRace = std::make_shared<SH::Catalog>(*added);
+			(void)withRace->AddRuntimeRaces({ "MyRace" });
+			SH::Director d3;
+			FakeGame     g3;
+			d3.SetCatalog(withRace);
+			auto cy = See(0x902, "Cy");
+			cy.facts.race = "MyRace";
+			d3.Seen(cy);
+			(void)Drain(d3, g3);
+			const auto& got = g3.actors[0x902].unkeyed;
+			const auto  rec3 = d3.RecordOf(0x902);
+			Check((got.contains("Silhouette_Curvy") || got.contains("Silhouette_Slim")) && rec3 && rec3->source == SH::Source::kFactionRule,
+				"someone of a race the config adds gets a body from the random pool, written by the plugin");
+		}
 		SH::Director d;
 		FakeGame     g;
 		d.SetCatalog(cat);
