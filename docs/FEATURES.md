@@ -47,9 +47,8 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
   MacCready, Deacon, Arthur Maxson, X6-88, Old Longfellow, Porter Gage, Sturges, Kellogg, Travis Miles, Mayor
   McDonough, Vadim Bobrov, Moe Cronin, Father, Paladin Brandis, Tinker Tom, John, Arturo Rodriguez, Solomon, Doctor Sun, Abbot,
   Sheffield, Malcolm Latimer, Finn, Wayne Delancy, Parker Quinn, Winlock, Barnes and Rufus Rubins.
-- **Ivy keeps her own body** by default (S-90): she is on the shipped config's form-id blacklist. Pick her a
-  preset in the window or MCM and she wears it; take her off `blacklistedNpcsFormID` and she gets the body
-  Silhouette made for her. Met her already? Reset on her gives her own body back.
+- **Ivy wears the body made for her** (S-92, lifting S-90's blacklist of her). Silhouette never changes
+  anyone's height. Met her while 0.3.9-0.4.0 left her alone? Reset on her gives her that body.
 - **The Diamond City pack** (S-77): the people the author's saves meet most, each drawn from their story and
   allowed to be sardonic -- the mayor of "Mankind for McDonough" grossly obese, Sheffield's ruined liver on
   stick limbs, Becky Fallon's "basement", a con man all chest on chicken legs.

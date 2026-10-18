@@ -29,9 +29,9 @@ class Validate(unittest.TestCase):
         with self.assertRaises(SystemExit):
             rules.distribute_races({'distributeRaces': []})
 
-    def test_ivy_keeps_her_own_body_by_default(self):
-        # S-90: blacklisted by form id, so BodyGen's last line for her sets nothing; a player's pick still wins.
-        self.assertEqual(rules.DEFAULT['blacklistedNpcsFormID'], {'CompanionIvy.esm': ['000803']})
+    def test_ivy_is_shaped_by_default(self):
+        # S-92 lifts S-90: nobody is blacklisted by default, so Ivy gets the body made for her (S-66).
+        self.assertEqual(rules.DEFAULT['blacklistedNpcsFormID'], {})
         shipped = json.loads((support.PACKAGE / 'F4SE/Plugins/Silhouette' / rules.CONFIG_NAME).read_text(encoding='utf-8'))
         self.assertEqual(shipped['blacklistedNpcsFormID'], rules.DEFAULT['blacklistedNpcsFormID'])
 

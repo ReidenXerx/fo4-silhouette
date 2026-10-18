@@ -8,11 +8,7 @@
   "raceFemale": {},
   "raceMale": {},
   "blacklistedNpcs": [],
-  "blacklistedNpcsFormID": {
-    "CompanionIvy.esm": [
-      "000803"
-    ]
-  },
+  "blacklistedNpcsFormID": {},
   "blacklistedNpcsPluginFemale": [],
   "blacklistedNpcsPluginMale": [],
   "blacklistedRacesFemale": [],

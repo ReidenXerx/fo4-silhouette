@@ -55,11 +55,9 @@ CONFIG_NAME = 'Silhouette_presetDistributionConfig.json'
 DEFAULT = {
     'npcFormID': {}, 'npc': {}, 'factionFemale': {}, 'factionMale': {},
     'npcPluginFemale': {}, 'npcPluginMale': {}, 'raceFemale': {}, 'raceMale': {},
-    'blacklistedNpcs': [],
-    # S-90 (alasdairn for the owner, 2026-10-12): Ivy (CompanionIvy.esm 000803) keeps her own body by default --
-    # her players dislike body changes on her. A player's pick still gives her one (a choice outranks every rule),
-    # and taking her off this list gives her the body Silhouette made for her (S-66).
-    'blacklistedNpcsFormID': {'CompanionIvy.esm': ['000803']},
+    # S-92 (owner, 2026-10-18): Ivy is shaped again -- S-90's blacklist of her is lifted (her players' complaint
+    # was a changed height, which Silhouette never sets).
+    'blacklistedNpcs': [], 'blacklistedNpcsFormID': {},
     'blacklistedNpcsPluginFemale': [], 'blacklistedNpcsPluginMale': [],
     'blacklistedRacesFemale': [], 'blacklistedRacesMale': [],
     'blacklistedPresetsFromRandomDistribution': [],
@@ -405,8 +403,8 @@ UNSHAPED = 'Silhouette_Unshaped'
 
 
 def write_default(path):
-    """A config with every key present and its default value written out -- the rules empty but Ivy's
-    blacklist (S-90), the heavy words and distributeRaces ["HumanRace"] spelled in full -- so a user sees each option and
+    """A config with every key present and its default value written out -- the rules empty, the
+    heavy words and distributeRaces ["HumanRace"] spelled in full -- so a user sees each option and
     what it holds without reading this file (owner, 2026-09-24). Only ever written where there is
     no config yet: the generator never writes into a config it reads."""
     path.parent.mkdir(parents=True, exist_ok=True)

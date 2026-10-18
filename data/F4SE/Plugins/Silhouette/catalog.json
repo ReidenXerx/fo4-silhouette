@@ -9350,12 +9350,7 @@
     }
    ]
   },
-  "blacklistedNpcsFormID": [
-   {
-    "plugin": "CompanionIvy.esm",
-    "id": 2051
-   }
-  ],
+  "blacklistedNpcsFormID": [],
   "blacklistedPlugins": {
    "female": [],
    "male": []
@@ -10458,5 +10453,5 @@
    "names": []
   }
  },
- "rulesHash": "d1ce92175f96"
+ "rulesHash": "a84830e002c4"
 }

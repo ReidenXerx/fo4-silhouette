@@ -1528,3 +1528,11 @@ BodyGen race line misses). The generator writes the pool into the catalog as `ru
 random line as preset names at their tier weights (S-65); verify_bodygen checks it is exactly the line, and a
 damage case proves it fails when it is not. Only additions: removing HumanRace from the file still needs a
 generator run, as does every other key. A catalog from before S-91 has no pool and adds no race (logged).
+
+## S-92 — Ivy is shaped again (the owner, 2026-10-18)
+
+S-90 blacklisted Ivy by default because her players disliked "body modifiers" on her. Back, the owner said
+the complaint was a changed HEIGHT, and Silhouette never sets height: it writes body sliders only (her S-66
+preset has no length or scale slider). So the blacklist is lifted: `blacklistedNpcsFormID` is empty again in
+rules.DEFAULT and the shipped config, and BodyGen's line for her is her S-66 character body. A player's pick
+still outranks it. Someone who met her under 0.3.9-0.4.0 keeps the body she has until a Reset on her (S-68).
