@@ -1563,3 +1563,17 @@ it names no part), and make-release refuses a .psc newer than its .pex (a failed
 Bridge.pex to be packed). The picture atlas held 252 cells (2048 square, 96x160 cells); it is now 2048 wide and
 2048 or 4096 tall, whichever holds the list -- the window cuts by columns only (Panel.as ATLAS_COLS), so it is
 unchanged.
+
+## S-94 — McDonough is heavy, not grossly obese (alasdairn for the owner, 2026-10-18)
+
+alasdairn in #management, from a screenshot of the mayor from behind in his suit: "we need to make Mcdonough's
+body look more natural". The gut ballooned sideways past the arm and the trousers became a wide tube. The body
+was ours: S-77 made him grossly obese on the owner's "could very very fat", with BTStomachFat at 135 -- past the
+slider's 100, so the morph is extrapolated beyond what any outfit's .tri was made for. His suit (Clothes\Mayor\
+SuitM.nif) is Anatomy's BodyTalk refit build and does morph; it just follows a stomach no refit expects.
+
+His body is now heavy and soft inside every slider's range: BTBodyFatv2 60, BTStomachFat 80, BTLowerStomachSize
+50, BTCenterStomachSize 35, BTChubbyArm 50, BTChubbyLeg 40, BTChestSmoothing 60, Hips 35 -- volume 464 (was 540;
+Diamond City's other bodies stay under 445), so he is still the heaviest man in Diamond City. A McDonough already met
+keeps his old body until a Reset on him (S-68). Other bodies past 100 on a slider (Fat Min's stomach at 130 and
+a few more) are left as they are: nobody has asked.

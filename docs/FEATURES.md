@@ -58,7 +58,7 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 - **Ivy wears the body made for her** (S-92, lifting S-90's blacklist of her). Silhouette never changes
   anyone's height. Met her while 0.3.9-0.4.0 left her alone? Reset on her gives her that body.
 - **The Diamond City pack** (S-77): the people the author's saves meet most, each drawn from their story and
-  allowed to be sardonic -- the mayor of "Mankind for McDonough" grossly obese, Sheffield's ruined liver on
+  allowed to be sardonic -- the mayor of "Mankind for McDonough" a heavy fat cat (S-94: no longer grossly obese), Sheffield's ruined liver on
   stick limbs, Becky Fallon's "basement", a con man all chest on chicken legs.
 - Bound to their NPC records by plugin and form id (64 records: Curie, Kellogg, Brandis and Malcolm Latimer have two each);
   a rule of yours for the same record wins.

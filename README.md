@@ -5,7 +5,7 @@ keeps it: an ordinary one most often, an unflattering one less often, a conventi
 rarely, from Silhouette's own pool. The Commonwealth's named people -- companions and major NPCs -- each
 have a body of their own.
 
-**Status:** 0.5.0: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
+**Status:** 0.5.1: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
 live on them while the camera frames them. One plugin for old-gen 1.10.163 and Anniversary 1.11.x through
 Runtime Database (S-75); your own BodySlide presets in the picker (S-76); the Diamond City pack (S-77); one
 body mod is enough (S-78).
@@ -48,7 +48,7 @@ OBody does.
   they stay in the picker.
 - **Named people: their own body** (`Silhouette Characters.xml`, S-66). 207 companions and named NPCs,
   from Piper to Fat Min, each one Anatomy Tailor's outfits dress included (S-93), each given a body that fits who they are -- the Diamond City pack's
-  cheerfully sardonic (S-77): the mayor is enormous. A rule of yours for the same NPC
+  cheerfully sardonic (S-77): the mayor is a heavy fat cat. A rule of yours for the same NPC
   wins.
 - **Factions: a pool of their own** (`Silhouette Factions.xml`, S-72). The Brotherhood, the Minutemen,
   the Gunners, the raiders and Nuka-World's three gangs, the Triggermen, the Institute, the Railroad and the

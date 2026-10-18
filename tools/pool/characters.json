@@ -2287,16 +2287,16 @@
      "002F08"
     ]
    ],
-   "vibe": "the fat cat of \"Mankind for McDonough\", who threw the ghouls out and smiles a mile-long smile: grossly obese, soft all over (the owner, 2026-09-27: \"quite unpleasant, could very very fat\"; was: well-fed and soft)",
+   "vibe": "the fat cat of \"Mankind for McDonough\", who threw the ghouls out and smiles a mile-long smile: a heavy, soft politician (S-94, alasdairn for the owner, 2026-10-18: \"more natural\"; was grossly obese, a 135% stomach that ballooned his suit sideways)",
    "values": {
-    "BTBodyFatv2": 100,
-    "BTStomachFat": 135,
-    "BTLowerStomachSize": 95,
-    "BTCenterStomachSize": 70,
-    "BTChubbyArm": 100,
-    "BTChubbyLeg": 90,
-    "BTChestSmoothing": 100,
-    "Hips": 95
+    "BTBodyFatv2": 60,
+    "BTStomachFat": 80,
+    "BTLowerStomachSize": 50,
+    "BTCenterStomachSize": 35,
+    "BTChubbyArm": 50,
+    "BTChubbyLeg": 40,
+    "BTChestSmoothing": 60,
+    "Hips": 35
    }
   },
   "Vadim Bobrov": {

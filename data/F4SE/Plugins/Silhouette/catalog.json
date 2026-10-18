@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "build": "9e731e484c1e",
- "stamp": 10384158,
+ "build": "0496657423e1",
+ "stamp": 300645,
  "mode": "absolute",
  "presets": [
   {
@@ -8489,14 +8489,14 @@
    "sex": "male",
    "marker": "Silhouette_Mayor_McDonough",
    "values": {
-    "BTBodyFatv2": 1.0,
-    "BTCenterStomachSize": 0.7,
-    "BTChestSmoothing": 1.0,
-    "BTChubbyArm": 1.0,
-    "BTChubbyLeg": 0.9,
-    "BTLowerStomachSize": 0.95,
-    "BTStomachFat": 1.35,
-    "Hips": 0.95
+    "BTBodyFatv2": 0.6,
+    "BTCenterStomachSize": 0.35,
+    "BTChestSmoothing": 0.6,
+    "BTChubbyArm": 0.5,
+    "BTChubbyLeg": 0.4,
+    "BTLowerStomachSize": 0.5,
+    "BTStomachFat": 0.8,
+    "Hips": 0.35
    },
    "random": false,
    "menu": true,
@@ -13946,5 +13946,5 @@
    "names": []
   }
  },
- "rulesHash": "aaafa46f31a5"
+ "rulesHash": "6fb7546dcb38"
 }

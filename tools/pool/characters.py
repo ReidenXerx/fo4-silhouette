@@ -476,10 +476,11 @@ CHARACTERS = [
      {'BTNegShoulder': 35, 'BTNegChestWidth': 30, 'BTChestSmoothing': 50, 'BTStomachFat': 40, 'BTThinArm': 30,
       'Hips': 30}),
     ('Mayor McDonough', 'male', [(F4, 'MayorMcDonough', '002F08')],
-     'the fat cat of "Mankind for McDonough", who threw the ghouls out and smiles a mile-long smile: grossly obese, '
-     'soft all over (the owner, 2026-09-27: "quite unpleasant, could very very fat"; was: well-fed and soft)',
-     {'BTBodyFatv2': 100, 'BTStomachFat': 135, 'BTLowerStomachSize': 95, 'BTCenterStomachSize': 70,
-      'BTChubbyArm': 100, 'BTChubbyLeg': 90, 'BTChestSmoothing': 100, 'Hips': 95}),
+     'the fat cat of "Mankind for McDonough", who threw the ghouls out and smiles a mile-long smile: a heavy, '
+     'soft politician (S-94, alasdairn for the owner, 2026-10-18: "more natural"; was grossly obese, '
+     'a 135% stomach that ballooned his suit sideways)',
+     {'BTBodyFatv2': 60, 'BTStomachFat': 80, 'BTLowerStomachSize': 50, 'BTCenterStomachSize': 35,
+      'BTChubbyArm': 50, 'BTChubbyLeg': 40, 'BTChestSmoothing': 60, 'Hips': 35}),
     ('Vadim Bobrov', 'male', [(F4, 'VadimBobrov', '002EFC')],
      'barkeep: a big beer belly, heavy arms',
      {'BTStomachFat': 100, 'BTLowerStomachSize': 60, 'BTCenterStomachSize': 45, 'BTChubbyArm': 50,
