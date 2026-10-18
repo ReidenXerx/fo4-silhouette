@@ -29,6 +29,18 @@ def written(root, p):
 
 class Parts(unittest.TestCase):
 
+    def test_the_window_never_names_a_part(self):
+        # S-93: Bridge passed two parts to At/Locate/PresetOf; 275 men made three and its compile failed. It asks the
+        # generated wrappers instead, which take every part the build has.
+        bridge = (support.REPO / 'papyrus' / 'Silhouette' / 'Bridge.psc').read_text(encoding='utf-8')
+        self.assertEqual(re.findall(r'(?:Names|Markers)\d\(|Player\.(?:At|Locate|PresetOf)\(', bridge), [])
+        with support.Scratch() as root:
+            text = written(root, picker(300, 5)).read_text(encoding='utf-8')
+        for fn in ('String Function Joined(Bool female)', 'String Function WornBy(Actor akActor, Bool female)',
+                   'Int Function IndexOf(String s, Bool female)'):
+            self.assertIn(fn, text)
+        self.assertIn('At(i, n0, n1, n2)', text)
+
     def test_three_hundred_come_back_whole_and_in_order(self):
         p = picker(300, 5)
         with support.Scratch() as root:

@@ -423,38 +423,15 @@ Function WindowLoadMe(Int aiSession)
 		WindowFrame(player, aiSession)
 		Return
 	EndIf
-	String[] n0
-	String[] n1
-	String[] m0
-	String[] m1
-	If female
-		n0 = Silhouette:Player.FemaleNames0()
-		n1 = Silhouette:Player.FemaleNames1()
-		m0 = Silhouette:Player.FemaleMarkers0()
-		m1 = Silhouette:Player.FemaleMarkers1()
-	Else
-		n0 = Silhouette:Player.MaleNames0()
-		n1 = Silhouette:Player.MaleNames1()
-		m0 = Silhouette:Player.MaleMarkers0()
-		m1 = Silhouette:Player.MaleMarkers1()
-	EndIf
-	Int n = Silhouette:Player.Count(female)
-	String joined = ""
-	Int i = 0
-	While i < n
-		If i > 0
-			joined += "|"
-		EndIf
-		joined += Silhouette:Player.At(i, n0, n1)
-		i += 1
-	EndWhile
-	String had = Silhouette:Player.PresetOf(player, female, m0, n0, m1, n1)
+	; Through the generated script's own wrappers: the lists come in as many parts as the build needs (S-93).
+	String joined = Silhouette:Player.Joined(female)
+	String had = Silhouette:Player.WornBy(player, female)
 	If !WindowLive(aiSession)
 		Return
 	EndIf
 	Int at = -1
 	If had != "" && had != "*"
-		at = Silhouette:Player.Locate(had, n0, n1)
+		at = Silhouette:Player.IndexOf(had, female)
 	EndIf
 	WindowItems(joined, "You have " + WindowBodyName(had) + ". Click a preset to try it on.", at)
 	Game.ForceThirdPerson()  ; the free camera shows the body the third-person view has
@@ -477,10 +454,7 @@ String Function WindowMyPreset(Actor akPlayer, Bool abFemale)
 			Return named
 		EndIf
 	EndIf
-	If abFemale
-		Return Silhouette:Player.PresetOf(akPlayer, abFemale, Silhouette:Player.FemaleMarkers0(), Silhouette:Player.FemaleNames0(), Silhouette:Player.FemaleMarkers1(), Silhouette:Player.FemaleNames1())
-	EndIf
-	Return Silhouette:Player.PresetOf(akPlayer, abFemale, Silhouette:Player.MaleMarkers0(), Silhouette:Player.MaleNames0(), Silhouette:Player.MaleMarkers1(), Silhouette:Player.MaleNames1())
+	Return Silhouette:Player.WornBy(akPlayer, abFemale)  ; whatever parts the lists come in (S-93)
 EndFunction
 
 ; A preset on the player from the plugin's list, as the player script gives one: the unkeyed layer cleared,

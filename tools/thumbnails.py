@@ -1,5 +1,5 @@
 """The picker window's thumbnails (S-79): every preset the pickers offer, drawn front and side on the installed
-body, one 2048x2048 atlas per sex, BC1 DDS for Data/Textures/Silhouette/Thumbs<Sex>_<build>.dds.
+body, one atlas per sex (2048 wide; 2048 tall, or 4096 when a sex's list outgrows it, S-93), BC1 DDS for Data/Textures/Silhouette/Thumbs<Sex>_<build>.dds.
 
     python tools/thumbnails.py [--data <game Data>] [--jobs 4] [--texconv <texconv.exe>]
 
@@ -39,8 +39,17 @@ TEXCONV = [pathlib.Path(r'D:\xEdit.4.1.5f\Edit Scripts\Texconvx64.exe'),
            pathlib.Path(r'D:\DynDOLOD\Edit Scripts\Texconvx64.exe')]
 
 CELL_W, CELL_H, SS = 96, 160, 3  # one thumbnail, and the supersampling it is drawn at
-ATLAS = 2048
-COLS, ROWS = ATLAS // CELL_W, ATLAS // CELL_H
+ATLAS = 2048          # the width, which fixes the columns the window cuts by (Panel.as ATLAS_COLS)
+TALL = (2048, 4096)   # the height: the smaller that holds the list (S-93: 207 named people outgrew 2048)
+COLS = ATLAS // CELL_W
+
+
+def rows_of(height):
+    return height // CELL_H
+
+
+def height_for(count):
+    return next((h for h in TALL if count <= COLS * rows_of(h)), None)
 BACK = (22, 22, 26)
 SKIN = (214, 176, 156)
 FILE = {'female': 'ThumbsFemale', 'male': 'ThumbsMale'}  # + "_<build>.dds"
@@ -153,8 +162,8 @@ def main():
             first = next((i for i, (x, y) in enumerate(zip(names, script)) if x != y), min(len(names), len(script)))
             sys.exit(f'{sex}: the catalog offers {len(names)} presets, Silhouette:Player {len(script)}, first '
                      f'difference at {first} -- regenerate (tools/silhouette_gen.py --write) and try again')
-        if len(names) > COLS * ROWS:
-            sys.exit(f'{sex}: {len(names)} presets, the atlas holds {COLS * ROWS}')
+        if height_for(len(names)) is None:
+            sys.exit(f'{sex}: {len(names)} presets, the tallest atlas holds {COLS * rows_of(TALL[-1])}')
         lists[sex] = names
         body = _load(a.data, sex)
         zs = [p[2] for p in body.ref]
@@ -164,7 +173,7 @@ def main():
 
     WORK.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
-    atlas = {sex: Image.new('RGB', (ATLAS, ATLAS), BACK) for sex in lists}
+    atlas = {sex: Image.new('RGB', (ATLAS, height_for(len(names))), BACK) for sex, names in lists.items()}
     import io
     with ProcessPoolExecutor(max_workers=a.jobs) as pool:
         for n, (sex, i, png) in enumerate(pool.map(render, jobs, chunksize=4), 1):

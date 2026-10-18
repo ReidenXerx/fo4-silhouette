@@ -1536,3 +1536,30 @@ the complaint was a changed HEIGHT, and Silhouette never sets height: it writes 
 preset has no length or scale slider). So the blacklist is lifted: `blacklistedNpcsFormID` is empty again in
 rules.DEFAULT and the shipped config, and BodyGen's line for her is her S-66 character body. A player's pick
 still outranks it. Someone who met her under 0.3.9-0.4.0 keeps the body she has until a Reset on her (S-68).
+
+## S-93 — The dressed pack: a body for everyone Anatomy Tailor's named outfits dress (the owner, 2026-10-18)
+
+The owner, Anatomy-specialist and the Watcher gave named NPCs of the game and of Ivy's mods outfits matching
+their vibe (fo4-refit data/esl_named_npcs.json + esl_dist.NAMED_NPCS, npc_outfit in esl_sets.json). The owner:
+"I want u also make unique bodies for them also", then "Man also". So tools/pool/characters.py gains every
+woman of that table Silhouette had no body for (57 of 65 at first, then the 3 ghouls) and 56 named men of the
+game, its DLC and the same mods, then the 33 more men of Anatomy's own "men" list (89 men in all). Each body is drawn from the outfit and
+the story, sardonic where the story allows (S-77): Skinny Malone is fat, Fat Min (Famine) is enormous, Pest
+Tilly is bloated on wasted limbs, Kate Armstrong has the arms. Every record was read from its plugin
+(characters.py --check: editor id, local id, sex). Left out, with the reason sent to Anatomy: three CHILDREN on
+the outfit table (HumanChildRace: Meg, Erin Combes, Small Bertha -- Anatomy removed them and its build now
+refuses child NPCs) and two mod-local races (Woodrose, Romy).
+
+Ghouls are in, which S-66 had left out. NakedGhoulTorso is MaleBody.nif / FemaleBody.nif, the human body, and a
+`Plugin|FormID|Gender` line is not race-filtered (only All/plugin lines match a race, docs/bodygen-format.md),
+so BodyGen gives a named ghoul the body although GhoulRace is not in distributeRaces; the plugin's Decide stops
+at its race check (kNone) and leaves BodyGen's body alone. Ghouls not named here stay unshaped. A line whose
+plugin is not installed costs nothing: LooksMenu skips it.
+
+Two limits the pack crossed. The men's picker list reached 275, a third Papyrus part of 128, and the hand-written
+Silhouette:Bridge passed two parts to Player.At/Locate/PresetOf, so it no longer compiled; the generator now
+writes Player.Joined/WornBy/IndexOf, which take every part, Bridge asks only those (test_picker_parts proves
+it names no part), and make-release refuses a .psc newer than its .pex (a failed compile had left the old
+Bridge.pex to be packed). The picture atlas held 252 cells (2048 square, 96x160 cells); it is now 2048 wide and
+2048 or 4096 tall, whichever holds the list -- the window cuts by columns only (Panel.as ATLAS_COLS), so it is
+unchanged.

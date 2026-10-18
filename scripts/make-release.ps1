@@ -59,6 +59,14 @@ $pexText = [System.Text.Encoding]::GetEncoding(28591).GetString([System.IO.File]
 if (-not $pexText.Contains($catalog.build)) {
     throw "$pexFile was not compiled from build $($catalog.build) - run scripts\build-papyrus.ps1."
 }
+# And every other script of its source as it is now: a failed compile leaves the last good .pex behind, and
+# that one was packed once (S-93: a Bridge that passed two list parts to a Player with three).
+foreach ($src in Get-ChildItem (Join-Path $root 'papyrus\Silhouette') -Filter *.psc) {
+    $compiled = Get-ChildItem $pex -Filter ($src.BaseName + '.pex') -ErrorAction SilentlyContinue
+    if (-not $compiled -or $compiled.LastWriteTimeUtc -lt $src.LastWriteTimeUtc) {
+        throw "$($src.Name) is newer than its .pex - run scripts\build-papyrus.ps1 and read its errors."
+    }
+}
 $python = (Get-Command python -ErrorAction SilentlyContinue).Source
 if (-not $python) { throw "No python: the verifier (tools\verify_bodygen.py) must pass before a release." }
 # Never pack a Silhouette.esp without the refit keyword (0x803): LooksMenu resolves a keyed morph by the

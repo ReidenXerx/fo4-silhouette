@@ -39,7 +39,7 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 
 ## The named people
 
-- **60 companions and named NPCs** (30 women, 30 men) each have a body of their own that fits who they are
+- **207 companions and named NPCs** (90 women, 117 men) each have a body of their own that fits who they are
   (S-66): Piper, Cait, Curie, Magnolia, Desdemona, Glory, Haylen, Madison Li, Mama Murphy, Marcy Long,
   Fahrenheit, Irma, Mags Black, Nisha, Kasumi Nakano, Ronnie Shaw, Myrna, Doctor Amari, Trudy, Ellie Perkins,
   Cricket, Carla, Captain Avery, Aster, **Ivy** (CompanionIvy), **Geneva**, Polly, Cathy, Becky Fallon and
@@ -47,6 +47,14 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
   MacCready, Deacon, Arthur Maxson, X6-88, Old Longfellow, Porter Gage, Sturges, Kellogg, Travis Miles, Mayor
   McDonough, Vadim Bobrov, Moe Cronin, Father, Paladin Brandis, Tinker Tom, John, Arturo Rodriguez, Solomon, Doctor Sun, Abbot,
   Sheffield, Malcolm Latimer, Finn, Wayne Delancy, Parker Quinn, Winlock, Barnes and Rufus Rubins.
+- **The dressed pack** (S-93): the named people Anatomy Tailor's outfits dress, from the game, its DLC and
+  Ivy's mods (3DNPC, Vault 4, Point Lookout, South of the Sea, America Rising 2, Goodneighbor Expanded, the
+  Lobotomite pack, Unique Raider Patrols, Shady Motives), each with a body to match the outfit and the story:
+  Kessler, Gwen McNamara, Penny Fitzgerald, Wilhelmina Cabot, Tessa, Sierra Petrovita, Lola, White Widow,
+  Pest Tilly and 51 more women; Hancock, the Cabots, Skinny Malone (who is not), Mason, Colter, Teagan,
+  Oberly, Tektus, War and Fat Min (who never went hungry) and 78 more men. Named ghouls -- Hancock, Daisy,
+  Ham, Oswald -- get theirs too: they wear the human body, and a form-id line reaches them. A plugin you do
+  not have costs nothing; a rule of yours for the same NPC wins.
 - **Ivy wears the body made for her** (S-92, lifting S-90's blacklist of her). Silhouette never changes
   anyone's height. Met her while 0.3.9-0.4.0 left her alone? Reset on her gives her that body.
 - **The Diamond City pack** (S-77): the people the author's saves meet most, each drawn from their story and
