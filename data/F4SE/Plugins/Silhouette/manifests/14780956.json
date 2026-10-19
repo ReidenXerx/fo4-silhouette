@@ -1,0 +1,8352 @@
+{
+ "bases": {
+  "female": "FemaleBody is the bare Anatomy Body reference mesh -- nothing baked in",
+  "male": "MaleBody is the bare BodyTalk4 reference mesh -- nothing baked in"
+ },
+ "build": "e18a1c1c849c",
+ "format": 1,
+ "mode": "absolute",
+ "player": {
+  "female": {
+   "preset": "Plain F01",
+   "template": "Silhouette_PlayerFemale"
+  },
+  "male": {
+   "preset": "Plain M02",
+   "template": "Silhouette_PlayerMale"
+  }
+ },
+ "stamp": 14780956,
+ "templates": {
+  "Silhouette_Abbot": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Abbot",
+   "values": {
+    "BTBack": 0.7,
+    "BTBodyFatv2": 0.35,
+    "BTCenterStomachSize": 0.55,
+    "BTChestSmoothing": 0.5,
+    "BTChubbyArm": 0.45,
+    "BTChubbyLeg": 0.4,
+    "BTShoulders": 0.55,
+    "BTStomachFat": 0.8,
+    "BTTraps": 0.45
+   }
+  },
+  "Silhouette_Abraham_Finch": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Abraham Finch",
+   "values": {
+    "BTBack": 0.35,
+    "BTBiceps": 0.4,
+    "BTChubbyArm": 0.2,
+    "BTLowerStomachSize": 0.3,
+    "BTShoulders": 0.45,
+    "BTStomachFat": 0.55,
+    "BTThigh": 0.3,
+    "BTTraps": 0.4
+   }
+  },
+  "Silhouette_Alan_Binet": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Alan Binet",
+   "values": {
+    "BTChestSmoothing": 0.5,
+    "BTChubbyArm": 0.25,
+    "BTLowerStomachSize": 0.25,
+    "BTNegShoulder": 0.3,
+    "BTStomachFat": 0.55,
+    "Hips": 0.25
+   }
+  },
+  "Silhouette_Alana_Secord": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Alana Secord",
+   "values": {
+    "Arms": 0.2,
+    "BreastPerkiness": 0.25,
+    "BreastsSmall": 0.25,
+    "ButtSmall": 0.2,
+    "ChubbyWaist": 0.45,
+    "Hips": -0.1,
+    "LegsThin": 0.25,
+    "SlimThighs": 0.2,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Alexis_Combes": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Alexis Combes",
+   "values": {
+    "Back": 0.2,
+    "Belly": 0.2,
+    "BreastGravity2": 0.5,
+    "Breasts": 0.3,
+    "ChubbyWaist": 0.8,
+    "HipUpperWidth": 0.3,
+    "Hips": 0.3,
+    "MuscularArms": 0.25,
+    "Thighs": 0.3,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Allen_Lee": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Allen Lee",
+   "values": {
+    "BTChubbyArm": 0.3,
+    "BTLowerStomachSize": 0.4,
+    "BTShoulders": 0.3,
+    "BTStomachFat": 0.7,
+    "BTThigh": 0.3,
+    "BTTraps": 0.5,
+    "Hips": 0.2
+   }
+  },
+  "Silhouette_Allie_Filmore": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Allie Filmore",
+   "values": {
+    "Arms": 0.4,
+    "BreastsSmall": 0.3,
+    "BreastsSmall2": 0.2,
+    "ButtSmall": 0.45,
+    "ChubbyWaist": 0.4,
+    "Hips": -0.25,
+    "LegsThin": 0.45,
+    "SlimThighs": 0.4,
+    "WideWaistLine": 0.3
+   }
+  },
+  "Silhouette_Andre_Michaud": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Andre Michaud",
+   "values": {
+    "BTBack": 0.5,
+    "BTBiceps": 0.5,
+    "BTBodyFatv2": 0.2,
+    "BTShoulders": 0.55,
+    "BTStomachFat": 0.45,
+    "BTThigh": 0.4,
+    "BTTraps": 0.45,
+    "TigerSanBBMale": 0.4
+   }
+  },
+  "Silhouette_Angelo": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Angelo",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTBiceps": 0.2,
+    "BTPectorals": 0.25,
+    "BTShoulders": 0.25,
+    "BTStomachFat": 0.15
+   }
+  },
+  "Silhouette_Arthur_Maxson": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Arthur Maxson",
+   "values": {
+    "BTBack": 0.4,
+    "BTBodyFatv2": 0.1,
+    "BTPectorals": 0.3,
+    "BTShoulders": 0.5,
+    "BTStomachFat": 0.25,
+    "BTTraps": 0.5,
+    "TigerSanBBMale": 0.45
+   }
+  },
+  "Silhouette_Arturo_Rodriguez": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Arturo Rodriguez",
+   "values": {
+    "BTBiceps": 1.0,
+    "BTLowerStomachSize": 0.5,
+    "BTPectorals": 0.45,
+    "BTShoulders": 0.8,
+    "BTStomachFat": 0.85,
+    "BTTraps": 0.75,
+    "Hips": 0.15,
+    "ThinThigh": 0.45
+   }
+  },
+  "Silhouette_Aster": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Aster",
+   "values": {
+    "Arms": 0.2,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.25,
+    "ChubbyWaist": 0.55,
+    "Hips": -0.15,
+    "LegsThin": 0.25,
+    "SlimThighs": 0.25,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Atom_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Fine F01",
+   "values": {
+    "Arms": 0.1,
+    "BreastPerkiness": 0.26,
+    "Breasts": 0.14,
+    "BreastsSmall": 0.11,
+    "Butt": 0.07,
+    "ChubbyWaist": 0.11,
+    "Hips": 0.07,
+    "LegsThin": 0.23,
+    "SlimThighs": 0.05
+   }
+  },
+  "Silhouette_Atom_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Fine M01",
+   "values": {
+    "BTAbDefinition": 0.67,
+    "BTBiceps": 0.26,
+    "BTNegStomach": 0.26,
+    "BTPectorals": 0.16,
+    "BTShoulders": 0.17,
+    "BTWaist-In": 0.37
+   }
+  },
+  "Silhouette_Atom_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Plain F01",
+   "values": {
+    "Arms": 0.34,
+    "BreastGravity2": 0.21,
+    "BreastsSmall": 0.17,
+    "ButtSmall": 0.24,
+    "ChubbyWaist": 0.75,
+    "HipUpperWidth": 0.23,
+    "Hips": -0.11,
+    "LegsThin": 0.26,
+    "WideWaistLine": 0.42
+   }
+  },
+  "Silhouette_Atom_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Plain F02",
+   "values": {
+    "Arms": 0.21,
+    "BreastGravity2": 0.21,
+    "BreastsSmall": 0.28,
+    "ButtSmall": 0.35,
+    "ChubbyWaist": 0.76,
+    "HipUpperWidth": 0.34,
+    "Hips": -0.03,
+    "LegsThin": 0.41,
+    "WideWaistLine": 0.68
+   }
+  },
+  "Silhouette_Atom_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Plain F03",
+   "values": {
+    "Arms": 0.22,
+    "BreastGravity2": 0.14,
+    "BreastsSmall": 0.24,
+    "ButtSmall": 0.23,
+    "ChubbyWaist": 0.56,
+    "HipUpperWidth": 0.23,
+    "Hips": -0.06,
+    "LegsThin": 0.48,
+    "WideWaistLine": 0.57
+   }
+  },
+  "Silhouette_Atom_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Plain F04",
+   "values": {
+    "Arms": 0.31,
+    "BreastGravity2": 0.12,
+    "BreastsSmall": 0.2,
+    "ButtSmall": 0.3,
+    "ChubbyWaist": 0.79,
+    "HipUpperWidth": 0.33,
+    "Hips": -0.09,
+    "LegsThin": 0.39,
+    "WideWaistLine": 0.69
+   }
+  },
+  "Silhouette_Atom_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Plain F05",
+   "values": {
+    "Arms": 0.11,
+    "Belly": 0.32,
+    "BreastGravity2": 0.38,
+    "Breasts": 0.07,
+    "BreastsSmall": 0.01,
+    "ChubbyArms": 0.15,
+    "ChubbyWaist": 0.7,
+    "HipUpperWidth": 0.34,
+    "Hips": 0.07,
+    "LegsThin": 0.11,
+    "Thighs": 0.06,
+    "WideWaistLine": 0.58
+   }
+  },
+  "Silhouette_Atom_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Plain F06",
+   "values": {
+    "Arms": 0.16,
+    "Belly": 0.21,
+    "BreastGravity2": 0.29,
+    "Breasts": 0.15,
+    "BreastsSmall": 0.02,
+    "Butt": -0.06,
+    "ChubbyArms": 0.07,
+    "ChubbyWaist": 0.63,
+    "HipUpperWidth": 0.22,
+    "Hips": -0.07,
+    "LegsThin": 0.13,
+    "Thighs": 0.12,
+    "WideWaistLine": 0.46
+   }
+  },
+  "Silhouette_Atom_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Plain M01",
+   "values": {
+    "BTAbDefinition": 0.07,
+    "BTStomachFat": 0.13,
+    "BTTHinCalf": 0.24,
+    "BTThinArm": 0.53,
+    "ThinThigh": 0.37
+   }
+  },
+  "Silhouette_Atom_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Plain M02",
+   "values": {
+    "BTAbDefinition": 0.08,
+    "BTStomachFat": 0.01,
+    "BTTHinCalf": 0.5,
+    "BTThinArm": 0.6,
+    "ThinThigh": 0.58
+   }
+  },
+  "Silhouette_Atom_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Plain M03",
+   "values": {
+    "BTAbDefinition": 0.02,
+    "BTStomachFat": 0.2,
+    "BTTHinCalf": 0.22,
+    "BTThinArm": 0.67,
+    "ThinThigh": 0.55
+   }
+  },
+  "Silhouette_Atom_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Plain M04",
+   "values": {
+    "BTAbDefinition": 0.19,
+    "BTBiceps": 0.17,
+    "BTStomach": 0.18,
+    "BTThinArm": 0.59,
+    "ThinThigh": 0.54
+   }
+  },
+  "Silhouette_Atom_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Plain M05",
+   "values": {
+    "BTAbDefinition": 0.27,
+    "BTBiceps": 0.12,
+    "BTStomach": 0.22,
+    "BTThinArm": 0.65,
+    "ThinThigh": 0.68
+   }
+  },
+  "Silhouette_Atom_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Plain M06",
+   "values": {
+    "BTAbDefinition": 0.14,
+    "BTBiceps": 0.18,
+    "BTStomach": 0.1,
+    "BTThinArm": 0.48,
+    "ThinThigh": 0.41
+   }
+  },
+  "Silhouette_Atom_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Rough F01",
+   "values": {
+    "Arms": 0.76,
+    "BreastGravity2": 0.54,
+    "Breasts": 0.03,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.68,
+    "CalfSmooth": 0.49,
+    "Hips": -0.3,
+    "LegsThin": 0.89,
+    "SlimThighs": 0.65,
+    "WideWaistLine": 0.32
+   }
+  },
+  "Silhouette_Atom_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Rough F02",
+   "values": {
+    "Arms": 0.8,
+    "BreastGravity2": 0.4,
+    "Breasts": 0.04,
+    "BreastsSmall": 0.25,
+    "ButtSmall": 0.66,
+    "CalfSmooth": 0.66,
+    "Hips": -0.34,
+    "LegsThin": 0.82,
+    "SlimThighs": 0.61,
+    "WideWaistLine": 0.24
+   }
+  },
+  "Silhouette_Atom_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Atom Rough F03",
+   "values": {
+    "Belly": 0.5,
+    "BigBelly": 0.27,
+    "BreastFlatness2": 0.65,
+    "BreastGravity2": 1.03,
+    "Breasts": 0.33,
+    "ButtSmall": 0.41,
+    "ChubbyWaist": 0.83,
+    "WideWaistLine": 0.34
+   }
+  },
+  "Silhouette_Atom_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Rough M01",
+   "values": {
+    "BTNegBicepMuscle": 0.73,
+    "BTNegChestWidth": 0.59,
+    "BTNegPecMuscle": 0.76,
+    "BTNegScapularMuscle": 0.54,
+    "BTNegShoulder": 0.76,
+    "BTTHinCalf": 0.91,
+    "BTThinArm": 0.87,
+    "ThinThigh": 0.91
+   }
+  },
+  "Silhouette_Atom_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Rough M02",
+   "values": {
+    "BTNegBicepMuscle": 0.7,
+    "BTNegChestWidth": 0.69,
+    "BTNegPecMuscle": 0.69,
+    "BTNegScapularMuscle": 0.69,
+    "BTNegShoulder": 0.59,
+    "BTTHinCalf": 0.88,
+    "BTThinArm": 0.98,
+    "ThinThigh": 0.81
+   }
+  },
+  "Silhouette_Atom_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Atom Rough M03",
+   "values": {
+    "BTChestSmoothing": 0.62,
+    "BTNegChestWidth": 0.7,
+    "BTNegShoulder": 0.59,
+    "BTStomachFat": 0.88,
+    "BTThinArm": 0.75,
+    "ThinThigh": 0.49
+   }
+  },
+  "Silhouette_BT_Average": {
+   "gender": "male",
+   "preset": "BT - Average",
+   "values": {
+    "BTAMBackAdjust": 0.1,
+    "BTAMPecAdjust": 1.0,
+    "BTAMShoulderTweaks": 0.51,
+    "BTBackArch": 0.14,
+    "BTButt": 0.04,
+    "BTChestSmoothing": 0.31,
+    "BTChubbyArm": 1.0,
+    "BTChubbyLeg": 0.5,
+    "BTElbowAdjust": 0.6,
+    "BTFootSize": 0.19,
+    "BTHips-In": 0.35,
+    "BTKneeAdust": 0.28,
+    "BTPectorals": 0.15,
+    "BTStomachFat": 0.46,
+    "Hips": 0.21
+   }
+  },
+  "Silhouette_BT_Bodybuilder": {
+   "gender": "male",
+   "preset": "BT - Bodybuilder",
+   "values": {
+    "AryaydaMuscleSlider": 0.57,
+    "BT2AdonisBelt": 0.69,
+    "BTAMBackAdjust": 0.34,
+    "BTAMPecAdjust": 0.42,
+    "BTAMShoulderTweaks": 0.27,
+    "BTAMWaistAdust": 0.33,
+    "BTARYAYDA": 0.2,
+    "BTAbDefinition": 0.03,
+    "BTAryaydaMoreMuscular": 1.0,
+    "BTBallSize": 0.24,
+    "BTCalves": 1.0,
+    "BTChubbyArm": 0.26,
+    "BTChubbyLeg": 0.13,
+    "BTElbowAdjust": 0.52,
+    "BTFootSize": 0.37,
+    "BTHips-In": 0.49,
+    "BTKneeAdust": 0.25,
+    "BTPectorals": 0.34,
+    "BTToeSmaller": 0.31,
+    "Balls": 0.29
+   }
+  },
+  "Silhouette_BT_Chubby": {
+   "gender": "male",
+   "preset": "BT - Chubby",
+   "values": {
+    "BT2AdonisBelt": 0.15,
+    "BTAMPecAdjust": 1.0,
+    "BTAMShoulderTweaks": 0.38,
+    "BTAMWaistAdust": 0.47,
+    "BTARYAYDA": 0.29,
+    "BTAryaydaMoreMuscular": 0.23,
+    "BTBack": 0.45,
+    "BTBackArch": 1.0,
+    "BTBallSize": 0.5,
+    "BTBiceps": 0.41,
+    "BTButt": 0.58,
+    "BTCalves": 0.65,
+    "BTChestSmoothing": 0.58,
+    "BTChubbyArm": 1.0,
+    "BTChubbyLeg": 0.39,
+    "BTElbowAdjust": 0.5,
+    "BTFootSize": 0.38,
+    "BTForearms": 0.65,
+    "BTHips-In": 1.0,
+    "BTKneeAdust": 0.23,
+    "BTNippleSize": 0.5,
+    "BTPectorals": 0.42,
+    "BTShinSize": 0.2,
+    "BTShoulders": 0.71,
+    "BTStomachFat": 1.3,
+    "BTStomachSmooth": 0.19,
+    "BTThigh": 0.44,
+    "BTToeSmaller": 0.15,
+    "BTTraps": 0.61,
+    "BTWaist-In": 1.0,
+    "Balls": 0.51,
+    "Hips": 1.0
+   }
+  },
+  "Silhouette_BT_Muscular": {
+   "gender": "male",
+   "preset": "BT - Muscular",
+   "values": {
+    "BT2AdonisBelt": 0.44,
+    "BTAMPecAdjust": 0.48,
+    "BTARYAYDA": 0.5,
+    "BTAbDefinition": 0.6,
+    "BTBack": 0.36,
+    "BTBackArch": 0.45,
+    "BTBiceps": 1.0,
+    "BTButt": 0.44,
+    "BTCalves": 0.18,
+    "BTElbowAdjust": 0.3,
+    "BTFootSize": 0.14,
+    "BTForearms": 0.22,
+    "BTHips-In": 0.28,
+    "BTKneeAdust": 0.3,
+    "BTPectorals": 0.3,
+    "BTShinSize": 0.39,
+    "BTStomachFat": 0.32,
+    "BTStomachSmooth": 0.9,
+    "BTTHinCalf": 0.13,
+    "BTThinArm": 0.36,
+    "BTToeSmaller": 0.39,
+    "BTTraps": 0.52,
+    "Hips": 0.14,
+    "ThinThigh": 0.76,
+    "TigerSanBBMale": 0.4
+   }
+  },
+  "Silhouette_BT_Swimmer": {
+   "gender": "male",
+   "preset": "BT - Swimmer",
+   "values": {
+    "BTAMPecAdjust": 0.58,
+    "BTAbDefinition": 0.33,
+    "BTAryaydaMoreMuscular": 0.1,
+    "BTBackArch": 0.45,
+    "BTBiceps": 0.5,
+    "BTButt": 0.52,
+    "BTCalves": 0.75,
+    "BTFootSize": 0.5,
+    "BTForearms": -0.5,
+    "BTPectorals": 0.05,
+    "BTRibcage": -0.3,
+    "BTShinSize": 0.5,
+    "BTShoulders": 0.13,
+    "BTStomach": 0.45,
+    "BTStomachSmooth": 0.15,
+    "BTTHinCalf": 1.0,
+    "BTThigh": 1.0,
+    "BTThinArm": 1.0,
+    "BTTraps": 0.2,
+    "BTWaist-In": 0.23,
+    "BTWaist-Smoothing": 0.44,
+    "Hips": 0.4,
+    "ThinThigh": 1.0
+   }
+  },
+  "Silhouette_BT_Thin": {
+   "gender": "male",
+   "preset": "BT - Thin",
+   "values": {
+    "BTAMPecAdjust": 1.0,
+    "BTAMShoulderTweaks": 0.41,
+    "BTButt": -0.2,
+    "BTButtWidth": 0.24,
+    "BTChestSmoothing": 0.13,
+    "BTElbowAdjust": 0.16,
+    "BTRibcage": -0.25,
+    "BTStomach": 0.13,
+    "BTTHinCalf": 1.0,
+    "BTThinArm": 1.0,
+    "BTWaist-In": 0.31,
+    "ThinThigh": 1.0
+   }
+  },
+  "Silhouette_BT_Zero": {
+   "gender": "male",
+   "preset": "BT - Zero",
+   "values": {}
+  },
+  "Silhouette_Barnes": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Barnes",
+   "values": {
+    "BTChestSmoothing": 0.75,
+    "BTChubbyArm": 0.6,
+    "BTChubbyLeg": 0.4,
+    "BTLowerStomachSize": 0.65,
+    "BTNegChestWidth": 0.55,
+    "BTNegShoulder": 0.65,
+    "BTStomachFat": 0.95,
+    "Hips": 0.7
+   }
+  },
+  "Silhouette_Becky_Fallon": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Becky Fallon",
+   "values": {
+    "AppleCheeks": 0.35,
+    "Arms": 0.25,
+    "BigButt": 0.85,
+    "BreastsSmall": 0.3,
+    "ChubbyButt": 0.95,
+    "ChubbyLegs": 1.1,
+    "ChubbyWaist": 0.65,
+    "HipUpperWidth": 0.55,
+    "Hips": 0.85,
+    "Thighs": 1.05
+   }
+  },
+  "Silhouette_Blake_Abernathy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Blake Abernathy",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTBiceps": 0.3,
+    "BTNegPecMuscle": 0.25,
+    "BTStomachFat": 0.2,
+    "BTThinArm": 0.25,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_Bluejay": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Bluejay",
+   "values": {
+    "BTNegChestWidth": 0.4,
+    "BTNegPecMuscle": 0.4,
+    "BTTHinCalf": 0.45,
+    "BTThinArm": 0.55,
+    "BTWaist-In": 0.4,
+    "ThinThigh": 0.5
+   }
+  },
+  "Silhouette_BoS_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Fine F01",
+   "values": {
+    "BreastPerkiness": 0.29,
+    "Breasts": 0.15,
+    "BreastsSmall": 0.29,
+    "Butt": 0.17,
+    "ChestWidth": 0.13,
+    "ChubbyWaist": 0.15,
+    "MuscularArms": 0.47,
+    "MuscularButt": 0.67,
+    "MuscularLegs": 0.43,
+    "RoundAss": 0.21
+   }
+  },
+  "Silhouette_BoS_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Fine M01",
+   "values": {
+    "BTARYAYDA": 0.37,
+    "BTAbDefinition": 0.61,
+    "BTAryaydaMoreMuscular": 0.39,
+    "BTPectorals": 0.3,
+    "BTTraps": 0.44,
+    "BTWaist-In": 0.12
+   }
+  },
+  "Silhouette_BoS_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Plain F01",
+   "values": {
+    "Back": 0.41,
+    "BigTorso": 0.21,
+    "Breasts": 0.12,
+    "ButtSmall": 0.04,
+    "ChestWidth": 0.34,
+    "ChubbyWaist": 0.64,
+    "Hips": -0.05,
+    "MuscularArms": 0.48,
+    "MuscularButt": 0.28,
+    "MuscularLegs": 0.4,
+    "Thighs": 0.21,
+    "WideWaistLine": 0.38
+   }
+  },
+  "Silhouette_BoS_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Plain F02",
+   "values": {
+    "Back": 0.4,
+    "BigTorso": 0.34,
+    "Breasts": 0.16,
+    "ButtSmall": 0.01,
+    "ChestWidth": 0.34,
+    "ChubbyWaist": 0.75,
+    "Hips": -0.05,
+    "MuscularArms": 0.28,
+    "MuscularButt": 0.13,
+    "MuscularLegs": 0.32,
+    "Thighs": 0.12,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_BoS_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Plain F03",
+   "values": {
+    "Arms": 0.2,
+    "BreastGravity2": 0.16,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.24,
+    "ChubbyWaist": 0.59,
+    "HipUpperWidth": 0.38,
+    "Hips": -0.04,
+    "LegsThin": 0.23,
+    "MuscularArms": 0.17,
+    "MuscularLegs": 0.19,
+    "WideWaistLine": 0.58
+   }
+  },
+  "Silhouette_BoS_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Plain F04",
+   "values": {
+    "Arms": 0.19,
+    "BreastGravity2": 0.21,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.26,
+    "ChubbyWaist": 0.78,
+    "HipUpperWidth": 0.4,
+    "Hips": -0.06,
+    "LegsThin": 0.27,
+    "MuscularArms": 0.16,
+    "MuscularLegs": 0.13,
+    "WideWaistLine": 0.62
+   }
+  },
+  "Silhouette_BoS_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Plain F05",
+   "values": {
+    "Belly": 0.36,
+    "BreastGravity2": 0.3,
+    "Breasts": 0.04,
+    "BreastsSmall": 0.02,
+    "Butt": -0.05,
+    "ChubbyArms": 0.19,
+    "ChubbyWaist": 0.79,
+    "HipUpperWidth": 0.28,
+    "Hips": -0.02,
+    "Thighs": 0.09,
+    "WideWaistLine": 0.51
+   }
+  },
+  "Silhouette_BoS_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Plain F06",
+   "values": {
+    "Belly": 0.31,
+    "BreastGravity2": 0.22,
+    "Breasts": 0.15,
+    "BreastsSmall": 0.15,
+    "ChubbyArms": 0.25,
+    "ChubbyWaist": 0.61,
+    "HipUpperWidth": 0.33,
+    "Hips": -0.02,
+    "Thighs": 0.08,
+    "WideWaistLine": 0.3
+   }
+  },
+  "Silhouette_BoS_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Plain M01",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTBiceps": 0.15,
+    "BTBodyFatv2": 0.23,
+    "BTChubbyLeg": 0.29,
+    "BTShoulders": 0.49,
+    "BTStomachFat": 0.33,
+    "BTThigh": 0.26,
+    "BTTraps": 0.23
+   }
+  },
+  "Silhouette_BoS_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Plain M02",
+   "values": {
+    "BTAbDefinition": 0.17,
+    "BTBiceps": 0.1,
+    "BTBodyFatv2": 0.1,
+    "BTChubbyLeg": 0.36,
+    "BTShoulders": 0.59,
+    "BTStomachFat": 0.33,
+    "BTThigh": 0.36,
+    "BTTraps": 0.33
+   }
+  },
+  "Silhouette_BoS_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Plain M03",
+   "values": {
+    "BTAbDefinition": 0.23,
+    "BTBiceps": 0.07,
+    "BTStomachFat": 0.06,
+    "BTTHinCalf": 0.41,
+    "BTThinArm": 0.4,
+    "ThinThigh": 0.43
+   }
+  },
+  "Silhouette_BoS_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Plain M04",
+   "values": {
+    "BTAbDefinition": 0.12,
+    "BTBiceps": 0.13,
+    "BTStomachFat": 0.19,
+    "BTTHinCalf": 0.32,
+    "BTThinArm": 0.38,
+    "ThinThigh": 0.5
+   }
+  },
+  "Silhouette_BoS_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Plain M05",
+   "values": {
+    "BTChestSmoothing": 0.35,
+    "BTChubbyArm": 0.32,
+    "BTChubbyLeg": 0.21,
+    "BTPectorals": 0.03,
+    "BTStomachFat": 0.38,
+    "Hips": 0.17
+   }
+  },
+  "Silhouette_BoS_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Plain M06",
+   "values": {
+    "BTChestSmoothing": 0.34,
+    "BTChubbyArm": 0.22,
+    "BTChubbyLeg": 0.36,
+    "BTPectorals": 0.03,
+    "BTStomachFat": 0.2,
+    "Hips": 0.18
+   }
+  },
+  "Silhouette_BoS_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Rough F01",
+   "values": {
+    "Back": 0.76,
+    "BigTorso": 0.59,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.52,
+    "ChestWidth": 0.68,
+    "ChubbyWaist": 0.86,
+    "HipUpperWidth": 0.53,
+    "Hips": -0.45,
+    "MuscularArms": 0.53,
+    "MuscularLegs": 0.12,
+    "WideWaistLine": 0.71
+   }
+  },
+  "Silhouette_BoS_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Rough F02",
+   "values": {
+    "Back": 0.52,
+    "BigTorso": 0.75,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.68,
+    "ChestWidth": 0.69,
+    "ChubbyWaist": 1.05,
+    "HipUpperWidth": 0.55,
+    "Hips": -0.43,
+    "MuscularArms": 0.45,
+    "MuscularLegs": 0.15,
+    "WideWaistLine": 0.94
+   }
+  },
+  "Silhouette_BoS_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "BoS Rough F03",
+   "values": {
+    "Back": 0.47,
+    "Belly": 1.05,
+    "BigBelly": 0.53,
+    "BreastGravity2": 0.67,
+    "Breasts": 0.18,
+    "ButtSmall": 0.53,
+    "ChubbyArms": 0.49,
+    "ChubbyWaist": 1.16,
+    "HipUpperWidth": 0.47,
+    "LegsThin": 0.34,
+    "SlimThighs": 0.22,
+    "WideWaistLine": 0.67
+   }
+  },
+  "Silhouette_BoS_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Rough M01",
+   "values": {
+    "BTCenterStomachSize": 0.69,
+    "BTLowerStomachSize": 0.69,
+    "BTNegPecMuscle": 0.36,
+    "BTStomachFat": 1.2,
+    "BTTHinCalf": 0.31,
+    "BTThinArm": 0.59,
+    "ThinThigh": 0.58
+   }
+  },
+  "Silhouette_BoS_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Rough M02",
+   "values": {
+    "BTBodyFatv2": 0.31,
+    "BTChestSmoothing": 0.93,
+    "BTChubbyArm": 0.72,
+    "BTNegPecMuscle": 0.42,
+    "BTStomachFat": 0.83,
+    "Hips": 0.64
+   }
+  },
+  "Silhouette_BoS_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "BoS Rough M03",
+   "values": {
+    "BTNegBicepMuscle": 0.75,
+    "BTNegChestWidth": 0.7,
+    "BTNegPecMuscle": 0.89,
+    "BTNegScapularMuscle": 0.41,
+    "BTNegShoulder": 0.58,
+    "BTTHinCalf": 0.97,
+    "BTThinArm": 0.95,
+    "ThinThigh": 0.89
+   }
+  },
+  "Silhouette_Bobby_De_Luca": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Bobby De Luca",
+   "values": {
+    "BTNegBicepMuscle": 0.6,
+    "BTNegChestWidth": 0.6,
+    "BTNegPecMuscle": 0.75,
+    "BTNegShoulder": 0.6,
+    "BTNegStomach": 0.7,
+    "BTTHinCalf": 0.75,
+    "BTThinArm": 0.85,
+    "ThinThigh": 0.8
+   }
+  },
+  "Silhouette_Brooks": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Brooks",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTNegPecMuscle": 0.3,
+    "BTStomachFat": 0.3,
+    "BTThinArm": 0.35,
+    "BTTraps": 0.3,
+    "ThinThigh": 0.3
+   }
+  },
+  "Silhouette_Brother_Devin": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Brother Devin",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTCalves": 0.25,
+    "BTNegStomach": 0.35,
+    "BTThinArm": 0.35,
+    "ThinThigh": 0.3
+   }
+  },
+  "Silhouette_Brother_Foster": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Brother Foster",
+   "values": {
+    "BTAbDefinition": 0.35,
+    "BTNegStomach": 0.4,
+    "BTThinArm": 0.25,
+    "BTTraps": 0.25,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_Brother_Griffith": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Brother Griffith",
+   "values": {
+    "BTChestSmoothing": 0.55,
+    "BTChubbyArm": 0.4,
+    "BTLowerStomachSize": 0.45,
+    "BTStomachFat": 0.8,
+    "Hips": 0.35
+   }
+  },
+  "Silhouette_Brother_Kane": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Brother Kane",
+   "values": {
+    "BTChestSmoothing": 0.3,
+    "BTShoulders": 0.1,
+    "BTStomachFat": 0.35,
+    "BTThinArm": 0.15
+   }
+  },
+  "Silhouette_Brother_Ogden": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Brother Ogden",
+   "values": {
+    "BTNegPecMuscle": 0.25,
+    "BTStomachFat": 0.25,
+    "BTThinArm": 0.3,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_Brother_Ward": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Brother Ward",
+   "values": {
+    "BTNegChestWidth": 0.4,
+    "BTNegPecMuscle": 0.65,
+    "BTNegShoulder": 0.45,
+    "BTNegStomach": 0.75,
+    "BTThinArm": 0.7,
+    "ThinThigh": 0.65
+   }
+  },
+  "Silhouette_Bullet": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Bullet",
+   "values": {
+    "BTAbDefinition": 0.5,
+    "BTBiceps": 0.3,
+    "BTNegStomach": 0.4,
+    "BTThinArm": 0.2,
+    "BTTraps": 0.3,
+    "BTWaist-In": 0.5,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_CBBE_Athletic": {
+   "gender": "female",
+   "preset": "CBBE Athletic",
+   "values": {
+    "Ankles": 0.55,
+    "Arms": 0.3,
+    "Back": 0.1,
+    "BackArch": 0.15,
+    "Belly": -0.5,
+    "BigTorso": 0.1,
+    "BreastCenter": -0.4,
+    "BreastFlatness2": -0.2,
+    "BreastHeight": 0.8,
+    "BreastPerkiness": 0.4,
+    "BreastTopSlope": 0.3,
+    "BreastsSmall2": 0.5,
+    "BreastsTogether": 0.3,
+    "ButtNew": 1.0,
+    "ButtSmall": 0.5,
+    "CrotchBack": 0.55,
+    "Hips": 0.1,
+    "LegShape": 1.0,
+    "MuscularArms": 1.0,
+    "MuscularButt": 1.0,
+    "MuscularChest": 1.0,
+    "MuscularLegs": 1.0,
+    "NippleSize": 0.35,
+    "NippleTip": 0.15,
+    "NippleUp": 0.1,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.75,
+    "SlimThighs": 0.2,
+    "SternumDepth": 0.15,
+    "WaistHeight": 0.1,
+    "WideWaistLine": 1.0
+   }
+  },
+  "Silhouette_CBBE_Chubby": {
+   "gender": "female",
+   "preset": "CBBE Chubby",
+   "values": {
+    "AppleCheeks": 0.3,
+    "Arms": 0.15,
+    "BackArch": 0.3,
+    "Belly": 0.35,
+    "BigBelly": 0.2,
+    "BigButt": 0.55,
+    "BreastCenter": 0.75,
+    "BreastCenterBig": 0.25,
+    "BreastGravity2": 0.35,
+    "BreastHeight": 0.75,
+    "BreastTopSlope": 1.0,
+    "Breasts": 0.7,
+    "BreastsTogether": 0.25,
+    "Butt": 0.65,
+    "ButtNew": 1.0,
+    "CalfSize": 0.45,
+    "ChubbyArms": 0.75,
+    "ChubbyButt": 0.25,
+    "ChubbyLegs": 0.4,
+    "ChubbyWaist": 0.5,
+    "CrotchBack": 0.5,
+    "HipBack": 0.25,
+    "HipBone": 0.15,
+    "HipUpperWidth": 0.1,
+    "LegShape": 0.4,
+    "NippleDown": 0.4,
+    "NipplePerkiness": 0.1,
+    "RoundAss": 0.15,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.8,
+    "SternumHeight": 0.25,
+    "Thighs": 0.25,
+    "Waist": 0.45,
+    "WaistHeight": 0.1
+   }
+  },
+  "Silhouette_CBBE_Curvy": {
+   "gender": "female",
+   "preset": "CBBE Curvy",
+   "values": {
+    "Ankles": 0.25,
+    "AppleCheeks": 0.2,
+    "Arms": 0.25,
+    "BackArch": 0.25,
+    "Belly": 0.15,
+    "BreastCenter": 0.75,
+    "BreastCenterBig": 0.25,
+    "BreastGravity2": 0.1,
+    "BreastHeight": 0.2,
+    "BreastTopSlope": 0.6,
+    "Breasts": 0.3,
+    "BreastsTogether": 0.4,
+    "Butt": 0.6,
+    "ButtNew": 1.0,
+    "CalfSize": 0.35,
+    "ChubbyWaist": 0.25,
+    "CrotchBack": 0.5,
+    "HipBack": 0.2,
+    "LegShape": 1.0,
+    "NippleDown": 0.3,
+    "NipplePerkiness": 0.1,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.8,
+    "Thighs": 0.25,
+    "Waist": 0.75,
+    "WaistHeight": 0.1
+   }
+  },
+  "Silhouette_CBBE_Petite": {
+   "gender": "female",
+   "preset": "CBBE Petite",
+   "values": {
+    "Ankles": 0.55,
+    "Arms": 0.25,
+    "BackArch": 0.2,
+    "BreastCenter": -0.4,
+    "BreastFlatness2": -0.2,
+    "BreastHeight": 0.5,
+    "BreastPerkiness": 0.4,
+    "BreastTopSlope": 0.3,
+    "BreastsGone": 0.45,
+    "BreastsSmall": 0.15,
+    "BreastsSmall2": 0.4,
+    "BreastsTogether": 0.4,
+    "ButtNew": 1.0,
+    "ButtSmall": 0.5,
+    "ChestDepth": -0.25,
+    "ChestWidth": -0.25,
+    "CrotchBack": 0.55,
+    "Hips": 0.1,
+    "LegShape": 1.0,
+    "LegsThin": 0.7,
+    "NippleSize": 0.35,
+    "NippleTip": 0.15,
+    "NippleUp": 0.15,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.9,
+    "SlimThighs": 0.4,
+    "WaistHeight": 0.1,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_CBBE_Slim": {
+   "gender": "female",
+   "preset": "CBBE Slim",
+   "values": {
+    "Ankles": 0.55,
+    "Arms": 0.25,
+    "BreastCenter": 0.25,
+    "BreastFlatness2": 0.1,
+    "BreastGravity2": 0.1,
+    "BreastHeight": 0.4,
+    "BreastTopSlope": 0.2,
+    "BreastsSmall2": 0.2,
+    "BreastsTogether": 0.4,
+    "ButtNew": 1.0,
+    "CrotchBack": 0.55,
+    "LegShape": 1.0,
+    "LegsThin": 0.7,
+    "NippleDown": 0.15,
+    "NipplePerkiness": 0.05,
+    "NippleSize": 0.3,
+    "NippleTip": 0.15,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.9,
+    "SlimThighs": 0.4,
+    "WaistHeight": 0.1
+   }
+  },
+  "Silhouette_CBBE_Vanilla": {
+   "gender": "female",
+   "preset": "CBBE Vanilla",
+   "values": {
+    "VanillaFo4": 1.0
+   }
+  },
+  "Silhouette_CBBE_Zeroed_Sliders": {
+   "gender": "female",
+   "preset": "CBBE Zeroed Sliders",
+   "values": {}
+  },
+  "Silhouette_Cait": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Cait",
+   "values": {
+    "Back": 0.2,
+    "BreastPerkiness": 0.2,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.1,
+    "ChestWidth": 0.25,
+    "ChubbyWaist": 0.55,
+    "Hips": -0.1,
+    "MuscularArms": 0.5,
+    "MuscularButt": 0.6,
+    "MuscularLegs": 0.55,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Calvin_Whitaker": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Calvin Whitaker",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTShoulders": 0.15,
+    "BTThinArm": 0.25,
+    "BTWaist-In": 0.3,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_Captain_Avery": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Captain Avery",
+   "values": {
+    "Back": 0.4,
+    "Belly": 0.2,
+    "BigTorso": 0.25,
+    "BreastGravity2": 0.45,
+    "Breasts": 0.1,
+    "ChestWidth": 0.3,
+    "ChubbyWaist": 0.85,
+    "MuscularArms": 0.25,
+    "Thighs": 0.2,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Captain_Baker": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Captain Baker",
+   "values": {
+    "BTARYAYDA": 0.35,
+    "BTAbDefinition": 0.4,
+    "BTBiceps": 0.4,
+    "BTShoulders": 0.4,
+    "BTTraps": 0.45,
+    "BTWaist-In": 0.3
+   }
+  },
+  "Silhouette_Captain_Bridget": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Captain Bridget",
+   "values": {
+    "Back": 0.6,
+    "BigTorso": 0.5,
+    "Breasts": 0.15,
+    "CalfSize": 0.4,
+    "ChestWidth": 0.5,
+    "ChubbyWaist": 0.9,
+    "MuscularArms": 0.8,
+    "MuscularLegs": 0.6,
+    "ShoulderWidth": 0.45,
+    "Thighs": 0.45,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Captain_Kells": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Captain Kells",
+   "values": {
+    "BTAbDefinition": 0.35,
+    "BTBiceps": 0.25,
+    "BTPectorals": 0.3,
+    "BTShoulders": 0.35,
+    "BTTraps": 0.3,
+    "BTWaist-In": 0.3
+   }
+  },
+  "Silhouette_Carla": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Carla",
+   "values": {
+    "BreastGravity2": 0.3,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.15,
+    "CalfSize": 0.2,
+    "ChubbyWaist": 0.65,
+    "Hips": -0.1,
+    "LegsThin": 0.1,
+    "MuscularLegs": 0.3,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Cassie_Dalton": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Cassie Dalton",
+   "values": {
+    "BreastsSmall": 0.2,
+    "ButtSmall": 0.1,
+    "CalfSize": 0.3,
+    "ChubbyWaist": 0.6,
+    "Hips": -0.05,
+    "LegsThin": 0.1,
+    "MuscularArms": 0.3,
+    "MuscularButt": 0.3,
+    "MuscularLegs": 0.45,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Cathy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Cathy",
+   "values": {
+    "Arms": 0.55,
+    "Belly": 0.9,
+    "BigBelly": 0.45,
+    "BreastFlatness2": 0.9,
+    "BreastGravity2": 1.2,
+    "Breasts": 0.2,
+    "ButtSmall": 0.7,
+    "ChubbyWaist": 1.05,
+    "Hips": -0.35,
+    "LegsThin": 0.6,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Cherry": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Cherry",
+   "values": {
+    "AppleCheeks": 0.4,
+    "Arms": 0.15,
+    "BreastPerkiness": 0.5,
+    "Breasts": 0.25,
+    "Butt": 0.25,
+    "ChubbyWaist": 0.4,
+    "Hips": 0.2,
+    "LegsThin": 0.1,
+    "RoundAss": 0.5
+   }
+  },
+  "Silhouette_Christine_Stennett": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Christine Stennett",
+   "values": {
+    "Arms": 0.2,
+    "BreastPerkiness": 0.3,
+    "Breasts": 0.15,
+    "CalfSmooth": 0.6,
+    "ChubbyWaist": 0.45,
+    "Hips": 0.05,
+    "LegsThin": 0.25,
+    "RoundAss": 0.2,
+    "SlimThighs": 0.15
+   }
+  },
+  "Silhouette_Clayton_Holdren": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Clayton Holdren",
+   "values": {
+    "BTNegChestWidth": 0.4,
+    "BTNegPecMuscle": 0.6,
+    "BTNegScapularMuscle": 0.3,
+    "BTNegShoulder": 0.45,
+    "BTStomachFat": 0.35,
+    "BTThinArm": 0.6,
+    "ThinThigh": 0.55
+   }
+  },
+  "Silhouette_Clint": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Clint",
+   "values": {
+    "BTARYAYDA": 0.4,
+    "BTBack": 0.55,
+    "BTBiceps": 0.5,
+    "BTShoulders": 0.6,
+    "BTStomachFat": 0.45,
+    "BTThigh": 0.45,
+    "BTTraps": 0.65,
+    "TigerSanBBMale": 0.6
+   }
+  },
+  "Silhouette_Confessor_Campbell": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Confessor Campbell",
+   "values": {
+    "Arms": 0.2,
+    "BreastGravity2": 0.2,
+    "BreastsSmall": 0.25,
+    "ButtSmall": 0.25,
+    "ChubbyWaist": 0.55,
+    "Hips": -0.1,
+    "LegsThin": 0.2,
+    "SlimThighs": 0.2,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Crazy_Marty": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Crazy Marty",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTNegPecMuscle": 0.6,
+    "BTNegShoulder": 0.4,
+    "BTNegStomach": 0.6,
+    "BTTHinCalf": 0.65,
+    "BTThinArm": 0.75,
+    "ThinThigh": 0.7
+   }
+  },
+  "Silhouette_Cricket": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Cricket",
+   "values": {
+    "Back": 0.35,
+    "BigTorso": 0.3,
+    "BreastGravity2": 0.4,
+    "Breasts": 0.2,
+    "ChestWidth": 0.3,
+    "ChubbyArms": 0.25,
+    "ChubbyWaist": 0.8,
+    "MuscularArms": 0.3,
+    "Thighs": 0.2,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Curie": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Curie",
+   "values": {
+    "AppleCheeks": 0.15,
+    "Belly": 0.25,
+    "BreastGravity2": 0.25,
+    "Breasts": 0.15,
+    "ChubbyArms": 0.15,
+    "ChubbyWaist": 0.7,
+    "Hips": 0.05,
+    "Thighs": 0.1
+   }
+  },
+  "Silhouette_Daisy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Daisy",
+   "values": {
+    "Arms": 0.65,
+    "Belly": 0.35,
+    "BreastFlatness2": 0.6,
+    "BreastGravity2": 1.1,
+    "Breasts": 0.2,
+    "ButtSmall": 0.6,
+    "ChubbyWaist": 0.75,
+    "Hips": -0.25,
+    "LegsThin": 0.7,
+    "SlimThighs": 0.55,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Daniel_Finch": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Daniel Finch",
+   "values": {
+    "BTBack": 0.4,
+    "BTBiceps": 0.35,
+    "BTShoulders": 0.45,
+    "BTStomachFat": 0.35,
+    "BTThigh": 0.3,
+    "BTTraps": 0.3
+   }
+  },
+  "Silhouette_Danny_Sullivan": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Danny Sullivan",
+   "values": {
+    "BTAbDefinition": 0.1,
+    "BTBiceps": 0.15,
+    "BTPectorals": 0.15,
+    "BTShoulders": 0.2,
+    "BTStomachFat": 0.3
+   }
+  },
+  "Silhouette_Deacon": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Deacon",
+   "values": {
+    "BTChestSmoothing": 0.3,
+    "BTChubbyArm": 0.25,
+    "BTChubbyLeg": 0.2,
+    "BTStomachFat": 0.3,
+    "Hips": 0.15
+   }
+  },
+  "Silhouette_Dean_Volkert": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Dean Volkert",
+   "values": {
+    "BTButt": 0.45,
+    "BTChestSmoothing": 0.55,
+    "BTChubbyArm": 0.3,
+    "BTNegShoulder": 0.4,
+    "BTStomachFat": 0.6,
+    "BTThighWidth": 0.4,
+    "Hips": 0.6
+   }
+  },
+  "Silhouette_Deb": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Deb",
+   "values": {
+    "Belly": 0.45,
+    "BreastGravity2": 0.55,
+    "Breasts": 0.35,
+    "ChubbyArms": 0.3,
+    "ChubbyButt": 0.25,
+    "ChubbyLegs": 0.25,
+    "ChubbyWaist": 0.95,
+    "Hips": 0.25,
+    "Thighs": 0.3
+   }
+  },
+  "Silhouette_Debby": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Debby",
+   "values": {
+    "7B Upper": 0.2,
+    "BreastPerkiness": 0.25,
+    "Breasts": 0.55,
+    "Butt": 0.35,
+    "ChubbyArms": 0.2,
+    "ChubbyWaist": 0.6,
+    "Hips": 0.3,
+    "PushUp": 0.25,
+    "RoundAss": 0.4,
+    "Thighs": 0.3
+   }
+  },
+  "Silhouette_Desdemona": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Desdemona",
+   "values": {
+    "Back": 0.15,
+    "BreastGravity2": 0.35,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.3,
+    "ChubbyWaist": 0.75,
+    "HipUpperWidth": 0.3,
+    "Hips": -0.2,
+    "LegsThin": 0.15,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Disciple_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Fine F01",
+   "values": {
+    "Arms": 0.08,
+    "BreastPerkiness": 0.29,
+    "Breasts": 0.12,
+    "BreastsSmall": 0.07,
+    "Butt": 0.07,
+    "ChubbyWaist": 0.09,
+    "Hips": 0.06,
+    "LegsThin": 0.21,
+    "SlimThighs": 0.02
+   }
+  },
+  "Silhouette_Disciple_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Fine M01",
+   "values": {
+    "BTAbDefinition": 0.35,
+    "BTBiceps": 0.45,
+    "BTButt": 0.48,
+    "BTCalves": 0.65,
+    "BTShoulders": 0.16,
+    "BTStomach": 0.39,
+    "BTThinArm": 0.39,
+    "BTTraps": 0.13,
+    "BTWaist-In": 0.32,
+    "ThinThigh": 0.43
+   }
+  },
+  "Silhouette_Disciple_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Plain F01",
+   "values": {
+    "Arms": 0.26,
+    "BreastGravity2": 0.24,
+    "BreastsSmall": 0.15,
+    "ButtSmall": 0.31,
+    "ChubbyWaist": 0.62,
+    "HipUpperWidth": 0.35,
+    "LegsThin": 0.4,
+    "WideWaistLine": 0.5
+   }
+  },
+  "Silhouette_Disciple_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Plain F02",
+   "values": {
+    "Arms": 0.23,
+    "BreastGravity2": 0.23,
+    "BreastsSmall": 0.23,
+    "ButtSmall": 0.15,
+    "ChubbyWaist": 0.77,
+    "HipUpperWidth": 0.33,
+    "Hips": -0.12,
+    "LegsThin": 0.21,
+    "WideWaistLine": 0.51
+   }
+  },
+  "Silhouette_Disciple_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Plain F03",
+   "values": {
+    "Arms": 0.2,
+    "BreastGravity2": 0.1,
+    "BreastsSmall": 0.16,
+    "ButtSmall": 0.17,
+    "ChubbyWaist": 0.58,
+    "HipUpperWidth": 0.28,
+    "Hips": -0.04,
+    "LegsThin": 0.35,
+    "WideWaistLine": 0.51
+   }
+  },
+  "Silhouette_Disciple_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Plain F04",
+   "values": {
+    "Arms": 0.27,
+    "BreastGravity2": 0.2,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.34,
+    "ChubbyWaist": 0.78,
+    "HipUpperWidth": 0.28,
+    "Hips": -0.05,
+    "LegsThin": 0.36,
+    "WideWaistLine": 0.64
+   }
+  },
+  "Silhouette_Disciple_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Plain F05",
+   "values": {
+    "Arms": 0.14,
+    "Belly": 0.32,
+    "BreastGravity2": 0.26,
+    "Breasts": 0.14,
+    "BreastsSmall": 0.14,
+    "Butt": 0.08,
+    "ChubbyArms": 0.09,
+    "ChubbyWaist": 0.79,
+    "HipUpperWidth": 0.26,
+    "LegsThin": 0.16,
+    "Thighs": 0.03,
+    "WideWaistLine": 0.36
+   }
+  },
+  "Silhouette_Disciple_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Plain F06",
+   "values": {
+    "Arms": 0.15,
+    "Belly": 0.34,
+    "BreastGravity2": 0.37,
+    "Breasts": 0.08,
+    "BreastsSmall": 0.24,
+    "Butt": 0.04,
+    "ChubbyArms": 0.16,
+    "ChubbyWaist": 0.87,
+    "HipUpperWidth": 0.39,
+    "LegsThin": 0.13,
+    "Thighs": 0.02,
+    "WideWaistLine": 0.48
+   }
+  },
+  "Silhouette_Disciple_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Plain M01",
+   "values": {
+    "BTAbDefinition": 0.37,
+    "BTBiceps": 0.17,
+    "BTStomach": 0.17,
+    "BTThinArm": 0.34,
+    "ThinThigh": 0.41
+   }
+  },
+  "Silhouette_Disciple_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Plain M02",
+   "values": {
+    "BTAbDefinition": 0.2,
+    "BTBiceps": 0.25,
+    "BTStomach": 0.19,
+    "BTThinArm": 0.48,
+    "ThinThigh": 0.31
+   }
+  },
+  "Silhouette_Disciple_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Plain M03",
+   "values": {
+    "BTAbDefinition": 0.24,
+    "BTBiceps": 0.18,
+    "BTStomach": 0.11,
+    "BTThinArm": 0.3,
+    "ThinThigh": 0.46
+   }
+  },
+  "Silhouette_Disciple_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Plain M04",
+   "values": {
+    "BTAbDefinition": 0.45,
+    "BTBiceps": 0.22,
+    "BTStomach": 0.25,
+    "BTThinArm": 0.34,
+    "ThinThigh": 0.32
+   }
+  },
+  "Silhouette_Disciple_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Plain M05",
+   "values": {
+    "BTStomachFat": 0.07,
+    "BTTHinCalf": 0.26,
+    "BTThinArm": 0.46,
+    "ThinThigh": 0.54
+   }
+  },
+  "Silhouette_Disciple_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Plain M06",
+   "values": {
+    "BTAbDefinition": 0.04,
+    "BTStomachFat": 0.19,
+    "BTTHinCalf": 0.25,
+    "BTThinArm": 0.56,
+    "ThinThigh": 0.59
+   }
+  },
+  "Silhouette_Disciple_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Rough F01",
+   "values": {
+    "Arms": 0.8,
+    "BreastGravity2": 0.44,
+    "Breasts": 0.01,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.69,
+    "CalfSmooth": 0.67,
+    "Hips": -0.37,
+    "LegsThin": 0.87,
+    "SlimThighs": 0.59,
+    "WideWaistLine": 0.36
+   }
+  },
+  "Silhouette_Disciple_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Rough F02",
+   "values": {
+    "Arms": 0.61,
+    "BreastGravity2": 0.57,
+    "Breasts": 0.01,
+    "BreastsSmall": 0.28,
+    "ButtSmall": 0.69,
+    "CalfSmooth": 0.62,
+    "Hips": -0.32,
+    "LegsThin": 0.78,
+    "SlimThighs": 0.52,
+    "WideWaistLine": 0.26
+   }
+  },
+  "Silhouette_Disciple_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Disciple Rough F03",
+   "values": {
+    "BreastFlatness2": 0.62,
+    "Breasts": 0.02,
+    "BreastsSmall": 0.24,
+    "BreastsSmall2": 0.42,
+    "ButtSmall": 0.73,
+    "ChubbyWaist": 0.82,
+    "HipUpperWidth": 0.44,
+    "Hips": -0.46,
+    "SlimThighs": 0.29,
+    "WideWaistLine": 0.51
+   }
+  },
+  "Silhouette_Disciple_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Rough M01",
+   "values": {
+    "BTNegBicepMuscle": 0.79,
+    "BTNegChestWidth": 0.57,
+    "BTNegPecMuscle": 0.78,
+    "BTNegScapularMuscle": 0.53,
+    "BTNegShoulder": 0.73,
+    "BTTHinCalf": 0.99,
+    "BTThinArm": 0.87,
+    "ThinThigh": 0.91
+   }
+  },
+  "Silhouette_Disciple_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Rough M02",
+   "values": {
+    "BTNegBicepMuscle": 0.62,
+    "BTNegChestWidth": 0.5,
+    "BTNegPecMuscle": 0.83,
+    "BTNegScapularMuscle": 0.65,
+    "BTNegShoulder": 0.54,
+    "BTTHinCalf": 0.86,
+    "BTThinArm": 0.82,
+    "ThinThigh": 0.82
+   }
+  },
+  "Silhouette_Disciple_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Disciple Rough M03",
+   "values": {
+    "BTChestSmoothing": 0.61,
+    "BTNegChestWidth": 0.67,
+    "BTNegShoulder": 0.6,
+    "BTStomachFat": 0.88,
+    "BTThinArm": 0.58,
+    "ThinThigh": 0.6
+   }
+  },
+  "Silhouette_Dixie": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Dixie",
+   "values": {
+    "Arms": 0.45,
+    "BreastsSmall": 0.3,
+    "BreastsSmall2": 0.25,
+    "ButtSmall": 0.5,
+    "ChubbyWaist": 0.35,
+    "Hips": -0.25,
+    "LegsThin": 0.5,
+    "MuscularArms": 0.3,
+    "SlimThighs": 0.4,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Doc_Crocker": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Doc Crocker",
+   "values": {
+    "BTNegBicepMuscle": 0.35,
+    "BTNegChestWidth": 0.35,
+    "BTNegPecMuscle": 0.4,
+    "BTNegShoulder": 0.4,
+    "BTStomachFat": 0.25,
+    "BTThinArm": 0.45,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Doctor_Amari": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Doctor Amari",
+   "values": {
+    "Belly": 0.3,
+    "BreastGravity2": 0.4,
+    "Breasts": 0.1,
+    "ChubbyArms": 0.15,
+    "ChubbyWaist": 0.8,
+    "Thighs": 0.1,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Doctor_Armstrong": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Doctor Armstrong",
+   "values": {
+    "BTChestSmoothing": 0.45,
+    "BTNegBicepMuscle": 0.6,
+    "BTNegShoulder": 0.4,
+    "BTStomachFat": 0.5,
+    "BTThinArm": 0.7,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Doctor_Cabbage": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Doctor Cabbage",
+   "values": {
+    "BTBodyFatv2": 0.5,
+    "BTCenterStomachSize": 0.6,
+    "BTChestSmoothing": 0.75,
+    "BTChubbyArm": 0.6,
+    "BTChubbyLeg": 0.55,
+    "BTLowerStomachSize": 0.7,
+    "BTStomachFat": 1.1,
+    "Hips": 0.7
+   }
+  },
+  "Silhouette_Doctor_Carrington": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Doctor Carrington",
+   "values": {
+    "BTNegChestWidth": 0.35,
+    "BTNegPecMuscle": 0.45,
+    "BTNegShoulder": 0.45,
+    "BTStomachFat": 0.35,
+    "BTThinArm": 0.5,
+    "ThinThigh": 0.45
+   }
+  },
+  "Silhouette_Doctor_Kane": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Doctor Kane",
+   "values": {
+    "BreastPerkiness": 0.3,
+    "BreastsSmall": 0.15,
+    "CalfSize": 0.2,
+    "ChubbyWaist": 0.45,
+    "Hips": 0.05,
+    "MuscularArms": 0.3,
+    "MuscularButt": 0.35,
+    "MuscularLegs": 0.35,
+    "WideWaistLine": 0.3
+   }
+  },
+  "Silhouette_Doctor_Penske": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Doctor Penske",
+   "values": {
+    "Arms": 0.2,
+    "BreastPerkiness": 0.2,
+    "BreastsSmall": 0.2,
+    "ButtSmall": 0.15,
+    "CalfSmooth": 0.4,
+    "ChubbyWaist": 0.5,
+    "LegsThin": 0.2,
+    "SlimThighs": 0.15,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Doctor_Sun": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Doctor Sun",
+   "values": {
+    "BTNegBicepMuscle": 0.7,
+    "BTNegChestWidth": 0.4,
+    "BTNegPecMuscle": 0.8,
+    "BTNegScapularMuscle": 0.55,
+    "BTNegShoulder": 0.55,
+    "BTNegStomach": 0.9,
+    "BTTHinCalf": 0.8,
+    "BTThinArm": 0.9,
+    "ThinThigh": 0.85
+   }
+  },
+  "Silhouette_Drummer_Boy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Drummer Boy",
+   "values": {
+    "BTNegChestWidth": 0.5,
+    "BTNegPecMuscle": 0.55,
+    "BTNegShoulder": 0.5,
+    "BTTHinCalf": 0.55,
+    "BTThinArm": 0.65,
+    "ThinThigh": 0.6
+   }
+  },
+  "Silhouette_Eddie_Winter": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Eddie Winter",
+   "values": {
+    "BTBodyFatv2": 0.35,
+    "BTChubbyArm": 0.45,
+    "BTLowerStomachSize": 0.45,
+    "BTShoulders": 0.45,
+    "BTStomachFat": 0.8,
+    "BTThigh": 0.3,
+    "BTTraps": 0.45
+   }
+  },
+  "Silhouette_Edward_Deegan": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Edward Deegan",
+   "values": {
+    "BTBack": 0.45,
+    "BTBiceps": 0.3,
+    "BTChubbyArm": 0.3,
+    "BTLowerStomachSize": 0.35,
+    "BTShoulders": 0.5,
+    "BTStomachFat": 0.6,
+    "BTThigh": 0.3,
+    "BTTraps": 0.45
+   }
+  },
+  "Silhouette_Ellie_Perkins": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Ellie Perkins",
+   "values": {
+    "Belly": 0.25,
+    "BreastGravity2": 0.25,
+    "Breasts": 0.05,
+    "BreastsSmall": 0.1,
+    "ChubbyArms": 0.1,
+    "ChubbyWaist": 0.7,
+    "HipUpperWidth": 0.25,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Evan_Watson": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Evan Watson",
+   "values": {
+    "BTChestSmoothing": 0.3,
+    "BTChubbyArm": 0.15,
+    "BTShoulders": 0.1,
+    "BTStomachFat": 0.35
+   }
+  },
+  "Silhouette_Fahrenheit": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Fahrenheit",
+   "values": {
+    "Back": 0.7,
+    "BigTorso": 0.7,
+    "Breasts": 0.1,
+    "CalfSize": 0.5,
+    "ChestWidth": 0.7,
+    "ChubbyArms": 0.3,
+    "ChubbyWaist": 1.0,
+    "Hips": -0.15,
+    "MuscularArms": 0.7,
+    "MuscularLegs": 0.55,
+    "Thighs": 0.45,
+    "WideWaistLine": 0.7
+   }
+  },
+  "Silhouette_Faraday": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Faraday",
+   "values": {
+    "BTChestSmoothing": 0.3,
+    "BTNegChestWidth": 0.3,
+    "BTNegShoulder": 0.35,
+    "BTStomachFat": 0.15,
+    "BTThinArm": 0.4,
+    "ThinThigh": 0.35
+   }
+  },
+  "Silhouette_Fat_Min": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Fat Min",
+   "values": {
+    "BTBodyFatv2": 1.0,
+    "BTCenterStomachSize": 0.7,
+    "BTChestSmoothing": 0.95,
+    "BTChubbyArm": 0.95,
+    "BTChubbyLeg": 0.85,
+    "BTLowerStomachSize": 0.9,
+    "BTStomachFat": 1.3,
+    "Hips": 0.9
+   }
+  },
+  "Silhouette_Father": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Father",
+   "values": {
+    "BTNegBicepMuscle": 0.7,
+    "BTNegChestWidth": 0.6,
+    "BTNegPecMuscle": 0.75,
+    "BTNegScapularMuscle": 0.5,
+    "BTNegShoulder": 0.6,
+    "BTStomachFat": 0.25,
+    "BTTHinCalf": 0.9,
+    "BTThinArm": 0.95,
+    "ThinThigh": 0.9
+   }
+  },
+  "Silhouette_Father_of_the_Four": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Father of the Four",
+   "values": {
+    "BTNegChestWidth": 0.4,
+    "BTNegPecMuscle": 0.65,
+    "BTNegShoulder": 0.45,
+    "BTNegStomach": 0.75,
+    "BTTHinCalf": 0.65,
+    "BTThinArm": 0.75,
+    "ThinThigh": 0.7
+   }
+  },
+  "Silhouette_Fine_F01": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Fine F01",
+   "values": {
+    "7B Upper": 0.24,
+    "BreastPerkiness": 0.28,
+    "Breasts": 0.24,
+    "Butt": 0.19,
+    "ChubbyWaist": 0.09,
+    "Hips": 0.15,
+    "PushUp": 0.03,
+    "RoundAss": 0.35,
+    "Thighs": 0.12
+   }
+  },
+  "Silhouette_Fine_F02": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Fine F02",
+   "values": {
+    "BreastPerkiness": 0.3,
+    "Breasts": 0.13,
+    "BreastsSmall": 0.22,
+    "Butt": 0.21,
+    "ChestWidth": 0.1,
+    "ChubbyWaist": 0.16,
+    "MuscularArms": 0.35,
+    "MuscularButt": 0.56,
+    "MuscularLegs": 0.45,
+    "RoundAss": 0.2
+   }
+  },
+  "Silhouette_Fine_F03": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Fine F03",
+   "values": {
+    "Arms": 0.13,
+    "BreastPerkiness": 0.37,
+    "Breasts": 0.19,
+    "BreastsSmall": 0.13,
+    "Butt": 0.1,
+    "ChubbyWaist": 0.09,
+    "Hips": 0.14,
+    "LegsThin": 0.15,
+    "SlimThighs": 0.08
+   }
+  },
+  "Silhouette_Fine_F04": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Fine F04",
+   "values": {
+    "7B Upper": 0.32,
+    "AppleCheeks": 0.21,
+    "BigButt": 0.32,
+    "BreastGravity2": 0.15,
+    "Breasts": 0.44,
+    "ChubbyArms": 0.1,
+    "ChubbyWaist": 0.14,
+    "Hips": 0.24,
+    "Thighs": 0.31
+   }
+  },
+  "Silhouette_Fine_F05": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Fine F05",
+   "values": {
+    "Arms": 0.13,
+    "BreastPerkiness": 0.3,
+    "Breasts": 0.13,
+    "BreastsSmall": 0.28,
+    "ChubbyWaist": 0.06,
+    "Hips": 0.07,
+    "LegsThin": 0.07,
+    "RoundAss": 0.3,
+    "SlimThighs": 0.19
+   }
+  },
+  "Silhouette_Fine_F06": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Fine F06",
+   "values": {
+    "AppleCheeks": 0.38,
+    "BreastsSmall": 0.17,
+    "Butt": 0.27,
+    "ChubbyButt": 0.2,
+    "ChubbyWaist": 0.11,
+    "Hips": 0.39,
+    "Thighs": 0.33
+   }
+  },
+  "Silhouette_Fine_M01": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Fine M01",
+   "values": {
+    "BT2AdonisBelt": 0.51,
+    "BTAbDefinition": 0.66,
+    "BTPectorals": 0.41,
+    "BTShoulders": 0.46,
+    "BTWaist-In": 0.46,
+    "TigerSanBBMale": 0.27
+   }
+  },
+  "Silhouette_Fine_M02": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Fine M02",
+   "values": {
+    "BTAbDefinition": 0.41,
+    "BTBiceps": 0.45,
+    "BTButt": 0.5,
+    "BTCalves": 0.5,
+    "BTShoulders": 0.18,
+    "BTStomach": 0.42,
+    "BTThinArm": 0.25,
+    "BTTraps": 0.25,
+    "BTWaist-In": 0.23,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Fine_M03": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Fine M03",
+   "values": {
+    "BTARYAYDA": 0.4,
+    "BTAbDefinition": 0.51,
+    "BTAryaydaMoreMuscular": 0.37,
+    "BTPectorals": 0.39,
+    "BTTraps": 0.56,
+    "BTWaist-In": 0.17
+   }
+  },
+  "Silhouette_Fine_M04": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Fine M04",
+   "values": {
+    "BTAbDefinition": 0.63,
+    "BTBiceps": 0.22,
+    "BTNegStomach": 0.26,
+    "BTPectorals": 0.16,
+    "BTShoulders": 0.14,
+    "BTWaist-In": 0.43
+   }
+  },
+  "Silhouette_Fine_M05": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Fine M05",
+   "values": {
+    "BTAbDefinition": 0.31,
+    "BTBack": 0.42,
+    "BTShoulders": 0.48,
+    "BTTraps": 0.52,
+    "TigerSanBBMale": 0.49
+   }
+  },
+  "Silhouette_Fine_M06": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Fine M06",
+   "values": {
+    "BTAbDefinition": 0.42,
+    "BTBiceps": 0.22,
+    "BTButt": 0.26,
+    "BTPectorals": 0.29,
+    "BTShoulders": 0.26,
+    "BTWaist-In": 0.25
+   }
+  },
+  "Silhouette_Finn": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Finn",
+   "values": {
+    "BTNegBicepMuscle": 0.85,
+    "BTNegChestWidth": 0.9,
+    "BTNegPecMuscle": 0.9,
+    "BTNegScapularMuscle": 0.7,
+    "BTNegShoulder": 0.9,
+    "BTTHinCalf": 0.95,
+    "BTThinArm": 1.0,
+    "ThinThigh": 1.0
+   }
+  },
+  "Silhouette_Fred_Allen": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Fred Allen",
+   "values": {
+    "BTNegBicepMuscle": 0.75,
+    "BTNegChestWidth": 0.7,
+    "BTNegPecMuscle": 0.85,
+    "BTNegShoulder": 0.7,
+    "BTNegStomach": 0.8,
+    "BTTHinCalf": 0.85,
+    "BTThinArm": 0.95,
+    "ThinThigh": 0.9
+   }
+  },
+  "Silhouette_Geneva": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Geneva",
+   "values": {
+    "7B Upper": 0.15,
+    "AppleCheeks": 0.3,
+    "BreastPerkiness": 0.45,
+    "Breasts": 0.35,
+    "Butt": 0.3,
+    "ChubbyWaist": 0.1,
+    "Hips": 0.15,
+    "PushUp": 0.2,
+    "RoundAss": 0.55,
+    "Thighs": 0.1
+   }
+  },
+  "Silhouette_Glory": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Glory",
+   "values": {
+    "Back": 0.55,
+    "BigTorso": 0.35,
+    "BreastsSmall": 0.25,
+    "CalfSize": 0.3,
+    "ChestWidth": 0.55,
+    "ChubbyWaist": 0.6,
+    "MuscularArms": 0.9,
+    "MuscularButt": 0.6,
+    "MuscularLegs": 0.85,
+    "Thighs": 0.3,
+    "WideWaistLine": 0.3
+   }
+  },
+  "Silhouette_Grand_Zealot_Richter": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Grand Zealot Richter",
+   "values": {
+    "BTARYAYDA": 0.45,
+    "BTBiceps": 0.45,
+    "BTPectorals": 0.4,
+    "BTShoulders": 0.5,
+    "BTStomachFat": 0.2,
+    "BTTraps": 0.55,
+    "TigerSanBBMale": 0.4
+   }
+  },
+  "Silhouette_Gunner_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Fine F01",
+   "values": {
+    "BreastPerkiness": 0.3,
+    "Breasts": 0.06,
+    "BreastsSmall": 0.17,
+    "Butt": 0.22,
+    "ChestWidth": 0.09,
+    "ChubbyWaist": 0.15,
+    "MuscularArms": 0.4,
+    "MuscularButt": 0.49,
+    "MuscularLegs": 0.37,
+    "RoundAss": 0.27
+   }
+  },
+  "Silhouette_Gunner_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Fine M01",
+   "values": {
+    "BT2AdonisBelt": 0.54,
+    "BTAbDefinition": 0.67,
+    "BTPectorals": 0.43,
+    "BTShoulders": 0.41,
+    "BTWaist-In": 0.47,
+    "TigerSanBBMale": 0.27
+   }
+  },
+  "Silhouette_Gunner_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Plain F01",
+   "values": {
+    "Arms": 0.15,
+    "BreastGravity2": 0.24,
+    "BreastsSmall": 0.18,
+    "ButtSmall": 0.21,
+    "ChubbyWaist": 0.71,
+    "HipUpperWidth": 0.24,
+    "Hips": -0.05,
+    "LegsThin": 0.23,
+    "MuscularArms": 0.11,
+    "MuscularLegs": 0.13,
+    "WideWaistLine": 0.49
+   }
+  },
+  "Silhouette_Gunner_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Plain F02",
+   "values": {
+    "Arms": 0.12,
+    "BreastGravity2": 0.23,
+    "BreastsSmall": 0.27,
+    "ButtSmall": 0.17,
+    "ChubbyWaist": 0.56,
+    "HipUpperWidth": 0.2,
+    "Hips": -0.19,
+    "LegsThin": 0.16,
+    "MuscularArms": 0.19,
+    "MuscularLegs": 0.13,
+    "WideWaistLine": 0.44
+   }
+  },
+  "Silhouette_Gunner_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Plain F03",
+   "values": {
+    "Arms": 0.13,
+    "BreastGravity2": 0.12,
+    "BreastsSmall": 0.15,
+    "ButtSmall": 0.19,
+    "ChubbyWaist": 0.75,
+    "HipUpperWidth": 0.34,
+    "Hips": -0.02,
+    "LegsThin": 0.15,
+    "MuscularArms": 0.15,
+    "MuscularLegs": 0.16,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Gunner_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Plain F04",
+   "values": {
+    "Back": 0.34,
+    "BigTorso": 0.32,
+    "Breasts": 0.11,
+    "ButtSmall": 0.1,
+    "ChestWidth": 0.24,
+    "ChubbyWaist": 0.65,
+    "Hips": 0.04,
+    "MuscularArms": 0.24,
+    "MuscularLegs": 0.34,
+    "Thighs": 0.18,
+    "WideWaistLine": 0.36
+   }
+  },
+  "Silhouette_Gunner_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Plain F05",
+   "values": {
+    "Back": 0.41,
+    "BigTorso": 0.31,
+    "Breasts": 0.01,
+    "ButtSmall": 0.14,
+    "ChestWidth": 0.2,
+    "ChubbyWaist": 0.77,
+    "Hips": 0.03,
+    "MuscularArms": 0.5,
+    "MuscularLegs": 0.26,
+    "Thighs": 0.17,
+    "WideWaistLine": 0.23
+   }
+  },
+  "Silhouette_Gunner_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Plain F06",
+   "values": {
+    "Belly": 0.38,
+    "BreastGravity2": 0.39,
+    "Breasts": 0.11,
+    "BreastsSmall": 0.1,
+    "Butt": -0.06,
+    "ChubbyArms": 0.14,
+    "ChubbyWaist": 0.73,
+    "HipUpperWidth": 0.31,
+    "Hips": -0.01,
+    "MuscularArms": 0.11,
+    "MuscularLegs": 0.11,
+    "Thighs": 0.09,
+    "WideWaistLine": 0.51
+   }
+  },
+  "Silhouette_Gunner_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Plain M01",
+   "values": {
+    "BTAbDefinition": 0.38,
+    "BTBiceps": 0.3,
+    "BTStomach": 0.2,
+    "BTThinArm": 0.36,
+    "ThinThigh": 0.41
+   }
+  },
+  "Silhouette_Gunner_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Plain M02",
+   "values": {
+    "BTAbDefinition": 0.2,
+    "BTBiceps": 0.25,
+    "BTStomach": 0.2,
+    "BTThinArm": 0.31,
+    "ThinThigh": 0.5
+   }
+  },
+  "Silhouette_Gunner_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Plain M03",
+   "values": {
+    "BTAbDefinition": 0.26,
+    "BTBiceps": 0.13,
+    "BTStomachFat": 0.06,
+    "BTTHinCalf": 0.2,
+    "BTThinArm": 0.48,
+    "ThinThigh": 0.43
+   }
+  },
+  "Silhouette_Gunner_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Plain M04",
+   "values": {
+    "BTAbDefinition": 0.28,
+    "BTBiceps": 0.09,
+    "BTStomachFat": 0.19,
+    "BTTHinCalf": 0.37,
+    "BTThinArm": 0.32,
+    "ThinThigh": 0.22
+   }
+  },
+  "Silhouette_Gunner_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Plain M05",
+   "values": {
+    "BTAbDefinition": 0.11,
+    "BTBiceps": 0.07,
+    "BTBodyFatv2": 0.19,
+    "BTChubbyLeg": 0.26,
+    "BTShoulders": 0.33,
+    "BTStomachFat": 0.37,
+    "BTThigh": 0.28,
+    "BTTraps": 0.36
+   }
+  },
+  "Silhouette_Gunner_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Plain M06",
+   "values": {
+    "BTAbDefinition": 0.18,
+    "BTBiceps": 0.07,
+    "BTBodyFatv2": 0.11,
+    "BTChubbyLeg": 0.29,
+    "BTShoulders": 0.33,
+    "BTStomachFat": 0.3,
+    "BTThigh": 0.24,
+    "BTTraps": 0.22
+   }
+  },
+  "Silhouette_Gunner_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Rough F01",
+   "values": {
+    "Back": 0.59,
+    "BigTorso": 0.61,
+    "BreastsSmall": 0.24,
+    "ButtSmall": 0.61,
+    "ChestWidth": 0.76,
+    "ChubbyWaist": 0.93,
+    "HipUpperWidth": 0.43,
+    "Hips": -0.53,
+    "MuscularArms": 0.36,
+    "WideWaistLine": 0.96
+   }
+  },
+  "Silhouette_Gunner_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Rough F02",
+   "values": {
+    "Arms": 0.77,
+    "BreastGravity2": 0.41,
+    "BreastsSmall": 0.29,
+    "ButtSmall": 0.69,
+    "CalfSmooth": 0.56,
+    "Hips": -0.36,
+    "LegsThin": 0.91,
+    "SlimThighs": 0.55,
+    "WideWaistLine": 0.29
+   }
+  },
+  "Silhouette_Gunner_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Gunner Rough F03",
+   "values": {
+    "BreastFlatness2": 0.64,
+    "BreastsSmall": 0.24,
+    "BreastsSmall2": 0.62,
+    "ButtSmall": 0.79,
+    "ChubbyWaist": 0.92,
+    "HipUpperWidth": 0.35,
+    "Hips": -0.44,
+    "SlimThighs": 0.33,
+    "WideWaistLine": 0.52
+   }
+  },
+  "Silhouette_Gunner_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Rough M01",
+   "values": {
+    "BTNegBicepMuscle": 0.76,
+    "BTNegChestWidth": 0.58,
+    "BTNegPecMuscle": 0.88,
+    "BTNegScapularMuscle": 0.44,
+    "BTNegShoulder": 0.79,
+    "BTTHinCalf": 0.91,
+    "BTThinArm": 0.87,
+    "ThinThigh": 0.88
+   }
+  },
+  "Silhouette_Gunner_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Rough M02",
+   "values": {
+    "BTChestSmoothing": 0.64,
+    "BTNegChestWidth": 0.61,
+    "BTNegShoulder": 0.49,
+    "BTStomachFat": 0.86,
+    "BTThinArm": 0.73,
+    "ThinThigh": 0.64
+   }
+  },
+  "Silhouette_Gunner_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Gunner Rough M03",
+   "values": {
+    "BTCenterStomachSize": 0.63,
+    "BTLowerStomachSize": 0.78,
+    "BTNegPecMuscle": 0.42,
+    "BTStomachFat": 1.21,
+    "BTTHinCalf": 0.37,
+    "BTThinArm": 0.5,
+    "ThinThigh": 0.62
+   }
+  },
+  "Silhouette_Gwen_McNamara": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Gwen McNamara",
+   "values": {
+    "Back": 0.35,
+    "Belly": 0.3,
+    "BigTorso": 0.3,
+    "BreastGravity2": 0.65,
+    "Breasts": 0.25,
+    "ButtSmall": 0.15,
+    "ChubbyWaist": 0.95,
+    "Hips": -0.05,
+    "ShoulderWidth": 0.3,
+    "WideWaistLine": 0.6
+   }
+  },
+  "Silhouette_Hailstorm": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Hailstorm",
+   "values": {
+    "BTARYAYDA": 0.5,
+    "BTBack": 0.6,
+    "BTBiceps": 0.55,
+    "BTBodyFatv2": 0.25,
+    "BTShoulders": 0.65,
+    "BTStomachFat": 0.55,
+    "BTThigh": 0.45,
+    "BTTraps": 0.7,
+    "TigerSanBBMale": 0.65
+   }
+  },
+  "Silhouette_Ham": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Ham",
+   "values": {
+    "BTBack": 0.55,
+    "BTBiceps": 0.45,
+    "BTBodyFatv2": 0.25,
+    "BTPectorals": 0.4,
+    "BTShoulders": 0.6,
+    "BTStomachFat": 0.5,
+    "BTThigh": 0.4,
+    "BTTraps": 0.55,
+    "TigerSanBBMale": 0.4
+   }
+  },
+  "Silhouette_Hancock": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Hancock",
+   "values": {
+    "BTAbDefinition": 0.4,
+    "BTNegPecMuscle": 0.3,
+    "BTNegStomach": 0.5,
+    "BTShoulders": 0.1,
+    "BTTHinCalf": 0.3,
+    "BTThinArm": 0.4,
+    "BTWaist-In": 0.5,
+    "ThinThigh": 0.35
+   }
+  },
+  "Silhouette_Harley_Evans": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Harley Evans",
+   "values": {
+    "Back": 0.3,
+    "BreastGravity2": 0.35,
+    "Breasts": 0.25,
+    "CalfSize": 0.25,
+    "ChubbyWaist": 0.8,
+    "MuscularArms": 0.35,
+    "MuscularLegs": 0.35,
+    "Thighs": 0.35,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Harvey": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Harvey",
+   "values": {
+    "BTChestSmoothing": 0.4,
+    "BTChubbyArm": 0.2,
+    "BTNegShoulder": 0.25,
+    "BTStomachFat": 0.5,
+    "Hips": 0.2
+   }
+  },
+  "Silhouette_Haylen": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Haylen",
+   "values": {
+    "Belly": 0.55,
+    "BigBelly": 0.2,
+    "BreastGravity2": 0.4,
+    "Breasts": 0.15,
+    "ChubbyArms": 0.45,
+    "ChubbyButt": 0.25,
+    "ChubbyLegs": 0.3,
+    "ChubbyWaist": 0.85,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Henry_Cooke": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Henry Cooke",
+   "values": {
+    "BTBodyFatv2": 0.3,
+    "BTCenterStomachSize": 0.4,
+    "BTChubbyArm": 0.45,
+    "BTChubbyLeg": 0.35,
+    "BTLowerStomachSize": 0.55,
+    "BTShoulders": 0.3,
+    "BTStomachFat": 0.9,
+    "BTTraps": 0.3
+   }
+  },
+  "Silhouette_High_Confessor_Tektus": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "High Confessor Tektus",
+   "values": {
+    "BTChestSmoothing": 0.4,
+    "BTLowerStomachSize": 0.5,
+    "BTNegPecMuscle": 0.55,
+    "BTNegShoulder": 0.4,
+    "BTStomachFat": 0.75,
+    "BTThinArm": 0.55,
+    "ThinThigh": 0.45
+   }
+  },
+  "Silhouette_Holt_Combes": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Holt Combes",
+   "values": {
+    "BTBack": 0.35,
+    "BTPectorals": 0.25,
+    "BTShoulders": 0.4,
+    "BTStomachFat": 0.4,
+    "BTThigh": 0.3,
+    "BTTraps": 0.35
+   }
+  },
+  "Silhouette_Honest_Dan": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Honest Dan",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTBiceps": 0.4,
+    "BTPectorals": 0.3,
+    "BTShoulders": 0.4,
+    "BTStomachFat": 0.25,
+    "BTThigh": 0.3,
+    "BTTraps": 0.4
+   }
+  },
+  "Silhouette_Imitation_Dream_Girl": {
+   "gender": "female",
+   "preset": "Imitation - Dream Girl",
+   "values": {
+    "Ankles": 0.55,
+    "AppleCheeks": 0.15,
+    "Arms": 0.35,
+    "Back": 0.05,
+    "Belly": 0.15,
+    "BigButt": 0.2,
+    "BreastCenter": 1.0,
+    "BreastCenterBig": 0.5,
+    "BreastHeight": 0.5,
+    "BreastTopSlope": 1.0,
+    "BreastWidth": 0.15,
+    "BreastsTogether": 0.4,
+    "Butt": -0.1,
+    "ButtNew": 0.5,
+    "ButtShape2": -0.15,
+    "ButtSmall": 0.2,
+    "CalfSize": 1.5,
+    "ChestDepth": -0.1,
+    "ChestWidth": -0.15,
+    "CrotchBack": 0.55,
+    "HipBack": 0.5,
+    "HipBone": -0.25,
+    "HipUpperWidth": 0.45,
+    "Hips": 0.1,
+    "LegShape": 1.0,
+    "LegsThin": 0.7,
+    "NippleDown": 0.35,
+    "NippleLength": -0.05,
+    "NipplePerkiness": 0.3,
+    "NippleSize": 0.3,
+    "NippleTip": 0.15,
+    "ShoulderWidth": 0.8,
+    "SlimThighs": 0.4,
+    "SternumDepth": 0.1,
+    "Thighs": 0.1,
+    "TummyTuck": 0.1,
+    "Waist": 1.0,
+    "WideWaistLine": -0.75
+   }
+  },
+  "Silhouette_Imitation_UNP_1": {
+   "gender": "female",
+   "preset": "Imitation - UNP #1",
+   "values": {
+    "Ankles": 0.25,
+    "ArmpitHeight": 1.0,
+    "Arms": 0.1,
+    "BackArch": -0.25,
+    "Belly": 1.0,
+    "BigBelly": 0.15,
+    "BigTorso": 0.15,
+    "BreastFlatness2": 0.05,
+    "BreastHeight": 0.35,
+    "BreastPerkiness": 0.45,
+    "BreastTopSlope": -0.5,
+    "BreastsCleavage": -0.5,
+    "BreastsNewSH": 0.64,
+    "BreastsSmall": 0.3,
+    "BreastsTogether": 0.65,
+    "Butt": 0.5,
+    "ButtShape2": 0.7,
+    "ButtSmall": 0.5,
+    "CalfSize": 0.6,
+    "ChestDepth": 0.15,
+    "ChubbyLegs": 0.15,
+    "ChubbyWaist": 0.15,
+    "CrotchBack": 1.0,
+    "ForearmSize": 0.5,
+    "Groin": 0.5,
+    "HipBack": 0.8,
+    "HipUpperWidth": 0.85,
+    "Hips": 0.5,
+    "KneeHeight": 0.4,
+    "LegShape": 0.7,
+    "LegsThin": 0.15,
+    "NippleAreola": 0.25,
+    "NippleDistance": 0.45,
+    "NippleLength": 0.2,
+    "NipplePerk2": 1.0,
+    "NipplePerkiness": 1.0,
+    "NippleSize": -0.5,
+    "NippleTip": 0.45,
+    "NippleUp": 0.25,
+    "PregnancyBelly": 0.05,
+    "PushUp": 0.2,
+    "RoundAss": 0.65,
+    "ShoulderSmooth": -1.0,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.55,
+    "SternumDepth": 0.6,
+    "SternumHeight": 0.7,
+    "Thighs": 0.45,
+    "Waist": -2.0,
+    "WaistHeight": 0.1,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Imitation_UNP_2": {
+   "gender": "female",
+   "preset": "Imitation - UNP #2",
+   "values": {
+    "Ankles": 0.3,
+    "AppleCheeks": 0.5,
+    "ArmpitHeight": 1.0,
+    "Arms": 0.6,
+    "BackArch": 0.1,
+    "Belly": -0.35,
+    "BigBelly": 0.3,
+    "BigTorso": 0.35,
+    "BreastGravity2": 0.25,
+    "BreastHeight": 0.5,
+    "BreastPerkiness": 1.0,
+    "BreastTopSlope": 0.5,
+    "BreastWidth": 0.25,
+    "Breasts": 0.3,
+    "BreastsNewSH": 0.25,
+    "BreastsSmall": -0.2,
+    "BreastsSmall2": -0.35,
+    "BreastsTogether": 0.65,
+    "Butt": 0.4,
+    "ButtNew": 1.0,
+    "ButtShape2": 0.25,
+    "ButtSmall": 0.15,
+    "CalfSmooth": 1.0,
+    "ChestDepth": 0.1,
+    "ChestWidth": 0.1,
+    "ChubbyArms": 0.5,
+    "ChubbyWaist": 0.25,
+    "CrotchBack": 0.7,
+    "ForearmSize": 0.25,
+    "Groin": 0.5,
+    "HipBack": 0.35,
+    "HipBone": -0.3,
+    "HipUpperWidth": 0.8,
+    "Hips": -0.45,
+    "KneeHeight": -0.65,
+    "LegShape": 1.45,
+    "NippleDistance": 0.05,
+    "NippleDown": 0.15,
+    "NippleLength": 0.1,
+    "NipplePerk2": 0.2,
+    "NipplePerkiness": 0.25,
+    "NippleSize": -0.25,
+    "ShoulderSmooth": -1.0,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.8,
+    "SlimThighs": -0.15,
+    "SternumDepth": -0.2,
+    "SternumHeight": 0.3,
+    "Thighs": 0.25,
+    "TummyTuck": 1.0,
+    "Waist": -1.1,
+    "WaistHeight": 0.15,
+    "WideWaistLine": -1.5
+   }
+  },
+  "Silhouette_Imitation_UNP_Skinny": {
+   "gender": "female",
+   "preset": "Imitation - UNP Skinny",
+   "values": {
+    "Ankles": 0.55,
+    "ArmpitHeight": 1.0,
+    "Arms": 0.25,
+    "BreastCenter": 0.25,
+    "BreastFlatness2": 0.05,
+    "BreastGravity2": 0.2,
+    "BreastHeight": 0.2,
+    "BreastPerkiness": 0.5,
+    "BreastTopSlope": 0.3,
+    "BreastWidth": 0.05,
+    "Breasts": 0.15,
+    "BreastsGone": 0.05,
+    "BreastsNewSH": 0.1,
+    "BreastsSmall2": 0.2,
+    "BreastsTogether": 0.4,
+    "ButtNew": 1.0,
+    "ChubbyWaist": 0.25,
+    "CrotchBack": 0.55,
+    "ForearmSize": 0.1,
+    "HipBack": 0.35,
+    "HipBone": -0.35,
+    "HipUpperWidth": 0.35,
+    "Hips": -0.3,
+    "LegShape": 1.45,
+    "LegsThin": 0.7,
+    "NippleDown": 0.15,
+    "NippleLength": 0.05,
+    "NipplePerk2": 0.1,
+    "NipplePerkiness": 0.45,
+    "NippleSize": 0.05,
+    "NippleTip": 0.15,
+    "NippleUp": 0.25,
+    "PregnancyBelly": 0.05,
+    "ShoulderSmooth": -1.0,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.9,
+    "SlimThighs": 0.4,
+    "SternumDepth": 0.35,
+    "TummyTuck": 1.0,
+    "Waist": -1.1,
+    "WaistHeight": 0.15,
+    "WideWaistLine": -0.9
+   }
+  },
+  "Silhouette_Initiate_Clarke": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Initiate Clarke",
+   "values": {
+    "BTNegChestWidth": 0.3,
+    "BTNegPecMuscle": 0.35,
+    "BTNegShoulder": 0.25,
+    "BTTHinCalf": 0.35,
+    "BTThinArm": 0.45,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Institute_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Fine F01",
+   "values": {
+    "Arms": 0.11,
+    "BreastPerkiness": 0.35,
+    "Breasts": 0.11,
+    "BreastsSmall": 0.04,
+    "Butt": 0.11,
+    "ChubbyWaist": 0.09,
+    "Hips": 0.12,
+    "LegsThin": 0.12,
+    "SlimThighs": 0.13
+   }
+  },
+  "Silhouette_Institute_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Fine M01",
+   "values": {
+    "BTAbDefinition": 0.41,
+    "BTBiceps": 0.21,
+    "BTButt": 0.31,
+    "BTPectorals": 0.35,
+    "BTShoulders": 0.27,
+    "BTWaist-In": 0.23
+   }
+  },
+  "Silhouette_Institute_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Plain F01",
+   "values": {
+    "Back": 0.25,
+    "Belly": 0.5,
+    "BigBelly": 0.16,
+    "BreastGravity2": 0.41,
+    "Breasts": 0.26,
+    "ChubbyArms": 0.35,
+    "ChubbyButt": 0.22,
+    "ChubbyLegs": 0.26,
+    "ChubbyWaist": 0.85,
+    "WideWaistLine": 0.24
+   }
+  },
+  "Silhouette_Institute_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Plain F02",
+   "values": {
+    "Back": 0.3,
+    "Belly": 0.49,
+    "BigBelly": 0.19,
+    "BreastGravity2": 0.4,
+    "Breasts": 0.12,
+    "ChubbyArms": 0.29,
+    "ChubbyButt": 0.18,
+    "ChubbyLegs": 0.2,
+    "ChubbyWaist": 0.94,
+    "WideWaistLine": 0.37
+   }
+  },
+  "Silhouette_Institute_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Plain F03",
+   "values": {
+    "Belly": 0.33,
+    "BreastGravity2": 0.37,
+    "Breasts": 0.11,
+    "BreastsSmall": 0.14,
+    "Butt": 0.02,
+    "ChubbyArms": 0.26,
+    "ChubbyWaist": 0.87,
+    "HipUpperWidth": 0.22,
+    "Hips": 0.07,
+    "Thighs": 0.07,
+    "WideWaistLine": 0.41
+   }
+  },
+  "Silhouette_Institute_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Plain F04",
+   "values": {
+    "Belly": 0.6,
+    "BreastGravity2": 0.23,
+    "Breasts": 0.18,
+    "Butt": 0.08,
+    "ChubbyArms": 0.21,
+    "ChubbyWaist": 0.66,
+    "HipUpperWidth": 0.29,
+    "Hips": -0.02,
+    "Thighs": 0.09,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Institute_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Plain F05",
+   "values": {
+    "Belly": 0.33,
+    "BreastGravity2": 0.25,
+    "Breasts": 0.16,
+    "BreastsSmall": 0.2,
+    "Butt": -0.09,
+    "ChubbyArms": 0.18,
+    "ChubbyWaist": 0.61,
+    "HipUpperWidth": 0.28,
+    "Hips": 0.01,
+    "WideWaistLine": 0.37
+   }
+  },
+  "Silhouette_Institute_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Plain F06",
+   "values": {
+    "7B Upper": 0.13,
+    "Belly": 0.25,
+    "BreastGravity2": 0.46,
+    "Breasts": 0.42,
+    "ChubbyArms": 0.13,
+    "ChubbyWaist": 0.71,
+    "WideWaistLine": 0.34
+   }
+  },
+  "Silhouette_Institute_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Plain M01",
+   "values": {
+    "BTChestSmoothing": 0.58,
+    "BTChubbyArm": 0.54,
+    "BTChubbyLeg": 0.37,
+    "BTStomachFat": 0.48,
+    "Hips": 0.32
+   }
+  },
+  "Silhouette_Institute_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Plain M02",
+   "values": {
+    "BTChestSmoothing": 0.67,
+    "BTChubbyArm": 0.56,
+    "BTChubbyLeg": 0.45,
+    "BTStomachFat": 0.59,
+    "Hips": 0.45
+   }
+  },
+  "Silhouette_Institute_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Plain M03",
+   "values": {
+    "BTBodyFatv2": 0.07,
+    "BTChestSmoothing": 0.39,
+    "BTChubbyArm": 0.53,
+    "BTLowerStomachSize": 0.32,
+    "BTStomachFat": 0.67,
+    "Hips": 0.35
+   }
+  },
+  "Silhouette_Institute_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Plain M04",
+   "values": {
+    "BTBodyFatv2": 0.05,
+    "BTChestSmoothing": 0.34,
+    "BTChubbyArm": 0.48,
+    "BTLowerStomachSize": 0.41,
+    "BTStomachFat": 0.51,
+    "Hips": 0.28
+   }
+  },
+  "Silhouette_Institute_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Plain M05",
+   "values": {
+    "BTChestSmoothing": 0.37,
+    "BTChubbyArm": 0.54,
+    "BTChubbyLeg": 0.32,
+    "BTPectorals": 0.1,
+    "BTStomachFat": 0.53,
+    "Hips": 0.26
+   }
+  },
+  "Silhouette_Institute_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Plain M06",
+   "values": {
+    "BTChestSmoothing": 0.22,
+    "BTChubbyArm": 0.42,
+    "BTChubbyLeg": 0.13,
+    "BTPectorals": 0.06,
+    "BTStomachFat": 0.31,
+    "Hips": 0.13
+   }
+  },
+  "Silhouette_Institute_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Rough F01",
+   "values": {
+    "Back": 0.6,
+    "Belly": 1.09,
+    "BigBelly": 0.32,
+    "BigTorso": 0.51,
+    "BreastFlatness2": 0.2,
+    "BreastGravity2": 0.8,
+    "Breasts": 0.41,
+    "CalfSize": 0.53,
+    "ChubbyArms": 1.12,
+    "ChubbyButt": 0.79,
+    "ChubbyLegs": 0.93,
+    "ChubbyWaist": 1.32,
+    "HipUpperWidth": 0.84,
+    "Thighs": 0.58,
+    "WideWaistLine": 0.75
+   }
+  },
+  "Silhouette_Institute_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Rough F02",
+   "values": {
+    "Belly": 0.42,
+    "BigBelly": 0.35,
+    "BreastFlatness2": 0.84,
+    "BreastGravity2": 0.93,
+    "Breasts": 0.2,
+    "ButtSmall": 0.4,
+    "ChubbyWaist": 0.79,
+    "WideWaistLine": 0.33
+   }
+  },
+  "Silhouette_Institute_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Institute Rough F03",
+   "values": {
+    "Back": 0.42,
+    "Belly": 0.95,
+    "BigBelly": 0.48,
+    "BreastGravity2": 0.63,
+    "Breasts": 0.19,
+    "ButtSmall": 0.54,
+    "ChubbyArms": 0.48,
+    "ChubbyWaist": 1.38,
+    "HipUpperWidth": 0.44,
+    "LegsThin": 0.36,
+    "SlimThighs": 0.22,
+    "WideWaistLine": 0.58
+   }
+  },
+  "Silhouette_Institute_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Rough M01",
+   "values": {
+    "BTBodyFatv2": 0.88,
+    "BTChestSmoothing": 0.78,
+    "BTChubbyArm": 0.82,
+    "BTChubbyLeg": 0.85,
+    "BTLowerStomachSize": 0.52,
+    "BTStomachFat": 1.15,
+    "Hips": 0.64
+   }
+  },
+  "Silhouette_Institute_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Rough M02",
+   "values": {
+    "BTBodyFatv2": 0.32,
+    "BTChestSmoothing": 0.83,
+    "BTChubbyArm": 0.75,
+    "BTNegPecMuscle": 0.53,
+    "BTStomachFat": 0.84,
+    "Hips": 0.41
+   }
+  },
+  "Silhouette_Institute_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Institute Rough M03",
+   "values": {
+    "BTChestSmoothing": 0.45,
+    "BTNegChestWidth": 0.64,
+    "BTNegShoulder": 0.68,
+    "BTStomachFat": 0.82,
+    "BTThinArm": 0.7,
+    "ThinThigh": 0.7
+   }
+  },
+  "Silhouette_Irma": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Irma",
+   "values": {
+    "7B Upper": 0.15,
+    "Belly": 0.35,
+    "BigButt": 0.2,
+    "BreastGravity2": 0.65,
+    "Breasts": 0.55,
+    "ChubbyArms": 0.3,
+    "ChubbyButt": 0.3,
+    "ChubbyWaist": 0.8,
+    "Hips": 0.25,
+    "Thighs": 0.3
+   }
+  },
+  "Silhouette_Isaac_Karlin": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Isaac Karlin",
+   "values": {
+    "BTNegChestWidth": 0.35,
+    "BTNegPecMuscle": 0.45,
+    "BTNegShoulder": 0.45,
+    "BTStomachFat": 0.25,
+    "BTThinArm": 0.5,
+    "ThinThigh": 0.45
+   }
+  },
+  "Silhouette_Ivy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Ivy",
+   "values": {
+    "7B Upper": 0.15,
+    "AppleCheeks": 0.6,
+    "Back": 0.3,
+    "BackArch": 0.35,
+    "BigButt": 0.75,
+    "BreastPerkiness": 0.45,
+    "Breasts": 0.7,
+    "Butt": 1.0,
+    "ChestWidth": 0.1,
+    "ChubbyWaist": 0.05,
+    "ForearmSize": 0.25,
+    "HipBack": 0.35,
+    "Hips": 0.45,
+    "MuscularArms": 0.7,
+    "MuscularButt": 1.0,
+    "MuscularLegs": 0.65,
+    "PushUp": 0.2,
+    "RoundAss": 0.8,
+    "ShoulderWidth": 0.1,
+    "Thighs": 0.7
+   }
+  },
+  "Silhouette_Jack_Cabot": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Jack Cabot",
+   "values": {
+    "BTChestSmoothing": 0.5,
+    "BTNegChestWidth": 0.3,
+    "BTNegShoulder": 0.35,
+    "BTStomachFat": 0.35,
+    "BTThinArm": 0.3,
+    "Hips": 0.25
+   }
+  },
+  "Silhouette_Jacob_Forsythe": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Jacob Forsythe",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTBiceps": 0.25,
+    "BTCalves": 0.25,
+    "BTShoulders": 0.2,
+    "BTStomachFat": 0.15,
+    "BTThinArm": 0.15
+   }
+  },
+  "Silhouette_Jacob_Orden": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Jacob Orden",
+   "values": {
+    "BTChestSmoothing": 0.45,
+    "BTChubbyArm": 0.3,
+    "BTLowerStomachSize": 0.25,
+    "BTShoulders": 0.15,
+    "BTStomachFat": 0.55,
+    "Hips": 0.25
+   }
+  },
+  "Silhouette_Jake_Finch": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Jake Finch",
+   "values": {
+    "BTAbDefinition": 0.45,
+    "BTBiceps": 0.35,
+    "BTNegStomach": 0.3,
+    "BTPectorals": 0.3,
+    "BTShoulders": 0.2,
+    "BTWaist-In": 0.4
+   }
+  },
+  "Silhouette_John": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "John",
+   "values": {
+    "BTButt": 0.5,
+    "BTChestSmoothing": 0.8,
+    "BTNegChestWidth": 0.7,
+    "BTNegShoulder": 0.85,
+    "BTStomachFat": 0.6,
+    "BTThinArm": 0.75,
+    "Hips": 0.95
+   }
+  },
+  "Silhouette_Jule": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Jule",
+   "values": {
+    "Back": 0.25,
+    "BreastPerkiness": 0.35,
+    "BreastsSmall": 0.2,
+    "CalfSize": 0.25,
+    "ChubbyWaist": 0.45,
+    "MuscularArms": 0.4,
+    "MuscularButt": 0.5,
+    "MuscularLegs": 0.5,
+    "RoundAss": 0.25,
+    "WideWaistLine": 0.25
+   }
+  },
+  "Silhouette_Jun_Long": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Jun Long",
+   "values": {
+    "BTChestSmoothing": 0.45,
+    "BTNegPecMuscle": 0.55,
+    "BTNegScapularMuscle": 0.4,
+    "BTNegShoulder": 0.5,
+    "BTStomachFat": 0.5,
+    "BTThinArm": 0.45,
+    "ThinThigh": 0.35
+   }
+  },
+  "Silhouette_June_Waters": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "June Waters",
+   "values": {
+    "Belly": 0.5,
+    "BreastGravity2": 0.6,
+    "Breasts": 0.45,
+    "ChubbyArms": 0.4,
+    "ChubbyButt": 0.4,
+    "ChubbyLegs": 0.35,
+    "ChubbyWaist": 1.0,
+    "Hips": 0.35,
+    "Thighs": 0.4
+   }
+  },
+  "Silhouette_Justin_Ayo": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Justin Ayo",
+   "values": {
+    "BTAbDefinition": 0.45,
+    "BTBiceps": 0.3,
+    "BTNegStomach": 0.35,
+    "BTShoulders": 0.3,
+    "BTTraps": 0.35,
+    "BTWaist-In": 0.5
+   }
+  },
+  "Silhouette_Kasumi_Nakano": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Kasumi Nakano",
+   "values": {
+    "Arms": 0.15,
+    "BreastPerkiness": 0.3,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.1,
+    "ChubbyWaist": 0.55,
+    "Hips": -0.05,
+    "LegsThin": 0.15,
+    "SlimThighs": 0.2,
+    "WideWaistLine": 0.3
+   }
+  },
+  "Silhouette_Kate_Armstrong": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Kate Armstrong",
+   "values": {
+    "Back": 0.4,
+    "Breasts": 0.25,
+    "ChubbyArms": 0.2,
+    "ChubbyWaist": 0.75,
+    "ForearmSize": 0.6,
+    "MuscularArms": 0.85,
+    "ShoulderWidth": 0.35,
+    "Thighs": 0.25,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Katherine_Pinn": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Katherine Pinn",
+   "values": {
+    "Belly": 0.25,
+    "BreastGravity2": 0.3,
+    "Breasts": 0.2,
+    "ChubbyArms": 0.2,
+    "ChubbyWaist": 0.75,
+    "Hips": 0.1,
+    "Thighs": 0.15,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Kay": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Kay",
+   "values": {
+    "Belly": 0.2,
+    "BreastGravity2": 0.3,
+    "Breasts": 0.15,
+    "ChubbyArms": 0.15,
+    "ChubbyWaist": 0.8,
+    "Thighs": 0.2,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Kellogg": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Kellogg",
+   "values": {
+    "BTARYAYDA": 0.35,
+    "BTAbDefinition": 0.35,
+    "BTBiceps": 0.35,
+    "BTShoulders": 0.3,
+    "BTStomachFat": 0.15,
+    "BTThigh": 0.25,
+    "BTTraps": 0.45
+   }
+  },
+  "Silhouette_Kelly_Canhead": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Kelly Canhead",
+   "values": {
+    "Back": 0.55,
+    "Belly": 0.6,
+    "BigTorso": 0.5,
+    "BreastGravity2": 0.6,
+    "Breasts": 0.3,
+    "ChubbyArms": 0.45,
+    "ChubbyLegs": 0.35,
+    "ChubbyWaist": 1.1,
+    "MuscularArms": 0.45,
+    "ShoulderWidth": 0.4,
+    "Thighs": 0.4,
+    "WideWaistLine": 0.6
+   }
+  },
+  "Silhouette_Kent_Connolly": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Kent Connolly",
+   "values": {
+    "BTChestSmoothing": 0.4,
+    "BTNegChestWidth": 0.55,
+    "BTNegPecMuscle": 0.6,
+    "BTNegShoulder": 0.6,
+    "BTStomachFat": 0.45,
+    "BTTHinCalf": 0.55,
+    "BTThinArm": 0.7,
+    "ThinThigh": 0.6
+   }
+  },
+  "Silhouette_Kessler": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Kessler",
+   "values": {
+    "Back": 0.4,
+    "BigTorso": 0.25,
+    "BreastGravity2": 0.35,
+    "Breasts": 0.15,
+    "ChestWidth": 0.3,
+    "ChubbyWaist": 0.8,
+    "MuscularArms": 0.4,
+    "MuscularLegs": 0.3,
+    "Thighs": 0.2,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Knight_Captain_Cade": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Knight-Captain Cade",
+   "values": {
+    "BTAbDefinition": 0.2,
+    "BTBiceps": 0.15,
+    "BTPectorals": 0.2,
+    "BTShoulders": 0.25,
+    "BTStomachFat": 0.3
+   }
+  },
+  "Silhouette_Knight_Gavil": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Knight Gavil",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTBiceps": 0.35,
+    "BTPectorals": 0.35,
+    "BTShoulders": 0.4,
+    "BTThigh": 0.25,
+    "BTTraps": 0.4
+   }
+  },
+  "Silhouette_Knight_Rhys": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Knight Rhys",
+   "values": {
+    "BTARYAYDA": 0.45,
+    "BTAbDefinition": 0.35,
+    "BTBiceps": 0.45,
+    "BTPectorals": 0.4,
+    "BTShoulders": 0.4,
+    "BTStomachFat": 0.1,
+    "BTTraps": 0.5
+   }
+  },
+  "Silhouette_Lana_Lafferty": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Lana Lafferty",
+   "values": {
+    "7B Upper": 0.2,
+    "BreastPerkiness": 0.35,
+    "Breasts": 0.5,
+    "Butt": 0.35,
+    "CalfSmooth": 0.6,
+    "ChubbyWaist": 0.25,
+    "Hips": 0.35,
+    "PushUp": 0.2,
+    "RoundAss": 0.45,
+    "Thighs": 0.25
+   }
+  },
+  "Silhouette_Lisa": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Lisa",
+   "values": {
+    "Arms": 0.15,
+    "BreastPerkiness": 0.4,
+    "Breasts": 0.2,
+    "CalfSmooth": 0.5,
+    "ChubbyWaist": 0.4,
+    "Hips": 0.15,
+    "LegsThin": 0.15,
+    "RoundAss": 0.4
+   }
+  },
+  "Silhouette_Lola": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Lola",
+   "values": {
+    "7B Upper": 0.2,
+    "AppleCheeks": 0.35,
+    "BigButt": 0.3,
+    "BreastPerkiness": 0.25,
+    "Breasts": 0.7,
+    "Butt": 0.5,
+    "ChubbyWaist": 0.35,
+    "Hips": 0.45,
+    "PushUp": 0.3,
+    "RoundAss": 0.55,
+    "Thighs": 0.4
+   }
+  },
+  "Silhouette_Lorenzo_Cabot": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Lorenzo Cabot",
+   "values": {
+    "BTAbDefinition": 0.6,
+    "BTNegChestWidth": 0.2,
+    "BTNegStomach": 0.7,
+    "BTTHinCalf": 0.5,
+    "BTThinArm": 0.6,
+    "BTTraps": 0.5,
+    "BTWaist-In": 0.5,
+    "ThinThigh": 0.55
+   }
+  },
+  "Silhouette_Lucas_Miller": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Lucas Miller",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTCalves": 0.4,
+    "BTNegStomach": 0.3,
+    "BTShoulders": 0.1,
+    "BTThinArm": 0.25,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_Mackenzie_Bridgeman": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Mackenzie Bridgeman",
+   "values": {
+    "Belly": 0.2,
+    "BreastGravity2": 0.3,
+    "Breasts": 0.15,
+    "ChubbyWaist": 0.75,
+    "MuscularArms": 0.15,
+    "Thighs": 0.2,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Madison_Li": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Madison Li",
+   "values": {
+    "Arms": 0.25,
+    "Belly": 0.25,
+    "BreastFlatness2": 0.2,
+    "BreastGravity2": 0.5,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.35,
+    "ChubbyWaist": 0.8,
+    "Hips": -0.2,
+    "LegsThin": 0.3,
+    "WideWaistLine": 0.5
+   }
+  },
+  "Silhouette_Magnolia": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Magnolia",
+   "values": {
+    "7B Upper": 0.2,
+    "BreastGravity2": 0.1,
+    "BreastPerkiness": 0.2,
+    "Breasts": 0.35,
+    "Butt": 0.25,
+    "ChubbyWaist": 0.2,
+    "Hips": 0.2,
+    "RoundAss": 0.35,
+    "Thighs": 0.15
+   }
+  },
+  "Silhouette_Mags_Black": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Mags Black",
+   "values": {
+    "BreastPerkiness": 0.25,
+    "Breasts": 0.05,
+    "BreastsSmall": 0.2,
+    "ChubbyWaist": 0.45,
+    "Hips": 0.05,
+    "LegsThin": 0.1,
+    "RoundAss": 0.2,
+    "SlimThighs": 0.1
+   }
+  },
+  "Silhouette_Maisie": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Maisie",
+   "values": {
+    "Belly": 0.1,
+    "BreastPerkiness": 0.3,
+    "Breasts": 0.3,
+    "Butt": 0.2,
+    "ChubbyArms": 0.1,
+    "ChubbyWaist": 0.6,
+    "Hips": 0.2,
+    "RoundAss": 0.3,
+    "Thighs": 0.2
+   }
+  },
+  "Silhouette_Malcolm_Latimer": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Malcolm Latimer",
+   "values": {
+    "BTButt": 1.0,
+    "BTChestSmoothing": 0.8,
+    "BTChubbyArm": 0.5,
+    "BTNegChestWidth": 0.7,
+    "BTNegShoulder": 0.85,
+    "BTOuterUpperThighSize": 0.9,
+    "BTStomachFat": 0.7,
+    "BTThighWidth": 1.0,
+    "Hips": 1.1
+   }
+  },
+  "Silhouette_Mama_Murphy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Mama Murphy",
+   "values": {
+    "Arms": 0.7,
+    "Belly": 0.4,
+    "BreastFlatness2": 0.6,
+    "BreastGravity2": 1.0,
+    "Breasts": 0.1,
+    "ButtSmall": 0.7,
+    "ChubbyWaist": 0.85,
+    "Hips": -0.3,
+    "LegsThin": 0.8,
+    "SlimThighs": 0.5,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Marcella": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Marcella",
+   "values": {
+    "BreastPerkiness": 0.35,
+    "BreastsSmall": 0.25,
+    "CalfSize": 0.35,
+    "ChubbyWaist": 0.45,
+    "MuscularArms": 0.2,
+    "MuscularButt": 0.5,
+    "MuscularLegs": 0.55,
+    "RoundAss": 0.3,
+    "WideWaistLine": 0.25
+   }
+  },
+  "Silhouette_Marcy_Long": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Marcy Long",
+   "values": {
+    "Arms": 0.3,
+    "BreastGravity2": 0.45,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.4,
+    "ChubbyWaist": 0.75,
+    "Hips": -0.25,
+    "LegsThin": 0.35,
+    "SlimThighs": 0.2,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Marguerite": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Marguerite",
+   "values": {
+    "BigButt": 0.25,
+    "BreastGravity2": 0.45,
+    "Breasts": 0.5,
+    "Butt": 0.4,
+    "ChubbyArms": 0.25,
+    "ChubbyLegs": 0.2,
+    "ChubbyWaist": 0.75,
+    "Hips": 0.4,
+    "Thighs": 0.4
+   }
+  },
+  "Silhouette_Mark_Summerset": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Mark Summerset",
+   "values": {
+    "BTChestSmoothing": 0.4,
+    "BTChubbyArm": 0.25,
+    "BTLowerStomachSize": 0.3,
+    "BTStomachFat": 0.6,
+    "Hips": 0.2
+   }
+  },
+  "Silhouette_Marowski": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Marowski",
+   "values": {
+    "BTChestSmoothing": 0.6,
+    "BTChubbyArm": 0.45,
+    "BTChubbyLeg": 0.35,
+    "BTLowerStomachSize": 0.45,
+    "BTNegShoulder": 0.25,
+    "BTStomachFat": 0.8,
+    "Hips": 0.45
+   }
+  },
+  "Silhouette_Mason": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Mason",
+   "values": {
+    "BTARYAYDA": 0.6,
+    "BTAbDefinition": 0.4,
+    "BTAryaydaMoreMuscular": 0.7,
+    "BTBiceps": 0.7,
+    "BTPectorals": 0.6,
+    "BTShoulders": 0.7,
+    "BTThigh": 0.5,
+    "BTTraps": 0.8,
+    "TigerSanBBMale": 0.6
+   }
+  },
+  "Silhouette_Max_Loken": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Max Loken",
+   "values": {
+    "BTAbDefinition": 0.4,
+    "BTBiceps": 0.2,
+    "BTPectorals": 0.3,
+    "BTShoulders": 0.25,
+    "BTWaist-In": 0.4
+   }
+  },
+  "Silhouette_Mayor_McDonough": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Mayor McDonough",
+   "values": {
+    "BTBodyFatv2": 0.65,
+    "BTChestSmoothing": 0.6,
+    "BTChubbyArm": 0.5,
+    "BTChubbyLeg": 0.35,
+    "BTStomachFat": 0.5,
+    "Hips": 0.3
+   }
+  },
+  "Silhouette_Mayor_Wayne_Sanders": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Mayor Wayne Sanders",
+   "values": {
+    "BTChestSmoothing": 0.55,
+    "BTChubbyArm": 0.4,
+    "BTChubbyLeg": 0.3,
+    "BTLowerStomachSize": 0.5,
+    "BTStomachFat": 0.85,
+    "Hips": 0.4
+   }
+  },
+  "Silhouette_Minutemen_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Fine F01",
+   "values": {
+    "AppleCheeks": 0.37,
+    "BreastsSmall": 0.17,
+    "Butt": 0.29,
+    "ChubbyButt": 0.18,
+    "ChubbyWaist": 0.11,
+    "Hips": 0.25,
+    "Thighs": 0.4
+   }
+  },
+  "Silhouette_Minutemen_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Fine M01",
+   "values": {
+    "BTAbDefinition": 0.29,
+    "BTBack": 0.33,
+    "BTShoulders": 0.51,
+    "BTTraps": 0.44,
+    "TigerSanBBMale": 0.51
+   }
+  },
+  "Silhouette_Minutemen_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Plain F01",
+   "values": {
+    "Back": 0.32,
+    "BigTorso": 0.27,
+    "Breasts": 0.08,
+    "ButtSmall": 0.17,
+    "ChestWidth": 0.29,
+    "ChubbyWaist": 0.67,
+    "Hips": 0.03,
+    "MuscularArms": 0.14,
+    "MuscularLegs": 0.24,
+    "Thighs": 0.11,
+    "WideWaistLine": 0.37
+   }
+  },
+  "Silhouette_Minutemen_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Plain F02",
+   "values": {
+    "Back": 0.27,
+    "BigTorso": 0.31,
+    "Breasts": 0.19,
+    "ButtSmall": 0.01,
+    "ChestWidth": 0.33,
+    "ChubbyWaist": 0.63,
+    "Hips": 0.03,
+    "MuscularArms": 0.26,
+    "MuscularLegs": 0.29,
+    "Thighs": 0.24,
+    "WideWaistLine": 0.21
+   }
+  },
+  "Silhouette_Minutemen_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Plain F03",
+   "values": {
+    "Belly": 0.33,
+    "BreastGravity2": 0.32,
+    "Breasts": 0.16,
+    "BreastsSmall": 0.06,
+    "Butt": -0.03,
+    "ChubbyArms": 0.14,
+    "ChubbyWaist": 0.71,
+    "HipUpperWidth": 0.29,
+    "Hips": 0.05,
+    "Thighs": 0.07,
+    "WideWaistLine": 0.5
+   }
+  },
+  "Silhouette_Minutemen_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Plain F04",
+   "values": {
+    "Belly": 0.37,
+    "BreastGravity2": 0.39,
+    "Breasts": 0.16,
+    "BreastsSmall": 0.2,
+    "Butt": -0.03,
+    "ChubbyArms": 0.16,
+    "ChubbyWaist": 0.88,
+    "HipUpperWidth": 0.33,
+    "Hips": 0.09,
+    "WideWaistLine": 0.56
+   }
+  },
+  "Silhouette_Minutemen_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Plain F05",
+   "values": {
+    "Belly": 0.22,
+    "BreastGravity2": 0.21,
+    "BreastsSmall": 0.27,
+    "ChubbyButt": 0.26,
+    "ChubbyLegs": 0.17,
+    "ChubbyWaist": 0.77,
+    "HipUpperWidth": 0.37,
+    "Hips": 0.18,
+    "Thighs": 0.29
+   }
+  },
+  "Silhouette_Minutemen_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Plain F06",
+   "values": {
+    "7B Upper": 0.14,
+    "Belly": 0.23,
+    "BreastGravity2": 0.36,
+    "Breasts": 0.38,
+    "ChubbyArms": 0.17,
+    "ChubbyWaist": 0.66,
+    "Hips": 0.03,
+    "WideWaistLine": 0.37
+   }
+  },
+  "Silhouette_Minutemen_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Plain M01",
+   "values": {
+    "BTBodyFatv2": 0.14,
+    "BTChubbyLeg": 0.27,
+    "BTShoulders": 0.27,
+    "BTStomachFat": 0.41,
+    "BTThigh": 0.32,
+    "BTTraps": 0.3
+   }
+  },
+  "Silhouette_Minutemen_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Plain M02",
+   "values": {
+    "BTBodyFatv2": 0.21,
+    "BTChubbyLeg": 0.27,
+    "BTShoulders": 0.33,
+    "BTStomachFat": 0.49,
+    "BTThigh": 0.31,
+    "BTTraps": 0.38
+   }
+  },
+  "Silhouette_Minutemen_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Plain M03",
+   "values": {
+    "BTBodyFatv2": 0.08,
+    "BTChestSmoothing": 0.49,
+    "BTChubbyArm": 0.4,
+    "BTLowerStomachSize": 0.27,
+    "BTStomachFat": 0.67,
+    "Hips": 0.35
+   }
+  },
+  "Silhouette_Minutemen_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Plain M04",
+   "values": {
+    "BTBodyFatv2": 0.15,
+    "BTChestSmoothing": 0.43,
+    "BTChubbyArm": 0.35,
+    "BTLowerStomachSize": 0.4,
+    "BTStomachFat": 0.77,
+    "Hips": 0.39
+   }
+  },
+  "Silhouette_Minutemen_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Plain M05",
+   "values": {
+    "BTChestSmoothing": 0.24,
+    "BTChubbyArm": 0.41,
+    "BTChubbyLeg": 0.24,
+    "BTPectorals": 0.09,
+    "BTStomachFat": 0.4,
+    "Hips": 0.11
+   }
+  },
+  "Silhouette_Minutemen_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Plain M06",
+   "values": {
+    "BTChestSmoothing": 0.22,
+    "BTChubbyArm": 0.25,
+    "BTChubbyLeg": 0.2,
+    "BTPectorals": 0.14,
+    "BTStomachFat": 0.21,
+    "Hips": 0.18
+   }
+  },
+  "Silhouette_Minutemen_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Rough F01",
+   "values": {
+    "Arms": 0.21,
+    "BigButt": 0.57,
+    "BreastsSmall": 0.24,
+    "ChubbyButt": 0.73,
+    "ChubbyLegs": 0.98,
+    "ChubbyWaist": 0.56,
+    "Hips": 0.65,
+    "Thighs": 0.77
+   }
+  },
+  "Silhouette_Minutemen_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Rough F02",
+   "values": {
+    "Belly": 0.52,
+    "BigBelly": 0.3,
+    "BreastFlatness2": 0.82,
+    "BreastGravity2": 1.02,
+    "Breasts": 0.4,
+    "ButtSmall": 0.43,
+    "ChubbyWaist": 0.78,
+    "WideWaistLine": 0.41
+   }
+  },
+  "Silhouette_Minutemen_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Minutemen Rough F03",
+   "values": {
+    "Back": 0.42,
+    "Belly": 1.07,
+    "BigBelly": 0.5,
+    "BreastGravity2": 0.66,
+    "Breasts": 0.12,
+    "ButtSmall": 0.49,
+    "ChubbyArms": 0.52,
+    "ChubbyWaist": 1.27,
+    "HipUpperWidth": 0.46,
+    "LegsThin": 0.44,
+    "SlimThighs": 0.19,
+    "WideWaistLine": 0.69
+   }
+  },
+  "Silhouette_Minutemen_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Rough M01",
+   "values": {
+    "BTCenterStomachSize": 0.64,
+    "BTLowerStomachSize": 0.75,
+    "BTNegPecMuscle": 0.45,
+    "BTStomachFat": 1.2,
+    "BTTHinCalf": 0.48,
+    "BTThinArm": 0.58,
+    "ThinThigh": 0.54
+   }
+  },
+  "Silhouette_Minutemen_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Rough M02",
+   "values": {
+    "BTButt": 0.82,
+    "BTChestSmoothing": 0.45,
+    "BTNegChestWidth": 0.39,
+    "BTNegShoulder": 0.54,
+    "BTOuterUpperThighSize": 0.75,
+    "BTStomachFat": 0.67,
+    "BTThighWidth": 0.82,
+    "Hips": 0.88
+   }
+  },
+  "Silhouette_Minutemen_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Minutemen Rough M03",
+   "values": {
+    "BTChestSmoothing": 0.65,
+    "BTNegChestWidth": 0.45,
+    "BTNegShoulder": 0.41,
+    "BTStomachFat": 0.84,
+    "BTThinArm": 0.67,
+    "ThinThigh": 0.68
+   }
+  },
+  "Silhouette_Miranda": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Miranda",
+   "values": {
+    "Arms": 0.1,
+    "BreastPerkiness": 0.4,
+    "Breasts": 0.25,
+    "CalfSmooth": 0.7,
+    "ChubbyWaist": 0.35,
+    "Hips": 0.1,
+    "LegsThin": 0.1,
+    "RoundAss": 0.3,
+    "SlimThighs": 0.1
+   }
+  },
+  "Silhouette_Mitch": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Mitch",
+   "values": {
+    "BTBack": 0.25,
+    "BTBiceps": 0.3,
+    "BTShoulders": 0.3,
+    "BTStomachFat": 0.4,
+    "BTThigh": 0.2
+   }
+  },
+  "Silhouette_Moe_Cronin": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Moe Cronin",
+   "values": {
+    "BTLowerStomachSize": 0.5,
+    "BTNegPecMuscle": 0.3,
+    "BTStomachFat": 0.9,
+    "BTThinArm": 0.35,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Myrna": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Myrna",
+   "values": {
+    "Belly": 0.3,
+    "BreastGravity2": 0.4,
+    "BreastsSmall": 0.3,
+    "ChubbyButt": 0.4,
+    "ChubbyLegs": 0.35,
+    "ChubbyWaist": 0.8,
+    "HipUpperWidth": 0.35,
+    "Hips": 0.35,
+    "Thighs": 0.4
+   }
+  },
+  "Silhouette_Nadine": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Nadine",
+   "values": {
+    "BreastsSmall": 0.25,
+    "ButtSmall": 0.2,
+    "CalfSize": 0.2,
+    "ChubbyWaist": 0.5,
+    "Hips": -0.1,
+    "LegsThin": 0.25,
+    "MuscularArms": 0.35,
+    "MuscularLegs": 0.35,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Neil_Freund": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Neil Freund",
+   "values": {
+    "BTChestSmoothing": 0.45,
+    "BTChubbyArm": 0.3,
+    "BTChubbyLeg": 0.25,
+    "BTStomachFat": 0.55,
+    "Hips": 0.25
+   }
+  },
+  "Silhouette_Newton_Oberly": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Newton Oberly",
+   "values": {
+    "BTCenterStomachSize": 0.35,
+    "BTChestSmoothing": 0.65,
+    "BTChubbyArm": 0.5,
+    "BTChubbyLeg": 0.4,
+    "BTLowerStomachSize": 0.5,
+    "BTStomachFat": 0.85,
+    "Hips": 0.5
+   }
+  },
+  "Silhouette_Nikki": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Nikki",
+   "values": {
+    "AppleCheeks": 0.4,
+    "BreastPerkiness": 0.5,
+    "Breasts": 0.35,
+    "Butt": 0.3,
+    "ChubbyWaist": 0.3,
+    "Hips": 0.2,
+    "MuscularArms": 0.2,
+    "MuscularButt": 0.6,
+    "MuscularLegs": 0.4,
+    "PushUp": 0.2,
+    "RoundAss": 0.55
+   }
+  },
+  "Silhouette_Nisha": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Nisha",
+   "values": {
+    "Arms": 0.25,
+    "BreastsSmall": 0.3,
+    "BreastsSmall2": 0.2,
+    "ButtSmall": 0.3,
+    "ChubbyWaist": 0.5,
+    "Hips": -0.2,
+    "LegsThin": 0.3,
+    "MuscularArms": 0.3,
+    "MuscularLegs": 0.25,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Obadiah_Blackhall": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Obadiah Blackhall",
+   "values": {
+    "BTLowerStomachSize": 0.45,
+    "BTNegPecMuscle": 0.55,
+    "BTNegShoulder": 0.35,
+    "BTStomachFat": 0.7,
+    "BTTHinCalf": 0.5,
+    "BTThinArm": 0.6,
+    "ThinThigh": 0.55
+   }
+  },
+  "Silhouette_Old_Longfellow": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Old Longfellow",
+   "values": {
+    "BTLowerStomachSize": 0.3,
+    "BTNegPecMuscle": 0.35,
+    "BTNegShoulder": 0.2,
+    "BTStomachFat": 0.55,
+    "BTTHinCalf": 0.35,
+    "BTThinArm": 0.45,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Old_Man_Stockton": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Old Man Stockton",
+   "values": {
+    "BTCalves": 0.3,
+    "BTNegChestWidth": 0.45,
+    "BTNegPecMuscle": 0.65,
+    "BTNegScapularMuscle": 0.4,
+    "BTNegShoulder": 0.5,
+    "BTStomachFat": 0.4,
+    "BTThinArm": 0.7,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Operator_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Fine F01",
+   "values": {
+    "7B Upper": 0.24,
+    "BreastPerkiness": 0.17,
+    "Breasts": 0.25,
+    "Butt": 0.25,
+    "ChubbyWaist": 0.11,
+    "Hips": 0.21,
+    "PushUp": 0.07,
+    "RoundAss": 0.3,
+    "Thighs": 0.11
+   }
+  },
+  "Silhouette_Operator_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Fine M01",
+   "values": {
+    "BTAbDefinition": 0.39,
+    "BTBiceps": 0.25,
+    "BTButt": 0.29,
+    "BTPectorals": 0.28,
+    "BTShoulders": 0.26,
+    "BTWaist-In": 0.2
+   }
+  },
+  "Silhouette_Operator_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Plain F01",
+   "values": {
+    "Belly": 0.27,
+    "BreastGravity2": 0.27,
+    "Breasts": 0.05,
+    "BreastsSmall": 0.06,
+    "Butt": 0.01,
+    "ChubbyArms": 0.2,
+    "ChubbyWaist": 0.75,
+    "HipUpperWidth": 0.2,
+    "Hips": 0.06,
+    "Thighs": 0.06,
+    "WideWaistLine": 0.44
+   }
+  },
+  "Silhouette_Operator_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Plain F02",
+   "values": {
+    "Belly": 0.36,
+    "BreastGravity2": 0.29,
+    "Breasts": 0.02,
+    "BreastsSmall": 0.23,
+    "Butt": 0.04,
+    "ChubbyArms": 0.16,
+    "ChubbyWaist": 0.88,
+    "HipUpperWidth": 0.37,
+    "Hips": 0.07,
+    "Thighs": 0.11,
+    "WideWaistLine": 0.38
+   }
+  },
+  "Silhouette_Operator_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Plain F03",
+   "values": {
+    "7B Upper": 0.14,
+    "Belly": 0.29,
+    "BreastGravity2": 0.48,
+    "Breasts": 0.41,
+    "ChubbyArms": 0.17,
+    "ChubbyWaist": 0.7,
+    "Hips": -0.01,
+    "WideWaistLine": 0.34
+   }
+  },
+  "Silhouette_Operator_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Plain F04",
+   "values": {
+    "7B Upper": 0.12,
+    "Belly": 0.21,
+    "BreastGravity2": 0.43,
+    "Breasts": 0.35,
+    "ChubbyArms": 0.12,
+    "ChubbyWaist": 0.55,
+    "Hips": 0.07,
+    "WideWaistLine": 0.21
+   }
+  },
+  "Silhouette_Operator_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Plain F05",
+   "values": {
+    "Arms": 0.21,
+    "BreastGravity2": 0.17,
+    "BreastsSmall": 0.16,
+    "ButtSmall": 0.31,
+    "ChubbyWaist": 0.69,
+    "HipUpperWidth": 0.2,
+    "Hips": -0.09,
+    "LegsThin": 0.19,
+    "WideWaistLine": 0.62
+   }
+  },
+  "Silhouette_Operator_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Plain F06",
+   "values": {
+    "Arms": 0.21,
+    "BreastGravity2": 0.21,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.16,
+    "ChubbyWaist": 0.7,
+    "HipUpperWidth": 0.37,
+    "Hips": -0.07,
+    "LegsThin": 0.12,
+    "WideWaistLine": 0.43
+   }
+  },
+  "Silhouette_Operator_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Plain M01",
+   "values": {
+    "BTChestSmoothing": 0.21,
+    "BTChubbyArm": 0.24,
+    "BTChubbyLeg": 0.2,
+    "BTPectorals": 0.09,
+    "BTStomachFat": 0.43,
+    "Hips": 0.22
+   }
+  },
+  "Silhouette_Operator_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Plain M02",
+   "values": {
+    "BTChestSmoothing": 0.38,
+    "BTChubbyArm": 0.31,
+    "BTChubbyLeg": 0.21,
+    "BTPectorals": 0.01,
+    "BTStomachFat": 0.22,
+    "Hips": 0.23
+   }
+  },
+  "Silhouette_Operator_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Plain M03",
+   "values": {
+    "BTAbDefinition": 0.03,
+    "BTStomachFat": 0.13,
+    "BTTHinCalf": 0.31,
+    "BTThinArm": 0.38,
+    "ThinThigh": 0.35
+   }
+  },
+  "Silhouette_Operator_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Plain M04",
+   "values": {
+    "BTAbDefinition": 0.16,
+    "BTStomachFat": 0.01,
+    "BTTHinCalf": 0.21,
+    "BTThinArm": 0.46,
+    "ThinThigh": 0.35
+   }
+  },
+  "Silhouette_Operator_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Plain M05",
+   "values": {
+    "BTChestSmoothing": 0.6,
+    "BTChubbyArm": 0.51,
+    "BTChubbyLeg": 0.36,
+    "BTStomachFat": 0.5,
+    "Hips": 0.45
+   }
+  },
+  "Silhouette_Operator_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Plain M06",
+   "values": {
+    "BTChestSmoothing": 0.48,
+    "BTChubbyArm": 0.48,
+    "BTChubbyLeg": 0.41,
+    "BTStomachFat": 0.4,
+    "Hips": 0.43
+   }
+  },
+  "Silhouette_Operator_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Rough F01",
+   "values": {
+    "Belly": 0.46,
+    "BigBelly": 0.33,
+    "BreastFlatness2": 0.6,
+    "BreastGravity2": 1.17,
+    "Breasts": 0.36,
+    "ButtSmall": 0.38,
+    "ChubbyWaist": 0.8,
+    "WideWaistLine": 0.39
+   }
+  },
+  "Silhouette_Operator_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Rough F02",
+   "values": {
+    "Arms": 0.26,
+    "BigButt": 0.69,
+    "BreastsSmall": 0.22,
+    "ChubbyButt": 0.7,
+    "ChubbyLegs": 0.95,
+    "ChubbyWaist": 0.57,
+    "Hips": 0.65,
+    "Thighs": 0.77
+   }
+  },
+  "Silhouette_Operator_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Operator Rough F03",
+   "values": {
+    "Back": 0.52,
+    "Belly": 1.08,
+    "BigBelly": 0.34,
+    "BreastGravity2": 0.81,
+    "Breasts": 0.25,
+    "ButtSmall": 0.41,
+    "ChubbyArms": 0.51,
+    "ChubbyWaist": 1.29,
+    "HipUpperWidth": 0.46,
+    "LegsThin": 0.38,
+    "SlimThighs": 0.28,
+    "WideWaistLine": 0.53
+   }
+  },
+  "Silhouette_Operator_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Rough M01",
+   "values": {
+    "BTBodyFatv2": 0.31,
+    "BTChestSmoothing": 0.89,
+    "BTChubbyArm": 0.71,
+    "BTNegPecMuscle": 0.53,
+    "BTStomachFat": 0.85,
+    "Hips": 0.49
+   }
+  },
+  "Silhouette_Operator_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Rough M02",
+   "values": {
+    "BTButt": 0.69,
+    "BTChestSmoothing": 0.46,
+    "BTNegChestWidth": 0.57,
+    "BTNegShoulder": 0.58,
+    "BTOuterUpperThighSize": 0.88,
+    "BTStomachFat": 0.69,
+    "BTThighWidth": 0.74,
+    "Hips": 0.85
+   }
+  },
+  "Silhouette_Operator_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Operator Rough M03",
+   "values": {
+    "BTCenterStomachSize": 0.63,
+    "BTLowerStomachSize": 0.65,
+    "BTNegPecMuscle": 0.42,
+    "BTStomachFat": 1.19,
+    "BTTHinCalf": 0.4,
+    "BTThinArm": 0.56,
+    "ThinThigh": 0.53
+   }
+  },
+  "Silhouette_Oswald": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Oswald",
+   "values": {
+    "BTLowerStomachSize": 0.5,
+    "BTNegPecMuscle": 0.4,
+    "BTNegShoulder": 0.4,
+    "BTStomachFat": 0.85,
+    "BTTHinCalf": 0.5,
+    "BTThinArm": 0.6,
+    "ThinThigh": 0.55
+   }
+  },
+  "Silhouette_Overboss_Colter": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Overboss Colter",
+   "values": {
+    "BTBodyFatv2": 0.3,
+    "BTChestSmoothing": 0.6,
+    "BTChubbyArm": 0.45,
+    "BTLowerStomachSize": 0.5,
+    "BTShoulders": 0.3,
+    "BTStomachFat": 0.85,
+    "Hips": 0.3
+   }
+  },
+  "Silhouette_Overseer_Barstow": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Overseer Barstow",
+   "values": {
+    "Back": 0.3,
+    "Belly": 0.35,
+    "BigTorso": 0.3,
+    "BreastGravity2": 0.6,
+    "Breasts": 0.25,
+    "ButtSmall": 0.15,
+    "ChubbyWaist": 0.95,
+    "ShoulderWidth": 0.2,
+    "Thighs": 0.2,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Pack_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Fine F01",
+   "values": {
+    "BreastPerkiness": 0.28,
+    "Breasts": 0.12,
+    "BreastsSmall": 0.2,
+    "Butt": 0.1,
+    "ChestWidth": 0.1,
+    "ChubbyWaist": 0.16,
+    "MuscularArms": 0.53,
+    "MuscularButt": 0.86,
+    "MuscularLegs": 0.67,
+    "RoundAss": 0.35
+   }
+  },
+  "Silhouette_Pack_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Fine M01",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTBack": 0.36,
+    "BTShoulders": 0.51,
+    "BTTraps": 0.45,
+    "TigerSanBBMale": 0.5
+   }
+  },
+  "Silhouette_Pack_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Plain F01",
+   "values": {
+    "Back": 0.31,
+    "BigTorso": 0.26,
+    "Breasts": 0.1,
+    "ButtSmall": 0.02,
+    "ChestWidth": 0.19,
+    "ChubbyWaist": 0.72,
+    "Hips": -0.09,
+    "MuscularArms": 0.34,
+    "MuscularButt": 0.15,
+    "MuscularLegs": 0.26,
+    "Thighs": 0.21,
+    "WideWaistLine": 0.25
+   }
+  },
+  "Silhouette_Pack_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Plain F02",
+   "values": {
+    "Back": 0.34,
+    "BigTorso": 0.35,
+    "Breasts": 0.16,
+    "ButtSmall": 0.02,
+    "ChestWidth": 0.33,
+    "ChubbyWaist": 0.59,
+    "Hips": 0.02,
+    "MuscularArms": 0.57,
+    "MuscularButt": 0.19,
+    "MuscularLegs": 0.39,
+    "Thighs": 0.23,
+    "WideWaistLine": 0.33
+   }
+  },
+  "Silhouette_Pack_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Plain F03",
+   "values": {
+    "Back": 0.44,
+    "BigTorso": 0.32,
+    "Breasts": 0.17,
+    "ButtSmall": 0.07,
+    "ChestWidth": 0.16,
+    "ChubbyWaist": 0.78,
+    "Hips": 0.04,
+    "MuscularArms": 0.25,
+    "MuscularButt": 0.27,
+    "MuscularLegs": 0.34,
+    "Thighs": 0.13,
+    "WideWaistLine": 0.38
+   }
+  },
+  "Silhouette_Pack_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Plain F04",
+   "values": {
+    "Back": 0.38,
+    "BigTorso": 0.35,
+    "Breasts": 0.02,
+    "ButtSmall": 0.17,
+    "ChestWidth": 0.3,
+    "ChubbyWaist": 0.76,
+    "Hips": -0.08,
+    "MuscularArms": 0.3,
+    "MuscularButt": 0.11,
+    "MuscularLegs": 0.59,
+    "Thighs": 0.18,
+    "WideWaistLine": 0.3
+   }
+  },
+  "Silhouette_Pack_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Plain F05",
+   "values": {
+    "Arms": 0.11,
+    "BreastGravity2": 0.19,
+    "BreastsSmall": 0.25,
+    "ButtSmall": 0.23,
+    "ChubbyWaist": 0.68,
+    "HipUpperWidth": 0.37,
+    "Hips": -0.03,
+    "LegsThin": 0.21,
+    "MuscularArms": 0.18,
+    "MuscularButt": 0.19,
+    "MuscularLegs": 0.2,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Pack_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Plain F06",
+   "values": {
+    "Arms": 0.24,
+    "BreastGravity2": 0.22,
+    "BreastsSmall": 0.18,
+    "ButtSmall": 0.34,
+    "ChubbyWaist": 0.57,
+    "HipUpperWidth": 0.2,
+    "Hips": -0.16,
+    "LegsThin": 0.27,
+    "MuscularArms": 0.16,
+    "MuscularButt": 0.25,
+    "MuscularLegs": 0.27,
+    "WideWaistLine": 0.41
+   }
+  },
+  "Silhouette_Pack_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Plain M01",
+   "values": {
+    "BTAbDefinition": 0.2,
+    "BTBiceps": 0.24,
+    "BTBodyFatv2": 0.21,
+    "BTChubbyLeg": 0.29,
+    "BTShoulders": 0.49,
+    "BTStomachFat": 0.35,
+    "BTThigh": 0.31,
+    "BTTraps": 0.35
+   }
+  },
+  "Silhouette_Pack_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Plain M02",
+   "values": {
+    "BTAbDefinition": 0.2,
+    "BTBiceps": 0.15,
+    "BTBodyFatv2": 0.11,
+    "BTChubbyLeg": 0.23,
+    "BTShoulders": 0.32,
+    "BTStomachFat": 0.31,
+    "BTThigh": 0.38,
+    "BTTraps": 0.29
+   }
+  },
+  "Silhouette_Pack_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Plain M03",
+   "values": {
+    "BTAbDefinition": 0.29,
+    "BTBiceps": 0.11,
+    "BTBodyFatv2": 0.25,
+    "BTChubbyLeg": 0.36,
+    "BTShoulders": 0.52,
+    "BTStomachFat": 0.48,
+    "BTThigh": 0.25,
+    "BTTraps": 0.23
+   }
+  },
+  "Silhouette_Pack_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Plain M04",
+   "values": {
+    "BTAbDefinition": 0.45,
+    "BTBiceps": 0.42,
+    "BTShoulders": 0.18,
+    "BTStomach": 0.14,
+    "BTThinArm": 0.48,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Pack_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Plain M05",
+   "values": {
+    "BTAbDefinition": 0.43,
+    "BTBiceps": 0.24,
+    "BTShoulders": 0.16,
+    "BTStomachFat": 0.09,
+    "BTTHinCalf": 0.48,
+    "BTThinArm": 0.36,
+    "ThinThigh": 0.38
+   }
+  },
+  "Silhouette_Pack_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Plain M06",
+   "values": {
+    "BTAbDefinition": 0.17,
+    "BTBiceps": 0.24,
+    "BTShoulders": 0.16,
+    "BTStomachFat": 0.19,
+    "BTTHinCalf": 0.24,
+    "BTThinArm": 0.21,
+    "ThinThigh": 0.29
+   }
+  },
+  "Silhouette_Pack_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Rough F01",
+   "values": {
+    "Back": 0.6,
+    "BigTorso": 0.7,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.58,
+    "ChestWidth": 0.66,
+    "ChubbyWaist": 0.99,
+    "HipUpperWidth": 0.42,
+    "Hips": -0.52,
+    "MuscularArms": 0.44,
+    "MuscularButt": 0.25,
+    "MuscularLegs": 0.26,
+    "WideWaistLine": 0.82
+   }
+  },
+  "Silhouette_Pack_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Rough F02",
+   "values": {
+    "Back": 0.51,
+    "BigTorso": 0.54,
+    "BreastsSmall": 0.2,
+    "ButtSmall": 0.7,
+    "ChestWidth": 0.82,
+    "ChubbyWaist": 0.98,
+    "HipUpperWidth": 0.47,
+    "Hips": -0.5,
+    "MuscularArms": 0.53,
+    "MuscularButt": 0.24,
+    "MuscularLegs": 0.16,
+    "WideWaistLine": 0.98
+   }
+  },
+  "Silhouette_Pack_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Pack Rough F03",
+   "values": {
+    "Arms": 0.28,
+    "BigButt": 0.67,
+    "Breasts": 0.05,
+    "BreastsSmall": 0.27,
+    "ChubbyButt": 0.61,
+    "ChubbyLegs": 1.02,
+    "ChubbyWaist": 0.58,
+    "Hips": 0.63,
+    "Thighs": 0.77
+   }
+  },
+  "Silhouette_Pack_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Rough M01",
+   "values": {
+    "BTCenterStomachSize": 0.62,
+    "BTLowerStomachSize": 0.78,
+    "BTNegPecMuscle": 0.4,
+    "BTStomachFat": 1.2,
+    "BTTHinCalf": 0.59,
+    "BTThinArm": 0.41,
+    "ThinThigh": 0.56
+   }
+  },
+  "Silhouette_Pack_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Rough M02",
+   "values": {
+    "BTButt": 0.84,
+    "BTChestSmoothing": 0.48,
+    "BTNegChestWidth": 0.6,
+    "BTNegShoulder": 0.59,
+    "BTOuterUpperThighSize": 0.61,
+    "BTStomachFat": 0.66,
+    "BTThighWidth": 0.9,
+    "Hips": 0.82
+   }
+  },
+  "Silhouette_Pack_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Pack Rough M03",
+   "values": {
+    "BTBodyFatv2": 0.84,
+    "BTChestSmoothing": 0.78,
+    "BTChubbyArm": 0.95,
+    "BTChubbyLeg": 0.81,
+    "BTLowerStomachSize": 0.58,
+    "BTStomachFat": 1.17,
+    "Hips": 0.81
+   }
+  },
+  "Silhouette_Paladin_Brandis": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Paladin Brandis",
+   "values": {
+    "BTAbDefinition": 0.4,
+    "BTNegBicepMuscle": 0.6,
+    "BTNegPecMuscle": 0.55,
+    "BTNegScapularMuscle": 0.4,
+    "BTNegStomach": 0.45,
+    "BTTHinCalf": 0.6,
+    "BTThinArm": 0.75,
+    "ThinThigh": 0.7
+   }
+  },
+  "Silhouette_Paladin_Danse": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Paladin Danse",
+   "values": {
+    "BTARYAYDA": 0.4,
+    "BTAbDefinition": 0.3,
+    "BTAryaydaMoreMuscular": 0.45,
+    "BTBack": 0.3,
+    "BTShoulders": 0.4,
+    "BTStomachFat": 0.1,
+    "BTTraps": 0.55,
+    "TigerSanBBMale": 0.3
+   }
+  },
+  "Silhouette_Panada": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Panada",
+   "values": {
+    "Belly": 0.4,
+    "BreastGravity2": 0.45,
+    "Breasts": 0.3,
+    "ChubbyArms": 0.3,
+    "ChubbyLegs": 0.35,
+    "ChubbyWaist": 0.95,
+    "Hips": 0.2,
+    "Thighs": 0.35,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Parker_Quinn": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Parker Quinn",
+   "values": {
+    "BTBiceps": 0.95,
+    "BTPectorals": 1.0,
+    "BTShoulders": 0.85,
+    "BTStomachFat": 0.3,
+    "BTTHinCalf": 1.0,
+    "BTTraps": 0.8,
+    "ThinThigh": 1.0,
+    "TigerSanBBMale": 0.35
+   }
+  },
+  "Silhouette_Paula_McKenzie": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Paula McKenzie",
+   "values": {
+    "Belly": 0.35,
+    "BreastGravity2": 0.45,
+    "Breasts": 0.3,
+    "ChubbyArms": 0.25,
+    "ChubbyButt": 0.2,
+    "ChubbyWaist": 0.85,
+    "Hips": 0.2,
+    "Thighs": 0.25
+   }
+  },
+  "Silhouette_Penelope": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Penelope",
+   "values": {
+    "Arms": 0.15,
+    "BreastPerkiness": 0.35,
+    "Breasts": 0.2,
+    "CalfSmooth": 0.6,
+    "ChubbyWaist": 0.4,
+    "Hips": 0.15,
+    "LegsThin": 0.15,
+    "RoundAss": 0.35
+   }
+  },
+  "Silhouette_Penny_Fitzgerald": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Penny Fitzgerald",
+   "values": {
+    "7B Upper": 0.15,
+    "AppleCheeks": 0.35,
+    "BreastPerkiness": 0.5,
+    "Breasts": 0.4,
+    "Butt": 0.3,
+    "CalfSmooth": 0.6,
+    "ChubbyWaist": 0.25,
+    "Hips": 0.25,
+    "PushUp": 0.25,
+    "RoundAss": 0.5,
+    "Thighs": 0.15
+   }
+  },
+  "Silhouette_Pest_Tilly": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Pest Tilly",
+   "values": {
+    "Arms": 0.7,
+    "Belly": 1.0,
+    "BigBelly": 0.6,
+    "BreastFlatness2": 0.5,
+    "BreastGravity2": 0.9,
+    "ButtSmall": 0.6,
+    "ChubbyWaist": 1.15,
+    "Hips": -0.2,
+    "LegsThin": 0.7,
+    "SlimThighs": 0.5,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Pickman": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Pickman",
+   "values": {
+    "BTNegPecMuscle": 0.7,
+    "BTNegScapularMuscle": 0.45,
+    "BTNegShoulder": 0.45,
+    "BTNegStomach": 0.85,
+    "BTTHinCalf": 0.7,
+    "BTThinArm": 0.8,
+    "BTWaist-In": 0.55,
+    "ThinThigh": 0.75
+   }
+  },
+  "Silhouette_Piper_Wright": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Piper Wright",
+   "values": {
+    "Arms": 0.15,
+    "BreastGravity2": 0.15,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.2,
+    "ChubbyWaist": 0.65,
+    "HipUpperWidth": 0.25,
+    "Hips": -0.15,
+    "LegsThin": 0.2,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Plain_F01": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F01",
+   "values": {
+    "Belly": 0.32,
+    "BreastGravity2": 0.34,
+    "Breasts": 0.15,
+    "BreastsSmall": 0.18,
+    "Butt": 0.02,
+    "ChubbyArms": 0.19,
+    "ChubbyWaist": 0.81,
+    "HipUpperWidth": 0.34,
+    "Hips": 0.03,
+    "Thighs": 0.06,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Plain_F02": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F02",
+   "values": {
+    "Belly": 0.39,
+    "BreastGravity2": 0.2,
+    "Breasts": 0.13,
+    "BreastsSmall": 0.15,
+    "Butt": -0.02,
+    "ChubbyArms": 0.09,
+    "ChubbyWaist": 0.62,
+    "HipUpperWidth": 0.21,
+    "Hips": -0.05,
+    "Thighs": 0.06,
+    "WideWaistLine": 0.41
+   }
+  },
+  "Silhouette_Plain_F03": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F03",
+   "values": {
+    "Belly": 0.21,
+    "BreastGravity2": 0.36,
+    "Breasts": 0.03,
+    "BreastsSmall": 0.23,
+    "Butt": -0.05,
+    "ChubbyArms": 0.24,
+    "ChubbyWaist": 0.64,
+    "HipUpperWidth": 0.27,
+    "Hips": 0.08,
+    "Thighs": 0.14,
+    "WideWaistLine": 0.51
+   }
+  },
+  "Silhouette_Plain_F04": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F04",
+   "values": {
+    "Back": 0.17,
+    "Belly": 0.55,
+    "BigBelly": 0.21,
+    "BreastGravity2": 0.37,
+    "Breasts": 0.18,
+    "ChubbyArms": 0.38,
+    "ChubbyButt": 0.21,
+    "ChubbyLegs": 0.23,
+    "ChubbyWaist": 0.87,
+    "WideWaistLine": 0.22
+   }
+  },
+  "Silhouette_Plain_F05": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F05",
+   "values": {
+    "Back": 0.25,
+    "Belly": 0.45,
+    "BigBelly": 0.16,
+    "BreastGravity2": 0.34,
+    "Breasts": 0.24,
+    "ChubbyArms": 0.38,
+    "ChubbyButt": 0.14,
+    "ChubbyLegs": 0.32,
+    "ChubbyWaist": 0.73,
+    "WideWaistLine": 0.21
+   }
+  },
+  "Silhouette_Plain_F06": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F06",
+   "values": {
+    "Back": 0.26,
+    "Belly": 0.48,
+    "BigBelly": 0.32,
+    "BreastGravity2": 0.41,
+    "Breasts": 0.21,
+    "ChubbyArms": 0.3,
+    "ChubbyButt": 0.12,
+    "ChubbyLegs": 0.32,
+    "ChubbyWaist": 0.93,
+    "WideWaistLine": 0.39
+   }
+  },
+  "Silhouette_Plain_F07": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F07",
+   "values": {
+    "Arms": 0.17,
+    "BreastGravity2": 0.12,
+    "BreastsSmall": 0.27,
+    "ButtSmall": 0.24,
+    "ChubbyWaist": 0.72,
+    "HipUpperWidth": 0.27,
+    "Hips": -0.13,
+    "LegsThin": 0.18,
+    "WideWaistLine": 0.7
+   }
+  },
+  "Silhouette_Plain_F08": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F08",
+   "values": {
+    "Arms": 0.12,
+    "BreastGravity2": 0.18,
+    "BreastsSmall": 0.25,
+    "ButtSmall": 0.29,
+    "ChubbyWaist": 0.58,
+    "HipUpperWidth": 0.25,
+    "Hips": -0.01,
+    "LegsThin": 0.28,
+    "WideWaistLine": 0.42
+   }
+  },
+  "Silhouette_Plain_F09": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F09",
+   "values": {
+    "Arms": 0.14,
+    "BreastGravity2": 0.25,
+    "BreastsSmall": 0.28,
+    "ButtSmall": 0.15,
+    "ChubbyWaist": 0.7,
+    "HipUpperWidth": 0.36,
+    "Hips": -0.06,
+    "LegsThin": 0.13,
+    "WideWaistLine": 0.48
+   }
+  },
+  "Silhouette_Plain_F10": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F10",
+   "values": {
+    "Back": 0.29,
+    "BigTorso": 0.28,
+    "Breasts": 0.12,
+    "ButtSmall": 0.09,
+    "ChestWidth": 0.32,
+    "ChubbyWaist": 0.72,
+    "Hips": -0.05,
+    "MuscularArms": 0.27,
+    "MuscularLegs": 0.24,
+    "Thighs": 0.14,
+    "WideWaistLine": 0.32
+   }
+  },
+  "Silhouette_Plain_F11": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F11",
+   "values": {
+    "Back": 0.28,
+    "BigTorso": 0.21,
+    "Breasts": 0.09,
+    "ButtSmall": 0.1,
+    "ChestWidth": 0.24,
+    "ChubbyWaist": 0.55,
+    "Hips": -0.02,
+    "MuscularArms": 0.29,
+    "MuscularLegs": 0.19,
+    "Thighs": 0.22,
+    "WideWaistLine": 0.28
+   }
+  },
+  "Silhouette_Plain_F12": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F12",
+   "values": {
+    "Back": 0.33,
+    "BigTorso": 0.23,
+    "Breasts": 0.06,
+    "ButtSmall": 0.17,
+    "ChestWidth": 0.18,
+    "ChubbyWaist": 0.75,
+    "Hips": -0.06,
+    "MuscularArms": 0.14,
+    "MuscularLegs": 0.11,
+    "Thighs": 0.11,
+    "WideWaistLine": 0.34
+   }
+  },
+  "Silhouette_Plain_F13": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F13",
+   "values": {
+    "7B Upper": 0.17,
+    "Belly": 0.3,
+    "BreastGravity2": 0.36,
+    "Breasts": 0.26,
+    "ChubbyArms": 0.17,
+    "ChubbyWaist": 0.71,
+    "Hips": 0.03,
+    "WideWaistLine": 0.2
+   }
+  },
+  "Silhouette_Plain_F14": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F14",
+   "values": {
+    "7B Upper": 0.19,
+    "Belly": 0.24,
+    "BreastGravity2": 0.53,
+    "Breasts": 0.25,
+    "ChubbyArms": 0.19,
+    "ChubbyWaist": 0.83,
+    "Hips": 0.08,
+    "WideWaistLine": 0.39
+   }
+  },
+  "Silhouette_Plain_F15": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F15",
+   "values": {
+    "7B Upper": 0.15,
+    "Belly": 0.37,
+    "BreastGravity2": 0.47,
+    "Breasts": 0.36,
+    "ChubbyArms": 0.13,
+    "ChubbyWaist": 0.85,
+    "Hips": -0.04,
+    "WideWaistLine": 0.32
+   }
+  },
+  "Silhouette_Plain_F16": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F16",
+   "values": {
+    "Belly": 0.22,
+    "BreastGravity2": 0.32,
+    "BreastsSmall": 0.1,
+    "ChubbyButt": 0.23,
+    "ChubbyLegs": 0.17,
+    "ChubbyWaist": 0.71,
+    "HipUpperWidth": 0.31,
+    "Hips": 0.22,
+    "Thighs": 0.35
+   }
+  },
+  "Silhouette_Plain_F17": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F17",
+   "values": {
+    "Belly": 0.16,
+    "BreastGravity2": 0.15,
+    "BreastsSmall": 0.22,
+    "ChubbyButt": 0.19,
+    "ChubbyLegs": 0.15,
+    "ChubbyWaist": 0.61,
+    "HipUpperWidth": 0.29,
+    "Hips": 0.16,
+    "Thighs": 0.2
+   }
+  },
+  "Silhouette_Plain_F18": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Plain F18",
+   "values": {
+    "Belly": 0.28,
+    "BreastGravity2": 0.28,
+    "BreastsSmall": 0.23,
+    "ChubbyButt": 0.16,
+    "ChubbyLegs": 0.12,
+    "ChubbyWaist": 0.77,
+    "HipUpperWidth": 0.31,
+    "Hips": 0.25,
+    "Thighs": 0.23
+   }
+  },
+  "Silhouette_Plain_M01": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M01",
+   "values": {
+    "BTChestSmoothing": 0.29,
+    "BTChubbyArm": 0.23,
+    "BTChubbyLeg": 0.19,
+    "BTPectorals": 0.13,
+    "BTStomachFat": 0.34,
+    "Hips": 0.29
+   }
+  },
+  "Silhouette_Plain_M02": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M02",
+   "values": {
+    "BTChestSmoothing": 0.22,
+    "BTChubbyArm": 0.32,
+    "BTChubbyLeg": 0.19,
+    "BTPectorals": 0.14,
+    "BTStomachFat": 0.49,
+    "Hips": 0.27
+   }
+  },
+  "Silhouette_Plain_M03": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M03",
+   "values": {
+    "BTChestSmoothing": 0.38,
+    "BTChubbyArm": 0.47,
+    "BTChubbyLeg": 0.37,
+    "BTPectorals": 0.1,
+    "BTStomachFat": 0.31,
+    "Hips": 0.21
+   }
+  },
+  "Silhouette_Plain_M04": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M04",
+   "values": {
+    "BTBodyFatv2": 0.09,
+    "BTChestSmoothing": 0.32,
+    "BTChubbyArm": 0.57,
+    "BTLowerStomachSize": 0.37,
+    "BTStomachFat": 0.65,
+    "Hips": 0.3
+   }
+  },
+  "Silhouette_Plain_M05": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M05",
+   "values": {
+    "BTBodyFatv2": 0.13,
+    "BTChestSmoothing": 0.3,
+    "BTChubbyArm": 0.57,
+    "BTLowerStomachSize": 0.48,
+    "BTStomachFat": 0.79,
+    "Hips": 0.25
+   }
+  },
+  "Silhouette_Plain_M06": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M06",
+   "values": {
+    "BTBodyFatv2": 0.05,
+    "BTChestSmoothing": 0.34,
+    "BTChubbyArm": 0.33,
+    "BTLowerStomachSize": 0.31,
+    "BTStomachFat": 0.56,
+    "Hips": 0.21
+   }
+  },
+  "Silhouette_Plain_M07": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M07",
+   "values": {
+    "BTAbDefinition": 0.06,
+    "BTStomachFat": 0.1,
+    "BTTHinCalf": 0.39,
+    "BTThinArm": 0.31,
+    "ThinThigh": 0.36
+   }
+  },
+  "Silhouette_Plain_M08": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M08",
+   "values": {
+    "BTAbDefinition": 0.04,
+    "BTStomachFat": 0.18,
+    "BTTHinCalf": 0.3,
+    "BTThinArm": 0.26,
+    "ThinThigh": 0.28
+   }
+  },
+  "Silhouette_Plain_M09": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M09",
+   "values": {
+    "BTAbDefinition": 0.16,
+    "BTStomachFat": 0.01,
+    "BTTHinCalf": 0.21,
+    "BTThinArm": 0.26,
+    "ThinThigh": 0.32
+   }
+  },
+  "Silhouette_Plain_M10": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M10",
+   "values": {
+    "BTBodyFatv2": 0.21,
+    "BTChubbyLeg": 0.24,
+    "BTShoulders": 0.28,
+    "BTStomachFat": 0.31,
+    "BTThigh": 0.31,
+    "BTTraps": 0.27
+   }
+  },
+  "Silhouette_Plain_M11": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M11",
+   "values": {
+    "BTBodyFatv2": 0.24,
+    "BTChubbyLeg": 0.36,
+    "BTShoulders": 0.39,
+    "BTStomachFat": 0.45,
+    "BTThigh": 0.22,
+    "BTTraps": 0.28
+   }
+  },
+  "Silhouette_Plain_M12": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M12",
+   "values": {
+    "BTBodyFatv2": 0.11,
+    "BTChubbyLeg": 0.2,
+    "BTShoulders": 0.23,
+    "BTStomachFat": 0.3,
+    "BTThigh": 0.34,
+    "BTTraps": 0.28
+   }
+  },
+  "Silhouette_Plain_M13": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M13",
+   "values": {
+    "BTAbDefinition": 0.2,
+    "BTBiceps": 0.16,
+    "BTStomach": 0.16,
+    "BTThinArm": 0.35,
+    "ThinThigh": 0.41
+   }
+  },
+  "Silhouette_Plain_M14": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M14",
+   "values": {
+    "BTAbDefinition": 0.1,
+    "BTBiceps": 0.18,
+    "BTStomach": 0.11,
+    "BTThinArm": 0.33,
+    "ThinThigh": 0.48
+   }
+  },
+  "Silhouette_Plain_M15": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M15",
+   "values": {
+    "BTAbDefinition": 0.29,
+    "BTBiceps": 0.11,
+    "BTStomach": 0.24,
+    "BTThinArm": 0.36,
+    "ThinThigh": 0.33
+   }
+  },
+  "Silhouette_Plain_M16": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M16",
+   "values": {
+    "BTChestSmoothing": 0.63,
+    "BTChubbyArm": 0.59,
+    "BTChubbyLeg": 0.42,
+    "BTStomachFat": 0.51,
+    "Hips": 0.47
+   }
+  },
+  "Silhouette_Plain_M17": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M17",
+   "values": {
+    "BTChestSmoothing": 0.4,
+    "BTChubbyArm": 0.46,
+    "BTChubbyLeg": 0.37,
+    "BTStomachFat": 0.41,
+    "Hips": 0.34
+   }
+  },
+  "Silhouette_Plain_M18": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Plain M18",
+   "values": {
+    "BTChestSmoothing": 0.59,
+    "BTChubbyArm": 0.42,
+    "BTChubbyLeg": 0.39,
+    "BTStomachFat": 0.59,
+    "Hips": 0.33
+   }
+  },
+  "Silhouette_Polly": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Polly",
+   "values": {
+    "Back": 0.6,
+    "Belly": 0.7,
+    "BigTorso": 0.35,
+    "BreastGravity2": 0.6,
+    "Breasts": 0.6,
+    "Butt": 0.4,
+    "ChubbyArms": 0.7,
+    "ChubbyWaist": 1.05,
+    "ForearmSize": 0.6,
+    "Hips": 0.2,
+    "MuscularArms": 0.6,
+    "MuscularLegs": 0.3,
+    "RoundAss": 0.6,
+    "ShoulderWidth": 0.45,
+    "Thighs": 0.4,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Porter_Gage": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Porter Gage",
+   "values": {
+    "BTBiceps": 0.25,
+    "BTBodyFatv2": 0.25,
+    "BTChubbyLeg": 0.3,
+    "BTShoulders": 0.35,
+    "BTStomachFat": 0.5,
+    "BTThigh": 0.35,
+    "BTTraps": 0.4
+   }
+  },
+  "Silhouette_Preston_Garvey": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Preston Garvey",
+   "values": {
+    "BTAbDefinition": 0.15,
+    "BTShoulders": 0.1,
+    "BTStomachFat": 0.1,
+    "BTTHinCalf": 0.2,
+    "BTThinArm": 0.3,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_Proctor_Quinlan": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Proctor Quinlan",
+   "values": {
+    "BTChestSmoothing": 0.3,
+    "BTNegChestWidth": 0.45,
+    "BTNegPecMuscle": 0.5,
+    "BTNegShoulder": 0.45,
+    "BTStomachFat": 0.3,
+    "BTThinArm": 0.55,
+    "ThinThigh": 0.5
+   }
+  },
+  "Silhouette_Proctor_Teagan": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Proctor Teagan",
+   "values": {
+    "BTChestSmoothing": 0.55,
+    "BTChubbyArm": 0.4,
+    "BTChubbyLeg": 0.3,
+    "BTLowerStomachSize": 0.45,
+    "BTStomachFat": 0.75,
+    "Hips": 0.35
+   }
+  },
+  "Silhouette_Quartermaster_Barratt": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Quartermaster Barratt",
+   "values": {
+    "Back": 0.35,
+    "Belly": 0.35,
+    "BigTorso": 0.3,
+    "BreastGravity2": 0.5,
+    "Breasts": 0.25,
+    "ChestWidth": 0.25,
+    "ChubbyWaist": 0.95,
+    "MuscularArms": 0.25,
+    "Thighs": 0.3,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Rabbit": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Rabbit",
+   "values": {
+    "Arms": 0.7,
+    "BreastFlatness2": 0.35,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.7,
+    "ChubbyWaist": 0.4,
+    "Hips": -0.35,
+    "LegsThin": 0.75,
+    "SlimThighs": 0.6,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Rachel": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Rachel",
+   "values": {
+    "Belly": 0.6,
+    "BigBelly": 0.15,
+    "BreastGravity2": 0.55,
+    "Breasts": 0.4,
+    "ChubbyArms": 0.4,
+    "ChubbyButt": 0.35,
+    "ChubbyLegs": 0.3,
+    "ChubbyWaist": 1.0,
+    "Hips": 0.3,
+    "Thighs": 0.35
+   }
+  },
+  "Silhouette_Raider_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Fine F01",
+   "values": {
+    "Arms": 0.11,
+    "BreastPerkiness": 0.28,
+    "Breasts": 0.19,
+    "BreastsSmall": 0.13,
+    "Butt": 0.09,
+    "ChubbyWaist": 0.1,
+    "Hips": 0.1,
+    "LegsThin": 0.12,
+    "SlimThighs": 0.06
+   }
+  },
+  "Silhouette_Raider_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Fine M01",
+   "values": {
+    "BTAbDefinition": 0.68,
+    "BTBiceps": 0.22,
+    "BTNegStomach": 0.37,
+    "BTPectorals": 0.11,
+    "BTShoulders": 0.19,
+    "BTWaist-In": 0.32
+   }
+  },
+  "Silhouette_Raider_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Plain F01",
+   "values": {
+    "Arms": 0.23,
+    "BreastGravity2": 0.11,
+    "BreastsSmall": 0.29,
+    "ButtSmall": 0.28,
+    "ChubbyWaist": 0.66,
+    "HipUpperWidth": 0.31,
+    "Hips": -0.05,
+    "LegsThin": 0.38,
+    "WideWaistLine": 0.49
+   }
+  },
+  "Silhouette_Raider_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Plain F02",
+   "values": {
+    "Arms": 0.32,
+    "BreastGravity2": 0.11,
+    "BreastsSmall": 0.17,
+    "ButtSmall": 0.3,
+    "ChubbyWaist": 0.76,
+    "HipUpperWidth": 0.4,
+    "Hips": -0.2,
+    "LegsThin": 0.49,
+    "WideWaistLine": 0.64
+   }
+  },
+  "Silhouette_Raider_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Plain F03",
+   "values": {
+    "Arms": 0.34,
+    "BreastGravity2": 0.24,
+    "BreastsSmall": 0.22,
+    "ButtSmall": 0.17,
+    "ChubbyWaist": 0.76,
+    "HipUpperWidth": 0.22,
+    "Hips": -0.08,
+    "LegsThin": 0.5,
+    "WideWaistLine": 0.69
+   }
+  },
+  "Silhouette_Raider_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Plain F04",
+   "values": {
+    "Arms": 0.42,
+    "BreastGravity2": 0.25,
+    "BreastsSmall": 0.24,
+    "ButtSmall": 0.23,
+    "ChubbyWaist": 0.62,
+    "HipUpperWidth": 0.36,
+    "Hips": -0.1,
+    "LegsThin": 0.24,
+    "WideWaistLine": 0.46
+   }
+  },
+  "Silhouette_Raider_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Plain F05",
+   "values": {
+    "Back": 0.36,
+    "BigTorso": 0.24,
+    "Breasts": 0.12,
+    "ButtSmall": 0.14,
+    "ChestWidth": 0.19,
+    "ChubbyWaist": 0.72,
+    "Hips": 0.03,
+    "MuscularArms": 0.39,
+    "MuscularLegs": 0.45,
+    "Thighs": 0.19,
+    "WideWaistLine": 0.32
+   }
+  },
+  "Silhouette_Raider_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Plain F06",
+   "values": {
+    "Back": 0.32,
+    "BigTorso": 0.33,
+    "Breasts": 0.15,
+    "ButtSmall": 0.16,
+    "ChestWidth": 0.21,
+    "ChubbyWaist": 0.55,
+    "Hips": 0.03,
+    "MuscularArms": 0.47,
+    "MuscularLegs": 0.25,
+    "Thighs": 0.17,
+    "WideWaistLine": 0.25
+   }
+  },
+  "Silhouette_Raider_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Plain M01",
+   "values": {
+    "BTAbDefinition": 0.18,
+    "BTBiceps": 0.19,
+    "BTStomach": 0.21,
+    "BTThinArm": 0.53,
+    "ThinThigh": 0.55
+   }
+  },
+  "Silhouette_Raider_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Plain M02",
+   "values": {
+    "BTAbDefinition": 0.1,
+    "BTBiceps": 0.1,
+    "BTStomach": 0.11,
+    "BTThinArm": 0.42,
+    "ThinThigh": 0.69
+   }
+  },
+  "Silhouette_Raider_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Plain M03",
+   "values": {
+    "BTAbDefinition": 0.11,
+    "BTBiceps": 0.15,
+    "BTStomach": 0.14,
+    "BTThinArm": 0.7,
+    "ThinThigh": 0.43
+   }
+  },
+  "Silhouette_Raider_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Plain M04",
+   "values": {
+    "BTAbDefinition": 0.02,
+    "BTStomachFat": 0.07,
+    "BTTHinCalf": 0.34,
+    "BTThinArm": 0.49,
+    "ThinThigh": 0.61
+   }
+  },
+  "Silhouette_Raider_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Plain M05",
+   "values": {
+    "BTAbDefinition": 0.09,
+    "BTStomachFat": 0.2,
+    "BTTHinCalf": 0.23,
+    "BTThinArm": 0.46,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Raider_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Plain M06",
+   "values": {
+    "BTAbDefinition": 0.2,
+    "BTBiceps": 0.06,
+    "BTBodyFatv2": 0.16,
+    "BTChubbyLeg": 0.25,
+    "BTShoulders": 0.33,
+    "BTStomachFat": 0.44,
+    "BTThigh": 0.29,
+    "BTTraps": 0.26
+   }
+  },
+  "Silhouette_Raider_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Rough F01",
+   "values": {
+    "Arms": 0.67,
+    "BreastGravity2": 0.46,
+    "Breasts": 0.02,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.73,
+    "CalfSmooth": 0.59,
+    "Hips": -0.35,
+    "LegsThin": 0.93,
+    "SlimThighs": 0.57,
+    "WideWaistLine": 0.34
+   }
+  },
+  "Silhouette_Raider_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Rough F02",
+   "values": {
+    "Arms": 0.85,
+    "BreastGravity2": 0.57,
+    "Breasts": 0.03,
+    "BreastsSmall": 0.24,
+    "ButtSmall": 0.64,
+    "CalfSmooth": 0.57,
+    "Hips": -0.35,
+    "LegsThin": 0.72,
+    "SlimThighs": 0.53,
+    "WideWaistLine": 0.26
+   }
+  },
+  "Silhouette_Raider_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Raider Rough F03",
+   "values": {
+    "Back": 0.63,
+    "BigTorso": 0.71,
+    "BreastsSmall": 0.24,
+    "ButtSmall": 0.63,
+    "ChestWidth": 0.84,
+    "ChubbyWaist": 0.86,
+    "HipUpperWidth": 0.53,
+    "Hips": -0.51,
+    "MuscularArms": 0.25,
+    "WideWaistLine": 0.88
+   }
+  },
+  "Silhouette_Raider_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Rough M01",
+   "values": {
+    "BTNegBicepMuscle": 0.77,
+    "BTNegChestWidth": 0.54,
+    "BTNegPecMuscle": 0.79,
+    "BTNegScapularMuscle": 0.51,
+    "BTNegShoulder": 0.67,
+    "BTTHinCalf": 0.88,
+    "BTThinArm": 0.99,
+    "ThinThigh": 0.92
+   }
+  },
+  "Silhouette_Raider_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Rough M02",
+   "values": {
+    "BTNegBicepMuscle": 0.64,
+    "BTNegChestWidth": 0.58,
+    "BTNegPecMuscle": 0.62,
+    "BTNegScapularMuscle": 0.45,
+    "BTNegShoulder": 0.63,
+    "BTTHinCalf": 0.95,
+    "BTThinArm": 0.89,
+    "ThinThigh": 0.81
+   }
+  },
+  "Silhouette_Raider_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Raider Rough M03",
+   "values": {
+    "BTChestSmoothing": 0.64,
+    "BTNegChestWidth": 0.64,
+    "BTNegShoulder": 0.61,
+    "BTStomachFat": 0.88,
+    "BTThinArm": 0.68,
+    "ThinThigh": 0.63
+   }
+  },
+  "Silhouette_Railroad_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Fine F01",
+   "values": {
+    "BreastPerkiness": 0.26,
+    "Breasts": 0.05,
+    "BreastsSmall": 0.21,
+    "Butt": 0.14,
+    "ChestWidth": 0.12,
+    "ChubbyWaist": 0.16,
+    "MuscularArms": 0.39,
+    "MuscularButt": 0.59,
+    "MuscularLegs": 0.44,
+    "RoundAss": 0.24
+   }
+  },
+  "Silhouette_Railroad_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Fine M01",
+   "values": {
+    "BTAbDefinition": 0.44,
+    "BTBiceps": 0.3,
+    "BTButt": 0.5,
+    "BTCalves": 0.53,
+    "BTShoulders": 0.14,
+    "BTStomach": 0.36,
+    "BTThinArm": 0.31,
+    "BTTraps": 0.17,
+    "BTWaist-In": 0.28,
+    "ThinThigh": 0.46
+   }
+  },
+  "Silhouette_Railroad_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Plain F01",
+   "values": {
+    "Arms": 0.18,
+    "BreastGravity2": 0.11,
+    "BreastsSmall": 0.27,
+    "ButtSmall": 0.22,
+    "ChubbyWaist": 0.64,
+    "HipUpperWidth": 0.28,
+    "Hips": -0.18,
+    "LegsThin": 0.16,
+    "MuscularArms": 0.18,
+    "MuscularLegs": 0.12,
+    "WideWaistLine": 0.68
+   }
+  },
+  "Silhouette_Railroad_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Plain F02",
+   "values": {
+    "Arms": 0.11,
+    "BreastGravity2": 0.25,
+    "BreastsSmall": 0.23,
+    "ButtSmall": 0.35,
+    "ChubbyWaist": 0.69,
+    "HipUpperWidth": 0.35,
+    "Hips": -0.03,
+    "LegsThin": 0.23,
+    "MuscularArms": 0.18,
+    "MuscularLegs": 0.11,
+    "WideWaistLine": 0.66
+   }
+  },
+  "Silhouette_Railroad_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Plain F03",
+   "values": {
+    "Arms": 0.2,
+    "BreastGravity2": 0.25,
+    "BreastsSmall": 0.29,
+    "ButtSmall": 0.22,
+    "ChubbyWaist": 0.61,
+    "HipUpperWidth": 0.34,
+    "Hips": -0.08,
+    "LegsThin": 0.29,
+    "MuscularArms": 0.11,
+    "MuscularLegs": 0.17,
+    "WideWaistLine": 0.46
+   }
+  },
+  "Silhouette_Railroad_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Plain F04",
+   "values": {
+    "Belly": 0.3,
+    "BreastGravity2": 0.25,
+    "Breasts": 0.08,
+    "BreastsSmall": 0.11,
+    "Butt": -0.02,
+    "ChubbyArms": 0.11,
+    "ChubbyWaist": 0.74,
+    "HipUpperWidth": 0.26,
+    "Hips": 0.07,
+    "Thighs": 0.1,
+    "WideWaistLine": 0.49
+   }
+  },
+  "Silhouette_Railroad_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Plain F05",
+   "values": {
+    "Belly": 0.23,
+    "BreastGravity2": 0.35,
+    "Breasts": 0.06,
+    "BreastsSmall": 0.23,
+    "Butt": -0.06,
+    "ChubbyArms": 0.13,
+    "ChubbyWaist": 0.88,
+    "HipUpperWidth": 0.26,
+    "Hips": 0.03,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Railroad_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Plain F06",
+   "values": {
+    "Back": 0.29,
+    "BigTorso": 0.3,
+    "Breasts": 0.09,
+    "ButtSmall": 0.17,
+    "ChestWidth": 0.25,
+    "ChubbyWaist": 0.65,
+    "Hips": -0.02,
+    "MuscularArms": 0.12,
+    "MuscularLegs": 0.28,
+    "Thighs": 0.18,
+    "WideWaistLine": 0.38
+   }
+  },
+  "Silhouette_Railroad_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Plain M01",
+   "values": {
+    "BTAbDefinition": 0.24,
+    "BTBiceps": 0.07,
+    "BTStomachFat": 0.06,
+    "BTTHinCalf": 0.29,
+    "BTThinArm": 0.37,
+    "ThinThigh": 0.37
+   }
+  },
+  "Silhouette_Railroad_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Plain M02",
+   "values": {
+    "BTAbDefinition": 0.13,
+    "BTBiceps": 0.14,
+    "BTStomachFat": 0.19,
+    "BTTHinCalf": 0.21,
+    "BTThinArm": 0.34,
+    "ThinThigh": 0.46
+   }
+  },
+  "Silhouette_Railroad_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Plain M03",
+   "values": {
+    "BTAbDefinition": 0.37,
+    "BTBiceps": 0.06,
+    "BTStomachFat": 0.14,
+    "BTTHinCalf": 0.4,
+    "BTThinArm": 0.24,
+    "ThinThigh": 0.33
+   }
+  },
+  "Silhouette_Railroad_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Plain M04",
+   "values": {
+    "BTAbDefinition": 0.18,
+    "BTBiceps": 0.11,
+    "BTStomach": 0.16,
+    "BTThinArm": 0.43,
+    "ThinThigh": 0.39
+   }
+  },
+  "Silhouette_Railroad_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Plain M05",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTBiceps": 0.15,
+    "BTStomach": 0.19,
+    "BTThinArm": 0.37,
+    "ThinThigh": 0.49
+   }
+  },
+  "Silhouette_Railroad_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Plain M06",
+   "values": {
+    "BTChestSmoothing": 0.22,
+    "BTChubbyArm": 0.37,
+    "BTChubbyLeg": 0.21,
+    "BTPectorals": 0.13,
+    "BTStomachFat": 0.37,
+    "Hips": 0.11
+   }
+  },
+  "Silhouette_Railroad_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Rough F01",
+   "values": {
+    "Arms": 0.86,
+    "BreastGravity2": 0.52,
+    "Breasts": 0.03,
+    "BreastsSmall": 0.24,
+    "ButtSmall": 0.62,
+    "CalfSmooth": 0.52,
+    "Hips": -0.33,
+    "LegsThin": 0.76,
+    "SlimThighs": 0.68,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Railroad_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Rough F02",
+   "values": {
+    "BreastFlatness2": 0.65,
+    "Breasts": 0.02,
+    "BreastsSmall": 0.26,
+    "BreastsSmall2": 0.46,
+    "ButtSmall": 0.82,
+    "ChubbyWaist": 0.77,
+    "HipUpperWidth": 0.37,
+    "Hips": -0.36,
+    "SlimThighs": 0.3,
+    "WideWaistLine": 0.77
+   }
+  },
+  "Silhouette_Railroad_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Railroad Rough F03",
+   "values": {
+    "Back": 0.63,
+    "BigTorso": 0.59,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.6,
+    "ChestWidth": 0.87,
+    "ChubbyWaist": 0.95,
+    "HipUpperWidth": 0.48,
+    "Hips": -0.54,
+    "MuscularArms": 0.29,
+    "WideWaistLine": 0.95
+   }
+  },
+  "Silhouette_Railroad_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Rough M01",
+   "values": {
+    "BTNegBicepMuscle": 0.67,
+    "BTNegChestWidth": 0.67,
+    "BTNegPecMuscle": 0.75,
+    "BTNegScapularMuscle": 0.53,
+    "BTNegShoulder": 0.51,
+    "BTTHinCalf": 0.87,
+    "BTThinArm": 0.99,
+    "ThinThigh": 0.89
+   }
+  },
+  "Silhouette_Railroad_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Rough M02",
+   "values": {
+    "BTChestSmoothing": 0.59,
+    "BTNegChestWidth": 0.53,
+    "BTNegShoulder": 0.56,
+    "BTStomachFat": 0.89,
+    "BTThinArm": 0.62,
+    "ThinThigh": 0.67
+   }
+  },
+  "Silhouette_Railroad_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Railroad Rough M03",
+   "values": {
+    "BTCenterStomachSize": 0.71,
+    "BTLowerStomachSize": 0.84,
+    "BTNegPecMuscle": 0.45,
+    "BTStomachFat": 1.2,
+    "BTTHinCalf": 0.53,
+    "BTThinArm": 0.65,
+    "ThinThigh": 0.58
+   }
+  },
+  "Silhouette_Rei_Nakano": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Rei Nakano",
+   "values": {
+    "Arms": 0.3,
+    "Belly": 0.2,
+    "BreastFlatness2": 0.25,
+    "BreastGravity2": 0.6,
+    "Breasts": 0.1,
+    "ButtSmall": 0.25,
+    "ChubbyWaist": 0.75,
+    "Hips": -0.1,
+    "LegsThin": 0.3,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Robert_MacCready": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Robert MacCready",
+   "values": {
+    "BTAbDefinition": 0.1,
+    "BTNegChestWidth": 0.35,
+    "BTNegPecMuscle": 0.3,
+    "BTNegShoulder": 0.3,
+    "BTTHinCalf": 0.5,
+    "BTThinArm": 0.6,
+    "ThinThigh": 0.55
+   }
+  },
+  "Silhouette_Roger_Warwick": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Roger Warwick",
+   "values": {
+    "BTNegPecMuscle": 0.4,
+    "BTNegShoulder": 0.25,
+    "BTNegStomach": 0.4,
+    "BTThinArm": 0.45,
+    "BTTraps": 0.2,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Ronnie_Shaw": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Ronnie Shaw",
+   "values": {
+    "Back": 0.35,
+    "Belly": 0.35,
+    "BigTorso": 0.3,
+    "BreastFlatness2": 0.3,
+    "BreastGravity2": 0.6,
+    "ButtSmall": 0.3,
+    "ChestWidth": 0.25,
+    "ChubbyWaist": 0.95,
+    "Hips": -0.15,
+    "MuscularArms": 0.15,
+    "WideWaistLine": 0.6
+   }
+  },
+  "Silhouette_Rosalind_Orman": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Rosalind Orman",
+   "values": {
+    "Belly": 0.45,
+    "BreastGravity2": 0.7,
+    "Breasts": 0.3,
+    "ChubbyArms": 0.35,
+    "ChubbyButt": 0.3,
+    "ChubbyWaist": 0.9,
+    "HipUpperWidth": 0.3,
+    "Hips": 0.25,
+    "Thighs": 0.3,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Rough_F01": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F01",
+   "values": {
+    "Back": 0.68,
+    "Belly": 1.12,
+    "BigBelly": 0.5,
+    "BigTorso": 0.49,
+    "BreastFlatness2": 0.26,
+    "BreastGravity2": 0.71,
+    "Breasts": 0.48,
+    "CalfSize": 0.44,
+    "ChubbyArms": 1.07,
+    "ChubbyButt": 0.88,
+    "ChubbyLegs": 0.93,
+    "ChubbyWaist": 1.28,
+    "HipUpperWidth": 0.74,
+    "Thighs": 0.57,
+    "WideWaistLine": 0.73
+   }
+  },
+  "Silhouette_Rough_F02": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F02",
+   "values": {
+    "Back": 0.74,
+    "Belly": 1.1,
+    "BigBelly": 0.26,
+    "BigTorso": 0.68,
+    "BreastFlatness2": 0.31,
+    "BreastGravity2": 0.71,
+    "Breasts": 0.57,
+    "CalfSize": 0.69,
+    "ChubbyArms": 1.2,
+    "ChubbyButt": 0.66,
+    "ChubbyLegs": 0.89,
+    "ChubbyWaist": 1.29,
+    "HipUpperWidth": 0.61,
+    "Thighs": 0.4,
+    "WideWaistLine": 0.75
+   }
+  },
+  "Silhouette_Rough_F03": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F03",
+   "values": {
+    "Back": 0.57,
+    "Belly": 1.18,
+    "BigBelly": 0.26,
+    "BigTorso": 0.42,
+    "BreastFlatness2": 0.27,
+    "BreastGravity2": 0.73,
+    "Breasts": 0.57,
+    "CalfSize": 0.7,
+    "ChubbyArms": 1.17,
+    "ChubbyButt": 0.87,
+    "ChubbyLegs": 0.98,
+    "ChubbyWaist": 1.14,
+    "HipUpperWidth": 0.65,
+    "Thighs": 0.6,
+    "WideWaistLine": 0.75
+   }
+  },
+  "Silhouette_Rough_F04": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F04",
+   "values": {
+    "BreastFlatness2": 0.72,
+    "Breasts": 0.04,
+    "BreastsSmall": 0.27,
+    "BreastsSmall2": 0.64,
+    "ButtSmall": 0.79,
+    "ChubbyWaist": 0.84,
+    "HipUpperWidth": 0.36,
+    "Hips": -0.45,
+    "SlimThighs": 0.32,
+    "WideWaistLine": 0.67
+   }
+  },
+  "Silhouette_Rough_F05": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F05",
+   "values": {
+    "BreastFlatness2": 0.51,
+    "Breasts": 0.05,
+    "BreastsSmall": 0.24,
+    "BreastsSmall2": 0.42,
+    "ButtSmall": 0.64,
+    "ChubbyWaist": 0.99,
+    "HipUpperWidth": 0.44,
+    "Hips": -0.36,
+    "SlimThighs": 0.39,
+    "WideWaistLine": 0.62
+   }
+  },
+  "Silhouette_Rough_F06": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F06",
+   "values": {
+    "BreastFlatness2": 0.58,
+    "Breasts": 0.02,
+    "BreastsSmall": 0.28,
+    "BreastsSmall2": 0.43,
+    "ButtSmall": 0.64,
+    "ChubbyWaist": 0.7,
+    "HipUpperWidth": 0.33,
+    "Hips": -0.42,
+    "SlimThighs": 0.32,
+    "WideWaistLine": 0.64
+   }
+  },
+  "Silhouette_Rough_F07": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F07",
+   "values": {
+    "Arms": 0.71,
+    "BreastGravity2": 0.47,
+    "Breasts": 0.02,
+    "BreastsSmall": 0.26,
+    "ButtSmall": 0.77,
+    "CalfSmooth": 0.65,
+    "Hips": -0.38,
+    "LegsThin": 0.8,
+    "SlimThighs": 0.56,
+    "WideWaistLine": 0.33
+   }
+  },
+  "Silhouette_Rough_F08": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F08",
+   "values": {
+    "Arms": 0.9,
+    "BreastGravity2": 0.57,
+    "BreastsSmall": 0.28,
+    "ButtSmall": 0.64,
+    "CalfSmooth": 0.47,
+    "Hips": -0.36,
+    "LegsThin": 0.82,
+    "SlimThighs": 0.66,
+    "WideWaistLine": 0.39
+   }
+  },
+  "Silhouette_Rough_F09": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F09",
+   "values": {
+    "Back": 0.47,
+    "Belly": 0.95,
+    "BigBelly": 0.38,
+    "BreastGravity2": 0.7,
+    "Breasts": 0.14,
+    "ButtSmall": 0.41,
+    "ChubbyArms": 0.5,
+    "ChubbyWaist": 1.33,
+    "HipUpperWidth": 0.51,
+    "LegsThin": 0.36,
+    "SlimThighs": 0.2,
+    "WideWaistLine": 0.7
+   }
+  },
+  "Silhouette_Rough_F10": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F10",
+   "values": {
+    "Back": 0.52,
+    "Belly": 1.13,
+    "BigBelly": 0.32,
+    "BreastGravity2": 0.7,
+    "Breasts": 0.23,
+    "ButtSmall": 0.54,
+    "ChubbyArms": 0.43,
+    "ChubbyWaist": 1.14,
+    "HipUpperWidth": 0.46,
+    "LegsThin": 0.49,
+    "SlimThighs": 0.26,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Rough_F11": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F11",
+   "values": {
+    "Back": 0.43,
+    "Belly": 0.9,
+    "BigBelly": 0.49,
+    "BreastGravity2": 0.8,
+    "Breasts": 0.15,
+    "ButtSmall": 0.46,
+    "ChubbyArms": 0.58,
+    "ChubbyWaist": 1.13,
+    "HipUpperWidth": 0.43,
+    "LegsThin": 0.3,
+    "SlimThighs": 0.26,
+    "WideWaistLine": 0.48
+   }
+  },
+  "Silhouette_Rough_F12": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F12",
+   "values": {
+    "Belly": 0.47,
+    "BigBelly": 0.27,
+    "BreastFlatness2": 0.81,
+    "BreastGravity2": 1.03,
+    "Breasts": 0.28,
+    "ButtSmall": 0.38,
+    "ChubbyWaist": 0.86,
+    "WideWaistLine": 0.32
+   }
+  },
+  "Silhouette_Rough_F13": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F13",
+   "values": {
+    "Belly": 0.57,
+    "BigBelly": 0.4,
+    "BreastFlatness2": 0.65,
+    "BreastGravity2": 1.09,
+    "Breasts": 0.28,
+    "ButtSmall": 0.5,
+    "ChubbyWaist": 0.86,
+    "WideWaistLine": 0.41
+   }
+  },
+  "Silhouette_Rough_F14": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F14",
+   "values": {
+    "Arms": 0.25,
+    "BigButt": 0.45,
+    "Breasts": 0.03,
+    "BreastsSmall": 0.27,
+    "ChubbyButt": 0.69,
+    "ChubbyLegs": 1.13,
+    "ChubbyWaist": 0.59,
+    "Hips": 0.7,
+    "Thighs": 0.72
+   }
+  },
+  "Silhouette_Rough_F15": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F15",
+   "values": {
+    "Arms": 0.19,
+    "BigButt": 0.66,
+    "Breasts": 0.01,
+    "BreastsSmall": 0.27,
+    "ChubbyButt": 0.62,
+    "ChubbyLegs": 0.9,
+    "ChubbyWaist": 0.62,
+    "Hips": 0.68,
+    "Thighs": 0.63
+   }
+  },
+  "Silhouette_Rough_F16": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F16",
+   "values": {
+    "Back": 0.67,
+    "BigTorso": 0.66,
+    "BreastsSmall": 0.25,
+    "ButtSmall": 0.59,
+    "ChestWidth": 0.75,
+    "ChubbyWaist": 1.02,
+    "HipUpperWidth": 0.46,
+    "Hips": -0.45,
+    "MuscularArms": 0.33,
+    "WideWaistLine": 0.76
+   }
+  },
+  "Silhouette_Rough_F17": {
+   "file": "Silhouette Pool.xml",
+   "gender": "female",
+   "preset": "Rough F17",
+   "values": {
+    "Back": 0.63,
+    "BigTorso": 0.54,
+    "BreastsSmall": 0.21,
+    "ButtSmall": 0.7,
+    "ChestWidth": 0.75,
+    "ChubbyWaist": 0.87,
+    "HipUpperWidth": 0.45,
+    "Hips": -0.55,
+    "MuscularArms": 0.31,
+    "WideWaistLine": 0.92
+   }
+  },
+  "Silhouette_Rough_M01": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M01",
+   "values": {
+    "BTBodyFatv2": 0.9,
+    "BTChestSmoothing": 0.71,
+    "BTChubbyArm": 0.87,
+    "BTChubbyLeg": 0.76,
+    "BTLowerStomachSize": 0.64,
+    "BTStomachFat": 1.06,
+    "Hips": 0.86
+   }
+  },
+  "Silhouette_Rough_M02": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M02",
+   "values": {
+    "BTBodyFatv2": 0.99,
+    "BTChestSmoothing": 0.83,
+    "BTChubbyArm": 0.98,
+    "BTChubbyLeg": 0.88,
+    "BTLowerStomachSize": 0.66,
+    "BTStomachFat": 1.28,
+    "Hips": 0.99
+   }
+  },
+  "Silhouette_Rough_M03": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M03",
+   "values": {
+    "BTBodyFatv2": 0.73,
+    "BTChestSmoothing": 0.81,
+    "BTChubbyArm": 0.87,
+    "BTChubbyLeg": 0.78,
+    "BTLowerStomachSize": 0.52,
+    "BTStomachFat": 1.08,
+    "Hips": 0.97
+   }
+  },
+  "Silhouette_Rough_M04": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M04",
+   "values": {
+    "BTCenterStomachSize": 0.62,
+    "BTLowerStomachSize": 0.61,
+    "BTNegPecMuscle": 0.35,
+    "BTStomachFat": 1.22,
+    "BTTHinCalf": 0.52,
+    "BTThinArm": 0.6,
+    "ThinThigh": 0.6
+   }
+  },
+  "Silhouette_Rough_M05": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M05",
+   "values": {
+    "BTCenterStomachSize": 0.55,
+    "BTLowerStomachSize": 0.61,
+    "BTNegPecMuscle": 0.46,
+    "BTStomachFat": 1.1,
+    "BTTHinCalf": 0.32,
+    "BTThinArm": 0.65,
+    "ThinThigh": 0.49
+   }
+  },
+  "Silhouette_Rough_M06": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M06",
+   "values": {
+    "BTCenterStomachSize": 0.72,
+    "BTLowerStomachSize": 0.77,
+    "BTNegPecMuscle": 0.5,
+    "BTStomachFat": 1.3,
+    "BTTHinCalf": 0.54,
+    "BTThinArm": 0.51,
+    "ThinThigh": 0.6
+   }
+  },
+  "Silhouette_Rough_M07": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M07",
+   "values": {
+    "BTNegBicepMuscle": 0.82,
+    "BTNegChestWidth": 0.52,
+    "BTNegPecMuscle": 0.72,
+    "BTNegScapularMuscle": 0.66,
+    "BTNegShoulder": 0.63,
+    "BTTHinCalf": 0.83,
+    "BTThinArm": 0.81,
+    "ThinThigh": 0.89
+   }
+  },
+  "Silhouette_Rough_M08": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M08",
+   "values": {
+    "BTNegBicepMuscle": 0.66,
+    "BTNegChestWidth": 0.59,
+    "BTNegPecMuscle": 0.72,
+    "BTNegScapularMuscle": 0.6,
+    "BTNegShoulder": 0.6,
+    "BTTHinCalf": 0.96,
+    "BTThinArm": 0.86,
+    "ThinThigh": 1.0
+   }
+  },
+  "Silhouette_Rough_M09": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M09",
+   "values": {
+    "BTNegBicepMuscle": 0.83,
+    "BTNegChestWidth": 0.8,
+    "BTNegPecMuscle": 0.85,
+    "BTNegScapularMuscle": 0.69,
+    "BTNegShoulder": 0.8,
+    "BTTHinCalf": 1.0,
+    "BTThinArm": 0.91,
+    "ThinThigh": 0.82
+   }
+  },
+  "Silhouette_Rough_M10": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M10",
+   "values": {
+    "BTButt": 0.71,
+    "BTChestSmoothing": 0.45,
+    "BTNegChestWidth": 0.45,
+    "BTNegShoulder": 0.62,
+    "BTOuterUpperThighSize": 0.66,
+    "BTStomachFat": 0.69,
+    "BTThighWidth": 0.78,
+    "Hips": 0.89
+   }
+  },
+  "Silhouette_Rough_M11": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M11",
+   "values": {
+    "BTButt": 0.87,
+    "BTChestSmoothing": 0.44,
+    "BTNegChestWidth": 0.47,
+    "BTNegShoulder": 0.57,
+    "BTOuterUpperThighSize": 0.83,
+    "BTStomachFat": 0.53,
+    "BTThighWidth": 0.89,
+    "Hips": 0.82
+   }
+  },
+  "Silhouette_Rough_M12": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M12",
+   "values": {
+    "BTButt": 0.88,
+    "BTChestSmoothing": 0.51,
+    "BTNegChestWidth": 0.51,
+    "BTNegShoulder": 0.5,
+    "BTOuterUpperThighSize": 0.86,
+    "BTStomachFat": 0.61,
+    "BTThighWidth": 0.73,
+    "Hips": 0.8
+   }
+  },
+  "Silhouette_Rough_M13": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M13",
+   "values": {
+    "BTBodyFatv2": 0.31,
+    "BTChestSmoothing": 0.96,
+    "BTChubbyArm": 0.73,
+    "BTNegPecMuscle": 0.57,
+    "BTStomachFat": 0.83,
+    "Hips": 0.41
+   }
+  },
+  "Silhouette_Rough_M14": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M14",
+   "values": {
+    "BTBodyFatv2": 0.39,
+    "BTChestSmoothing": 0.93,
+    "BTChubbyArm": 0.85,
+    "BTNegPecMuscle": 0.36,
+    "BTStomachFat": 0.99,
+    "Hips": 0.49
+   }
+  },
+  "Silhouette_Rough_M15": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M15",
+   "values": {
+    "BTBodyFatv2": 0.21,
+    "BTChestSmoothing": 0.88,
+    "BTChubbyArm": 0.81,
+    "BTNegPecMuscle": 0.58,
+    "BTStomachFat": 0.74,
+    "Hips": 0.62
+   }
+  },
+  "Silhouette_Rough_M16": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M16",
+   "values": {
+    "BTChestSmoothing": 0.55,
+    "BTNegChestWidth": 0.58,
+    "BTNegShoulder": 0.57,
+    "BTStomachFat": 0.84,
+    "BTThinArm": 0.61,
+    "ThinThigh": 0.68
+   }
+  },
+  "Silhouette_Rough_M17": {
+   "file": "Silhouette Pool.xml",
+   "gender": "male",
+   "preset": "Rough M17",
+   "values": {
+    "BTChestSmoothing": 0.45,
+    "BTNegChestWidth": 0.56,
+    "BTNegShoulder": 0.46,
+    "BTStomachFat": 0.76,
+    "BTThinArm": 0.51,
+    "ThinThigh": 0.7
+   }
+  },
+  "Silhouette_Rowdy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Rowdy",
+   "values": {
+    "Back": 0.45,
+    "BigTorso": 0.35,
+    "BreastGravity2": 0.3,
+    "Breasts": 0.2,
+    "ChubbyWaist": 0.85,
+    "ForearmSize": 0.55,
+    "MuscularArms": 0.6,
+    "MuscularLegs": 0.35,
+    "ShoulderWidth": 0.45,
+    "Thighs": 0.35,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Roxy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Roxy",
+   "values": {
+    "BreastPerkiness": 0.3,
+    "BreastsSmall": 0.2,
+    "Butt": 0.15,
+    "ChubbyWaist": 0.5,
+    "ForearmSize": 0.3,
+    "Hips": 0.1,
+    "LegsThin": 0.15,
+    "MuscularArms": 0.35,
+    "RoundAss": 0.35
+   }
+  },
+  "Silhouette_Rufus_Rubins": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Rufus Rubins",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTBiceps": 0.4,
+    "BTShoulders": 0.2,
+    "BTStomach": 0.2,
+    "BTThinArm": 0.25,
+    "BTTraps": 0.2,
+    "ThinThigh": 0.3
+   }
+  },
+  "Silhouette_Sammy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Sammy",
+   "values": {
+    "Arms": 0.5,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.45,
+    "ChubbyWaist": 0.5,
+    "Hips": -0.2,
+    "LegsThin": 0.55,
+    "MuscularArms": 0.2,
+    "SlimThighs": 0.4,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Sandra_Lee": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Sandra Lee",
+   "values": {
+    "Back": 0.2,
+    "BreastGravity2": 0.4,
+    "Breasts": 0.35,
+    "Butt": 0.2,
+    "ChubbyWaist": 0.8,
+    "Hips": 0.25,
+    "MuscularArms": 0.15,
+    "Thighs": 0.3,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Sasha": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Sasha",
+   "values": {
+    "7B Upper": 0.15,
+    "AppleCheeks": 0.3,
+    "BreastPerkiness": 0.2,
+    "Breasts": 0.65,
+    "Butt": 0.45,
+    "ChubbyLegs": 0.15,
+    "ChubbyWaist": 0.45,
+    "Hips": 0.45,
+    "PushUp": 0.25,
+    "RoundAss": 0.45,
+    "Thighs": 0.4
+   }
+  },
+  "Silhouette_Scarlett": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Scarlett",
+   "values": {
+    "Arms": 0.8,
+    "BreastFlatness2": 0.45,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.85,
+    "CalfSmooth": 0.6,
+    "ChubbyWaist": 0.45,
+    "Hips": -0.45,
+    "LegsThin": 0.85,
+    "SlimThighs": 0.7,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Scribe_Faris": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Scribe Faris",
+   "values": {
+    "BTNegChestWidth": 0.35,
+    "BTNegPecMuscle": 0.4,
+    "BTNegShoulder": 0.4,
+    "BTStomachFat": 0.2,
+    "BTThinArm": 0.45,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_SevenBase": {
+   "gender": "female",
+   "preset": "SevenBase",
+   "values": {
+    "7B Lower": 1.0,
+    "7B Upper": 1.0
+   }
+  },
+  "Silhouette_SevenBase_Lower": {
+   "gender": "female",
+   "preset": "SevenBase Lower",
+   "values": {
+    "7B Lower": 1.0,
+    "BreastCenter": 0.75,
+    "BreastCenterBig": 0.25,
+    "BreastTopSlope": 0.8,
+    "BreastWidth": -0.2,
+    "Breasts": 0.4,
+    "BreastsTogether": 0.45,
+    "ChubbyArms": 0.1,
+    "ForearmSize": 0.2,
+    "NippleDown": 0.3,
+    "NipplePerkiness": 0.25,
+    "ShoulderTweak": 1.0,
+    "ShoulderWidth": 0.8
+   }
+  },
+  "Silhouette_SevenBase_Slim": {
+   "gender": "female",
+   "preset": "SevenBase Slim",
+   "values": {
+    "7B Lower": 1.0,
+    "7B Upper": 1.0,
+    "ArmpitHeight": 0.2,
+    "Arms": 1.0,
+    "Belly": -0.25,
+    "BreastHeight": -0.4,
+    "BreastsSmall": 0.85,
+    "BreastsTogether": 0.4,
+    "ButtSmall": 0.15,
+    "CalfSize": -0.75,
+    "CalfSmooth": 0.4,
+    "NippleDistance": -0.15,
+    "SlimThighs": 0.3,
+    "SternumDepth": 0.3,
+    "SternumHeight": 0.2,
+    "TummyTuck": 0.2
+   }
+  },
+  "Silhouette_SevenBase_Upper": {
+   "gender": "female",
+   "preset": "SevenBase Upper",
+   "values": {
+    "7B Upper": 1.0,
+    "Ankles": 0.55,
+    "AppleCheeks": 0.55,
+    "BackArch": 0.85,
+    "ButtNew": 1.0,
+    "CrotchBack": 0.55,
+    "LegShape": 1.0,
+    "SlimThighs": 0.4,
+    "Thighs": 0.3,
+    "WaistHeight": 0.1
+   }
+  },
+  "Silhouette_Shank": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Shank",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTNegPecMuscle": 0.25,
+    "BTStomachFat": 0.25,
+    "BTThinArm": 0.3,
+    "BTTraps": 0.3,
+    "ThinThigh": 0.3
+   }
+  },
+  "Silhouette_Sheffield": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Sheffield",
+   "values": {
+    "BTCenterStomachSize": 0.8,
+    "BTLowerStomachSize": 0.85,
+    "BTNegChestWidth": 0.5,
+    "BTNegPecMuscle": 0.7,
+    "BTNegShoulder": 0.55,
+    "BTStomachFat": 1.25,
+    "BTTHinCalf": 0.8,
+    "BTThinArm": 0.9,
+    "ThinThigh": 0.9
+   }
+  },
+  "Silhouette_Shelbie_Chase": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Shelbie Chase",
+   "values": {
+    "BreastPerkiness": 0.45,
+    "Breasts": 0.35,
+    "Butt": 0.2,
+    "ChubbyWaist": 0.5,
+    "Hips": 0.2,
+    "PushUp": 0.2,
+    "RoundAss": 0.4,
+    "Thighs": 0.15
+   }
+  },
+  "Silhouette_Sierra_Petrovita": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Sierra Petrovita",
+   "values": {
+    "AppleCheeks": 0.3,
+    "Belly": 0.55,
+    "BigBelly": 0.2,
+    "BreastGravity2": 0.35,
+    "Breasts": 0.4,
+    "ChubbyArms": 0.35,
+    "ChubbyButt": 0.4,
+    "ChubbyLegs": 0.35,
+    "ChubbyWaist": 0.9,
+    "Hips": 0.35,
+    "Thighs": 0.4
+   }
+  },
+  "Silhouette_Sinjin": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Sinjin",
+   "values": {
+    "BTARYAYDA": 0.5,
+    "BTBiceps": 0.5,
+    "BTShoulders": 0.5,
+    "BTStomachFat": 0.3,
+    "BTThigh": 0.4,
+    "BTTraps": 0.6,
+    "TigerSanBBMale": 0.4
+   }
+  },
+  "Silhouette_Skinny_Malone": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Skinny Malone",
+   "values": {
+    "BTBodyFatv2": 0.6,
+    "BTCenterStomachSize": 0.7,
+    "BTChestSmoothing": 0.8,
+    "BTChubbyArm": 0.7,
+    "BTChubbyLeg": 0.6,
+    "BTLowerStomachSize": 0.8,
+    "BTStomachFat": 1.2,
+    "Hips": 0.6
+   }
+  },
+  "Silhouette_Solomon": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Solomon",
+   "values": {
+    "BTChestSmoothing": 0.6,
+    "BTLowerStomachSize": 0.45,
+    "BTNegChestWidth": 0.85,
+    "BTNegPecMuscle": 0.85,
+    "BTNegShoulder": 0.85,
+    "BTStomachFat": 0.95,
+    "BTTHinCalf": 0.8,
+    "BTThinArm": 1.0,
+    "ThinThigh": 0.9
+   }
+  },
+  "Silhouette_Sonja": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Sonja",
+   "values": {
+    "Arms": 0.3,
+    "BreastGravity2": 0.55,
+    "Breasts": 0.15,
+    "ButtSmall": 0.25,
+    "ChubbyWaist": 0.55,
+    "Hips": -0.05,
+    "LegsThin": 0.3,
+    "SlimThighs": 0.2,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Spitball": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Spitball",
+   "values": {
+    "Arms": 0.5,
+    "BreastsSmall": 0.3,
+    "ButtSmall": 0.45,
+    "ChubbyWaist": 0.45,
+    "Hips": -0.2,
+    "LegsThin": 0.55,
+    "MuscularArms": 0.2,
+    "SlimThighs": 0.45,
+    "WideWaistLine": 0.4
+   }
+  },
+  "Silhouette_Stingbreath": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Stingbreath",
+   "values": {
+    "Arms": 0.3,
+    "BreastsSmall": 0.25,
+    "ChubbyWaist": 0.25,
+    "Hips": 0.15,
+    "LegsThin": 0.3,
+    "MuscularArms": 0.3,
+    "MuscularLegs": 0.25,
+    "RoundAss": 0.3,
+    "SlimThighs": 0.2
+   }
+  },
+  "Silhouette_Sturges": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Sturges",
+   "values": {
+    "BTBiceps": 0.25,
+    "BTChubbyArm": 0.2,
+    "BTLowerStomachSize": 0.15,
+    "BTPectorals": 0.2,
+    "BTShoulders": 0.25,
+    "BTStomachFat": 0.4
+   }
+  },
+  "Silhouette_Susan_Janeway": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Susan Janeway",
+   "values": {
+    "Back": 0.25,
+    "BreastPerkiness": 0.25,
+    "Breasts": 0.2,
+    "ChubbyWaist": 0.6,
+    "Hips": 0.05,
+    "MuscularArms": 0.25,
+    "MuscularLegs": 0.25,
+    "ShoulderWidth": 0.25,
+    "WideWaistLine": 0.35
+   }
+  },
+  "Silhouette_Switch": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Switch",
+   "values": {
+    "Back": 0.55,
+    "BigTorso": 0.45,
+    "BreastGravity2": 0.45,
+    "Breasts": 0.3,
+    "ChubbyArms": 0.35,
+    "ChubbyLegs": 0.3,
+    "ChubbyWaist": 0.95,
+    "MuscularArms": 0.6,
+    "ShoulderWidth": 0.4,
+    "Thighs": 0.45,
+    "WideWaistLine": 0.55
+   }
+  },
+  "Silhouette_Teddy_Wright": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Teddy Wright",
+   "values": {
+    "BTBack": 0.45,
+    "BTBiceps": 0.45,
+    "BTShoulders": 0.5,
+    "BTStomachFat": 0.45,
+    "BTThigh": 0.3,
+    "BTTraps": 0.4
+   }
+  },
+  "Silhouette_Tessa": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Tessa",
+   "values": {
+    "Back": 0.5,
+    "BreastsSmall": 0.25,
+    "CalfSize": 0.3,
+    "ChestWidth": 0.35,
+    "ChubbyWaist": 0.6,
+    "MuscularArms": 0.65,
+    "MuscularLegs": 0.55,
+    "ShoulderWidth": 0.3,
+    "Thighs": 0.3,
+    "WideWaistLine": 0.3
+   }
+  },
+  "Silhouette_Tina_De_Luca": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Tina De Luca",
+   "values": {
+    "AppleCheeks": 0.3,
+    "Arms": 0.1,
+    "BreastPerkiness": 0.4,
+    "Breasts": 0.35,
+    "Butt": 0.25,
+    "ChubbyWaist": 0.4,
+    "Hips": 0.25,
+    "PushUp": 0.15,
+    "RoundAss": 0.45,
+    "Thighs": 0.15
+   }
+  },
+  "Silhouette_Tinker_Tom": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Tinker Tom",
+   "values": {
+    "BTChestSmoothing": 0.4,
+    "BTNegShoulder": 0.4,
+    "BTStomachFat": 0.5,
+    "BTThinArm": 0.5,
+    "ThinThigh": 0.45
+   }
+  },
+  "Silhouette_Tobar": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Tobar",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTBack": 0.5,
+    "BTBiceps": 0.45,
+    "BTNegStomach": 0.3,
+    "BTShoulders": 0.45,
+    "BTTraps": 0.35,
+    "ThinThigh": 0.3
+   }
+  },
+  "Silhouette_Travis_Miles": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Travis Miles",
+   "values": {
+    "BTChestSmoothing": 0.5,
+    "BTNegChestWidth": 0.3,
+    "BTNegShoulder": 0.35,
+    "BTStomachFat": 0.4,
+    "BTThinArm": 0.3,
+    "Hips": 0.3
+   }
+  },
+  "Silhouette_Triggerman_Fine_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Fine F01",
+   "values": {
+    "7B Upper": 0.23,
+    "BreastPerkiness": 0.3,
+    "Breasts": 0.23,
+    "Butt": 0.24,
+    "ChubbyWaist": 0.08,
+    "Hips": 0.14,
+    "PushUp": 0.01,
+    "RoundAss": 0.24,
+    "Thighs": 0.13
+   }
+  },
+  "Silhouette_Triggerman_Fine_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Fine M01",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTBack": 0.35,
+    "BTShoulders": 0.47,
+    "BTTraps": 0.57,
+    "TigerSanBBMale": 0.51
+   }
+  },
+  "Silhouette_Triggerman_Plain_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Plain F01",
+   "values": {
+    "Belly": 0.3,
+    "BreastGravity2": 0.3,
+    "Breasts": 0.11,
+    "BreastsSmall": 0.06,
+    "Butt": -0.04,
+    "ChubbyArms": 0.33,
+    "ChubbyWaist": 0.82,
+    "HipUpperWidth": 0.26,
+    "Hips": -0.02,
+    "Thighs": 0.06,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_Triggerman_Plain_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Plain F02",
+   "values": {
+    "Belly": 0.37,
+    "BreastGravity2": 0.38,
+    "Breasts": 0.08,
+    "BreastsSmall": 0.21,
+    "Butt": -0.01,
+    "ChubbyArms": 0.24,
+    "ChubbyWaist": 0.61,
+    "HipUpperWidth": 0.25,
+    "Hips": 0.07,
+    "Thighs": 0.12,
+    "WideWaistLine": 0.42
+   }
+  },
+  "Silhouette_Triggerman_Plain_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Plain F03",
+   "values": {
+    "7B Upper": 0.13,
+    "Belly": 0.22,
+    "BreastGravity2": 0.43,
+    "Breasts": 0.39,
+    "ChubbyArms": 0.18,
+    "ChubbyWaist": 0.74,
+    "Hips": 0.05,
+    "WideWaistLine": 0.32
+   }
+  },
+  "Silhouette_Triggerman_Plain_F04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Plain F04",
+   "values": {
+    "7B Upper": 0.19,
+    "Belly": 0.33,
+    "BreastGravity2": 0.35,
+    "Breasts": 0.37,
+    "ChubbyArms": 0.24,
+    "ChubbyWaist": 0.56,
+    "Hips": 0.01,
+    "WideWaistLine": 0.31
+   }
+  },
+  "Silhouette_Triggerman_Plain_F05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Plain F05",
+   "values": {
+    "Back": 0.17,
+    "Belly": 0.43,
+    "BigBelly": 0.32,
+    "BreastGravity2": 0.33,
+    "Breasts": 0.19,
+    "ChubbyArms": 0.29,
+    "ChubbyButt": 0.13,
+    "ChubbyLegs": 0.28,
+    "ChubbyWaist": 0.86,
+    "WideWaistLine": 0.32
+   }
+  },
+  "Silhouette_Triggerman_Plain_F06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Plain F06",
+   "values": {
+    "Back": 0.3,
+    "Belly": 0.57,
+    "BigBelly": 0.34,
+    "BreastGravity2": 0.34,
+    "Breasts": 0.11,
+    "ChubbyArms": 0.3,
+    "ChubbyButt": 0.11,
+    "ChubbyLegs": 0.17,
+    "ChubbyWaist": 0.83,
+    "WideWaistLine": 0.33
+   }
+  },
+  "Silhouette_Triggerman_Plain_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Plain M01",
+   "values": {
+    "BTBodyFatv2": 0.06,
+    "BTChestSmoothing": 0.37,
+    "BTChubbyArm": 0.41,
+    "BTLowerStomachSize": 0.43,
+    "BTStomachFat": 0.71,
+    "Hips": 0.35
+   }
+  },
+  "Silhouette_Triggerman_Plain_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Plain M02",
+   "values": {
+    "BTBodyFatv2": 0.06,
+    "BTChestSmoothing": 0.31,
+    "BTChubbyArm": 0.55,
+    "BTLowerStomachSize": 0.31,
+    "BTStomachFat": 0.51,
+    "Hips": 0.25
+   }
+  },
+  "Silhouette_Triggerman_Plain_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Plain M03",
+   "values": {
+    "BTBodyFatv2": 0.17,
+    "BTChubbyLeg": 0.28,
+    "BTShoulders": 0.33,
+    "BTStomachFat": 0.4,
+    "BTThigh": 0.32,
+    "BTTraps": 0.34
+   }
+  },
+  "Silhouette_Triggerman_Plain_M04": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Plain M04",
+   "values": {
+    "BTBodyFatv2": 0.12,
+    "BTChubbyLeg": 0.3,
+    "BTShoulders": 0.29,
+    "BTStomachFat": 0.3,
+    "BTThigh": 0.35,
+    "BTTraps": 0.25
+   }
+  },
+  "Silhouette_Triggerman_Plain_M05": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Plain M05",
+   "values": {
+    "BTChestSmoothing": 0.54,
+    "BTChubbyArm": 0.56,
+    "BTChubbyLeg": 0.38,
+    "BTStomachFat": 0.52,
+    "Hips": 0.35
+   }
+  },
+  "Silhouette_Triggerman_Plain_M06": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Plain M06",
+   "values": {
+    "BTChestSmoothing": 0.67,
+    "BTChubbyArm": 0.46,
+    "BTChubbyLeg": 0.43,
+    "BTStomachFat": 0.41,
+    "Hips": 0.31
+   }
+  },
+  "Silhouette_Triggerman_Rough_F01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Rough F01",
+   "values": {
+    "Back": 0.63,
+    "Belly": 1.13,
+    "BigBelly": 0.37,
+    "BigTorso": 0.52,
+    "BreastFlatness2": 0.25,
+    "BreastGravity2": 0.72,
+    "Breasts": 0.5,
+    "CalfSize": 0.52,
+    "ChubbyArms": 1.06,
+    "ChubbyButt": 0.8,
+    "ChubbyLegs": 0.94,
+    "ChubbyWaist": 1.34,
+    "HipUpperWidth": 0.63,
+    "Thighs": 0.58,
+    "WideWaistLine": 0.93
+   }
+  },
+  "Silhouette_Triggerman_Rough_F02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Rough F02",
+   "values": {
+    "Belly": 0.58,
+    "BigBelly": 0.2,
+    "BreastFlatness2": 0.63,
+    "BreastGravity2": 1.16,
+    "Breasts": 0.32,
+    "ButtSmall": 0.37,
+    "ChubbyWaist": 0.76,
+    "WideWaistLine": 0.46
+   }
+  },
+  "Silhouette_Triggerman_Rough_F03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "female",
+   "preset": "Triggerman Rough F03",
+   "values": {
+    "Back": 0.6,
+    "Belly": 1.01,
+    "BigBelly": 0.51,
+    "BreastGravity2": 0.82,
+    "Breasts": 0.2,
+    "ButtSmall": 0.42,
+    "ChubbyArms": 0.5,
+    "ChubbyWaist": 1.13,
+    "HipUpperWidth": 0.56,
+    "LegsThin": 0.37,
+    "SlimThighs": 0.29,
+    "WideWaistLine": 0.57
+   }
+  },
+  "Silhouette_Triggerman_Rough_M01": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Rough M01",
+   "values": {
+    "BTBodyFatv2": 0.85,
+    "BTChestSmoothing": 0.85,
+    "BTChubbyArm": 0.86,
+    "BTChubbyLeg": 0.76,
+    "BTLowerStomachSize": 0.74,
+    "BTStomachFat": 1.19,
+    "Hips": 0.69
+   }
+  },
+  "Silhouette_Triggerman_Rough_M02": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Rough M02",
+   "values": {
+    "BTCenterStomachSize": 0.64,
+    "BTLowerStomachSize": 0.81,
+    "BTNegPecMuscle": 0.48,
+    "BTStomachFat": 1.23,
+    "BTTHinCalf": 0.44,
+    "BTThinArm": 0.56,
+    "ThinThigh": 0.53
+   }
+  },
+  "Silhouette_Triggerman_Rough_M03": {
+   "file": "Silhouette Factions.xml",
+   "gender": "male",
+   "preset": "Triggerman Rough M03",
+   "values": {
+    "BTBodyFatv2": 0.31,
+    "BTChestSmoothing": 0.86,
+    "BTChubbyArm": 0.73,
+    "BTNegPecMuscle": 0.45,
+    "BTStomachFat": 0.87,
+    "Hips": 0.65
+   }
+  },
+  "Silhouette_Trudy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Trudy",
+   "values": {
+    "Back": 0.45,
+    "Belly": 0.95,
+    "BigBelly": 0.3,
+    "BreastGravity2": 0.75,
+    "Breasts": 0.25,
+    "ButtSmall": 0.3,
+    "ChubbyArms": 0.5,
+    "ChubbyWaist": 1.2,
+    "HipUpperWidth": 0.5,
+    "LegsThin": 0.2,
+    "WideWaistLine": 0.6
+   }
+  },
+  "Silhouette_Vadim_Bobrov": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Vadim Bobrov",
+   "values": {
+    "BTCenterStomachSize": 0.45,
+    "BTChestSmoothing": 0.5,
+    "BTChubbyArm": 0.5,
+    "BTLowerStomachSize": 0.6,
+    "BTStomachFat": 1.0,
+    "Hips": 0.3
+   }
+  },
+  "Silhouette_War": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "War",
+   "values": {
+    "BTARYAYDA": 0.7,
+    "BTAryaydaMoreMuscular": 0.8,
+    "BTBack": 0.7,
+    "BTBiceps": 0.8,
+    "BTPectorals": 0.65,
+    "BTShoulders": 0.8,
+    "BTThigh": 0.6,
+    "BTTraps": 0.9,
+    "TigerSanBBMale": 0.7
+   }
+  },
+  "Silhouette_Wayne_Delancy": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Wayne Delancy",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTNegChestWidth": 0.3,
+    "BTNegPecMuscle": 0.55,
+    "BTNegStomach": 0.9,
+    "BTTHinCalf": 0.6,
+    "BTThinArm": 0.7,
+    "BTTraps": 0.45,
+    "BTWaist-In": 0.6,
+    "ThinThigh": 0.7
+   }
+  },
+  "Silhouette_White_Widow": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "White Widow",
+   "values": {
+    "Arms": 0.25,
+    "BigButt": 0.25,
+    "BreastPerkiness": 0.3,
+    "Breasts": 0.45,
+    "Butt": 0.4,
+    "CalfSmooth": 0.6,
+    "ChubbyWaist": 0.15,
+    "Hips": 0.4,
+    "LegsThin": 0.4,
+    "RoundAss": 0.5,
+    "SlimThighs": 0.3
+   }
+  },
+  "Silhouette_Wilhelmina_Cabot": {
+   "file": "Silhouette Characters.xml",
+   "gender": "female",
+   "preset": "Wilhelmina Cabot",
+   "values": {
+    "Arms": 0.85,
+    "Belly": 0.3,
+    "BreastFlatness2": 0.8,
+    "BreastGravity2": 1.2,
+    "Breasts": 0.15,
+    "ButtSmall": 0.8,
+    "ChubbyWaist": 0.7,
+    "Hips": -0.35,
+    "LegsThin": 0.9,
+    "SlimThighs": 0.7,
+    "WideWaistLine": 0.45
+   }
+  },
+  "Silhouette_William_Black": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "William Black",
+   "values": {
+    "BTAbDefinition": 0.3,
+    "BTNegStomach": 0.35,
+    "BTShoulders": 0.15,
+    "BTThinArm": 0.25,
+    "BTWaist-In": 0.45,
+    "ThinThigh": 0.25
+   }
+  },
+  "Silhouette_Winlock": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Winlock",
+   "values": {
+    "BTBack": 0.75,
+    "BTBiceps": 0.6,
+    "BTPectorals": 0.55,
+    "BTShoulders": 0.85,
+    "BTStomachFat": 0.35,
+    "BTThigh": 0.5,
+    "BTTraps": 0.85,
+    "TigerSanBBMale": 0.9
+   }
+  },
+  "Silhouette_X6_88": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "X6-88",
+   "values": {
+    "BT2AdonisBelt": 0.4,
+    "BTAbDefinition": 0.6,
+    "BTBiceps": 0.3,
+    "BTCalves": 0.3,
+    "BTPectorals": 0.3,
+    "BTShoulders": 0.35,
+    "BTWaist-In": 0.4
+   }
+  },
+  "Silhouette_Yefim_Bobrov": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Yefim Bobrov",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTNegPecMuscle": 0.4,
+    "BTNegStomach": 0.55,
+    "BTThinArm": 0.45,
+    "BTTraps": 0.3,
+    "BTWaist-In": 0.4,
+    "ThinThigh": 0.4
+   }
+  },
+  "Silhouette_Zealot_Ware": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Zealot Ware",
+   "values": {
+    "BTAbDefinition": 0.4,
+    "BTBiceps": 0.3,
+    "BTNegStomach": 0.35,
+    "BTThinArm": 0.15,
+    "BTTraps": 0.3,
+    "BTWaist-In": 0.4
+   }
+  },
+  "Silhouette_Zeke": {
+   "file": "Silhouette Characters.xml",
+   "gender": "male",
+   "preset": "Zeke",
+   "values": {
+    "BTAbDefinition": 0.25,
+    "BTBiceps": 0.45,
+    "BTPectorals": 0.4,
+    "BTShoulders": 0.3,
+    "BTStomachFat": 0.2,
+    "BTTraps": 0.25
+   }
+  }
+ }
+}

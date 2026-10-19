@@ -479,8 +479,9 @@ CHARACTERS = [
      'the fat cat of "Mankind for McDonough", who threw the ghouls out and smiles a mile-long smile: a heavy, '
      'soft politician (S-94, alasdairn for the owner, 2026-10-18: "more natural"; was grossly obese, '
      'a 135% stomach that ballooned his suit sideways)',
-     {'BTBodyFatv2': 60, 'BTStomachFat': 80, 'BTLowerStomachSize': 50, 'BTCenterStomachSize': 35,
-      'BTChubbyArm': 50, 'BTChubbyLeg': 40, 'BTChestSmoothing': 60, 'Hips': 35}),
+     # S-95: no BTLowerStomachSize/BTCenterStomachSize -- the pot they make reads as a growth under his suit
+     {'BTBodyFatv2': 65, 'BTStomachFat': 50, 'BTChubbyArm': 50, 'BTChubbyLeg': 35, 'BTChestSmoothing': 60,
+      'Hips': 30}),
     ('Vadim Bobrov', 'male', [(F4, 'VadimBobrov', '002EFC')],
      'barkeep: a big beer belly, heavy arms',
      {'BTStomachFat': 100, 'BTLowerStomachSize': 60, 'BTCenterStomachSize': 45, 'BTChubbyArm': 50,

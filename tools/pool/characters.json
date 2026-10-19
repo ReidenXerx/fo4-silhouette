@@ -2289,14 +2289,12 @@
    ],
    "vibe": "the fat cat of \"Mankind for McDonough\", who threw the ghouls out and smiles a mile-long smile: a heavy, soft politician (S-94, alasdairn for the owner, 2026-10-18: \"more natural\"; was grossly obese, a 135% stomach that ballooned his suit sideways)",
    "values": {
-    "BTBodyFatv2": 60,
-    "BTStomachFat": 80,
-    "BTLowerStomachSize": 50,
-    "BTCenterStomachSize": 35,
+    "BTBodyFatv2": 65,
+    "BTStomachFat": 50,
     "BTChubbyArm": 50,
-    "BTChubbyLeg": 40,
+    "BTChubbyLeg": 35,
     "BTChestSmoothing": 60,
-    "Hips": 35
+    "Hips": 30
    }
   },
   "Vadim Bobrov": {

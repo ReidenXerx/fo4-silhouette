@@ -19046,8 +19046,8 @@
         <SetSlider name="BTBellybuttonWidth" size="big" value="0"/>
         <SetSlider name="BTBiceps" size="small" value="0"/>
         <SetSlider name="BTBiceps" size="big" value="0"/>
-        <SetSlider name="BTBodyFatv2" size="small" value="60"/>
-        <SetSlider name="BTBodyFatv2" size="big" value="60"/>
+        <SetSlider name="BTBodyFatv2" size="small" value="65"/>
+        <SetSlider name="BTBodyFatv2" size="big" value="65"/>
         <SetSlider name="BTButt" size="small" value="0"/>
         <SetSlider name="BTButt" size="big" value="0"/>
         <SetSlider name="BTButtWidth" size="small" value="0"/>
@@ -19056,16 +19056,16 @@
         <SetSlider name="BTCalves" size="big" value="0"/>
         <SetSlider name="BTCalvesWidth" size="small" value="0"/>
         <SetSlider name="BTCalvesWidth" size="big" value="0"/>
-        <SetSlider name="BTCenterStomachSize" size="small" value="35"/>
-        <SetSlider name="BTCenterStomachSize" size="big" value="35"/>
+        <SetSlider name="BTCenterStomachSize" size="small" value="0"/>
+        <SetSlider name="BTCenterStomachSize" size="big" value="0"/>
         <SetSlider name="BTChest" size="small" value="0"/>
         <SetSlider name="BTChest" size="big" value="0"/>
         <SetSlider name="BTChestSmoothing" size="small" value="60"/>
         <SetSlider name="BTChestSmoothing" size="big" value="60"/>
         <SetSlider name="BTChubbyArm" size="small" value="50"/>
         <SetSlider name="BTChubbyArm" size="big" value="50"/>
-        <SetSlider name="BTChubbyLeg" size="small" value="40"/>
-        <SetSlider name="BTChubbyLeg" size="big" value="40"/>
+        <SetSlider name="BTChubbyLeg" size="small" value="35"/>
+        <SetSlider name="BTChubbyLeg" size="big" value="35"/>
         <SetSlider name="BTElbowAdjust" size="small" value="0"/>
         <SetSlider name="BTElbowAdjust" size="big" value="0"/>
         <SetSlider name="BTFootSize" size="small" value="0"/>
@@ -19088,8 +19088,8 @@
         <SetSlider name="BTKneePit" size="big" value="0"/>
         <SetSlider name="BTKneeSize" size="small" value="0"/>
         <SetSlider name="BTKneeSize" size="big" value="0"/>
-        <SetSlider name="BTLowerStomachSize" size="small" value="50"/>
-        <SetSlider name="BTLowerStomachSize" size="big" value="50"/>
+        <SetSlider name="BTLowerStomachSize" size="small" value="0"/>
+        <SetSlider name="BTLowerStomachSize" size="big" value="0"/>
         <SetSlider name="BTNegArmpit" size="small" value="0"/>
         <SetSlider name="BTNegArmpit" size="big" value="0"/>
         <SetSlider name="BTNegBicepMuscle" size="small" value="0"/>
@@ -19158,8 +19158,8 @@
         <SetSlider name="BTSmoothKnees" size="big" value="0"/>
         <SetSlider name="BTStomach" size="small" value="0"/>
         <SetSlider name="BTStomach" size="big" value="0"/>
-        <SetSlider name="BTStomachFat" size="small" value="80"/>
-        <SetSlider name="BTStomachFat" size="big" value="80"/>
+        <SetSlider name="BTStomachFat" size="small" value="50"/>
+        <SetSlider name="BTStomachFat" size="big" value="50"/>
         <SetSlider name="BTStomachSmooth" size="small" value="0"/>
         <SetSlider name="BTStomachSmooth" size="big" value="0"/>
         <SetSlider name="BTTHinCalf" size="small" value="0"/>
@@ -19182,8 +19182,8 @@
         <SetSlider name="BTWaist-Smoothing" size="big" value="0"/>
         <SetSlider name="Balls" size="small" value="0"/>
         <SetSlider name="Balls" size="big" value="0"/>
-        <SetSlider name="Hips" size="small" value="35"/>
-        <SetSlider name="Hips" size="big" value="35"/>
+        <SetSlider name="Hips" size="small" value="30"/>
+        <SetSlider name="Hips" size="big" value="30"/>
         <SetSlider name="ThinThigh" size="small" value="0"/>
         <SetSlider name="ThinThigh" size="big" value="0"/>
         <SetSlider name="TigerSanBBMale" size="small" value="0"/>

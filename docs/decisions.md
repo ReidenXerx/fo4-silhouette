@@ -1577,3 +1577,12 @@ His body is now heavy and soft inside every slider's range: BTBodyFatv2 60, BTSt
 Diamond City's other bodies stay under 445), so he is still the heaviest man in Diamond City. A McDonough already met
 keeps his old body until a Reset on him (S-68). Other bodies past 100 on a slider (Fat Min's stomach at 130 and
 a few more) are left as they are: nobody has asked.
+
+## S-95 — McDonough is heavy all over, with no pot (alasdairn for the owner, 2026-10-19)
+
+alasdairn, with a new screenshot from the front: "Man still has a growth in his gut" -- a round lump under the
+jacket below the chest. S-94 had kept BTLowerStomachSize 50 and BTCenterStomachSize 35, the two sliders that
+push a pot forward from the belly; inside a suit a pot that localised reads as a growth. (A save that met him
+before 0.5.1 also still holds his S-77 body until a Reset, S-68.) His body drops both: BTBodyFatv2 65,
+BTStomachFat 50, BTChubbyArm 50, BTChubbyLeg 35, BTChestSmoothing 60, Hips 30 -- volume 454, still the heaviest
+man in Diamond City, the weight spread over him instead of out front.
