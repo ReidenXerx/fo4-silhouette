@@ -1586,3 +1586,22 @@ push a pot forward from the belly; inside a suit a pot that localised reads as a
 before 0.5.1 also still holds his S-77 body until a Reset, S-68.) His body drops both: BTBodyFatv2 65,
 BTStomachFat 50, BTChubbyArm 50, BTChubbyLeg 35, BTChestSmoothing 60, Hips 30 -- volume 454, still the heaviest
 man in Diamond City, the weight spread over him instead of out front.
+
+## S-96 — every body inside its sliders' range; no folded chests, no stick limbs (alasdairn, 2026-10-25)
+
+alasdairn, from a player's screenshot (Ivy help-chat): "Cathy's silhouette preset is fucked up", and "double check
+all presets for similar issues". Cathy (S-77) had BreastGravity2 120 with BreastFlatness2 90: rendered, the chest
+folds into a shelf with a crease under it (the concave chest the physics folded in S-65, again); her LegsThin 60,
+Arms 55, ButtSmall 70 and Hips -35 left stick limbs on a narrow torso. The audit of all 509 shipped presets found
+179 the same kind: negative Hips (the Flat, Frail, Boxy and Lean archetypes drew them on purpose), fat sliders
+past 100 (Obese, Apple, BottomHeavy, the men's StomachFat up to 130 -- S-94's ballooning suit) and the same
+sag+flatness pairs (Saggy, Wilhelmina Cabot, Daisy, Mama Murphy).
+
+The rule: every value is inside its slider's own 0..100 (archetypes.LIMIT) -- past it BodySlide extrapolates the
+morph, which outfits were never built for -- and a woman's BreastGravity2 stays at most 70, BreastFlatness2 at most
+30, LegsThin and Arms at most 70 (archetypes.CAP_F; renders: 70/30 sags cleanly, 80/40 still creases). It holds
+in the archetypes' ranges, in a faction's shifted ranges (factions.ranges_of clamps after the shift) and in the
+named people's values; tests/test_pool.py InsideTheRange checks all three plus what ships. The pool and the
+factions were redrawn from the same seeds; the tiers kept 70/22/8. Cathy is drawn again by hand: soft and
+sagging, not deflated (Gravity 60, Flatness 20, Breasts 30, Belly 60, ChubbyWaist 85, LegsThin 25). A save that
+met anyone before 0.5.3 keeps the old body until a Reset on them (S-68).

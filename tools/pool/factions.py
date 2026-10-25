@@ -32,7 +32,7 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent))
 import generate  # noqa: E402
 import plugin_forms  # noqa: E402
-from archetypes import ARCHETYPES  # noqa: E402
+from archetypes import ARCHETYPES, CAP_F, LIMIT  # noqa: E402
 from measure import measure  # noqa: E402
 from mesh import Body  # noqa: E402
 
@@ -158,7 +158,8 @@ TIER_NAME = {'middle': 'Plain', 'ugly': 'Rough', 'beautiful': 'Fine'}
 
 
 def ranges_of(sex, tier, base, shift):
-    """The archetype's ranges with the faction's shift added, the bust floor kept for a woman (S-65)."""
+    """The archetype's ranges with the faction's shift added, the bust floor kept for a woman (S-65), every
+    slider inside its range and a woman's caps (S-96)."""
     ranges = dict(ARCHETYPES[sex][tier][base][1])
     for s, (lo, hi) in shift.items():
         blo, bhi = ranges.get(s, (0, 0))
@@ -168,6 +169,11 @@ def ranges_of(sex, tier, base, shift):
             if s in ranges:
                 lo, hi = ranges[s]
                 ranges[s] = (max(lo, limit), max(hi, limit)) if side == 'lo' else (min(lo, limit), min(hi, limit))
+    # S-96: a shift never pushes a slider past its own range, nor a woman past the chest and limb caps
+    caps = CAP_F if sex == 'female' else {}
+    for s, (lo, hi) in ranges.items():
+        top = caps.get(s, LIMIT[1])
+        ranges[s] = (min(max(lo, LIMIT[0]), top), min(max(hi, LIMIT[0]), top))
     return ranges
 
 

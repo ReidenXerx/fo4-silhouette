@@ -19,7 +19,6 @@
     "ChubbyWaist": 65,
     "WideWaistLine": 45,
     "HipUpperWidth": 25,
-    "Hips": -15,
     "ButtSmall": 20
    }
   },
@@ -43,7 +42,6 @@
     "BreastPerkiness": 20,
     "ChubbyWaist": 55,
     "WideWaistLine": 35,
-    "Hips": -10,
     "ButtSmall": 10
    }
   },
@@ -111,7 +109,6 @@
     "ChubbyWaist": 75,
     "WideWaistLine": 55,
     "HipUpperWidth": 30,
-    "Hips": -20,
     "ButtSmall": 30,
     "LegsThin": 15,
     "Back": 15
@@ -182,7 +179,6 @@
     "ChubbyWaist": 80,
     "WideWaistLine": 50,
     "Belly": 25,
-    "Hips": -20,
     "ButtSmall": 35
    }
   },
@@ -197,17 +193,16 @@
    ],
    "vibe": "old chem-worn seer: frail and sagging, thin limbs",
    "values": {
-    "LegsThin": 80,
+    "LegsThin": 70,
     "Arms": 70,
     "SlimThighs": 50,
     "ButtSmall": 70,
-    "BreastGravity2": 100,
-    "BreastFlatness2": 60,
+    "BreastGravity2": 70,
+    "BreastFlatness2": 30,
     "Breasts": 10,
     "Belly": 40,
     "ChubbyWaist": 85,
-    "WideWaistLine": 40,
-    "Hips": -30
+    "WideWaistLine": 40
    }
   },
   "Marcy Long": {
@@ -227,7 +222,6 @@
     "BreastGravity2": 45,
     "ChubbyWaist": 75,
     "WideWaistLine": 55,
-    "Hips": -25,
     "ButtSmall": 40,
     "SlimThighs": 20
    }
@@ -253,8 +247,7 @@
     "WideWaistLine": 70,
     "Thighs": 45,
     "Breasts": 10,
-    "CalfSize": 50,
-    "Hips": -15
+    "CalfSize": 50
    }
   },
   "Irma": {
@@ -320,7 +313,6 @@
     "BreastsSmall2": 20,
     "ChubbyWaist": 50,
     "WideWaistLine": 40,
-    "Hips": -20,
     "ButtSmall": 30
    }
   },
@@ -342,7 +334,6 @@
     "LegsThin": 15,
     "ChubbyWaist": 55,
     "WideWaistLine": 30,
-    "Hips": -5,
     "ButtSmall": 10
    }
   },
@@ -366,7 +357,6 @@
     "BreastGravity2": 60,
     "BreastFlatness2": 30,
     "ButtSmall": 30,
-    "Hips": -15,
     "MuscularArms": 15
    }
   },
@@ -425,14 +415,14 @@
    "values": {
     "BigBelly": 30,
     "Belly": 95,
-    "ChubbyWaist": 120,
+    "ChubbyWaist": 100,
     "WideWaistLine": 60,
     "HipUpperWidth": 50,
     "Back": 45,
     "LegsThin": 20,
     "ButtSmall": 30,
     "Breasts": 25,
-    "BreastGravity2": 75,
+    "BreastGravity2": 70,
     "ChubbyArms": 50
    }
   },
@@ -497,7 +487,6 @@
     "BreastsSmall": 30,
     "ChubbyWaist": 65,
     "WideWaistLine": 45,
-    "Hips": -10,
     "ButtSmall": 15,
     "BreastGravity2": 30
    }
@@ -541,7 +530,6 @@
     "BreastsSmall": 30,
     "ChubbyWaist": 55,
     "WideWaistLine": 40,
-    "Hips": -15,
     "ButtSmall": 25,
     "SlimThighs": 25
    }
@@ -621,7 +609,7 @@
     "BigTorso": 35,
     "Breasts": 60,
     "BreastGravity2": 60,
-    "ChubbyWaist": 105,
+    "ChubbyWaist": 100,
     "Belly": 70,
     "WideWaistLine": 40,
     "Hips": 20,
@@ -640,19 +628,19 @@
      "002CCF"
     ]
    ],
-   "vibe": "the salon gossip who greets you with \"You look terrible\": bloodshot, graying -- and a wreck herself, skinny-fat and sagging",
+   "vibe": "the salon gossip who greets you with \"You look terrible\": bloodshot, graying -- and a wreck herself, soft and sagging (S-96, alasdairn 2026-10-25: was a folded, deflated chest on stick limbs)",
    "values": {
-    "BreastGravity2": 120,
-    "BreastFlatness2": 90,
-    "Breasts": 20,
-    "Belly": 90,
-    "BigBelly": 45,
-    "ChubbyWaist": 105,
-    "WideWaistLine": 45,
-    "LegsThin": 60,
-    "Arms": 55,
-    "ButtSmall": 70,
-    "Hips": -35
+    "BreastGravity2": 60,
+    "BreastFlatness2": 20,
+    "Breasts": 30,
+    "Belly": 60,
+    "BigBelly": 25,
+    "ChubbyWaist": 85,
+    "WideWaistLine": 40,
+    "ChubbyArms": 20,
+    "LegsThin": 25,
+    "ButtSmall": 35,
+    "HipUpperWidth": 25
    }
   },
   "Becky Fallon": {
@@ -667,11 +655,10 @@
    "vibe": "Fallon's Basement, \"quality and affordability\": everything has sunk to the basement -- a small bust over enormous hips, thighs and bottom",
    "values": {
     "BreastsSmall": 30,
-    "Breasts": 0,
     "ChubbyWaist": 65,
     "Hips": 85,
-    "Thighs": 105,
-    "ChubbyLegs": 110,
+    "Thighs": 100,
+    "ChubbyLegs": 100,
     "BigButt": 85,
     "ChubbyButt": 95,
     "HipUpperWidth": 55,
@@ -690,14 +677,12 @@
    ],
    "vibe": "the Dugout Inn waitress, \"hopefully nothing will poison ya\": she never eats what she serves -- bony, run off her feet",
    "values": {
-    "LegsThin": 85,
-    "Arms": 80,
+    "LegsThin": 70,
+    "Arms": 70,
     "SlimThighs": 70,
     "ButtSmall": 85,
     "BreastsSmall": 30,
-    "Breasts": 0,
-    "BreastFlatness2": 45,
-    "Hips": -45,
+    "BreastFlatness2": 30,
     "ChubbyWaist": 45,
     "WideWaistLine": 35,
     "CalfSmooth": 60
@@ -766,7 +751,6 @@
     "BreastPerkiness": 25,
     "ChubbyWaist": 45,
     "WideWaistLine": 35,
-    "Hips": -10,
     "ButtSmall": 20,
     "SlimThighs": 20
    }
@@ -812,7 +796,6 @@
     "BreastsSmall2": 20,
     "ChubbyWaist": 40,
     "WideWaistLine": 30,
-    "Hips": -25,
     "ButtSmall": 45
    }
   },
@@ -988,7 +971,6 @@
     "BreastPerkiness": 20,
     "ChubbyWaist": 50,
     "WideWaistLine": 35,
-    "Hips": 0,
     "ButtSmall": 15,
     "SlimThighs": 15,
     "CalfSmooth": 40
@@ -1013,8 +995,7 @@
     "Belly": 30,
     "Breasts": 25,
     "BreastGravity2": 65,
-    "ButtSmall": 15,
-    "Hips": -5
+    "ButtSmall": 15
    }
   },
   "Penny Fitzgerald": {
@@ -1052,17 +1033,16 @@
    ],
    "vibe": "the Cabots' mother, kept alive for centuries by the Lazarus serum and locked in her room, still in an evening dress: preserved, not young -- a dried-out, sagging, brittle body",
    "values": {
-    "LegsThin": 90,
-    "Arms": 85,
+    "LegsThin": 70,
+    "Arms": 70,
     "SlimThighs": 70,
     "ButtSmall": 80,
-    "BreastGravity2": 120,
-    "BreastFlatness2": 80,
+    "BreastGravity2": 70,
+    "BreastFlatness2": 30,
     "Breasts": 15,
     "Belly": 30,
     "ChubbyWaist": 70,
-    "WideWaistLine": 45,
-    "Hips": -35
+    "WideWaistLine": 45
    }
   },
   "Tessa": {
@@ -1131,7 +1111,6 @@
     "ChubbyWaist": 75,
     "WideWaistLine": 45,
     "Belly": 20,
-    "Hips": -10,
     "ButtSmall": 25
    }
   },
@@ -1153,7 +1132,6 @@
     "BreastsSmall": 20,
     "ChubbyWaist": 60,
     "WideWaistLine": 40,
-    "Hips": -5,
     "ButtSmall": 10,
     "MuscularButt": 30
    }
@@ -1266,7 +1244,6 @@
     "BreastsSmall2": 25,
     "ChubbyWaist": 35,
     "WideWaistLine": 45,
-    "Hips": -25,
     "ButtSmall": 50,
     "SlimThighs": 40
    }
@@ -1422,7 +1399,6 @@
     "Breasts": 15,
     "ChubbyWaist": 55,
     "WideWaistLine": 40,
-    "Hips": -5,
     "ButtSmall": 25,
     "SlimThighs": 20
    }
@@ -1512,7 +1488,6 @@
     "BreastsSmall": 30,
     "ChubbyWaist": 45,
     "WideWaistLine": 40,
-    "Hips": -20,
     "ButtSmall": 45
    }
   },
@@ -1527,13 +1502,12 @@
    ],
    "vibe": "a Jet-fueled bar's girl in club clothes, jittery on her own stock: bony and twitchy, jet-thin",
    "values": {
-    "LegsThin": 75,
+    "LegsThin": 70,
     "Arms": 70,
     "SlimThighs": 60,
     "ButtSmall": 70,
     "BreastsSmall": 30,
-    "BreastFlatness2": 35,
-    "Hips": -35,
+    "BreastFlatness2": 30,
     "ChubbyWaist": 40,
     "WideWaistLine": 35
    }
@@ -1731,7 +1705,6 @@
     "BreastsSmall": 25,
     "ChubbyWaist": 50,
     "WideWaistLine": 40,
-    "Hips": -10,
     "ButtSmall": 20,
     "CalfSize": 20
    }
@@ -1884,15 +1857,14 @@
    "values": {
     "BigBelly": 60,
     "Belly": 100,
-    "ChubbyWaist": 115,
+    "ChubbyWaist": 100,
     "WideWaistLine": 55,
     "LegsThin": 70,
     "Arms": 70,
     "SlimThighs": 50,
-    "BreastGravity2": 90,
-    "BreastFlatness2": 50,
-    "ButtSmall": 60,
-    "Hips": -20
+    "BreastGravity2": 70,
+    "BreastFlatness2": 30,
+    "ButtSmall": 60
    }
   },
   "Stingbreath": {
@@ -1957,7 +1929,7 @@
     "ShoulderWidth": 40,
     "MuscularArms": 45,
     "ChubbyArms": 45,
-    "ChubbyWaist": 110,
+    "ChubbyWaist": 100,
     "Belly": 60,
     "WideWaistLine": 60,
     "Thighs": 40,
@@ -1982,7 +1954,6 @@
     "BreastsSmall": 25,
     "ChubbyWaist": 55,
     "WideWaistLine": 40,
-    "Hips": -10,
     "ButtSmall": 25,
     "SlimThighs": 20,
     "BreastGravity2": 20
@@ -2003,13 +1974,12 @@
     "Arms": 65,
     "SlimThighs": 55,
     "ButtSmall": 60,
-    "BreastGravity2": 110,
-    "BreastFlatness2": 60,
+    "BreastGravity2": 70,
+    "BreastFlatness2": 30,
     "Breasts": 20,
     "Belly": 35,
     "ChubbyWaist": 75,
-    "WideWaistLine": 45,
-    "Hips": -25
+    "WideWaistLine": 45
    }
   },
   "Overseer Barstow": {
@@ -2052,7 +2022,6 @@
     "BreastsSmall": 30,
     "ChubbyWaist": 50,
     "WideWaistLine": 40,
-    "Hips": -20,
     "ButtSmall": 45,
     "MuscularArms": 20
    }
@@ -2518,7 +2487,7 @@
    ],
    "vibe": "the market's former alcoholic, \"doctors said I shot my liver\", begging for Nuka-Cola: stick limbs and a swollen gut",
    "values": {
-    "BTStomachFat": 125,
+    "BTStomachFat": 100,
     "BTLowerStomachSize": 85,
     "BTCenterStomachSize": 80,
     "BTThinArm": 90,
@@ -2545,7 +2514,7 @@
    ],
    "vibe": "the rich man who \"practically runs Diamond City\", pays the mayor and hires others for his dirty work, confidence \"Cowardly\": a pampered pear that never lifted anything",
    "values": {
-    "Hips": 110,
+    "Hips": 100,
     "BTButt": 100,
     "BTThighWidth": 100,
     "BTOuterUpperThighSize": 90,
@@ -3019,7 +2988,7 @@
    ],
    "vibe": "the Triggermen boss of Vault 114, called Skinny: he is not -- a crime boss's gut on a soft, heavy body",
    "values": {
-    "BTStomachFat": 120,
+    "BTStomachFat": 100,
     "BTLowerStomachSize": 80,
     "BTCenterStomachSize": 70,
     "BTBodyFatv2": 60,
@@ -3570,7 +3539,7 @@
    "vibe": "the Lobotomite horseman Famine -- \"Fat Min\": the one rider who never went hungry, enormous and soft",
    "values": {
     "BTBodyFatv2": 100,
-    "BTStomachFat": 130,
+    "BTStomachFat": 100,
     "BTLowerStomachSize": 90,
     "BTCenterStomachSize": 70,
     "BTChubbyArm": 95,
@@ -3748,7 +3717,7 @@
    ],
    "vibe": "Dr. Cabbage of Shady Motives, named like a vegetable and shaped like one: short, round and leafy-soft",
    "values": {
-    "BTStomachFat": 110,
+    "BTStomachFat": 100,
     "BTLowerStomachSize": 70,
     "BTCenterStomachSize": 60,
     "BTBodyFatv2": 50,

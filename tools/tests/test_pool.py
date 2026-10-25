@@ -136,6 +136,36 @@ class BustFloor(unittest.TestCase):
                     self.assertLessEqual(ranges.get('BreastsSmall', (0, 0))[1], 30)
 
 
+class InsideTheRange(unittest.TestCase):
+    """S-96 (alasdairn 2026-10-25): Cathy shipped a chest folded into a shelf on stick limbs. Every shipped value is
+    inside its slider's 0..100, and a woman's sag, flatness and thin limbs stay under archetypes.CAP_F."""
+
+    def check(self, name, sex, values):
+        import archetypes
+        caps = archetypes.CAP_F if sex == 'female' else {}
+        for s, v in values.items():
+            with self.subTest(f'{name} {s}'):
+                self.assertGreaterEqual(v, archetypes.LIMIT[0])
+                self.assertLessEqual(v, caps.get(s, archetypes.LIMIT[1]))
+
+    def test_every_pool_and_faction_body(self):
+        for sidecar in (sg.POOL_SIDECAR, sg.POOL_SIDECAR.parent / 'factions.json'):
+            for name, p in json.loads(sidecar.read_text(encoding='utf-8'))['presets'].items():
+                self.check(name, p['sex'], p['values'])
+
+    def test_every_named_body(self):
+        for name, c in json.loads(sg.CHARACTERS_SIDECAR.read_text(encoding='utf-8'))['characters'].items():
+            self.check(name, c['sex'], c['values'])
+
+    def test_no_archetype_can_draw_outside(self):
+        import archetypes
+        for sex, tiers in archetypes.ARCHETYPES.items():
+            for tier, kinds in tiers.items():
+                for kind, (_, ranges) in kinds.items():
+                    self.check(f'{sex} {tier} {kind}', sex, {f'{s} lo': lo for s, (lo, _hi) in ranges.items()})
+                    self.check(f'{sex} {tier} {kind}', sex, {s: hi for s, (_lo, hi) in ranges.items()})
+
+
 @support.needs_data
 class StillItsTier(unittest.TestCase):
     """generate.py --check: every committed body, rebuilt from the installed body, measures as its tier."""

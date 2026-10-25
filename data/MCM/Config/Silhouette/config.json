@@ -592,7 +592,7 @@
         {
           "type": "button",
           "text": "Back to the default",
-          "help": "The most average body of the pool: Plain F01 / Plain M02.",
+          "help": "The most average body of the pool: Plain F03 / Plain M02.",
           "action": {
             "type": "CallGlobalFunction",
             "script": "Silhouette:Player",

@@ -60,6 +60,9 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 - **The Diamond City pack** (S-77): the people the author's saves meet most, each drawn from their story and
   allowed to be sardonic -- the mayor of "Mankind for McDonough" a heavy fat cat (S-94: no longer grossly obese), Sheffield's ruined liver on
   stick limbs, Becky Fallon's "basement", a con man all chest on chicken legs.
+- **Every body stays inside its sliders** (S-96): no value past 0..100, so nothing is extrapolated past what
+  outfits were built for, and no woman's chest sags or flattens into a fold or sits on stick-thin limbs.
+  Cathy is soft and sagging now, not deflated.
 - Bound to their NPC records by plugin and form id (64 records: Curie, Kellogg, Brandis and Malcolm Latimer have two each);
   a rule of yours for the same record wins.
 - Ghouls (Hancock), synths of the old models (Nick) and robots are not HumanRace and have none.
