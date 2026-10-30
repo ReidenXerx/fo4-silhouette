@@ -36,6 +36,10 @@ namespace SH::Game
 
 	// Main thread: an actor by form id, or null.
 	[[nodiscard]] RE::Actor*    ActorFor(std::uint32_t a_ref);
+	// Main thread: the companions the game is simulating around the player (CurrentCompanionFaction), their
+	// bodies built. The window holds them still while it is open: sandboxing, they walked through the shot
+	// (alasdairn, 2026-10-30; Quartermaster 1.0.6's WindowCompanions).
+	[[nodiscard]] std::vector<std::uint32_t> Companions();
 	[[nodiscard]] bool          IsFemale(RE::Actor* a_actor);  // the BODY's sex (S-86); LooksMenu keeps morphs under the flag's
 	[[nodiscard]] std::uint32_t BaseOf(RE::Actor* a_actor);
 	[[nodiscard]] std::string   NameOf(RE::Actor* a_actor);  // the name the player sees

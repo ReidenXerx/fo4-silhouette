@@ -482,6 +482,16 @@ namespace SH::Papyrus
 
 		Str NameOf(std::monostate, std::int32_t a_actor) { return Str{ Game::NameOf(Game::ActorFor(Ref(a_actor))) }; }
 
+		// The window holds every loaded companion still, not only the one it edits (alasdairn, 2026-10-30).
+		std::vector<std::int32_t> WindowCompanions(std::monostate)
+		{
+			std::vector<std::int32_t> out;
+			for (const auto id : Game::Companions()) {
+				out.push_back(static_cast<std::int32_t>(id));
+			}
+			return out;
+		}
+
 		// S-86: the sex of the body they wear, which picks presets -- not the flag LooksMenu files morphs under.
 		bool BodyFemale(std::monostate, std::int32_t a_actor) { return Game::IsFemale(Game::ActorFor(Ref(a_actor))); }
 
@@ -600,6 +610,7 @@ namespace SH::Papyrus
 		Bind(a_vm, "FreshStart"sv, FreshStart, fast);
 		Bind(a_vm, "NameOf"sv, NameOf, main);
 		Bind(a_vm, "BodyFemale"sv, BodyFemale, main);
+		Bind(a_vm, "WindowCompanions"sv, WindowCompanions, main);
 
 		logger::info("papyrus: {} bound (protocol {})", kScript, kProtocol);
 		return true;

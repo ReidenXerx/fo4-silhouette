@@ -197,6 +197,7 @@ Bool _winAfterMenu = False  ; an MCM button asked for the window: it opens when 
 ; The NPC the window holds in place (SetRestrained), 0 for none. Lives in the save: a save made while the
 ; window was open still lets them go at the next load (Connect).
 Int _winHeld = 0
+Int[] _winHeldOthers        ; the other loaded companions held while the window is open; the same
 Int _winAfterTarget = 0     ; ... on this NPC, 0 for the player
 Int _winSession = 0         ; bumped by every open, close and switch: older work stops
 Bool _winOpen = False       ; the window is open (between OpenWindowOn and its close event)
@@ -420,6 +421,7 @@ Function WindowLoadMe(Int aiSession)
 		EndIf
 		WindowItems(list, "You have " + WindowBodyName(mine) + ". Click a preset to try it on.", Silhouette:DLL.PlayerPresetIndex(mine, female))
 		Game.ForceThirdPerson()
+		WindowHold(None, aiSession)  ; you are not held: the companions around you are
 		WindowFrame(player, aiSession)
 		Return
 	EndIf
@@ -435,6 +437,7 @@ Function WindowLoadMe(Int aiSession)
 	EndIf
 	WindowItems(joined, "You have " + WindowBodyName(had) + ". Click a preset to try it on.", at)
 	Game.ForceThirdPerson()  ; the free camera shows the body the third-person view has
+	WindowHold(None, aiSession)
 	WindowFrame(player, aiSession)
 EndFunction
 
@@ -624,28 +627,58 @@ EndFunction
 ; Held in place while they are picked: SetRestrained, the game's own "cannot move" -- their AI keeps running,
 ; so quests, companion routines and dialogue go on, and they carry on walking once let go. Nobody is held
 ; whose movement another mod or the game may be holding already (the game cannot say who is restrained):
-; not in a scene, in combat, dead, or busy in AAF.
+; not in a scene, in combat, dead, or busy in AAF. The other loaded companions are held too: sandboxing, they
+; kept walking through the shot (alasdairn, 2026-10-30; Quartermaster 1.0.6 does the same).
 Function WindowHold(Actor akActor, Int aiSession)
 	WindowRelease()
-	If !WindowLive(aiSession) || !akActor || akActor.IsDead() || akActor.IsInCombat() || akActor.IsInScene() || Busy(akActor)
+	If !WindowLive(aiSession)
 		Return
 	EndIf
-	akActor.SetRestrained(True)
-	_winHeld = akActor.GetFormID()
+	If akActor && WindowHoldOne(akActor)
+		_winHeld = akActor.GetFormID()
+	EndIf
+	If _plugin
+		Int[] all = Silhouette:DLL.WindowCompanions()
+		Int i = 0
+		While all && i < all.Length && WindowLive(aiSession)
+			Actor other = Game.GetForm(all[i]) as Actor
+			If other && other != akActor && WindowHoldOne(other)
+				_winHeldOthers.Add(all[i])
+			EndIf
+			i += 1
+		EndWhile
+	EndIf
 	If !WindowLive(aiSession)
 		WindowRelease()  ; the window closed while they were being held
 	EndIf
 EndFunction
 
+Bool Function WindowHoldOne(Actor akActor)
+	If akActor.IsDead() || akActor.IsInCombat() || akActor.IsInScene() || Busy(akActor)
+		Return False
+	EndIf
+	akActor.SetRestrained(True)
+	Return True
+EndFunction
+
 Function WindowRelease()
-	If _winHeld == 0
-		Return
+	If _winHeld != 0
+		Actor held = Game.GetForm(_winHeld) as Actor
+		_winHeld = 0
+		If held
+			held.SetRestrained(False)
+		EndIf
 	EndIf
-	Actor held = Game.GetForm(_winHeld) as Actor
-	_winHeld = 0
-	If held
-		held.SetRestrained(False)
+	If !_winHeldOthers
+		_winHeldOthers = new Int[0]
 	EndIf
+	While _winHeldOthers.Length > 0
+		Actor other = Game.GetForm(_winHeldOthers[0]) as Actor
+		_winHeldOthers.Remove(0)
+		If other
+			other.SetRestrained(False)
+		EndIf
+	EndWhile
 EndFunction
 
 ; The camera in front of them, the window beside them (Silhouette:DLL.CameraFrame: the game's free camera,

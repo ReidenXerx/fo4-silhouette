@@ -1605,3 +1605,13 @@ named people's values; tests/test_pool.py InsideTheRange checks all three plus w
 factions were redrawn from the same seeds; the tiers kept 70/22/8. Cathy is drawn again by hand: soft and
 sagging, not deflated (Gravity 60, Flatness 20, Breasts 30, Belly 60, ChubbyWaist 85, LegsThin 25). A save that
 met anyone before 0.5.3 keeps the old body until a Reset on them (S-68).
+
+
+## S-97 — the window holds every loaded companion still (alasdairn, 2026-10-30)
+
+alasdairn, testing: companions kept walking in front of the player while the window was open (Idle Life's spots,
+fixed in Idle Life 1.2.4, and vanilla companion sandboxing). The window held only the NPC it edits (S-79). It
+now holds every companion the game simulates around the player too (Silhouette:DLL.WindowCompanions: the high
+process list, in CurrentCompanionFaction, body built), on the Me tab as well, with the same rule as the target:
+SetRestrained, nobody dead, in combat, in a scene or AAF-busy. All are let go on every close, switch and load
+(the ids live in the save, like the target's). Quartermaster 1.0.6 did the same for its window.

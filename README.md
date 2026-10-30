@@ -5,7 +5,7 @@ keeps it: an ordinary one most often, an unflattering one less often, a conventi
 rarely, from Silhouette's own pool. The Commonwealth's named people -- companions and major NPCs -- each
 have a body of their own.
 
-**Status:** 0.5.3: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
+**Status:** 0.5.4: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
 live on them while the camera frames them. One plugin for old-gen 1.10.163 and Anniversary 1.11.x through
 Runtime Database (S-75); your own BodySlide presets in the picker (S-76); the Diamond City pack (S-77); one
 body mod is enough (S-78).
@@ -98,7 +98,8 @@ Without the DLL, everything above keeps working.
   sights*), or use the button on that page (aimed at in the half minute before) or on the *Bodies* page (you):
   a window beside them shows every preset that fits their body as a grid of pictures, filtered (People,
   Plain, Rough, Fine, Yours). A click puts one on them live while the camera frames them and they stand still
-  (their AI keeps running: quests and companions carry on); your own controls are off while it is open.
+  (their AI keeps running: quests and companions carry on), and so do the companions around you, so nobody
+  walks through the shot; your own controls are off while it is open.
   *Apply* keeps it; *Cancel*, the window's hotkey again, or the console (`cgf "Silhouette:API.CloseWindow"`)
   closes it and puts back exactly what they had. *Them* / *Me* switches to your own body. The pictures show
   each preset on the author's zeroed bodies, one scale a sex; the live try-on shows yours.

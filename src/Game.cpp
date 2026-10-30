@@ -961,6 +961,27 @@ namespace SH::Game
 		return static_cast<RE::Actor*>(form);
 	}
 
+	std::vector<std::uint32_t> Companions()
+	{
+		std::vector<std::uint32_t> out;
+		auto*      dh = RE::TESDataHandler::GetSingleton();
+		auto*      faction = dh ? dh->LookupForm<RE::TESFaction>(0x023C01, "Fallout4.esm"sv) : nullptr;  // CurrentCompanionFaction
+		const auto lists = RE::ProcessLists::GetSingleton();
+		if (!faction || !lists) {
+			return out;
+		}
+		for (const auto& handle : lists->highActorHandles) {
+			const auto ptr = handle.get();
+			auto*      actor = ptr.get();
+			// The actor's own factions: a companion joins CurrentCompanionFaction at runtime, not on the record.
+			// Quartermaster calls the same IsInFaction through this library on every runtime.
+			if (actor && Has3D(actor) && actor->IsInFaction(faction)) {
+				out.push_back(actor->GetFormID());
+			}
+		}
+		return out;
+	}
+
 	bool IsFemale(RE::Actor* a_actor)
 	{
 		auto* npc = a_actor ? a_actor->GetNPC() : nullptr;

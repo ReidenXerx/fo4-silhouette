@@ -114,7 +114,8 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
     game version, it is not moved at all (S-75's rule).
   - The NPC stands still while picked (the game's own "restrained": their AI keeps running, so quests and
     companion routines go on) -- not someone in a scene, in combat or busy in AAF; let go on every close,
-    switch and load.
+    switch and load. Every other companion loaded around you is held the same way, on the Me tab too, so
+    nobody sandboxes through the shot (S-97).
   - Input: the mouse. Under the free camera the game delivers no mouse click to a menu -- it turns the left
     button into the camera's "WorldZUp" control -- so the window clicks whatever is under the cursor itself
     (as ScreenArcherMenu does). The player's own controls are off while it is open (an InputEnableLayer), and
