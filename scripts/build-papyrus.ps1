@@ -25,7 +25,8 @@ param(
     # real base does, and the bridge's custom events stop compiling. Kept outside the public repo, as the
     # base is.
     [string] $F4se     = 'D:\F4CustomMods\PapyrusBase\Source\F4SE',
-    [string] $Compiler = 'D:\GOGGames\Fallout 4 GOTY\Papyrus Compiler\PapyrusCompiler.exe'
+    # The Steam CK's copy (2026-11-05); the old GOG folder's copy is gone.
+    [string] $Compiler = 'D:\F4Tools\Papyrus Compiler\PapyrusCompiler.exe'
 )
 
 $ErrorActionPreference = 'Stop'
