@@ -3833,6 +3833,18 @@ static void TestCrosshairTrail()
 		Check(result.added.size() == 3 && result.notes.size() == 4, std::format("presets: 3 added, 4 said why ({} / {})", result.added.size(), result.notes.size()));
 		std::unordered_set<std::string> none[2];
 		Check(P::Resolve(*cat, files, none).added.empty(), "presets: no body read, nothing added");
+		// S-98: an Anatomy body (Ivy's) takes a CBBE preset's partial fit, and a CBBE body an Anatomy one's
+		auto anatomyDoc = doc;
+		for (auto& p : anatomyDoc["presets"]) {
+			if (p["family"] == "CBBE") {
+				p["family"] = "Anatomy";
+			}
+		}
+		const auto anatomy = P::Resolve(*Cat(anatomyDoc), files, bodies);
+		Check(Added(anatomy, "HalfCBBE") && Added(anatomy, "HalfCBBE")->fit == "partial" && !Added(anatomy, "Half"),
+			"presets: a CBBE preset is for an Anatomy body (built on CBBE's), a Fusion Girl one still is not");
+		const std::vector<P::SliderPreset> anatomyFiles{ one("HalfAnatomy", { "Anatomy" }, { { "Breasts", 0.5F }, { "Zzz", 0.5F } }) };
+		Check(Added(P::Resolve(*cat, anatomyFiles, bodies), "HalfAnatomy"), "presets: an Anatomy preset is for a CBBE body");
 	}
 
 // --presets <Data> <catalog.json>: what the plugin's own code (Presets::ReadInstalled) adds to the pickers from a

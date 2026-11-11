@@ -42,7 +42,7 @@ param(
     [string] $Staging  = 'D:\Vortex\fallout4\mods\Silhouette-dev',
     [string] $Config   = 'Release',
     # Read only: whether each staged file is live there is read from it at the end.
-    [string] $GameData = 'D:\GOGGames\Fallout 4 GOTY\Data'
+    [string] $GameData = 'D:\SteamFreeGames\Fallout 4 AE\Data'
 )
 
 $ErrorActionPreference = 'Stop'

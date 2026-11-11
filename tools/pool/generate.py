@@ -42,7 +42,7 @@ from mesh import Body  # noqa: E402
 
 PRESETS = ROOT / 'data/Tools/BodySlide/SliderPresets/Silhouette Pool.xml'
 SIDECAR = HERE / 'pool.json'
-DATA = pathlib.Path(r'D:\GOGGames\Fallout 4 GOTY\Data')
+DATA = pathlib.Path(r'D:\SteamFreeGames\Fallout 4 AE\Data')
 TIER_NAME = {'middle': 'Plain', 'ugly': 'Rough', 'beautiful': 'Fine'}
 WEIGHT = {'middle': 3, 'ugly': 1, 'beautiful': 1}
 # The preset's declaration, as the body's own zero presets declare it (AnatomyZero.xml, BT-Zero.xml)

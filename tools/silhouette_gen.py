@@ -72,7 +72,7 @@ import catalog
 import rules
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DEFAULT_DATA = pathlib.Path(r'D:\GOGGames\Fallout 4 GOTY\Data')
+DEFAULT_DATA = pathlib.Path(r'D:\SteamFreeGames\Fallout 4 AE\Data')
 MANIFESTS = pathlib.Path('F4SE/Plugins/Silhouette/manifests')    # below a mod folder / data root
 CATALOG = pathlib.Path('F4SE/Plugins/Silhouette/catalog.json')
 # Silhouette's own body pool (tools/pool, S-65): the only presets NPCs are drawn from at random, each listed
@@ -330,6 +330,13 @@ def installed_family(presets, gender):
     return counts.most_common(1)[0][0] if counts else None
 
 
+def kin(family):
+    """Anatomy's body is built on CBBE's -- the same slider names for the same
+    shapes -- so a preset grouped for one is for the other (S-98)."""
+    low = (family or '').lower()
+    return 'cbbe' if low == 'anatomy' or low.startswith('cbbe') else family
+
+
 def band(preset, family):
     """full | partial | other-family | none.
 
@@ -346,7 +353,7 @@ def band(preset, family):
     if fit < PARTIAL_FIT:
         return 'none'
     declared = preset['families']
-    if declared and family not in declared:
+    if declared and kin(family) not in {kin(f) for f in declared}:
         return 'other-family'
     return 'partial'
 

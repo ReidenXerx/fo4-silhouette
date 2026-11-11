@@ -1615,3 +1615,13 @@ now holds every companion the game simulates around the player too (Silhouette:D
 process list, in CurrentCompanionFaction, body built), on the Me tab as well, with the same rule as the target:
 SetRestrained, nobody dead, in combat, in a scene or AAF-busy. All are let go on every close, switch and load
 (the ids live in the save, like the target's). Quartermaster 1.0.6 did the same for its window.
+
+## S-98 — CBBE and Anatomy presets are one family (alasdairn, 2026-11-11)
+
+An Ivy player's own CBBE presets (Jasmine and two more) never reached the picker: Silhouette.log said "made for
+CBBE, your body is Anatomy". They were partial fits (50-95 % of their sliders on the body's .tri), and a partial
+fit counts only for the body's own family (S-76), read off the catalog's full fits -- Anatomy on Ivy. But Anatomy's
+body is built on CBBE's, with the same slider names for the same shapes, which is exactly what the family rule
+exists to tell apart from coincident names (Fusion Girl). So a group named Anatomy or starting with CBBE is one
+family now, both ways, in the plugin (Presets.cpp Kin) and the generator (kin). Ivy ships the prebuilt body, so
+"re-save it on the Anatomy set in BodySlide" was no answer for its players. alasdairn: "Do it".

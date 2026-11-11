@@ -29,7 +29,8 @@ param(
     # Folders BodySlide built into, searched before Data for the body meshes (verify_bodygen.py --built): the
     # package is proven against a zeroed body there when the one deployed in Data cannot be measured -- another
     # mod's rebuilt body, say, with its own topology.
-    [string[]] $Built = @()
+    # The owner's zeroed builds by default: the AE Data body is Anatomy's own rebuild and cannot be measured.
+    [string[]] $Built = $(@('D:\F4Output\Bodyslides\woman', 'D:\F4Output\Bodyslides\man') | Where-Object { Test-Path $_ })
 )
 
 $ErrorActionPreference = 'Stop'

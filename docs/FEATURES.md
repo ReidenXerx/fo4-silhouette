@@ -129,7 +129,8 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 - **Your own BodySlide presets** join the NPC picker's Next / Previous by themselves, read from BodySlide's
   SliderPresets folder when the game starts, exactly as BodySlide builds them for your body -- no Python, no
   generator (S-76). They are never random. `Silhouette.log` says how many joined and which were left out, and
-  why (made for another body, fits too little, an outfit copy).
+  why (made for another body, fits too little, an outfit copy). CBBE presets count as made for Anatomy's
+  body and Anatomy's for CBBE's: Anatomy is built on CBBE (S-98).
 
 - **Your character** is never randomised: the pool's most average body (Plain F01 / Plain M02) unless you
   choose one in MCM; *Apply to my character*, *Back to the default*, *Which body do I have?* (S-7, S-10). This

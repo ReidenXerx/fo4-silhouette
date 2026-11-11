@@ -23,7 +23,7 @@ import struct
 import sys
 
 SAVES = pathlib.Path.home() / 'Documents/My Games/Fallout4/Saves'
-MANIFESTS = [pathlib.Path(r'D:\GOGGames\Fallout 4 GOTY\Data\F4SE\Plugins\Silhouette\manifests'),
+MANIFESTS = [pathlib.Path(r'D:\SteamFreeGames\Fallout 4 AE\Data\F4SE\Plugins\Silhouette\manifests'),
              pathlib.Path(__file__).resolve().parent.parent / 'data/F4SE/Plugins/Silhouette/manifests']
 
 # Silhouette's own names that are not a body's marker (src/Catalog.cpp KindOf, compared as the plugin

@@ -115,6 +115,14 @@ namespace SH::Presets
 			return std::regex_search(a_name, re);
 		}
 
+		// tools/silhouette_gen.py kin. Anatomy's body is built on CBBE's -- the same slider names for the same
+		// shapes -- so a preset grouped for one is for the other (S-98: Ivy's players' CBBE presets were left out).
+		std::string Kin(const std::string& a_family)
+		{
+			const auto lower = Lower(a_family);
+			return lower == "anatomy" || lower.starts_with("cbbe") ? std::string{ "cbbe" } : a_family;
+		}
+
 		constexpr double kFullFit = 0.95;
 		constexpr double kPartialFit = 0.50;
 	}
@@ -323,7 +331,8 @@ namespace SH::Presets
 			} else if (fit < kPartialFit) {
 				out.notes.push_back(std::format("\"{}\": fits your {} body at {:.0f} %", sp.name, isFemale ? "female" : "male", fit * 100.0));
 				continue;
-			} else if (!sp.families.empty() && !family[s].empty() && std::ranges::find(sp.families, family[s]) == sp.families.end()) {
+			} else if (!sp.families.empty() && !family[s].empty() &&
+					   std::ranges::none_of(sp.families, [&](const std::string& f) { return Kin(f) == Kin(family[s]); })) {
 				out.notes.push_back(std::format("\"{}\": made for {}, your body is {}", sp.name, sp.families.front(), family[s]));
 				continue;
 			} else {
