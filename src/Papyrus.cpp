@@ -25,7 +25,8 @@ namespace SH::Papyrus
 		// 8: PlayerPresets, PlayerPresetIndex, PlayerBodyCount, PlayerBodyMorph, PlayerBodyValue -- the window's Me
 		// tab lists the catalog's presets, the player's own BodySlide presets among them (0.3.3).
 		// 9: BodyFemale (S-86), and the bridge writes LooksMenu under the actor's own sex, OrderFemale being the body's.
-		constexpr std::int32_t kProtocol = 9;
+		// 10: Configure takes the share of NPCs drawn from the player's own presets (S-99).
+		constexpr std::int32_t kProtocol = 10;
 
 		using Str = RE::BSFixedString;
 
@@ -76,10 +77,10 @@ namespace SH::Papyrus
 			return Str{ c ? c->build : std::string{} };
 		}
 
-		void Configure(std::monostate, bool a_orefit, bool a_nipples, bool a_genitals, bool a_factionPools)
+		void Configure(std::monostate, bool a_orefit, bool a_nipples, bool a_genitals, bool a_factionPools, std::int32_t a_ownShare)
 		{
 			D().Configure(Settings{ .orefit = a_orefit, .variety = { .nipples = a_nipples, .genitals = a_genitals },
-				.factionPools = a_factionPools });
+				.factionPools = a_factionPools, .ownShare = std::clamp<std::int32_t>(a_ownShare, 0, 100) });
 		}
 
 		std::int32_t Pending(std::monostate) { return static_cast<std::int32_t>(D().Pending()); }

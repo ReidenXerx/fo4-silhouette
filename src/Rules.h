@@ -39,7 +39,10 @@ namespace SH
 
 	// a_factionPools: Silhouette's own faction pools take part (S-72); MCM's switch can leave them out (S-73),
 	// and then a faction is drawn from the random pool like everyone else. A user's faction rule applies either way.
-	[[nodiscard]] Verdict Decide(const Catalog& a_catalog, const ActorFacts& a_actor, bool a_factionPools = true);
+	// a_ownShare (S-99): out of 100, how many of the people Silhouette's own bodies reach -- its faction pools, the
+	// random pool, BodyGen's roll -- draw from the player's own presets instead (MCM, off = 0 by default). Named
+	// NPCs, the player's choices and the user's own rules never do.
+	[[nodiscard]] Verdict Decide(const Catalog& a_catalog, const ActorFacts& a_actor, bool a_factionPools = true, int a_ownShare = 0);
 
 	[[nodiscard]] std::string_view TierName(Tier a_tier);
 }

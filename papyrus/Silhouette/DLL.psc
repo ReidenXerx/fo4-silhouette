@@ -19,7 +19,7 @@ String Function Version() Global Native
 Int Function ProtocolVersion() Global Native  ; what RunOrder must do; the bridge checks it
 Int Function Stamp() Global Native            ; the build's marker stamp, 0 without a catalog
 String Function Build() Global Native
-Function Configure(Bool abORefit, Bool abNipples, Bool abGenitals, Bool abFactionPools) Global Native
+Function Configure(Bool abORefit, Bool abNipples, Bool abGenitals, Bool abFactionPools, Int aiOwnShare) Global Native
 Int Function Pending() Global Native          ; orders that can go out now, or in flight
 Function Log(String asLine) Global Native     ; into Silhouette.log
 

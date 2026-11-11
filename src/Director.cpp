@@ -134,6 +134,11 @@ namespace SH
 			// Who is decided from now on; a body a faction's pool already gave stays until Reset (S-73).
 			Log(std::format("faction bodies {} by the settings", a_settings.factionPools ? "on" : "off"));
 		}
+		if (a_settings.ownShare != _settings.ownShare) {
+			// Like the faction switch: who is decided from now on; a body of yours someone has stays until Reset
+			// unless their faction's pool takes them back.
+			Log(std::format("your own presets: {}% of NPCs by the settings (S-99)", a_settings.ownShare));
+		}
 		_settings = a_settings;
 		if (!refitChanged || !_catalog) {
 			return;
@@ -263,7 +268,7 @@ namespace SH
 			a_session.facts.salt = rec->salt;  // the rules draw as Back to random last left them (S-60)
 		}
 		a_session.eligible = a_sighting.eligible && Distributed(*_catalog, a_session.facts);
-		a_session.verdict = Decide(*_catalog, a_session.facts, _settings.factionPools);
+		a_session.verdict = Decide(*_catalog, a_session.facts, _settings.factionPools, _settings.ownShare);
 		a_session.blacklisted = a_session.verdict.blacklisted;
 	}
 
@@ -1050,7 +1055,7 @@ namespace SH
 		std::string drawn;
 		for (int i = 0; i < 64; ++i) {
 			facts.salt = facts.salt + 1 == 0 ? 1 : facts.salt + 1;
-			drawn = Decide(*_catalog, facts, _settings.factionPools).preset;
+			drawn = Decide(*_catalog, facts, _settings.factionPools, _settings.ownShare).preset;
 			if (!IEquals(drawn, now)) {
 				break;
 			}
@@ -1060,7 +1065,7 @@ namespace SH
 		}
 		rec.salt = facts.salt;
 		a_session.facts.salt = facts.salt;
-		a_session.verdict = Decide(*_catalog, a_session.facts, _settings.factionPools);
+		a_session.verdict = Decide(*_catalog, a_session.facts, _settings.factionPools, _settings.ownShare);
 		Log(std::format("{:08X} \"{}\": the rule draws again - {} instead of {}", a_ref, a_session.facts.baseName, drawn, now));
 	}
 
@@ -1196,7 +1201,7 @@ namespace SH
 				_registry.resetMet[ref] = s.base;  // decided here, whatever they wear (S-70)
 				const bool ours = KindOf(s.marker) == MarkerKind::kBody && !IEquals(s.marker, kBlacklistMarker);
 				s.facts.salt = 0;  // a rule draws by id alone, as for someone met the first time
-				s.verdict = Decide(*_catalog, s.facts, _settings.factionPools);
+				s.verdict = Decide(*_catalog, s.facts, _settings.factionPools, _settings.ownShare);
 				const auto& v = s.verdict;
 				// Eligible: a race Silhouette distributes to (S-11), neither the player nor a dummy. A Silhouette
 				// body is decided again whatever the rules now say (a blacklist's: bare); anyone else only where

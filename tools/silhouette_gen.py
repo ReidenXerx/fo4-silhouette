@@ -973,6 +973,14 @@ def write_mcm(folder, picker, default_index, average, build):
                  'either way. It decides who is given a body from now on: a faction body someone already has '
                  'stays until Reset.' + needs,
          'valueOptions': {'sourceType': 'ModSettingBool'}},
+        {'type': 'slider', 'id': 'fOwnShare:General', 'text': 'Your own presets on NPCs',
+         'help': 'Out of every 100 NPCs Silhouette\'s own bodies reach -- its faction bodies and everyone else\'s '
+                 'random body -- how many wear one of YOUR BodySlide presets instead (the ones the picker lists '
+                 'from Data\\Tools\\BodySlide\\SliderPresets). 0 is off, 100 is only yours. Named characters keep '
+                 'their own bodies, and your choices in the picker and your own rules in the config always win. '
+                 'Raised, people take your presets as you next meet them; lowered, a body of yours someone '
+                 'already has stays until Reset, unless their faction\'s pool takes them back.' + needs,
+         'valueOptions': {'min': 0, 'max': 100, 'step': 5, 'formatString': '{0}%', 'sourceType': 'ModSettingFloat'}},
         {'type': 'switcher', 'id': 'bNotices:General', 'text': 'Tell me when a change I asked for waits',
          'help': 'When a change you asked for -- a Reset, a preset given, a picker try -- has to wait because '
                  'another mod has them busy in a scene, a notification says so, and another when it is done.'
@@ -1005,7 +1013,7 @@ def write_mcm(folder, picker, default_index, average, build):
     ini += [f'{npc_setting_id(g, picker[g])}={default_index.get(g, 0)}' for g in ('female', 'male')
             if picker[g]]
     ini += ['[General]', 'bORefit=1', 'bNippleRand=1', 'bGenitalRand=1', 'bFreshStart=1', 'bFactionPools=1',
-            'bNotices=1']
+            'fOwnShare=0', 'bNotices=1']
     # A key on NO control: MCM answers false/0 for a key it never loaded, so the bridge believes MCM's
     # switches only when this reads 1 -- this file was read, and every answer is a setting, not a gap
     # (wave 4 lens 2 L3; the "settings read" sentinel of mcm-settings-not-globals).

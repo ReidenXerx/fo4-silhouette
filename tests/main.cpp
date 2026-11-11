@@ -302,6 +302,53 @@ namespace
 		}
 		Check(drawn.size() == 2, "a rule with several presets spreads them across people");
 
+		// S-99: a share of everyone Silhouette's own bodies reach draws from the player's own presets
+		{
+			auto doc = BaseCatalog();
+			doc["rules"]["faction"][0]["pool"] = true;
+			auto mine = *Cat(doc);
+			SH::Preset own{ .name = "My Shape", .female = true, .marker = "Silhouette_My_Shape", .menu = true, .fit = "full", .installed = true };
+			mine.presets.push_back(own);
+			auto plain = Npc();
+			Check(SH::Decide(mine, plain).tier == SH::Tier::kNone, "S-99: off by default -- BodyGen's roll stands");
+			Check(SH::Decide(mine, plain, true, 0).tier == SH::Tier::kNone, "S-99: a share of 0 is off");
+			v = SH::Decide(mine, plain, true, 100);
+			Check(v.tier == SH::Tier::kFaction && v.preset == "My Shape" && v.options == std::vector<std::string>{ "My Shape" },
+				std::format("S-99: at 100 a plain NPC draws from your presets ({})", v.why));
+			auto pooled = Npc();
+			pooled.factions = { { "Fallout4.esm", 3000 } };
+			Check(SH::Decide(mine, pooled, true, 100).preset == "My Shape", "S-99: ... and so does one of Silhouette's faction pools");
+			auto users = Npc();
+			users.factions = { { "Fallout4.esm", 3001 } };
+			Check(SH::Decide(mine, users, true, 100).preset != "My Shape", "S-99: the user's own faction rule still wins");
+			auto named = Npc();
+			named.baseName = "Piper";
+			Check(SH::Decide(mine, named, true, 100).tier == SH::Tier::kName, "S-99: a name rule still wins");
+			named = Npc();
+			named.bases = { { "Fallout4.esm", 1000 } };
+			Check(SH::Decide(mine, named, true, 100).tier == SH::Tier::kNone, "S-99: a named NPC's own body (form id) stays");
+			auto man = Npc();
+			man.female = false;
+			Check(SH::Decide(mine, man, true, 100).tier == SH::Tier::kNone, "S-99: no own preset of his sex, BodyGen's roll stands");
+			int in = 0;
+			bool steady = true;
+			for (std::uint32_t id = 0xFF000800; id < 0xFF000800 + 1000; ++id) {
+				plain.seed = id;
+				const bool took = SH::Decide(mine, plain, true, 30).preset == "My Shape";
+				in += took ? 1 : 0;
+				steady &= took == (SH::Decide(mine, plain, true, 30).preset == "My Shape");
+			}
+			Check(in > 230 && in < 370 && steady, std::format("S-99: a share of 30 takes about 30 in 100, the same people every time ({} of 1000)", in));
+			plain.seed = 0xFF000801;
+			bool moved = false;
+			for (std::uint32_t salt = 1; salt < 40 && !moved; ++salt) {
+				auto again = plain;
+				again.salt = salt;
+				moved = (SH::Decide(mine, again, true, 50).tier == SH::Tier::kFaction) != (SH::Decide(mine, plain, true, 50).tier == SH::Tier::kFaction);
+			}
+			Check(moved, "S-99: Back to random draws the share again too");
+		}
+
 		// S-86: a race with a pool of its own -- its body's sex, its own draw, after the factions
 		auto robots = *c;
 		robots.races.push_back("ServitronRace");

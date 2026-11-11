@@ -36,6 +36,44 @@ namespace SH
 			x ^= x >> 16;
 			return a_presets[x % a_presets.size()];
 		}
+
+		// S-99: whether this person is one of the share who draw from the player's own presets -- from the id and
+		// the salt like Pick, with another key, so who is in the share says nothing about which preset they draw.
+		bool InShare(std::uint32_t a_seed, std::uint32_t a_salt, int a_share)
+		{
+			if (a_share <= 0) {
+				return false;
+			}
+			if (a_share >= 100) {
+				return true;
+			}
+			std::uint32_t x = (a_seed ^ 0x5157C0DEu) + 0x7F4A7C15u * (a_salt + 1);
+			x = (x ^ (x >> 15)) * 0x2C1B3C6Du;
+			x = (x ^ (x >> 12)) * 0x297A2D39u;
+			x ^= x >> 15;
+			return static_cast<int>(x % 100u) < a_share;
+		}
+
+		// S-99: a draw from the player's own presets of this sex (S-76, read at game start), or none when the share
+		// passes them by or there are none.
+		std::optional<Verdict> OwnDraw(const Catalog& a_catalog, const ActorFacts& a_actor, int a_share)
+		{
+			if (!InShare(a_actor.seed, a_actor.salt, a_share)) {
+				return std::nullopt;
+			}
+			std::vector<std::string> own;
+			for (const auto& p : a_catalog.presets) {
+				if (p.installed && p.female == a_actor.female) {
+					own.push_back(p.name);
+				}
+			}
+			if (own.empty()) {
+				return std::nullopt;
+			}
+			auto preset = Pick(own, a_actor.seed, a_actor.salt);
+			auto why = std::format("one of the {}% given your own presets (S-99) -> {}", a_share, preset);
+			return Verdict{ Tier::kFaction, std::move(preset), std::move(own), std::move(why) };
+		}
 	}
 
 	std::string_view TierName(Tier a_tier)
@@ -53,7 +91,7 @@ namespace SH
 		return "?"sv;
 	}
 
-	Verdict Decide(const Catalog& a_catalog, const ActorFacts& a_actor, bool a_factionPools)
+	Verdict Decide(const Catalog& a_catalog, const ActorFacts& a_actor, bool a_factionPools, int a_ownShare)
 	{
 		const int sex = a_actor.female ? 1 : 0;
 
@@ -91,12 +129,19 @@ namespace SH
 			return { Tier::kNone, {}, {}, std::format("race {} is blacklisted (BodyGen keeps them bare)", a_actor.race), true };
 		}
 
+		// S-99: the share of everyone below who draw from the player's own presets. A user's own faction rule is
+		// theirs and still wins; Silhouette's faction pools, the random pool and BodyGen's roll give way.
+		const auto own = OwnDraw(a_catalog, a_actor, a_ownShare);
+
 		// 4. faction -- the first rule, in the config's order, whose faction the NPC record carries.
 		for (const auto& rule : a_catalog.factionRules) {
 			if (rule.pool && !a_factionPools) {
 				continue;  // switched off in MCM (S-73): the faction is drawn from the random pool
 			}
 			if (rule.female == a_actor.female && Listed(a_actor.factions, rule.faction)) {
+				if (rule.pool && own) {
+					return *own;
+				}
 				auto preset = Pick(rule.presets, a_actor.seed, a_actor.salt);
 				return { Tier::kFaction, preset, rule.presets, std::format("faction {} -> {}", rule.editorID, preset) };
 			}
@@ -112,6 +157,9 @@ namespace SH
 
 		// 4c. S-91: a race the config added after the generator ran has no BodyGen line: it draws from the random
 		// pool the line would have given it, the same bodies at the same weights.
+		if (own) {
+			return *own;
+		}
 		if (ListedName(a_catalog.runtimeRaces, a_actor.race) && !a_catalog.randomPool[sex].empty()) {
 			auto preset = Pick(a_catalog.randomPool[sex], a_actor.seed, a_actor.salt);
 			return { Tier::kFaction, preset, a_catalog.randomPool[sex],

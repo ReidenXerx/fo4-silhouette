@@ -5,7 +5,8 @@ keeps it: an ordinary one most often, an unflattering one less often, a conventi
 rarely, from Silhouette's own pool. The Commonwealth's named people -- companions and major NPCs -- each
 have a body of their own.
 
-**Status:** 0.5.5: the picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
+**Status:** 0.6.0: your own presets on NPCs (S-99, off by default) and the named people of Tales from
+the Commonwealth and America Rising 2 (S-100). The picker window (S-79) -- choose anyone's body, or your own, from a grid of pictures,
 live on them while the camera frames them. One plugin for old-gen 1.10.163 and Anniversary 1.11.x through
 Runtime Database (S-75); your own BodySlide presets in the picker (S-76); the Diamond City pack (S-77); one
 body mod is enough (S-78).
@@ -44,10 +45,10 @@ OBody does.
 - **Everyone: Silhouette's pool** (`Silhouette Pool.xml`, S-65). 41 bodies a sex, generated and measured
   rather than hand-picked: 18 ordinary ("Plain"), 17 unflattering ("Rough": very fat, very flat, frail,
   disproportioned) and 6 conventionally beautiful ("Fine"). A Plain body is listed three times in
-  BodyGen's random line, so the odds are 70 / 22 / 8 per cent. Your installed presets are not random;
-  they stay in the picker.
-- **Named people: their own body** (`Silhouette Characters.xml`, S-66). 207 companions and named NPCs,
-  from Piper to Fat Min, each one Anatomy Tailor's outfits dress included (S-93), each given a body that fits who they are -- the Diamond City pack's
+  BodyGen's random line, so the odds are 70 / 22 / 8 per cent. Your installed presets stay in the picker,
+  and MCM's "Your own presets on NPCs" (off by default) gives them to a share of everyone (S-99).
+- **Named people: their own body** (`Silhouette Characters.xml`, S-66). 327 companions and named NPCs,
+  from Piper to Fat Min and Tales from the Commonwealth's Audrey (S-100), each one Anatomy Tailor's outfits dress included (S-93), each given a body that fits who they are -- the Diamond City pack's
   cheerfully sardonic (S-77): the mayor is a heavy fat cat. A rule of yours for the same NPC
   wins.
 - **Factions: a pool of their own** (`Silhouette Factions.xml`, S-72). The Brotherhood, the Minutemen,

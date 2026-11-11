@@ -4349,6 +4349,2315 @@
     "BTBodyFatv2": 20,
     "BTThigh": 40
    }
+  },
+  "Audrey": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_CompanionAudrey",
+     "001E1C"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul woman: wasted thin under the ruined skin",
+   "values": {
+    "LegsThin": 47,
+    "Arms": 59,
+    "BreastsSmall": 16,
+    "ButtSmall": 54,
+    "ChubbyWaist": 53,
+    "SlimThighs": 52
+   }
+  },
+  "R4-04": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_CompanionR404",
+     "004356"
+    ],
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_R404clone",
+     "027A0E"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: athletic, strong legs and shoulders, a trained body",
+   "values": {
+    "MuscularArms": 48,
+    "MuscularLegs": 39,
+    "Back": 8,
+    "ShoulderWidth": 14,
+    "ChubbyWaist": 54,
+    "WideWaistLine": 22,
+    "BreastsSmall": 11,
+    "MuscularButt": 39
+   }
+  },
+  "Niah": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_NiahNPC",
+     "014B06"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a woman in charge: trim, upright and severe",
+   "values": {
+    "ChubbyWaist": 48,
+    "WideWaistLine": 43,
+    "BreastsSmall": 30,
+    "BreastPerkiness": 4,
+    "ButtSmall": 14,
+    "Back": 21,
+    "MuscularArms": 17
+   }
+  },
+  "Anna Lee": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_AudreyTzen_AnnaLee",
+     "0124BC"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 64,
+    "Belly": 23,
+    "Breasts": 0,
+    "BreastGravity2": 15,
+    "Thighs": 7,
+    "ChubbyArms": 6
+   }
+  },
+  "Annie": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Bunker_Annie",
+     "0030D6"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 73,
+    "Belly": 32,
+    "Breasts": 0,
+    "BreastGravity2": 30,
+    "Thighs": 15,
+    "ChubbyArms": 0
+   }
+  },
+  "Aunt Patty": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jacks_AuntPatty",
+     "034AAA"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, an older woman who has fed everyone around her: heavy, soft and sagging",
+   "values": {
+    "Belly": 58,
+    "BigBelly": 32,
+    "ChubbyWaist": 85,
+    "WideWaistLine": 63,
+    "Breasts": 32,
+    "BreastGravity2": 49,
+    "ChubbyArms": 49,
+    "ChubbyLegs": 43,
+    "Thighs": 25,
+    "Hips": 22
+   }
+  },
+  "Beth": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerA01",
+     "00A098"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 70,
+    "Belly": 27,
+    "Breasts": 15,
+    "BreastGravity2": 21,
+    "Thighs": 16,
+    "ChubbyArms": 0
+   }
+  },
+  "Cameron": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Photo_Cameron",
+     "002ABF"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 67,
+    "Belly": 25,
+    "Breasts": 8,
+    "BreastGravity2": 37,
+    "Thighs": 6,
+    "ChubbyArms": 10
+   }
+  },
+  "Carmen": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_AudreyTzen_Carmen",
+     "01897F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang woman: lean and hard, nothing spare on her",
+   "values": {
+    "MuscularArms": 27,
+    "MuscularLegs": 24,
+    "ChubbyWaist": 58,
+    "WideWaistLine": 38,
+    "BreastsSmall": 30,
+    "ButtSmall": 7,
+    "LegsThin": 6
+   }
+  },
+  "Cecylia": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Immigrant_Cecylia",
+     "00D3C5"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 58,
+    "Belly": 26,
+    "Breasts": 0,
+    "BreastGravity2": 33,
+    "Thighs": 16,
+    "ChubbyArms": 2
+   }
+  },
+  "Clarissa": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Patriot_Clarissa",
+     "00FEC6"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 68,
+    "Belly": 27,
+    "Breasts": 3,
+    "BreastGravity2": 15,
+    "Thighs": 3,
+    "ChubbyArms": 22
+   }
+  },
+  "Commie": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Gunners_Commie",
+     "0362C8"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: athletic, strong legs and shoulders, a trained body",
+   "values": {
+    "MuscularArms": 52,
+    "MuscularLegs": 34,
+    "Back": 25,
+    "ShoulderWidth": 25,
+    "ChubbyWaist": 58,
+    "WideWaistLine": 19,
+    "BreastsSmall": 21,
+    "MuscularButt": 52
+   }
+  },
+  "Crash": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_EastBoston_Crash",
+     "003FD2"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang woman: lean and hard, nothing spare on her",
+   "values": {
+    "MuscularArms": 28,
+    "MuscularLegs": 40,
+    "ChubbyWaist": 50,
+    "WideWaistLine": 34,
+    "BreastsSmall": 30,
+    "ButtSmall": 6,
+    "LegsThin": 21
+   }
+  },
+  "Doctor Singh": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_DoctorSingh",
+     "006B2F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a doctor or scholar: slim and soft, a life indoors",
+   "values": {
+    "ChubbyWaist": 64,
+    "WideWaistLine": 50,
+    "BreastsSmall": 17,
+    "BreastGravity2": 8,
+    "ButtSmall": 19,
+    "LegsThin": 3,
+    "Belly": 14
+   }
+  },
+  "Emily": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Children_Emily",
+     "010E34"
+    ],
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Children_EmilyPost",
+     "00E637"
+    ],
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Children_EmilyGhoul",
+     "0141AB"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a Child of Atom: thin from fasting and faith",
+   "values": {
+    "LegsThin": 46,
+    "Arms": 54,
+    "BreastsSmall": 30,
+    "ButtSmall": 44,
+    "ChubbyWaist": 36,
+    "SlimThighs": 37
+   }
+  },
+  "Fast Pitch Fannie": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Baseball_Cult02",
+     "00EC5E"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a sportswoman of the cult of the old games: strong legs, a hard behind",
+   "values": {
+    "MuscularLegs": 41,
+    "MuscularButt": 51,
+    "CalfSize": 24,
+    "MuscularArms": 23,
+    "ChubbyWaist": 53,
+    "Butt": 10,
+    "BreastsSmall": 8
+   }
+  },
+  "Gran": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RaiderGran",
+     "0029DD"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, an older woman who has fed everyone around her: heavy, soft and sagging",
+   "values": {
+    "Belly": 65,
+    "BigBelly": 42,
+    "ChubbyWaist": 97,
+    "WideWaistLine": 64,
+    "Breasts": 39,
+    "BreastGravity2": 51,
+    "ChubbyArms": 33,
+    "ChubbyLegs": 29,
+    "Thighs": 40,
+    "Hips": 34
+   }
+  },
+  "Holly Winters": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_MemoryLady",
+     "00F345"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 77,
+    "Belly": 13,
+    "Breasts": 11,
+    "BreastGravity2": 29,
+    "Thighs": 18,
+    "ChubbyArms": 19
+   }
+  },
+  "Jacqueline": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_FaceDoctorWife",
+     "01CE01"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 77,
+    "Belly": 26,
+    "Breasts": 5,
+    "BreastGravity2": 37,
+    "Thighs": 20,
+    "ChubbyArms": 12
+   }
+  },
+  "Jane": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Brothel_JaneDoe",
+     "00270F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a woman who works the clubs and the night: a real hourglass",
+   "values": {
+    "Breasts": 46,
+    "Hips": 22,
+    "Butt": 29,
+    "RoundAss": 18,
+    "ChubbyWaist": 29,
+    "Thighs": 24,
+    "BreastPerkiness": 15
+   }
+  },
+  "Knight Casilla": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_BoSGhoul_KnightCasilla",
+     "00B9FB"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul woman: wasted thin under the ruined skin",
+   "values": {
+    "LegsThin": 53,
+    "Arms": 55,
+    "BreastsSmall": 16,
+    "ButtSmall": 43,
+    "ChubbyWaist": 47,
+    "SlimThighs": 45
+   }
+  },
+  "Lynn": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_EastBoston_Lynn",
+     "0030BA"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 80,
+    "Belly": 24,
+    "Breasts": 4,
+    "BreastGravity2": 18,
+    "Thighs": 17,
+    "ChubbyArms": 7
+   }
+  },
+  "Mama Mabel": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Karaoke_MamaMabel",
+     "009702"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, an older woman who has fed everyone around her: heavy, soft and sagging",
+   "values": {
+    "Belly": 48,
+    "BigBelly": 26,
+    "ChubbyWaist": 92,
+    "WideWaistLine": 55,
+    "Breasts": 41,
+    "BreastGravity2": 69,
+    "ChubbyArms": 38,
+    "ChubbyLegs": 29,
+    "Thighs": 40,
+    "Hips": 15
+   }
+  },
+  "Marion Taylor": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_MailmanDaughter",
+     "001F95"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 71,
+    "Belly": 27,
+    "Breasts": 19,
+    "BreastGravity2": 15,
+    "Thighs": 6,
+    "ChubbyArms": 17
+   }
+  },
+  "Molly": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Molly",
+     "0047C2"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 63,
+    "Belly": 16,
+    "Breasts": 10,
+    "BreastGravity2": 20,
+    "Thighs": 6,
+    "ChubbyArms": 0
+   }
+  },
+  "Paladin Brend": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_BosGuard03",
+     "03EF28"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: athletic, strong legs and shoulders, a trained body",
+   "values": {
+    "MuscularArms": 46,
+    "MuscularLegs": 42,
+    "Back": 14,
+    "ShoulderWidth": 12,
+    "ChubbyWaist": 47,
+    "WideWaistLine": 26,
+    "BreastsSmall": 19,
+    "MuscularButt": 45
+   }
+  },
+  "Rhonda": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RhondaNPC",
+     "010309"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 75,
+    "Belly": 32,
+    "Breasts": 10,
+    "BreastGravity2": 31,
+    "Thighs": 16,
+    "ChubbyArms": 0
+   }
+  },
+  "Sadie": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Sadie",
+     "0047B9"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 73,
+    "Belly": 31,
+    "Breasts": 3,
+    "BreastGravity2": 21,
+    "Thighs": 19,
+    "ChubbyArms": 19
+   }
+  },
+  "Sally": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_BusLady",
+     "00E68C"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 60,
+    "Belly": 14,
+    "Breasts": 0,
+    "BreastGravity2": 21,
+    "Thighs": 24,
+    "ChubbyArms": 15
+   }
+  },
+  "Sarah": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerA06",
+     "012B5A"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 82,
+    "Belly": 27,
+    "Breasts": 17,
+    "BreastGravity2": 29,
+    "Thighs": 11,
+    "ChubbyArms": 19
+   }
+  },
+  "Smokescreen": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_AtomCat_Smoke",
+     "00357A"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang woman: lean and hard, nothing spare on her",
+   "values": {
+    "MuscularArms": 41,
+    "MuscularLegs": 39,
+    "ChubbyWaist": 43,
+    "WideWaistLine": 26,
+    "BreastsSmall": 28,
+    "ButtSmall": 21,
+    "LegsThin": 14
+   }
+  },
+  "Sophie": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jewel_Sophie",
+     "02CEE7"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a woman who works the clubs and the night: a real hourglass",
+   "values": {
+    "Breasts": 45,
+    "Hips": 12,
+    "Butt": 18,
+    "RoundAss": 26,
+    "ChubbyWaist": 26,
+    "Thighs": 6,
+    "BreastPerkiness": 9
+   }
+  },
+  "Starchild": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Hippies_Starchild",
+     "002B61"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a free spirit: soft, natural, unbound curves",
+   "values": {
+    "ChubbyWaist": 58,
+    "Belly": 13,
+    "Breasts": 13,
+    "BreastGravity2": 43,
+    "Hips": 18,
+    "Thighs": 34,
+    "ChubbyArms": 24
+   }
+  },
+  "Susan": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_CastleSusan",
+     "0104EF"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working woman of the wasteland: ordinary, a little soft at the middle",
+   "values": {
+    "ChubbyWaist": 58,
+    "Belly": 10,
+    "Breasts": 22,
+    "BreastGravity2": 14,
+    "Thighs": 3,
+    "ChubbyArms": 17
+   }
+  },
+  "Washout": {
+   "sex": "female",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Bowling_Washout",
+     "009924"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a sportswoman of the cult of the old games: strong legs, a hard behind",
+   "values": {
+    "MuscularLegs": 43,
+    "MuscularButt": 49,
+    "CalfSize": 35,
+    "MuscularArms": 20,
+    "ChubbyWaist": 45,
+    "Butt": 14,
+    "BreastsSmall": 12
+   }
+  },
+  "Birdie": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_CompanionBirdie",
+     "004357"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 42,
+    "BTTraps": 31,
+    "BTPectorals": 20,
+    "BTBiceps": 41,
+    "BTAbDefinition": 23,
+    "BTThigh": 20
+   }
+  },
+  "John Castle": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_NPCCastle",
+     "003CB6"
+    ],
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_NPCCastleClone01",
+     "003D17"
+    ],
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_NPCCastleClone03",
+     "003D1E"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 32,
+    "BTShoulders": 60,
+    "BTTraps": 45,
+    "BTBiceps": 55,
+    "BTPectorals": 35,
+    "BTStomachFat": 35,
+    "BTBack": 43
+   }
+  },
+  "Alex": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerA04",
+     "00A09B"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 48,
+    "BTChestSmoothing": 37,
+    "BTChubbyArm": 12,
+    "BTShoulders": 11
+   }
+  },
+  "Anchorage": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Gunners_Anchorage",
+     "0362C9"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 57,
+    "BTThinArm": 65,
+    "ThinThigh": 38,
+    "BTNegPecMuscle": 52,
+    "BTNegShoulder": 26,
+    "BTTHinCalf": 39
+   }
+  },
+  "Arran": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Immigrant_Arran",
+     "00D2DA"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 66,
+    "BTThinArm": 51,
+    "ThinThigh": 61,
+    "BTNegPecMuscle": 56,
+    "BTNegShoulder": 25,
+    "BTTHinCalf": 45
+   }
+  },
+  "Arthur Dean": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jacks_ArthurDean",
+     "034A6B"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 44,
+    "BTChestSmoothing": 33,
+    "BTChubbyArm": 23,
+    "BTShoulders": 11
+   }
+  },
+  "Bad-X": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RaiderBadX",
+     "0029DB"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 31,
+    "BTThinArm": 18,
+    "ThinThigh": 35,
+    "BTNegStomach": 40,
+    "BTTraps": 35,
+    "BTBiceps": 8
+   }
+  },
+  "Black Eye Bobby": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RaiderBlackEyeBobby",
+     "0029DA"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 46,
+    "BTThinArm": 32,
+    "ThinThigh": 25,
+    "BTNegStomach": 46,
+    "BTTraps": 37,
+    "BTBiceps": 24
+   }
+  },
+  "Bobby Crane": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jacks_BobbyCrane",
+     "034AA9"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 33,
+    "BTChestSmoothing": 42,
+    "BTChubbyArm": 19,
+    "BTShoulders": 9
+   }
+  },
+  "Boxcar": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_CastleBoxcar",
+     "016EA3"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 43,
+    "BTShoulders": 48,
+    "BTTraps": 45,
+    "BTBiceps": 55,
+    "BTPectorals": 24,
+    "BTStomachFat": 28,
+    "BTBack": 47
+   }
+  },
+  "Brennan McConnell": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jewel_Brennan",
+     "02A843"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 34,
+    "BTShoulders": 50,
+    "BTTraps": 56,
+    "BTBiceps": 50,
+    "BTPectorals": 35,
+    "BTStomachFat": 38,
+    "BTBack": 31
+   }
+  },
+  "Brick": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Gunners_Brick",
+     "0362C6"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 39,
+    "BTShoulders": 44,
+    "BTTraps": 54,
+    "BTBiceps": 37,
+    "BTPectorals": 36,
+    "BTStomachFat": 39,
+    "BTBack": 34
+   }
+  },
+  "Brother Jacob": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Children_Jacob",
+     "010E36"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 59,
+    "BTThinArm": 63,
+    "ThinThigh": 39,
+    "BTNegPecMuscle": 60,
+    "BTNegShoulder": 26,
+    "BTTHinCalf": 42
+   }
+  },
+  "Bruce": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_BaseballBruce",
+     "0140D4"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ballplayer of the cult of the old games: strong legs and shoulders",
+   "values": {
+    "BTThigh": 45,
+    "BTCalves": 40,
+    "BTShoulders": 36,
+    "BTBiceps": 29,
+    "BTAbDefinition": 42,
+    "BTPectorals": 21,
+    "BTStomachFat": 24
+   }
+  },
+  "Cain": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RaiderCain",
+     "003B33"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 46,
+    "BTThinArm": 55,
+    "ThinThigh": 59,
+    "BTNegPecMuscle": 62,
+    "BTNegShoulder": 32,
+    "BTTHinCalf": 36
+   }
+  },
+  "Catcher": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Baseball_Cult07",
+     "00EC69"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 42,
+    "BTShoulders": 40,
+    "BTTraps": 58,
+    "BTBiceps": 33,
+    "BTPectorals": 32,
+    "BTStomachFat": 46,
+    "BTBack": 32
+   }
+  },
+  "Chase": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Prostitute04M",
+     "002694"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a man who sells his looks: lean and defined",
+   "values": {
+    "BTAbDefinition": 44,
+    "BTWaist-In": 45,
+    "BTPectorals": 13,
+    "BTBiceps": 26,
+    "BTNegStomach": 40
+   }
+  },
+  "Coach": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Baseball_Cult01",
+     "00EC34"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a big man who eats well: heavy all over, the weight spread, no pot out front",
+   "values": {
+    "BTStomachFat": 62,
+    "BTBodyFatv2": 33,
+    "BTChestSmoothing": 52,
+    "BTChubbyArm": 45,
+    "BTChubbyLeg": 38,
+    "Hips": 33
+   }
+  },
+  "Cosmos": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Hippies_Cosmos",
+     "002980"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a free spirit: lanky and soft",
+   "values": {
+    "BTThinArm": 26,
+    "ThinThigh": 21,
+    "BTStomachFat": 26,
+    "BTChestSmoothing": 35,
+    "BTNegShoulder": 20
+   }
+  },
+  "Craig": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerA05",
+     "00A09C"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 30,
+    "BTChestSmoothing": 27,
+    "BTChubbyArm": 3,
+    "BTShoulders": 18
+   }
+  },
+  "Cueball": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Cueball",
+     "00485C"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 34,
+    "BTThinArm": 27,
+    "ThinThigh": 30,
+    "BTNegStomach": 28,
+    "BTTraps": 19,
+    "BTBiceps": 24
+   }
+  },
+  "Denton": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Treasure_Hunter",
+     "003A20"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 38,
+    "BTThinArm": 25,
+    "ThinThigh": 30,
+    "BTNegStomach": 30,
+    "BTTraps": 27,
+    "BTBiceps": 19
+   }
+  },
+  "Derrick McConnell": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jewel_Derrick",
+     "02A845"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 39,
+    "BTThinArm": 29,
+    "ThinThigh": 37,
+    "BTNegStomach": 26,
+    "BTTraps": 41,
+    "BTBiceps": 28
+   }
+  },
+  "Designated Hitter": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Baseball_Cult03",
+     "00EC60"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 23,
+    "BTShoulders": 39,
+    "BTTraps": 56,
+    "BTBiceps": 45,
+    "BTPectorals": 32,
+    "BTStomachFat": 34,
+    "BTBack": 41
+   }
+  },
+  "Doc Casey": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Children_Feldman",
+     "010E39"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a thin man -- a doctor, an addict, a believer: narrow, round-shouldered",
+   "values": {
+    "BTThinArm": 45,
+    "ThinThigh": 57,
+    "BTNegShoulder": 37,
+    "BTNegPecMuscle": 46,
+    "BTNegChestWidth": 41,
+    "BTStomachFat": 14
+   }
+  },
+  "Doc Winters": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_MemoryDoc",
+     "00F34A"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, an older man: soft in the middle, the muscle gone",
+   "values": {
+    "BTStomachFat": 62,
+    "BTChestSmoothing": 62,
+    "BTNegPecMuscle": 35,
+    "BTThinArm": 42,
+    "BTNegShoulder": 13,
+    "Hips": 24
+   }
+  },
+  "Dutch": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RaiderDutch",
+     "0038A4"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 47,
+    "BTThinArm": 18,
+    "ThinThigh": 19,
+    "BTNegStomach": 40,
+    "BTTraps": 27,
+    "BTBiceps": 24
+   }
+  },
+  "Earthstone": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Hippies_Earthstone",
+     "002B5F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a free spirit: lanky and soft",
+   "values": {
+    "BTThinArm": 20,
+    "ThinThigh": 27,
+    "BTStomachFat": 27,
+    "BTChestSmoothing": 43,
+    "BTNegShoulder": 10
+   }
+  },
+  "Father Malcom": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Children_Malcolm",
+     "010681"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a thin man -- a doctor, an addict, a believer: narrow, round-shouldered",
+   "values": {
+    "BTThinArm": 46,
+    "ThinThigh": 50,
+    "BTNegShoulder": 51,
+    "BTNegPecMuscle": 38,
+    "BTNegChestWidth": 28,
+    "BTStomachFat": 16
+   }
+  },
+  "Fats Dixon": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Busker_Musician",
+     "00A33E"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a big man who eats well: heavy all over, the weight spread, no pot out front",
+   "values": {
+    "BTStomachFat": 75,
+    "BTBodyFatv2": 37,
+    "BTChestSmoothing": 46,
+    "BTChubbyArm": 28,
+    "BTChubbyLeg": 40,
+    "Hips": 19
+   }
+  },
+  "Frank Taylor": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Mailman",
+     "001F90"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 47,
+    "BTChestSmoothing": 19,
+    "BTChubbyArm": 7,
+    "BTShoulders": 0
+   }
+  },
+  "Franz": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Bunker_Franz",
+     "006922"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 33,
+    "BTChestSmoothing": 23,
+    "BTChubbyArm": 23,
+    "BTShoulders": 13
+   }
+  },
+  "Garrett": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_EastBoston_Garrett",
+     "0030BB"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 37,
+    "BTChestSmoothing": 20,
+    "BTChubbyArm": 25,
+    "BTShoulders": 14
+   }
+  },
+  "Gary": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Hippies_Gary",
+     "002B36"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a free spirit: lanky and soft",
+   "values": {
+    "BTThinArm": 26,
+    "ThinThigh": 22,
+    "BTStomachFat": 24,
+    "BTChestSmoothing": 30,
+    "BTNegShoulder": 20
+   }
+  },
+  "Gene McConnell": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jewel_Gene",
+     "02A84F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a big man who eats well: heavy all over, the weight spread, no pot out front",
+   "values": {
+    "BTStomachFat": 72,
+    "BTBodyFatv2": 28,
+    "BTChestSmoothing": 58,
+    "BTChubbyArm": 49,
+    "BTChubbyLeg": 24,
+    "Hips": 34
+   }
+  },
+  "Ghost": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_TremontGhost",
+     "01C887"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 44,
+    "BTThinArm": 58,
+    "ThinThigh": 54,
+    "BTNegPecMuscle": 46,
+    "BTNegShoulder": 19,
+    "BTTHinCalf": 32
+   }
+  },
+  "Gomez": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_Gomez",
+     "006B32"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 44,
+    "BTChestSmoothing": 34,
+    "BTChubbyArm": 25,
+    "BTShoulders": 21
+   }
+  },
+  "Guthrie": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Treasure_Collector",
+     "002597"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, an older man: soft in the middle, the muscle gone",
+   "values": {
+    "BTStomachFat": 65,
+    "BTChestSmoothing": 42,
+    "BTNegPecMuscle": 31,
+    "BTThinArm": 30,
+    "BTNegShoulder": 28,
+    "Hips": 8
+   }
+  },
+  "Harold": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_FaceDoctorHusband",
+     "01CE05"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, an older man: soft in the middle, the muscle gone",
+   "values": {
+    "BTStomachFat": 66,
+    "BTChestSmoothing": 53,
+    "BTNegPecMuscle": 24,
+    "BTThinArm": 31,
+    "BTNegShoulder": 25,
+    "Hips": 25
+   }
+  },
+  "Harvey (Paradise)": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_Harvey",
+     "0052E9"
+    ],
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_HarveyCorpse",
+     "015AB7"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 33,
+    "BTChestSmoothing": 26,
+    "BTChubbyArm": 21,
+    "BTShoulders": 7
+   }
+  },
+  "Hitch": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_AudreyTzen_Hitch",
+     "018980"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 39,
+    "BTThinArm": 17,
+    "ThinThigh": 32,
+    "BTNegStomach": 35,
+    "BTTraps": 37,
+    "BTBiceps": 17
+   }
+  },
+  "Infielder": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Baseball_Cult06",
+     "00EC64"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ballplayer of the cult of the old games: strong legs and shoulders",
+   "values": {
+    "BTThigh": 46,
+    "BTCalves": 29,
+    "BTShoulders": 46,
+    "BTBiceps": 34,
+    "BTAbDefinition": 35,
+    "BTPectorals": 18,
+    "BTStomachFat": 23
+   }
+  },
+  "Jeff": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerB01",
+     "0052B3"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 52,
+    "BTChestSmoothing": 18,
+    "BTChubbyArm": 25,
+    "BTShoulders": 12
+   }
+  },
+  "Jimmy": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Karaoke_Jimmy",
+     "009735"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 38,
+    "BTChestSmoothing": 40,
+    "BTChubbyArm": 23,
+    "BTShoulders": 4
+   }
+  },
+  "John (Paradise)": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerA02",
+     "00A099"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 30,
+    "BTChestSmoothing": 36,
+    "BTChubbyArm": 21,
+    "BTShoulders": 10
+   }
+  },
+  "Johnny Friendly": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_DiamondCity_JohnnyFriendly",
+     "01C874"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 37,
+    "BTChestSmoothing": 31,
+    "BTChubbyArm": 12,
+    "BTShoulders": 10
+   }
+  },
+  "Joker": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Gunners_Joker",
+     "0362C7"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 42,
+    "BTTraps": 34,
+    "BTPectorals": 38,
+    "BTBiceps": 38,
+    "BTAbDefinition": 15,
+    "BTThigh": 32
+   }
+  },
+  "Josh": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerB03",
+     "00575D"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 37,
+    "BTChestSmoothing": 32,
+    "BTChubbyArm": 23,
+    "BTShoulders": 1
+   }
+  },
+  "Ludwick": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RadstagLudwick",
+     "00EEA6"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 35,
+    "BTTraps": 37,
+    "BTPectorals": 40,
+    "BTBiceps": 42,
+    "BTAbDefinition": 33,
+    "BTThigh": 15
+   }
+  },
+  "Melvin": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_EastBoston_Melvin",
+     "004BAA"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a thin man -- a doctor, an addict, a believer: narrow, round-shouldered",
+   "values": {
+    "BTThinArm": 62,
+    "ThinThigh": 42,
+    "BTNegShoulder": 30,
+    "BTNegPecMuscle": 34,
+    "BTNegChestWidth": 24,
+    "BTStomachFat": 12
+   }
+  },
+  "Murphy": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_AudreyTzen_Murphy",
+     "018981"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a gang man: wiry and hard, ribs and sinew",
+   "values": {
+    "BTAbDefinition": 42,
+    "BTThinArm": 13,
+    "ThinThigh": 18,
+    "BTNegStomach": 27,
+    "BTTraps": 42,
+    "BTBiceps": 10
+   }
+  },
+  "Nilesh Singh": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_Nilesh",
+     "015AE6"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 59,
+    "BTThinArm": 63,
+    "ThinThigh": 49,
+    "BTNegPecMuscle": 54,
+    "BTNegShoulder": 37,
+    "BTTHinCalf": 36
+   }
+  },
+  "Outfielder": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Baseball_Cult04",
+     "00EC63"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ballplayer of the cult of the old games: strong legs and shoulders",
+   "values": {
+    "BTThigh": 29,
+    "BTCalves": 35,
+    "BTShoulders": 31,
+    "BTBiceps": 18,
+    "BTAbDefinition": 36,
+    "BTPectorals": 26,
+    "BTStomachFat": 10
+   }
+  },
+  "Overseer": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_R404_Overseer",
+     "027A1D"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a big man who eats well: heavy all over, the weight spread, no pot out front",
+   "values": {
+    "BTStomachFat": 82,
+    "BTBodyFatv2": 45,
+    "BTChestSmoothing": 59,
+    "BTChubbyArm": 51,
+    "BTChubbyLeg": 29,
+    "Hips": 33
+   }
+  },
+  "Pence": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_BankGhoul",
+     "014CFA"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 49,
+    "BTThinArm": 51,
+    "ThinThigh": 60,
+    "BTNegPecMuscle": 38,
+    "BTNegShoulder": 40,
+    "BTTHinCalf": 45
+   }
+  },
+  "Pinch Hitter": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Baseball_Cult05",
+     "00EC65"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ballplayer of the cult of the old games: strong legs and shoulders",
+   "values": {
+    "BTThigh": 36,
+    "BTCalves": 42,
+    "BTShoulders": 42,
+    "BTBiceps": 22,
+    "BTAbDefinition": 35,
+    "BTPectorals": 17,
+    "BTStomachFat": 11
+   }
+  },
+  "Powerman": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Powerman",
+     "0153EA"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 44,
+    "BTShoulders": 62,
+    "BTTraps": 52,
+    "BTBiceps": 34,
+    "BTPectorals": 28,
+    "BTStomachFat": 47,
+    "BTBack": 29
+   }
+  },
+  "Rick": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Paradise_SettlerA03",
+     "00A09A"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 36,
+    "BTChestSmoothing": 18,
+    "BTChubbyArm": 15,
+    "BTShoulders": 9
+   }
+  },
+  "Russell": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Jacks_BountyHunter",
+     "034A5F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 36,
+    "BTTraps": 39,
+    "BTPectorals": 33,
+    "BTBiceps": 37,
+    "BTAbDefinition": 23,
+    "BTThigh": 36
+   }
+  },
+  "Sanctuary Joe": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Sanctuary_Joe",
+     "0392E5"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 33,
+    "BTChestSmoothing": 37,
+    "BTChubbyArm": 23,
+    "BTShoulders": 0
+   }
+  },
+  "Scalpel": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Scalpel",
+     "00484A"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a thin man -- a doctor, an addict, a believer: narrow, round-shouldered",
+   "values": {
+    "BTThinArm": 44,
+    "ThinThigh": 40,
+    "BTNegShoulder": 46,
+    "BTNegPecMuscle": 48,
+    "BTNegChestWidth": 28,
+    "BTStomachFat": 15
+   }
+  },
+  "Skinny": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Patriot_Coach",
+     "0120A9"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a big man who eats well: heavy all over, the weight spread, no pot out front",
+   "values": {
+    "BTStomachFat": 81,
+    "BTBodyFatv2": 25,
+    "BTChestSmoothing": 51,
+    "BTChubbyArm": 46,
+    "BTChubbyLeg": 26,
+    "Hips": 23
+   }
+  },
+  "Slim": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_JetFueled_Slim",
+     "00560F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ghoul man: wasted thin under the ruined skin",
+   "values": {
+    "BTNegStomach": 53,
+    "BTThinArm": 47,
+    "ThinThigh": 49,
+    "BTNegPecMuscle": 40,
+    "BTNegShoulder": 39,
+    "BTTHinCalf": 38
+   }
+  },
+  "Strike": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Bowling_Strike",
+     "009923"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a ballplayer of the cult of the old games: strong legs and shoulders",
+   "values": {
+    "BTThigh": 39,
+    "BTCalves": 25,
+    "BTShoulders": 41,
+    "BTBiceps": 21,
+    "BTAbDefinition": 37,
+    "BTPectorals": 24,
+    "BTStomachFat": 31
+   }
+  },
+  "Teddy": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Bowling_Teddy",
+     "009925"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a big man who eats well: heavy all over, the weight spread, no pot out front",
+   "values": {
+    "BTStomachFat": 62,
+    "BTBodyFatv2": 28,
+    "BTChestSmoothing": 46,
+    "BTChubbyArm": 51,
+    "BTChubbyLeg": 21,
+    "Hips": 37
+   }
+  },
+  "Tzen": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_AudreyTzen_Tzen",
+     "01421F"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a man in command: fit, older, kept to regulation",
+   "values": {
+    "BTShoulders": 19,
+    "BTPectorals": 19,
+    "BTAbDefinition": 14,
+    "BTStomachFat": 36,
+    "BTBiceps": 3
+   }
+  },
+  "Vince": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Prostitute03M",
+     "002693"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a man who sells his looks: lean and defined",
+   "values": {
+    "BTAbDefinition": 39,
+    "BTWaist-In": 56,
+    "BTPectorals": 30,
+    "BTBiceps": 23,
+    "BTNegStomach": 38
+   }
+  },
+  "Vincent": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_VincentNPC",
+     "018205"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 32,
+    "BTChestSmoothing": 35,
+    "BTChubbyArm": 22,
+    "BTShoulders": 15
+   }
+  },
+  "Virus": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_JetFueled_Virus",
+     "005642"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a thin man -- a doctor, an addict, a believer: narrow, round-shouldered",
+   "values": {
+    "BTThinArm": 52,
+    "ThinThigh": 38,
+    "BTNegShoulder": 42,
+    "BTNegPecMuscle": 41,
+    "BTNegChestWidth": 26,
+    "BTStomachFat": 4
+   }
+  },
+  "Von Trapp": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_RadstagVonTrapp",
+     "00EEA5"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 49,
+    "BTTraps": 37,
+    "BTPectorals": 19,
+    "BTBiceps": 24,
+    "BTAbDefinition": 14,
+    "BTThigh": 25
+   }
+  },
+  "Wolf": {
+   "sex": "male",
+   "forms": [
+    [
+     "3DNPC_FO4.esp",
+     "f3DNPC_Bunker_Wolf",
+     "00891C"
+    ]
+   ],
+   "vibe": "Tales from the Commonwealth, the muscle: a big, thick heavy who blocks doors",
+   "values": {
+    "TigerSanBBMale": 36,
+    "BTShoulders": 54,
+    "BTTraps": 40,
+    "BTBiceps": 40,
+    "BTPectorals": 29,
+    "BTStomachFat": 30,
+    "BTBack": 44
+   }
+  },
+  "Colonel Whitehill": {
+   "sex": "female",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveColonelWhitehill",
+     "015D95"
+    ]
+   ],
+   "vibe": "America Rising 2, a woman in charge: trim, upright and severe",
+   "values": {
+    "ChubbyWaist": 69,
+    "WideWaistLine": 49,
+    "BreastsSmall": 13,
+    "BreastPerkiness": 24,
+    "ButtSmall": 8,
+    "Back": 3,
+    "MuscularArms": 7
+   }
+  },
+  "Paladin Davenport": {
+   "sex": "female",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_BoSPaladinDavenport",
+     "031608"
+    ]
+   ],
+   "vibe": "America Rising 2, a soldier: athletic, strong legs and shoulders, a trained body",
+   "values": {
+    "MuscularArms": 45,
+    "MuscularLegs": 36,
+    "Back": 25,
+    "ShoulderWidth": 13,
+    "ChubbyWaist": 39,
+    "WideWaistLine": 21,
+    "BreastsSmall": 17,
+    "MuscularButt": 44
+   }
+  },
+  "Vanessa": {
+   "sex": "female",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_FuryCompanyVanessaSynth",
+     "0278C6"
+    ]
+   ],
+   "vibe": "America Rising 2, a soldier: athletic, strong legs and shoulders, a trained body",
+   "values": {
+    "MuscularArms": 36,
+    "MuscularLegs": 57,
+    "Back": 26,
+    "ShoulderWidth": 21,
+    "ChubbyWaist": 42,
+    "WideWaistLine": 38,
+    "BreastsSmall": 24,
+    "MuscularButt": 43
+   }
+  },
+  "General Ward": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveGeneralWard",
+     "00150A"
+    ]
+   ],
+   "vibe": "America Rising 2, a man in command: fit, older, kept to regulation",
+   "values": {
+    "BTShoulders": 14,
+    "BTPectorals": 22,
+    "BTAbDefinition": 22,
+    "BTStomachFat": 34,
+    "BTBiceps": 27
+   }
+  },
+  "Senator Matthews": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveSenatorMatthews",
+     "01EFC1"
+    ]
+   ],
+   "vibe": "America Rising 2, a big man who eats well: heavy all over, the weight spread, no pot out front",
+   "values": {
+    "BTStomachFat": 73,
+    "BTBodyFatv2": 27,
+    "BTChestSmoothing": 61,
+    "BTChubbyArm": 43,
+    "BTChubbyLeg": 26,
+    "Hips": 30
+   }
+  },
+  "Captain Peterson": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveCaptainPeterson",
+     "00150C"
+    ]
+   ],
+   "vibe": "America Rising 2, a man in command: fit, older, kept to regulation",
+   "values": {
+    "BTShoulders": 33,
+    "BTPectorals": 26,
+    "BTAbDefinition": 5,
+    "BTStomachFat": 42,
+    "BTBiceps": 16
+   }
+  },
+  "Captain Wyatt": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveVendorCaptainWyatt",
+     "031C40"
+    ]
+   ],
+   "vibe": "America Rising 2, a man in command: fit, older, kept to regulation",
+   "values": {
+    "BTShoulders": 24,
+    "BTPectorals": 29,
+    "BTAbDefinition": 19,
+    "BTStomachFat": 37,
+    "BTBiceps": 5
+   }
+  },
+  "Lieutenant Fitzpatrick": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveLieutenantFitzpatrick",
+     "001311"
+    ]
+   ],
+   "vibe": "America Rising 2, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 46,
+    "BTTraps": 38,
+    "BTPectorals": 23,
+    "BTBiceps": 45,
+    "BTAbDefinition": 26,
+    "BTThigh": 19
+   }
+  },
+  "Staff Sergeant Toby": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveStaffSergeantToby",
+     "001310"
+    ]
+   ],
+   "vibe": "America Rising 2, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 29,
+    "BTTraps": 40,
+    "BTPectorals": 39,
+    "BTBiceps": 37,
+    "BTAbDefinition": 27,
+    "BTThigh": 18
+   }
+  },
+  "Chief Engineer Myers": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveChiefEngineerMyers",
+     "01EFBD"
+    ]
+   ],
+   "vibe": "America Rising 2, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 41,
+    "BTChestSmoothing": 34,
+    "BTChubbyArm": 17,
+    "BTShoulders": 12
+   }
+  },
+  "Doctor Dagless": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_EnclaveVendorDoctorDagless",
+     "00130E"
+    ]
+   ],
+   "vibe": "America Rising 2, a thin man -- a doctor, an addict, a believer: narrow, round-shouldered",
+   "values": {
+    "BTThinArm": 49,
+    "ThinThigh": 38,
+    "BTNegShoulder": 52,
+    "BTNegPecMuscle": 51,
+    "BTNegChestWidth": 32,
+    "BTStomachFat": 24
+   }
+  },
+  "X7-33": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_InstituteX7-33",
+     "028935"
+    ]
+   ],
+   "vibe": "America Rising 2, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 30,
+    "BTTraps": 52,
+    "BTPectorals": 42,
+    "BTBiceps": 39,
+    "BTAbDefinition": 22,
+    "BTThigh": 34
+   }
+  },
+  "Drew": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_MinutemenDrew",
+     "0307BC"
+    ]
+   ],
+   "vibe": "America Rising 2, a soldier: drilled and solid",
+   "values": {
+    "BTShoulders": 38,
+    "BTTraps": 44,
+    "BTPectorals": 36,
+    "BTBiceps": 41,
+    "BTAbDefinition": 34,
+    "BTThigh": 19
+   }
+  },
+  "Axel": {
+   "sex": "male",
+   "forms": [
+    [
+     "AmericaRising2.esm",
+     "AR_RETravelKMK03_Merchant",
+     "0322AF"
+    ]
+   ],
+   "vibe": "America Rising 2, a working man of the wasteland: an ordinary, average body",
+   "values": {
+    "BTStomachFat": 49,
+    "BTChestSmoothing": 20,
+    "BTChubbyArm": 17,
+    "BTShoulders": 21
+   }
   }
  }
 }

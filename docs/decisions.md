@@ -1625,3 +1625,39 @@ body is built on CBBE's, with the same slider names for the same shapes, which i
 exists to tell apart from coincident names (Fusion Girl). So a group named Anatomy or starting with CBBE is one
 family now, both ways, in the plugin (Presets.cpp Kin) and the generator (kin). Ivy ships the prebuilt body, so
 "re-save it on the Anatomy set in BodySlide" was no answer for its players. alasdairn: "Do it".
+
+## S-99 — your own presets on NPCs: a share, off by default (the owner, 2026-11-11)
+
+Three players asked on the Posts tab: anigialtor (+1 from Enryu916) wants his own shapes on random raiders and
+settlers, not only through the picker; Ghost554324 misses presets from other mods; 815710121 finds the bundled
+waists too wide and wants only their own presets. The owner approved it ONLY as a separate function, OFF by
+default, because Silhouette's own distribution is lore-based per faction -- his explicit exception to
+features-on-by-default.
+
+MCM, Settings, "Your own presets on NPCs": a slider 0..100 (fOwnShare, default 0). Out of every 100 people
+Silhouette's own bodies reach -- its faction pools (S-72), the random pool for config races (S-91) and BodyGen's
+roll -- that many wear one of the player's own presets instead: the ones S-76 reads at game start (the picker's
+own list, of the person's sex). 0 is off, 100 is only yours. Who is in the share and which preset they draw both
+come from the reference id and Back to random's salt (Rules.cpp InShare, Pick), with different keys, so the same
+people take the same preset every time and a new draw moves both. Named characters keep their bodies (their
+form-id line comes first), and so do the player's choices, name rules and the user's own faction rules; race
+pools (S-86) are untouched. With no own preset of a sex, that sex keeps Silhouette's bodies. The verdict is a
+faction-tier draw (Tier::kFaction, the own list as its options), so S-52 keeps a met person's preset while it is
+still installed. Raised, people take your presets as you next meet them; lowered, a body of yours someone already
+has stays until Reset, unless their faction's pool takes them back. Configure gained the share: protocol 10.
+
+## S-100 — named people of Tales from the Commonwealth and America Rising 2 (the owner, 2026-11-11)
+
+DNater98 asked for fixed bodies for the named NPCs of popular mods, "Tales of the Commonwealth, America Rising 2
+and the like"; the owner approved. 120 more named people (38 women, 82 men): 106 from Tales from the Commonwealth
+(3DNPC_FO4.esp) -- Audrey, R4-04 and MARA, Niah, Birdie, John Castle and his clones, the baseball cult, the
+McConnells, Paradise's settlers -- and 14 from America Rising 2 (Colonel Whitehill, General Ward, Senator
+Matthews, Paladin Davenport, Vanessa ...). The 13 of theirs S-93 already gave a body keep it.
+
+Their bodies come from their ROLE, not a story read for each (S-66): 23 role bodies (tools/pool/mod_characters.py
+-- raider, soldier, Enclave officer, ballplayer, hippie, Child of Atom, ghoul, heavy, thin ...), each value moved by
+at most 12 points by a hash of the person's name, so no two share a body, the same person always has the same one,
+and every value stays inside 0..100 and the women's caps (S-96). Sardonic where the name invites it (S-77): Skinny
+and Fats Dixon are heavy. Every record and its sex was read from the plugins (characters.py --check). Left out:
+children, robots, corpses, generic ranks (Enclave Private, Fury Company Trooper), voices and people named only by
+a job. A line whose plugin is not installed costs nothing (S-93).

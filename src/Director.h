@@ -152,6 +152,7 @@ namespace SH
 		bool            orefit{ true };  // MCM, and SetORefit (S-24)
 		VarietySwitches variety;
 		bool            factionPools{ true };  // MCM: Silhouette's own faction pools (S-72, S-73)
+		int             ownShare{ 0 };         // MCM: out of 100, how many draw from the player's own presets (S-99), off by default
 	};
 
 	enum class Switch

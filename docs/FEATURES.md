@@ -18,7 +18,7 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 - A **bust floor** keeps every woman's bust small but real (no concave chest the breast physics would fold),
   in the pool, the faction pools and the named characters alike (S-65 amendment, seventh wave).
 - The pickers hold Silhouette's own bodies and the presets CBBE and BodyTalk themselves ship (CBBE Curvy,
-  Slim, Athletic ..., the Imitation and SevenBase presets; BT - Average, Muscular ...): 196 for women, 188 for
+  Slim, Athletic ..., the Imitation and SevenBase presets; BT - Average, Muscular ...): 294 for women, 357 for
   men (S-74). Your other installed BodySlide presets join the NPC picker's Next / Previous by themselves
   (S-76); in the MCM dropdowns only when you run the generator yourself. None is ever random. Zeroed presets (`CBBE Zeroed Sliders`, `BT - Zero`) are left out of random, told by their
   measured values (S-8).
@@ -39,7 +39,7 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
 
 ## The named people
 
-- **207 companions and named NPCs** (90 women, 117 men) each have a body of their own that fits who they are
+- **327 companions and named NPCs** (128 women, 199 men) each have a body of their own that fits who they are
   (S-66): Piper, Cait, Curie, Magnolia, Desdemona, Glory, Haylen, Madison Li, Mama Murphy, Marcy Long,
   Fahrenheit, Irma, Mags Black, Nisha, Kasumi Nakano, Ronnie Shaw, Myrna, Doctor Amari, Trudy, Ellie Perkins,
   Cricket, Carla, Captain Avery, Aster, **Ivy** (CompanionIvy), **Geneva**, Polly, Cathy, Becky Fallon and
@@ -55,6 +55,11 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
   Oberly, Tektus, War and Fat Min (who never went hungry) and 78 more men. Named ghouls -- Hancock, Daisy,
   Ham, Oswald -- get theirs too: they wear the human body, and a form-id line reaches them. A plugin you do
   not have costs nothing; a rule of yours for the same NPC wins.
+- **Tales from the Commonwealth and America Rising 2** (S-100): 120 more named people, each with a fixed body
+  of their own instead of a roll -- Audrey, R4-04, Niah, Birdie, John Castle, the baseball cult, the McConnells,
+  Paradise's settlers; Colonel Whitehill, General Ward, Senator Matthews, Paladin Davenport and more. Their
+  bodies come from their role (raider, soldier, officer, ballplayer, ghoul ...) with a fixed variation by name,
+  so no two share one. Skinny and Fats Dixon are heavy.
 - **Ivy wears the body made for her** (S-92, lifting S-90's blacklist of her). Silhouette never changes
   anyone's height. Met her while 0.3.9-0.4.0 left her alone? Reset on her gives her that body.
 - **The Diamond City pack** (S-77): the people the author's saves meet most, each drawn from their story and
@@ -131,6 +136,10 @@ order. Each item names where it is settled: `S-#` is a decision in [decisions.md
   generator (S-76). They are never random. `Silhouette.log` says how many joined and which were left out, and
   why (made for another body, fits too little, an outfit copy). CBBE presets count as made for Anatomy's
   body and Anatomy's for CBBE's: Anatomy is built on CBBE (S-98).
+- **Your own presets on NPCs** (S-99), off by default: MCM's "Your own presets on NPCs" slider says how many
+  of every 100 people Silhouette's own bodies reach -- its faction bodies and everyone's random body -- wear
+  one of your BodySlide presets instead. 0 is off, 100 is only yours. The same people get the same preset
+  every time. Named characters keep their bodies; your picks and your own rules always win.
 
 - **Your character** is never randomised: the pool's most average body (Plain F01 / Plain M02) unless you
   choose one in MCM; *Apply to my character*, *Back to the default*, *Which body do I have?* (S-7, S-10). This

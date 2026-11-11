@@ -27,6 +27,7 @@ ROOT = HERE.parent.parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent))
 import generate  # noqa: E402
+import mod_characters  # noqa: E402
 import plugin_forms  # noqa: E402
 from measure import measure  # noqa: E402
 from mesh import Body  # noqa: E402
@@ -900,6 +901,8 @@ CHARACTERS = [
      {'TigerSanBBMale': 40, 'BTShoulders': 55, 'BTBack': 50, 'BTTraps': 45, 'BTBiceps': 50, 'BTStomachFat': 45,
       'BTBodyFatv2': 20, 'BTThigh': 40}),
 ]
+# S-100: the named people of Tales from the Commonwealth and America Rising 2, a body by role (mod_characters.py).
+CHARACTERS += mod_characters.characters()
 
 
 def sidecar():

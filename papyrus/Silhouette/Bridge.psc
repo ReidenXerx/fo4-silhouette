@@ -49,7 +49,7 @@ Int Property SourcePicker = 3 AutoReadOnly
 Int Property LaneUrgent = 0 AutoReadOnly
 ; What RunOrder below does, and the natives the menu calls. Silhouette.dll says what it
 ; expects; they must agree. 4: ResetEveryone (S-68).
-Int Property Protocol = 9 AutoReadOnly
+Int Property Protocol = 10 AutoReadOnly
 ; "Reset everyone" forgets every body, picks included: a second press within this long
 ; confirms the first. A minute, not ten seconds: the clock runs while the player reads the
 ; first press's message box, and the owner's first try ran out reading it.
@@ -820,11 +820,18 @@ Function PushSettings()
 	Bool nipples = True
 	Bool genitals = True
 	Bool factionPools = True
+	Int ownShare = 0
 	If _mcm && MCM.GetModSettingInt(ModName, "iDefaults:Meta") == 1
 		orefit = MCM.GetModSettingBool(ModName, "bORefit:General")
 		nipples = MCM.GetModSettingBool(ModName, "bNippleRand:General")
 		genitals = MCM.GetModSettingBool(ModName, "bGenitalRand:General")
 		factionPools = MCM.GetModSettingBool(ModName, "bFactionPools:General")
+		ownShare = Math.Floor(MCM.GetModSettingFloat(ModName, "fOwnShare:General") + 0.5)
+		If ownShare < 0
+			ownShare = 0
+		ElseIf ownShare > 100
+			ownShare = 100
+		EndIf
 		_hideNotices = !MCM.GetModSettingBool(ModName, "bNotices:General")
 	ElseIf _refitKeyword
 		Return
@@ -846,11 +853,12 @@ Function PushSettings()
 	If factionPools
 		now += 8
 	EndIf
+	now += 16 * ownShare
 	If now == _pushed
 		Return
 	EndIf
 	_pushed = now
-	Silhouette:DLL.Configure(orefit, nipples, genitals, factionPools)
+	Silhouette:DLL.Configure(orefit, nipples, genitals, factionPools, ownShare)
 EndFunction
 
 ;---------------------------------------------------------------------------
