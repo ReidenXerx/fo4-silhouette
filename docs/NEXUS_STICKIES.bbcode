@@ -1,11 +1,10 @@
 === STICKY: Every feature ===
 [b]Silhouette 0.6.0: every feature[/b]
-The full list, each item as the code does it. Decision numbers (S-#) point into [url=https://github.com/ReidenXerx/fo4-silhouette/blob/master/docs/decisions.md]decisions.md[/url].
+Each item as the code does it; S-# point into [url=https://github.com/ReidenXerx/fo4-silhouette/blob/master/docs/decisions.md]decisions.md[/url].
 
 [b]Game versions[/b]
 [list]
-[*]One DLL for old-gen 1.10.163 and Anniversary 1.11.x, through [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url]. Verified in game on both (S-75).
-[*]Classes laid out differently than the plugin reads: it switches itself off with one log line, never half on.
+[*]One DLL for old-gen 1.10.163 and Anniversary 1.11.x, through [url=https://www.nexusmods.com/fallout4/mods/108394]Runtime Database[/url] (S-75).
 [*]Old-gen without Runtime Database: 0.1.1, in Old files.
 [/list]
 
@@ -14,46 +13,46 @@ The full list, each item as the code does it. Decision numbers (S-#) point into 
 [*]Every NPC gets a body the first time you meet them, and keeps it for the rest of the save.
 [*]Random bodies come from Silhouette's own pool: 41 per sex, 18 Plain, 17 Rough, 6 Fine. Odds 70 / 22 / 8 % (S-65).
 [*]A bust floor keeps every woman's bust small but real: no concave chest for the breast physics to fold.
-[*]Which races get bodies is a config key (HumanRace by default). Add a modded race that wears the CBBE or BodyTalk body to [font=Courier New]distributeRaces[/font] and its people get bodies from the random pool at the next game start: no Python, no generator (S-91).
-[*]One body mod is enough: a sex with no body Silhouette supports (CBBE for women, BodyTalk for men, built in BodySlide) is left alone, with a log line and one message box a launch (S-78).
+[*]Races that get bodies: a config key (HumanRace by default). Add a modded race wearing CBBE or BodyTalk to [font=Courier New]distributeRaces[/font] and it draws from the random pool at the next start (S-91).
+[*]One body mod is enough: a sex without a supported body (CBBE women, BodyTalk men) is left alone, with a log line and one message box (S-78).
 [/list]
 [b]The named people[/b]
 [list]
-[*]327 named people (128 women, 199 men) each have a body that fits who they are: Piper, Cait, Curie, Ivy, Geneva, Preston, Danse, Deacon, Hancock and more (S-66). Everyone Anatomy Tailor's named outfits dress has one to match (S-93), named ghouls too; Fat Min never went hungry. The Diamond City pack is sardonic on purpose: the mayor is a heavy fat cat (S-77, S-94). Every body stays inside its sliders (S-96). A rule of yours for the same NPC wins.
-[*]Tales from the Commonwealth and America Rising 2: 120 named people with a fixed body each, by their role, never the same twice: Audrey, R4-04, Niah, Birdie, John Castle, the baseball cult; Colonel Whitehill, General Ward, Paladin Davenport and more (S-100).
+[*]327 named people (128 women, 199 men) each have a body that fits who they are: Piper, Cait, Curie, Ivy, Preston, Danse, Hancock and more (S-66). Everyone Anatomy Tailor's named outfits dress too (S-93), named ghouls included. Diamond City's are sardonic: the mayor is a fat cat (S-77). Every body stays inside its sliders (S-96). A rule of yours for the same NPC wins.
+[*]Tales from the Commonwealth and America Rising 2: 120 more, a fixed body each by role, never the same twice: Audrey, R4-04, Niah, Birdie, John Castle; Colonel Whitehill, General Ward and more (S-100).
 [/list]
 [b]Factions[/b]
 [list]
 [*]Eleven factions draw from ten bodies per sex in their own look (S-72): the Brotherhood, Minutemen, Gunners, raiders, the Disciples, Operators and Pack, the Triggermen, the Institute, the Railroad and the Children of Atom.
-[*]A faction outranks the random pool and loses to per-NPC rules. Your own faction rule wins. A switch in MCM turns it off.
+[*]A faction outranks random and loses to per-NPC rules; your own faction rule wins. An MCM switch turns it off.
 [/list]
 [b]Your rules[/b]
 [list]
-[*]OBody NG's own JSON keys and priority, including blacklists, per-NPC, plugin, race and faction rules, and includes/*.json. See the Settings sticky.
+[*]OBody NG's JSON keys and priority: blacklists, per-NPC, plugin, race and faction rules, includes/*.json. See the Settings sticky.
 [/list]
 [b]Picking bodies in game[/b]
 [list]
-[*]The picker window: aim at someone (or no one, for yourself) and press its hotkey, or use MCM. A grid of pictures of every preset that fits them, with filters; a click puts one on them live while the camera frames them and they stand still, and so do your companions nearby (S-97). Apply keeps it, Cancel puts back exactly what they had. Mouse; your controls are off while it is open (S-79).
+[*]The picker window: aim at someone (or no one, for yourself) and press its hotkey, or use MCM. A grid of pictures of every preset that fits them, with filters; a click puts it on them live while they and your companions stand still (S-97). Apply keeps it, Cancel puts back exactly what they had. Mouse; your controls are off while it is open (S-79).
 [*]Your character is never randomised: an average pool body unless you choose one.
 [*]The old picker hotkeys stay: Pick, Next / Previous, Keep, Cancel (S-22).
 [*]The pickers hold Silhouette's own bodies and CBBE's and BodyTalk's stock presets: 294 women, 357 men (S-74). Your own BodySlide presets join by themselves (S-76).
-[*]Your own presets on NPCs (S-99), off by default: an MCM slider says how many of every 100 NPCs wear one of your BodySlide presets instead of Silhouette's bodies, faction bodies included. 0 is off, 100 is only yours. Named characters keep theirs; your picks and rules win.
+[*]Your own presets on NPCs (S-99), off by default: an MCM slider sets how many of every 100 NPCs wear your BodySlide presets, faction bodies included; 100 is only yours. Named characters keep theirs; your picks and rules win.
 [/list]
 [b]The people around you[/b]
 [list]
 [*]Count the bodies around me, Refresh the people around me, Give the people around me new bodies.
 [*]Reset on one NPC: a named character gets their own body back, anyone else rolls again. Other mods' keyed morphs (AAF, pregnancy) stay.
-[*]Reset everyone: a fresh start for the whole save, your picks included; the people around you change at once, everyone else when met. The log names each person and the body they got.
+[*]Reset everyone: a fresh start for the whole save, your picks included; the people around you change at once, everyone else when met.
 [*]Fresh start: a save that never had Silhouette gets Reset everyone by itself on its first load, with a notification. A switch turns it off (S-70).
 [/list]
 [b]Clothing (ORefit)[/b]
 [list]
-[*]While someone is dressed: breasts held together and lifted. Under heavy clothes (armour, jacket, coat, duster... told by the item's name) the nipples are flattened (S-48).
+[*]While someone is dressed: breasts held together and lifted. Under heavy clothes (armour, jackets, coats, by the item's name) the nipples are flattened (S-48).
 [*]It only raises sliders, under a keyword of its own: undressed, they are exactly their own body again.
 [/list]
 [b]Variety[/b]
 [list]
-[*]Every person their own nipples and, on bodies that have the sliders, genital shape for women and ball size for men. Never the shaft, never a runtime state. Two MCM switches.
+[*]Every person their own nipples and, on bodies that have the sliders, genital shape for women and ball size for men. Two MCM switches.
 [/list]
 [b]Other mods[/b]
 [list]
