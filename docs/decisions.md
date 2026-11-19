@@ -1661,3 +1661,11 @@ and every value stays inside 0..100 and the women's caps (S-96). Sardonic where 
 and Fats Dixon are heavy. Every record and its sex was read from the plugins (characters.py --check). Left out:
 children, robots, corpses, generic ranks (Enclave Private, Fury Company Trooper), voices and people named only by
 a job. A line whose plugin is not installed costs nothing (S-93).
+
+## S-101 — MCM help text stays short (avj2222 via the Watcher, 2026-11-19)
+
+MCM shrinks a help text until it fits its box, and Silhouette's longest (ORefit, 795 characters; the own-presets
+slider, 580; Reset everyone, 532) came out too small to read. Every help and page text is now about 200 characters
+or less (the longest 224): what it does, what wins, whether it can be undone. The mechanism and the edge cases live
+on the Nexus "Every feature" sticky and here, not in the menu. A new MCM text keeps to that length. 0.6.1, MCM text
+only; the generated data is unchanged (build 2aa8cc7f62cc).

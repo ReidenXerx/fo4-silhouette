@@ -815,12 +815,11 @@ def write_mcm(folder, picker, default_index, average, build):
 
     needs = ' Needs Silhouette.dll and Silhouette.esp.'
     content = [
-        {'type': 'text', 'text': 'Every NPC gets a body the first time you meet them, and keeps it: most '
-                                 'people one of Silhouette\'s own pool (mostly ordinary, some rough, a rare '
-                                 'fine one), the named characters their own, and the Brotherhood, raiders, '
-                                 'Gunners and the other factions one of their faction\'s pool. Your own '
-                                 'BodySlide presets are all in the lists below. Your character gets the most '
-                                 'average body of the pool unless you choose one here.'},
+        # MCM shrinks long help text until it cannot be read (avj2222, 11-19): keep every one short;
+        # the full story is on the Nexus "Every feature" sticky.
+        {'type': 'text', 'text': 'Every NPC gets a body when first met and keeps it: named characters their own, '
+                                 'factions one of their pool, everyone else Silhouette\'s pool. Your character '
+                                 'gets the most average body unless you choose one here.'},
         {'type': 'section', 'text': 'Your character'},
     ]
     for g, label in (('female', 'If your character is female'), ('male', 'If your character is male')):
@@ -840,9 +839,8 @@ def write_mcm(folder, picker, default_index, average, build):
     avg = ' / '.join(average[g] for g in ('female', 'male') if average.get(g))
     content += [
         button('Apply to my character',
-               'Gives your character the preset chosen above for their sex. It replaces the body '
-               'sliders LooksMenu and BodyGen set, including ones you set in LooksMenu yourself; '
-               'body morphs other mods add are left alone. Close the menu to see it.',
+               'Gives your character the preset chosen above. It replaces the body sliders of LooksMenu '
+               'and BodyGen, yours too; other mods\' morphs stay. Close the menu to see it.',
                'ApplyChosen'),
         button('Back to the default', f'The most average body of the pool: {avg}.', 'ApplyDefault'),
         button('Which body do I have?', 'Names the preset Silhouette last gave your character.',
@@ -852,32 +850,22 @@ def write_mcm(folder, picker, default_index, average, build):
                'How many people nearby have a Silhouette body, and in how many different presets. '
                'Each one, with its preset, is written to the Papyrus log.', 'Census'),
         button('Refresh the people around me',
-               'Everyone nearby keeps their preset but gets its values from this build again -- for '
-               'after you edited a preset or rebuilt your bodies. Body morphs other mods add are '
-               'left alone. With Silhouette.dll each keeps their own nipple and genital variety; '
-               'without it the preset\'s values alone are written.', 'Refresh'),
+               'Everyone nearby keeps their preset but gets its values again: for after you edited a preset '
+               'or rebuilt your bodies. Other mods\' morphs stay.', 'Refresh'),
         button('Give the people around me new bodies',
-               'Everyone nearby (never your character) rolls a new body, as if met for the first '
-               'time, and the rules by name and faction get their say: someone a rule covers draws '
-               'again from its presets. With Silhouette.dll, body morphs other mods keep under their '
-               'own keyword are kept, and anyone in an AAF scene gets theirs when the scene ends; '
-               'without it those morphs are cleared too. Cannot be undone.',
+               'Everyone nearby (never you) rolls a new body as if met for the first time; name and '
+               'faction rules draw again. Other mods\' morphs are kept. Cannot be undone.',
                'Reroll'),
         # S-68 (owner poll): the whole save, not only who is near, and the bodies you picked too.
         bridge_button('Reset everyone',
-                      'A fresh start: forgets every body Silhouette gave -- the ones you picked too -- and '
-                      'decides them all again, as if everyone were met for the first time. Named characters '
-                      'get their own body, the rules by name and faction draw again, everyone else rolls a '
-                      'new body from the pool. People around you change at once; everyone else the next time '
-                      'you meet them (the save remembers the reset). Body morphs other mods keep under their '
-                      'own keyword are kept. Press it twice to confirm. Cannot be undone.' + needs,
+                      'Forgets every body Silhouette gave, your picks too, and decides them all again. People '
+                      'nearby change now, the rest when next met. Press twice to confirm. Cannot be undone.'
+                      + needs,
                       'MenuResetEveryone'),
         {'type': 'section', 'text': 'Regeneration window'},
-        {'type': 'text', 'text': 'LooksMenu only shapes people who hold no body morphs at all, so '
-                                 'someone another mod already marked (an AAF morph left by a scene) '
-                                 'never gets a body. For 24 in-game hours after Silhouette first '
-                                 'loads, such people around you are given one, and the other mod\'s '
-                                 'morphs are kept. Needs Silhouette.esp.'},
+        {'type': 'text', 'text': 'LooksMenu skips people another mod already gave morphs (an AAF scene). For 24 '
+                                 'in-game hours after Silhouette first loads, such people nearby get a body '
+                                 'and keep those morphs. Needs Silhouette.esp.'},
         button('How is the regeneration window doing?',
                'Open or closed, the in-game hours left, and how many people it has given a body.',
                'RegenerationStatus'),
@@ -885,17 +873,13 @@ def write_mcm(folder, picker, default_index, average, build):
                'Starts another 24 in-game hours of giving bodies to people other mods marked first. '
                'People it already handled are not handled twice.', 'OpenRegenerationWindow'),
     ]
-    window_help = ('A window beside them lists every preset that fits their body, with filters; a click puts one '
-                   'on them live, Apply keeps it, Cancel puts back what they had. It opens when you close this '
-                   'menu.')
     npcs = [
-        {'type': 'text', 'text': 'Aim at someone, then open this menu -- or Pick them with the hotkey below '
-                                 'and open it any time. Anyone you give a preset keeps it: the rules by name '
-                                 'and faction no longer change them.' + needs},
+        {'type': 'text', 'text': 'Aim at someone, then open this menu, or Pick them with the hotkey. Anyone you '
+                                 'give a preset keeps it; name and faction rules no longer change them.' + needs},
         {'type': 'section', 'text': 'The picker window'},
         bridge_button('Open the picker window',
-                      'On the NPC you aimed at in the half minute before opening this menu, or on you when you '
-                      'aimed at nobody. ' + window_help + ' The hotkey below opens it at once.' + needs,
+                      'On the NPC you aimed at in the last half minute, or on you. Click a preset to see it live; '
+                      'Apply keeps it, Cancel puts back what they had. Opens when you close this menu.',
                       'MenuOpenWindow'),
         {'type': 'section', 'text': 'Their body'},
     ]
@@ -910,25 +894,18 @@ def write_mcm(folder, picker, default_index, average, build):
         })
     npcs += [
         bridge_button('Give them this preset',
-                      'The preset chosen above for their sex, on the NPC you picked -- or, with nobody '
-                      'picked, the last NPC you aimed at in the half minute before opening the menu. Their '
-                      'own nipple and genital variety comes with it while those switches are on (Settings). '
-                      'Close the menu to see it.', 'MenuApply'),
+                      'The preset chosen above, on the NPC you picked or last aimed at. Their own nipple and '
+                      'genital variety comes with it while those switches are on. Close the menu to see it.',
+                      'MenuApply'),
         bridge_button('Reset',
                       'Forget the body you gave them: Silhouette decides again, as if they were met for the '
-                      'first time. A named character gets their own body back; someone a rule by name or '
-                      'faction covers draws again from that rule\'s presets -- a different one whenever the '
-                      'rule lists more than one -- and keeps the new draw; anyone else rolls a new body from '
-                      'the pool. Body morphs other mods keep under their own keyword (AAF, pregnancy) are '
-                      'kept. In the middle of an AAF scene it waits for the scene to end.',
+                      'first time. Other mods\' morphs (AAF, pregnancy) stay; mid-scene it waits for the end.',
                       'MenuRandom'),
         bridge_button('Which body do they have?', 'The preset their body carries, and who chose it.',
                       'MenuWhich'),
         {'type': 'section', 'text': 'Hotkeys: try presets on them in the world'},
-        {'type': 'text', 'text': 'Pick someone, then Next and Previous put each preset on them in turn '
-                                 '(a second or so each: LooksMenu is reached through Papyrus, one value '
-                                 'a frame, and the picker goes before any other work). Keep makes it '
-                                 'theirs; Cancel puts back exactly what they had.'},
+        {'type': 'text', 'text': 'Pick someone, then Next and Previous put each preset on them in turn (about a '
+                                 'second each). Keep makes it theirs; Cancel puts back what they had.'},
     ]
     npcs += [{'type': 'hotkey', 'id': kid, 'text': text, 'help': text + '.' + needs}
              for kid, text, _fn in HOTKEYS]
@@ -936,23 +913,14 @@ def write_mcm(folder, picker, default_index, average, build):
     settings = [
         {'type': 'section', 'text': 'While they are dressed'},
         {'type': 'switcher', 'id': 'bORefit:General', 'text': 'ORefit',
-         'help': 'A clothed shape while someone is dressed: breasts held together and lifted, and under '
-                 'heavy clothes -- armour, jackets, coats, told by the item\'s name -- the nipple sliders '
-                 'flattened. That flattening only shows on heavy outfits whose meshes carry the nipple '
-                 'sliders (mod outfits built with them in BodySlide); no vanilla or DLC heavy outfit does, so '
-                 'on those it changes nothing you can see. It only ever raises a slider, so a body that is already '
-                 'fuller keeps its own, and the moment they undress they are exactly their own body again. '
-                 'Your character is never refit, nor anyone in power armour. Removing Silhouette.esp takes '
-                 'every clothed shape off by itself, and without a working Silhouette.dll the shapes left '
-                 'on people are taken off as you meet them.' + needs,
+         'help': 'A clothed shape: breasts held together and lifted; heavy clothes flatten the nipples (on '
+                 'outfits built with those sliders). Undressed, their own body again. Never you or power armour.'
+                 + needs,
          'valueOptions': {'sourceType': 'ModSettingBool'}},
         {'type': 'section', 'text': 'Variety in the bodies Silhouette gives'},
-        {'type': 'text', 'text': 'BodyGen rolls every NPC their own nipples (and genital shape for women, '
-                                 'ball size for men) from the generated files, always. These two decide '
-                                 'the same for bodies Silhouette itself gives -- the rules, the picker, '
-                                 'other mods -- and for the touch-up of bodies it gave before: whether the '
-                                 'variety such a body is missing gets added. Taking a runtime state or the '
-                                 'shaft out of a body happens either way.'},
+        {'type': 'text', 'text': 'BodyGen always rolls each NPC their own nipples (and genital shape for women, '
+                                 'ball size for men). These two do the same for bodies Silhouette gives itself: '
+                                 'rules, the picker, other mods.'},
         {'type': 'switcher', 'id': 'bNippleRand:General', 'text': 'Nipple variety',
          'help': 'Each person their own nipple size, areola and tip.', 'valueOptions': {'sourceType': 'ModSettingBool'}},
         {'type': 'switcher', 'id': 'bGenitalRand:General', 'text': 'Genital variety',
@@ -960,31 +928,20 @@ def write_mcm(folder, picker, default_index, average, build):
          'valueOptions': {'sourceType': 'ModSettingBool'}},
         {'type': 'section', 'text': 'What Silhouette does by itself'},
         {'type': 'switcher', 'id': 'bFreshStart:General', 'text': 'Fresh start for saves new to Silhouette',
-         'help': 'The first time a save loads with Silhouette, everyone you already met still has the body they '
-                 'had before, since a body is only given to someone who has none. On, Silhouette presses Reset '
-                 'everyone for that save by itself, once -- replacing other mods\' bodies and sliders set by hand '
-                 'on the people it reaches too. Off, they keep them until you press Reset everyone yourself; '
-                 'switched on in the save\'s first 24 in-game hours, it still happens.' + needs,
+         'help': 'On a save new to Silhouette, people you already met keep their old bodies. On, Silhouette '
+                 'presses Reset everyone once by itself for that save, replacing other mods\' bodies too.' + needs,
          'valueOptions': {'sourceType': 'ModSettingBool'}},
         {'type': 'switcher', 'id': 'bFactionPools:General', 'text': 'Faction bodies',
-         'help': 'The Brotherhood, the Minutemen, Gunners, raiders, Nuka-World\'s gangs, the Triggermen, the '
-                 'Institute, the Railroad and the Children of Atom each draw from a pool of their own, in their '
-                 'own look. Off, they draw from the same pool as everyone else; your own faction rules apply '
-                 'either way. It decides who is given a body from now on: a faction body someone already has '
-                 'stays until Reset.' + needs,
+         'help': 'The Brotherhood, Minutemen, Gunners, raiders, the Institute and other factions draw from pools '
+                 'in their own look. Off, they share everyone\'s pool. Given bodies stay until Reset.' + needs,
          'valueOptions': {'sourceType': 'ModSettingBool'}},
         {'type': 'slider', 'id': 'fOwnShare:General', 'text': 'Your own presets on NPCs',
-         'help': 'Out of every 100 NPCs Silhouette\'s own bodies reach -- its faction bodies and everyone else\'s '
-                 'random body -- how many wear one of YOUR BodySlide presets instead (the ones the picker lists '
-                 'from Data\\Tools\\BodySlide\\SliderPresets). 0 is off, 100 is only yours. Named characters keep '
-                 'their own bodies, and your choices in the picker and your own rules in the config always win. '
-                 'Raised, people take your presets as you next meet them; lowered, a body of yours someone '
-                 'already has stays until Reset, unless their faction\'s pool takes them back.' + needs,
+         'help': 'How many of every 100 NPCs Silhouette shapes wear one of YOUR BodySlide presets instead. 0 is '
+                 'off, 100 only yours. Named characters, your picks and your rules always win.' + needs,
          'valueOptions': {'min': 0, 'max': 100, 'step': 5, 'formatString': '{0}%', 'sourceType': 'ModSettingFloat'}},
         {'type': 'switcher', 'id': 'bNotices:General', 'text': 'Tell me when a change I asked for waits',
-         'help': 'When a change you asked for -- a Reset, a preset given, a picker try -- has to wait because '
-                 'another mod has them busy in a scene, a notification says so, and another when it is done.'
-                 + needs,
+         'help': 'When a change you asked for has to wait because another mod has them busy in a scene, a '
+                 'notification says so, and another when it is done.' + needs,
          'valueOptions': {'sourceType': 'ModSettingBool'}},
         {'type': 'section', 'text': 'Silhouette'},
         {'type': 'button', 'text': 'How is Silhouette doing?',
