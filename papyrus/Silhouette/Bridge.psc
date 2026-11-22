@@ -271,6 +271,9 @@ Function OpenWindowOn(Int aiTarget)
 		; game (2026-09-30) clicked through. 0.3.0 added the menu input context (0x8) for the gamepad, and a
 		; player could click nothing, not even Esc, and had to quit the game (0.3.1).
 		data.menuFlags = 0x8018496
+		; S-102: movieFlags is the Scaleform scale mode. F4SE's default 3 is NoBorder: on a 32:9 screen the 1280x720
+		; window scaled by width (x4 at 5120x1440), twice too big and cut off (lilalien26845, 11-22). 1 = ShowAll fits it.
+		data.movieFlags = 1
 		; Inherit the HUD's colours, and keep the cursor even with a gamepad plugged in: F4SE's "check for
 		; gamepad" (2) takes the cursor away, and the window is then out of reach of the mouse.
 		data.extendedFlags = 1

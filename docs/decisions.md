@@ -1669,3 +1669,12 @@ slider, 580; Reset everyone, 532) came out too small to read. Every help and pag
 or less (the longest 224): what it does, what wins, whether it can be undone. The mechanism and the edge cases live
 on the Nexus "Every feature" sticky and here, not in the menu. A new MCM text keeps to that length. 0.6.1, MCM text
 only; the generated data is unchanged (build 2aa8cc7f62cc).
+
+## S-102 — The picker window scales ShowAll (lilalien26845 via the Watcher, 2026-11-22)
+
+Bridge.psc registered the window without setting `UI:MenuData.movieFlags`, and F4SE passes that field to
+BSScaleformManager::LoadMovie as the Scaleform scale mode: its default 3 is NoBorder, which fills the screen and
+crops. The window is a 1280x720 stage, so on a 32:9 screen (5120x1440) it scaled by width (x4, not x2): twice too
+big, top and bottom cut off. 16:9 looks the same in every mode, so it went unseen. `movieFlags = 1` (ShowAll)
+fits the whole window by the shorter side, centred. The registration lasts a game session: the fix shows after a
+restart. 0.6.2, script only.
